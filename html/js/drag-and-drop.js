@@ -1,11 +1,17 @@
 var currWindow;
 
-makeWindowDraggable("window-notes");
-makeWindowDraggable("window-console");
-
-function makeWindowDraggable(id)
+var draggables = document.getElementsByClassName("window");
+for (let i = 0; i < draggables.length; i++)
 {
-  var draggable = document.getElementById(id);
+  makeWindowDraggable(draggables[i]);
+}
+// makeWindowDraggable("window-notes");
+// makeWindowDraggable("window-console");
+// makeWindowDraggable("window-wip");
+
+function makeWindowDraggable(draggable)
+{
+  // var draggable = document.getElementById(id);
   draggable.addEventListener("mousedown", function(event){ mouseDown(event, draggable) });
   draggable.addEventListener("mouseup", function(event){ mouseUp(event) });
 }
@@ -13,7 +19,7 @@ function makeWindowDraggable(id)
 function mouseDown(event, window)
 {
   var canDrag = false;
-  if (window.matches("draggable"))
+  if (window.classList.contains("draggable"))
   {
     canDrag = true;
   }

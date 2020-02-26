@@ -12,8 +12,8 @@ Fucking let's make some cool shit whaddayasay
 
 <head>
 	<!-- Styling -->
-	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="libs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Libs -->
 	<script src="libs/js/jquery-1.11.3.min.js"></script>
@@ -28,10 +28,12 @@ Fucking let's make some cool shit whaddayasay
 
 		<div id = "folder-exe" class = "program-button">
 			<div class = "program-image">
-			<img src="imgs/folder-icon.svg" id="portfolio" draggable=false>
+			<img src="imgs/folder-icon.svg" id="portfolio" draggable=false width=50px>
 		</div>
 			<p class="program-text">Portfolio</p>
 		</div>
+
+			<img src="imgs/bin.svg" id="bin" draggable=false>
 
 		<!---- Logo ---->
 		<div id="logo-container" class = "unselectable-text logo-slide-anim">
@@ -55,18 +57,16 @@ Fucking let's make some cool shit whaddayasay
 		</div>
 
 		<!---- Window Console ---->
-		<div id = "window-wip" class = "box window d-flex flex-column window-fade-in">
+		<div id = "window-wip" class = "box window d-flex flex-column window-fade-in draggable">
 			<div id = "window-draggable" class = "topbar box draggable">
 				<div id = "topbar-wip" class = "topbar-text window-margins">
-					shell.exe
+					wip.exe
 				</div>
 
 			</div>
 
-			<div  id = "body-wip" class = "editable-text-container window-body window-margins flex-grow-1">
-				<p class = "editable-text" contenteditable="true" spellcheck="false">
-					>_
-				</p>
+			<div  id = "body-wip" class = "editable-text-container window-body window-margins unselectable-text flex-grow-1">
+				<p>This website is an active <b>work in progress</b>.</p>
 			</div>
 		</div>
 
