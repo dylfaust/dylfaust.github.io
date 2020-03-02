@@ -1,0 +1,29 @@
+
+
+/* --------------------------------------------------------------------------
+	Window Instances
+	-------------------------------------------------------------------------- */
+	html
+	{
+		overflow: hidden;
+	}
+
+	#window-notes
+	{
+		width: 300px;
+		height: min(156px, 1000px);
+		background-color: white;
+		background-color: #f9e1ff;
+	}
+
+
+	#topbar-notes
+	{
+		background-color: #f1b6ff;
+	}
+
+
+	#body-notes
+	{
+		/*background-color: #f9e1ff;*/
+	}

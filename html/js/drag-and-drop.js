@@ -36,7 +36,6 @@ function mouseDown(event, window)
       var top =  child.getBoundingClientRect().top;
       var bottom =  child.getBoundingClientRect().bottom;
 
-      console.log(posX + " " + posY + " | " + top + " " + bottom);
       var withinY = posY > top && posY < bottom;
 
       canDrag = withinY;
@@ -78,5 +77,4 @@ function mouseUp(event)
   function onMouseMove(event) 
   {
     moveAt(event.pageX, event.pageY);
-    console.log("swag");
   }

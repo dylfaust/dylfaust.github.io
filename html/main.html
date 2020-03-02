@@ -1,12 +1,11 @@
 <!--
-==========================================================================================================================	
+========================================================================================
 LandingPage.html
---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
 Fucking let's make some cool shit whaddayasay
-==========================================================================================================================
+========================================================================================
 -->
 <!DOCTYPE html>
-
 <html>
 <title>Dylan Faust - Animation, Interactive, Graphic Design</title>
 
@@ -21,25 +20,23 @@ Fucking let's make some cool shit whaddayasay
 
 </head>
 
-<!-- BODY -------------------------------------------------------------------------------------------------------------->
+<!-- BODY ----------------------------------------------------------->
 <body>
-	
+	<clipPath id="clip-path">
+		    <circle cx="40" cy="35" r="35" />		
+	</clipPath>
 	<div id="page">
 
 		<div id = "folder-exe" class = "program-button">
 			<div class = "program-image">
-			<img src="imgs/folder-icon.svg" id="portfolio" draggable=false width=50px>
-		</div>
+				<img src="imgs/folder-icon.svg" id="portfolio" draggable=false width=50px>
+			</div>
 			<p class="program-text">Portfolio</p>
 		</div>
-
-			<img src="imgs/bin.svg" id="bin" draggable=false>
-
 		<!---- Logo ---->
-		<div id="logo-container" class = "unselectable-text logo-slide-anim">
+		<div id="logo-container" class = "unselectable-text">
 			<img src="imgs/logo.svg" width=200px id="logo" draggable=false>
 		</div>
-		
 		<!---- Window Notes ---->
 		<div id = "window-notes" class = "box window d-flex flex-column window-fade-in">
 			<div id = "window-draggable" class = "topbar box draggable">
@@ -57,7 +54,7 @@ Fucking let's make some cool shit whaddayasay
 		</div>
 
 		<!---- Window Console ---->
-		<div id = "window-wip" class = "box window d-flex flex-column window-fade-in draggable">
+	<!-- 	<div id = "window-wip" class = "box window d-flex flex-column window-fade-in draggable">
 			<div id = "window-draggable" class = "topbar box draggable">
 				<div id = "topbar-wip" class = "topbar-text window-margins">
 					wip.exe
@@ -68,8 +65,7 @@ Fucking let's make some cool shit whaddayasay
 			<div  id = "body-wip" class = "editable-text-container window-body window-margins unselectable-text flex-grow-1">
 				<p>This website is an active <b>work in progress</b>.</p>
 			</div>
-		</div>
-
+		</div> -->
 		<!---- Window Console ---->
 		<!-- <div id = "window-console" class = "box window d-flex flex-column window-fade-in">
 			<div id = "window-draggable" class = "topbar box draggable">
@@ -85,29 +81,29 @@ Fucking let's make some cool shit whaddayasay
 				</p>
 			</div>
 		</div> -->
-
+		
 		<!---- Taskbar ---->
 		<div id="taskbar" class="taskbar-slide-in">
 			<div id = "galuga-container">
 				<div id = "galuga-text" class = "unselectable-text">
-					Mr. Galugaboy<font style = "font-size: 15px;">™</font>
+					Galuga OS  <font style = "font-size: 15px;">|</font><font>                      0.1</font>
 				</div>
 			</div>
 
 			<div id = "taskbar-button" class = "box">
-				<div class="taskbar-button-box-row">
-				<div class = "taskbar-button-box-wrapper">
-					<div id="taskbar-button-box-1" class="taskbar-button-box box-small"></div>
-				</div>
-				<div class = "taskbar-button-box-wrapper">
-					<div id="taskbar-button-box-2" class ="taskbar-button-box box-small"></div>				
-				</div>
-				<div class = "taskbar-button-box-wrapper">
-					<div id="taskbar-button-box-3" class ="taskbar-button-box box-small"></div>
-				</div>
-				<div class = "taskbar-button-box-wrapper">
-					<div id="taskbar-button-box-4" class ="taskbar-button-box box-small"></div>
-				</div>
+				<div id = "taskbar-button-boxes-anim" class="taskbar-button-box-row taskbar-button--normal">
+					<div class = "taskbar-button-box-wrapper">
+						<div id="taskbar-button-box-1" class="taskbar-button-box box-small"></div>
+					</div>
+					<div class = "taskbar-button-box-wrapper">
+						<div id="taskbar-button-box-2" class ="taskbar-button-box box-small"></div>				
+					</div>
+					<div class = "taskbar-button-box-wrapper">
+						<div id="taskbar-button-box-3" class ="taskbar-button-box box-small"></div>
+					</div>
+					<div class = "taskbar-button-box-wrapper">
+						<div id="taskbar-button-box-4" class ="taskbar-button-box box-small"></div>
+					</div>
 				</div>
 			</div>
 
@@ -115,10 +111,11 @@ Fucking let's make some cool shit whaddayasay
 			<div id = "anim"></div>
 			<div id = "taskbar-bg" class = "box"></div>
 		</div>
-
+		<div id="taskbar-submenu" class="box taskbar-submenu--off"></div>
 	</div>
 
-	<!-- CODE -------------------------------------------------------------------------------------------------------------->
+
+	<!-- CODE ----------------------------------------------------------->
 	<script type='text/javascript'>
 
 		var container;
@@ -208,6 +205,7 @@ Fucking let's make some cool shit whaddayasay
 </script>
 <!-- Scripts -->
 <script src="js/drag-and-drop.js"></script>
+<script src="js/taskbar.js"></script>
 
 </body>
 </html>
