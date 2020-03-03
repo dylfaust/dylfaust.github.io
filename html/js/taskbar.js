@@ -1,80 +1,131 @@
 // -------------------------------------------
 // Global Vars
 // -------------------------------------------
-var boxRowAnim = document.getElementById("taskbar-button-boxes-anim");
+var taskbarButton = document.getElementById("taskbar-button");
+var taskbarButtonBoxRow = document.getElementById("taskbar-button-boxes-anim");
 var submenu = document.getElementById("taskbar-submenu");
+var overlay = null;
+
+var submenuActive = false;
 
 // -------------------------------------------
 // Listeners
 // -------------------------------------------
-
-{
-
-  let button = document.getElementById("taskbar-button");
   
   // Hover and click
-  button.addEventListener("mouseover", 
-    function(event){ onMouseOver(event, boxRowAnim) }
-    );
-  button.addEventListener("mouseout", 
-   function(event){ onMouseOut(event, boxRowAnim) }
-   );
-  button.addEventListener("click", 
-    function(event){ onClick(event, boxRowAnim) }
-    );
+  taskbarButton.addEventListener("mouseover", onMouseOver, true);
+  taskbarButton.addEventListener("mouseout", onMouseOut, true);
+  taskbarButton.addEventListener("click", onClick, true);
 
   // Transitions
-  boxRowAnim.addEventListener("transitionend", onTransitionEnd, event);
-
-}
+  taskbarButtonBoxRow.addEventListener("transitionend", onTransitionEnd, event);
 
 // -------------------------------------------
 // Setup
 // -------------------------------------------
 
-goAnimState(boxRowAnim, "taskbar-button--normal");
+goAnimState(taskbarButtonBoxRow, "taskbar-button-row--normal");
 goAnimState(submenu, "taskbar-submenu--off");
+
+// -------------------------------------------
+// States
+// -------------------------------------------
+function beginSubmenuOpen()
+{
+  if (!submenuActive)
+  {
+    submenuActive = true;
+    goAnimState(taskbarButtonBoxRow, "taskbar-button-row--active");
+    goAnimState(taskbarButton, "taskbar-button-fill--active");
+    setTimeout(function() {
+      // window.alert("county");
+      document.addEventListener("click", goSubmenuClosed, true);
+    });
+  }
+
+  taskbarButton.removeEventListener("click", onClick, true);
+}
+
+function endSubmenuOpen()
+{
+  goAnimState(submenu, "taskbar-submenu--active");
+  if (overlay == null)
+    overlay = document.createElement("overlay");
+  overlay.classList.add("dark-overlay");
+  setTimeout(function() { goAnimState(overlay, "dark-overlay--active") });
+  overlay.classList.add("unselectable-text");
+
+  var page = document.getElementById("page");
+  page.appendChild(overlay);
+
+  var z = overlay.style.zIndex;
+  submenu.style.zIndex = z+1;
+
+  var taskbar = document.getElementById("taskbar");
+  taskbar.style.zIndex = z+1;
+}
+
+function goSubmenuClosed()
+{
+  // window.alert("swag");
+  submenuActive = false;
+  document.removeEventListener("click", goSubmenuClosed, true);
+  if (overlay != null)
+  {
+    goAnimState(overlay, "dark-overlay--off");
+  }
+
+   goAnimState(submenu, "taskbar-submenu--off");
+goAnimState(taskbarButton, "taskbar-button-fill--normal");
+
+    let targetButtonState = taskbarButton.hovered ? "taskbar-button-row--hover" : "taskbar-button-row--normal";
+    goAnimState(taskbarButtonBoxRow, targetButtonState);
+
+  setTimeout(function() {
+      // window.alert("county");
+      taskbarButton.addEventListener("click", onClick, true);
+    });
+
+    overlay.addEventListener("transitionend", onFadeComplete, event);
+}
 
 // -------------------------------------------
 // Funcs
 // -------------------------------------------
 
-// taskbar-button-box-row
-function onMouseOver(event, element)
+function onMouseOver()
 {
-  if (!element.active)
-    goAnimState(element, "taskbar-button--hover");
+  taskbarButton.hovered = true;
+  if (!submenuActive)
+    goAnimState(taskbarButtonBoxRow, "taskbar-button-row--hover");
 }
-function onMouseOut(event, element)
+function onMouseOut()
 {
-  if (!element.active)
-    goAnimState(element, "taskbar-button--normal");
+  taskbarButton.hovered = false;
+  if (!submenuActive)
+    goAnimState(taskbarButtonBoxRow, "taskbar-button-row--normal");
 }
 
-function onClick(event, element)
+function onClick()
 {
-  element.active = true;
-  goAnimState(element, "taskbar-button--active");
+  beginSubmenuOpen();
 }
 
 function onTransitionEnd(event)
 {
-  if (this.animState == "taskbar-button--active")
+  if (this.animState == "taskbar-button-row--active")
   {  
-    goAnimState(submenu, "taskbar-submenu--active");
-    var overlay = document.createElement("overlay");
-    overlay.classList.add("dark-overlay");
-    setTimeout(function() { overlay.classList.add("dark-overlay-fade-in"); });
-    overlay.classList.add("unselectable-text");
+    endSubmenuOpen();
+  }
+}
 
-    var page = document.getElementById("page");
-    page.appendChild(overlay);
-
-    var z = overlay.style.zIndex;
-    submenu.style.zIndex = z+1;
-
-    var taskbar = document.getElementById("taskbar");
-    taskbar.style.zIndex = z+1;
+function onFadeComplete()
+{
+  if (!submenuActive && overlay)
+  {
+   var page = document.getElementById("page");
+  page.removeChild(overlay); 
+  overlay = null;
   }
 }
 
