@@ -493,48 +493,100 @@ body
 /* --------------------------------------------------------------------------
 	Buttons
 	-------------------------------------------------------------------------- */
-#taskbar-button-bg
-{
-	/*background-color: grey;*/
-}
+	#taskbar-button-bg
+	{
+		/*background-color: grey;*/
+	}
 
-#taskbar-button-bg-l
-{
-	background-color: white;
-	width: 50%;
-	left: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-}
-#taskbar-button-bg-r
-{
-	background-color: green;
-	width: 50%;
-	right: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-}
-#taskbar-button-bg-t
-{
-	background-color: red;
-	height: 50%;
-	width: 100%;
-	top: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-}
-#taskbar-button-bg-b
-{
-	/*background-color: blue;*/
-	position:absolute;
-	border-bottom: 25px;
-	border-color: purple;
-	height: 0px;
-	width: 100%;
-	bottom: 0px;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-}
+	#taskbar-button-line-bl
+	{
+		position: absolute;
+		width: 25%;
+		height: 1px;
+		background: black;
+		left: 0px;
+		bottom: 0px;
+		-webkit-transform-origin: 0% 0%;
+		-webkit-transform: rotateZ(-38deg);
+	}
+	#taskbar-button-line-br
+	{
+		position: absolute;
+		width: 25%;
+		height: 1px;
+		background: black;
+		right: 0px;
+		bottom: 0px;
+		-webkit-transform-origin: 100% 0%;
+		-webkit-transform: rotateZ(38deg);
+	}
+	#taskbar-button-line-tl
+	{
+		position: absolute;
+		width: 25%;
+		height: 1px;
+		background: black;
+		left: 0px;
+		top: 0px;
+		-webkit-transform-origin: 0% 0%;
+		-webkit-transform: rotateZ(38deg);
+	}
+	#taskbar-button-line-tr
+	{
+		position: absolute;
+		width: 25%;
+		height: 1px;
+		background: black;
+		right: 0px;
+		top: 0px;
+		-webkit-transform-origin: 100% 0%;
+		-webkit-transform: rotateZ(-38deg);
+	}
+
+	#taskbar-button-bg-l
+	{
+		position:absolute;
+		height: 100%;
+		width: 3.25%;
+		left: 0px;
+		/*background-color: blue;*/
+		background-image: linear-gradient(90deg, #dedede, #6b6b6b 70%);
+		clip-path: polygon(100% 10%, 0% 0%, 0% 100%, 100% 90%);
+	}
+
+	#taskbar-button-bg-r
+	{
+		position:absolute;
+		height: 100%;
+		width: 3.25%;
+		right: 0px;
+		top: 0px;
+		/*background-color: blue;*/
+		background-image: linear-gradient(-90deg, #dedede, #6b6b6b 70%);
+		clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
+	}
+
+	#taskbar-button-bg-t
+	{
+		position:absolute;
+		height: 10%;
+		width: 100%;
+		top: 0px;
+		/*background-color: blue;*/
+		background-image: linear-gradient(180deg, #dedede, #6b6b6b 70%);
+		clip-path: polygon(3% 100%, 97% 100%, 100% 0%, 0% 0%);
+	}
+
+	#taskbar-button-bg-b
+	{
+		background-image: linear-gradient(0deg, #dedede, #6b6b6b 70%);
+		position:absolute;
+		height: 10%;
+		width: 100%;
+		bottom: 0px;
+		clip-path: polygon(3% 0%, 97% 0%, 100% 100%, 0% 100%);
+		/*background-color: orange;*/
+	}
 	
 
 
@@ -678,17 +730,17 @@ body
 	.taskbar-button-fill--normal
 	{
 		transform: scale(1.0, 1.0);
-		transition: 0.07s;
+		transition: 0.15s;
 		transition-timing-function: ease-in;
 		filter: brightness(100%);
 	}
 
 	.taskbar-button-fill--active
 	{
-		transform: scale(0.92, 0.8);
-		transition: 0.07s;
+		transform: scale(0.935, 0.8);
+		transition: 0.15s;
 		transition-timing-function: ease-in;
-		filter: brightness(95%);
+		filter: brightness(60%);
 	}
 
 /* --------------------------------------------------------------------------
