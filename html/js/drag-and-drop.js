@@ -1,4 +1,5 @@
 var currWindow;
+var topmostZIndex = -9999;
 
 var draggables = document.getElementsByClassName("window");
 for (let i = 0; i < draggables.length; i++)
@@ -14,6 +15,9 @@ function makeWindowDraggable(draggable)
   // var draggable = document.getElementById(id);
   draggable.addEventListener("mousedown", function(event){ mouseDown(event, draggable) });
   draggable.addEventListener("mouseup", function(event){ mouseUp(event) });
+  if (draggable && draggable.style.zIndex > topmostZIndex)
+    topmostZIndex = draggable.style.zIndex;
+
 }
 
 function mouseDown(event, window)
@@ -49,7 +53,7 @@ function mouseDown(event, window)
     currWindow.shiftX = event.clientX - currWindow.getBoundingClientRect().left;
     currWindow.shiftY = event.clientY - currWindow.getBoundingClientRect().top;
     currWindow.style.position = 'absolute';
-    currWindow.style.zIndex = 1000;
+    currWindow.style.zIndex = topmostZIndex;
     document.body.append(currWindow);
 
     moveAt(event.pageX, event.pageY);

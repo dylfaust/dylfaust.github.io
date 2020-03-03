@@ -37,21 +37,6 @@ Fucking let's make some cool shit whaddayasay
 		<div id="logo-container" class = "unselectable-text">
 			<img src="imgs/logo.svg" width=200px id="logo" draggable=false>
 		</div>
-		<!---- Window Notes ---->
-		<div id = "window-notes" class = "box window d-flex flex-column window-fade-in">
-			<div id = "window-draggable" class = "topbar box draggable">
-				<div id = "topbar-notes" class = "topbar-text window-margins">
-					dylanFaust.exe
-				</div>
-
-			</div>
-
-			<div  id = "body-notes" class = "editable-text-container window-body window-margins flex-grow-1">
-				<p class = "editable-text" contenteditable="true" spellcheck="false">
-					A <b>UI / UX Programmer</b> with a keen eye for polish.
-				</p>
-			</div>
-		</div>
 
 		<!---- Window Console ---->
 	<!-- 	<div id = "window-wip" class = "box window d-flex flex-column window-fade-in draggable">
@@ -96,7 +81,7 @@ Fucking let's make some cool shit whaddayasay
 				<div id="taskbar-button-bg-l"></div>	
 				<div id="taskbar-button-bg-r"></div>	
 				<div id="taskbar-button-bg-b"></div>	
-				
+
 				<div id="taskbar-button-line-bl"></div>
 				<div id="taskbar-button-line-br"></div>
 				<div id="taskbar-button-line-tl"></div>
@@ -126,18 +111,93 @@ Fucking let's make some cool shit whaddayasay
 			<div id = "anim"></div>
 			<div id = "taskbar-bg" class = "box"></div>
 		</div>
-		<div id="taskbar-submenu" class="box taskbar-submenu--off"></div>
+
+
+		<!---- Window Notes ---->
+		<div id = "window-notes" class = "box window d-flex flex-column window-fade-in">
+			<div id = "window-draggable" class = "topbar box draggable">
+				<div id = "topbar-notes" class = "topbar-text window-margins">
+					dylanFaust.exe
+				</div>
+
+			</div>
+
+			<div  id = "body-notes" class = "editable-text-container window-body window-margins flex-grow-1">
+				<p class = "editable-text" contenteditable="true" spellcheck="false">
+					A <b>UI / UX Programmer</b> with a keen eye for polish.
+				</p>
+			</div>
+		</div>
+
+		<div id="taskbar-submenu" class="box taskbar-submenu--off">
+
+			<div class="submenu-slot-wrapper">
+				<div class="text-vert-center-parent">
+					<div class="submenu-slot unselectable-text">
+						Portfolio
+					</div>
+				</div>
+				<div class="submenu-slot-bottom-line"></div>
+			</div>
+
+			<div class="submenu-slot-wrapper">
+				<div class="text-vert-center-parent">
+					<div class="submenu-slot unselectable-text">
+						Design Doc's
+					</div>
+				</div>
+				<div class="submenu-slot-bottom-line"></div>
+			</div>
+
+			<div class="submenu-slot-wrapper">
+				<div class="text-vert-center-parent">
+					<div class="submenu-slot unselectable-text">
+						Executables
+					</div>
+				</div>
+				<div class="submenu-slot-bottom-line"></div>
+			</div>
+
+			<div class="submenu-slot-wrapper">
+				<div class="text-vert-center-parent">
+					<div class="submenu-slot unselectable-text">
+						Terminal
+					</div>
+				</div>
+				<div class="submenu-slot-bottom-line"></div>
+			</div>
+
+			<div class="submenu-slot-wrapper">
+				<div class="text-vert-center-parent">
+					<div class="submenu-slot unselectable-text">
+						Trash
+					</div>
+				</div>
+				<div class="submenu-slot-bottom-line"></div>
+			</div>
+
+			<div class="submenu-slot-wrapper">
+				<div class="text-vert-center-parent">
+					<div class="submenu-slot unselectable-text">
+						Email
+					</div>
+				</div>
+				<div class="submenu-slot-bottom-line"></div>
+			</div>
+
+		</div>
 	</div>
+</div>
 
 
-	<!-- CODE ----------------------------------------------------------->
-	<script type='text/javascript'>
+<!-- CODE ----------------------------------------------------------->
+<script type='text/javascript'>
 
-		var container;
-		var camera, scene, renderer, objects;
-		var dae;
+	var container;
+	var camera, scene, renderer, objects;
+	var dae;
 
-		init();
+	init();
 
 	// Initiate function
 	function init()

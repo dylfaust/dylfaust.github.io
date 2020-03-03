@@ -11,7 +11,7 @@ var submenuActive = false;
 // -------------------------------------------
 // Listeners
 // -------------------------------------------
-  
+
   // Hover and click
   taskbarButton.addEventListener("mouseover", onMouseOver, true);
   taskbarButton.addEventListener("mouseout", onMouseOut, true);
@@ -39,7 +39,7 @@ function beginSubmenuOpen()
     goAnimState(taskbarButton, "taskbar-button-fill--active");
     setTimeout(function() {
       // window.alert("county");
-      document.addEventListener("click", goSubmenuClosed, true);
+      document.addEventListener("click", onClickOutside, true);
     });
   }
 
@@ -65,28 +65,33 @@ function endSubmenuOpen()
   taskbar.style.zIndex = z+1;
 }
 
+function onClickOutside(event)
+{
+  if (!event.target.closest("#taskbar-submenu"))
+    goSubmenuClosed();
+}
+
 function goSubmenuClosed()
 {
   // window.alert("swag");
   submenuActive = false;
-  document.removeEventListener("click", goSubmenuClosed, true);
+  document.removeEventListener("click", onClickOutside, true);
   if (overlay != null)
   {
     goAnimState(overlay, "dark-overlay--off");
+    overlay.addEventListener("transitionend", onFadeComplete, event);
   }
 
-   goAnimState(submenu, "taskbar-submenu--off");
-goAnimState(taskbarButton, "taskbar-button-fill--normal");
+  goAnimState(submenu, "taskbar-submenu--off");
+  goAnimState(taskbarButton, "taskbar-button-fill--normal");
 
-    let targetButtonState = taskbarButton.hovered ? "taskbar-button-row--hover" : "taskbar-button-row--normal";
-    goAnimState(taskbarButtonBoxRow, targetButtonState);
+  let targetButtonState = taskbarButton.hovered ? "taskbar-button-row--hover" : "taskbar-button-row--normal";
+  goAnimState(taskbarButtonBoxRow, targetButtonState);
 
   setTimeout(function() {
       // window.alert("county");
       taskbarButton.addEventListener("click", onClick, true);
     });
-
-    overlay.addEventListener("transitionend", onFadeComplete, event);
 }
 
 // -------------------------------------------
@@ -124,9 +129,9 @@ function onFadeComplete()
   if (!submenuActive && overlay)
   {
    var page = document.getElementById("page");
-  page.removeChild(overlay); 
-  overlay = null;
-  }
+   page.removeChild(overlay); 
+   overlay = null;
+ }
 }
 
 function goAnimState(element, stateId)
