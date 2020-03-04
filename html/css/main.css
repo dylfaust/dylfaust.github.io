@@ -228,22 +228,46 @@ body
 	.program-button
 	{
 		/*display:table;*/
+		/*pointer-events: none;*/
+		/*align-content: center;*/
+		/*background-color: blue;*/
+		position:absolute;
+		width: 50px;
 	}
 
-	.program-image
+	.program-icon
 	{
+		transition-duration: 0.01s;
+		transition-property: transform-origin;
+
+		position:relative;
 		/*display:table-row;*/
-		justify-content: center;
-		display:flex;
+		/*justify-content: center;*/
+		/*display:flex;*/
+		/*position: relative;*/
+
+		/*height: 50px;*/
+
+		/*height: 50px;*/
 		width: 100%;
-		height: 50px;
+		/*background:green;*/
 	}
 
 	.program-text
 	{
 		/*display:table-row;*/
 		text-align: center;
-		margin-top: -5px;
+		/*background: blue;*/
+		left: 50%;
+		transform: translateX(-50%);
+		position:absolute;
+		/*margin-top: -5px;*/
+	}
+
+	.folder-fg
+	{
+		position:absolute;
+		top: 0;
 	}
 
 	.dark-overlay
@@ -320,6 +344,14 @@ body
 	min-height: 100%; 
 }
 
+#portfolio
+{
+	/*transform: scale(2.0, 2.0);*/
+	/*width: 600px;*/
+	width: 100%;
+	height: 100%;
+}
+
 #page 
 {
 	height: 100%;
@@ -371,7 +403,7 @@ body
 	width: 100%;
 	height: 50px;
 	max-height: 5%;
-	background-color:blue;
+	/*background-color:blue;*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -438,9 +470,9 @@ body
 #taskbar-submenu
 {
 	background-color: white;
-	width: 200px;
-	left: 0px;
-	bottom: 38px;
+	width: 180px;
+	left: -1px;
+	bottom: 100%;
 	position: absolute;
 
 	clip-path: inset(0px 0px 0px 0px);
@@ -452,7 +484,6 @@ body
 
 	#folder-exe
 	{
-		position:fixed;
 		left: 30px;
 		top: 30px;
 	}
@@ -829,6 +860,103 @@ body
 		transition: 0.3s !important;
 		transition-timing-function: ease-out !important;
 	}
+
+/* --------------------------------------------------------------------------
+	Program Button
+	-------------------------------------------------------------------------- */
+	.program-icon--hover
+	{
+		transform: scale(1.05, 1.05);
+		transition-timing-function: ease-out;
+		filter: brightness(90%);
+		transition: 0.4s; /* programIconHoverDuration */
+	}
+
+	.program-icon--normal
+	{
+		transform: scale(1.0, 1.0);
+		/*transform-origin: 50% 50%;*/
+		filter: brightness(100%);
+		transition: 0.4s;
+	}
+
+	.program-icon--active
+	{
+		width: 400px !important;
+		margin-top: 100px;
+		margin-left: 50px;
+		/*height: 400px !important;*/
+		/*transform-origin: 0% 0%;*/
+
+		transition: 0.22s;
+		transition-timing-function: ease-in-out;
+	}
+
+
+	.program-text--normal
+	{
+		transition: 0.4s;
+		letter-spacing: 0px;
+	}
+
+	.program-text--anchor-upper-left
+	{
+		transition: 0.1s; /* programIconHoverDuration */
+	}
+
+	.program-text--hover
+	{
+		transition: 0.4s; /* programIconHoverDuration */
+		letter-spacing: 1px;
+		transition-timing-function: ease-out;
+	}
+
+	.program-text--active
+	{
+		transition: 0.1s;
+		opacity: 0%;
+		transition-timing-function: ease-out;
+	}
+
+	.debug-origin
+	{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: orange;
+		opacity: 1%;
+		pointer-events: none;
+		transform-origin: inherit;
+		transform:scale(.1, .1);
+	}
+
+	.origin-top-left
+	{
+		transition: 0.1s;
+		transform-origin: top left;
+	}
+
+	.origin-center
+	{
+		transform-origin: center center;
+	}
+
+	.folder-fg--normal
+	{
+		/*clip-path: inset(0px 0px 100% 0px);*/
+		opacity: 0%;
+	}
+
+	.folder-fg--active
+	{
+		/*clip-path: inset(0px 0px 0px 0px);*/
+		opacity: 100%;
+		transition: 0.22s;
+		transition-delay: 0.0s;
+		transition-timing-function: ease-in-out;
+	}
+
 
 /*#taskbar-button:hover
 {

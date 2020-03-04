@@ -13,9 +13,9 @@ var submenuActive = false;
 // -------------------------------------------
 
   // Hover and click
-  taskbarButton.addEventListener("mouseover", onMouseOver, true);
-  taskbarButton.addEventListener("mouseout", onMouseOut, true);
-  taskbarButton.addEventListener("click", onClick, true);
+  taskbarButton.addEventListener("mouseover", onMouseOverTb, true);
+  taskbarButton.addEventListener("mouseout", onMouseOutTb, true);
+  taskbarButton.addEventListener("click", onClickTb, true);
 
   // Transitions
   taskbarButtonBoxRow.addEventListener("transitionend", onTransitionEnd, event);
@@ -43,7 +43,7 @@ function beginSubmenuOpen()
     });
   }
 
-  taskbarButton.removeEventListener("click", onClick, true);
+  taskbarButton.removeEventListener("click", onClickTb, true);
 }
 
 function endSubmenuOpen()
@@ -90,7 +90,7 @@ function goSubmenuClosed()
 
   setTimeout(function() {
       // window.alert("county");
-      taskbarButton.addEventListener("click", onClick, true);
+      taskbarButton.addEventListener("click", onClickTb, true);
     });
 }
 
@@ -98,20 +98,20 @@ function goSubmenuClosed()
 // Funcs
 // -------------------------------------------
 
-function onMouseOver()
+function onMouseOverTb()
 {
   taskbarButton.hovered = true;
   if (!submenuActive)
     goAnimState(taskbarButtonBoxRow, "taskbar-button-row--hover");
 }
-function onMouseOut()
+function onMouseOutTb()
 {
   taskbarButton.hovered = false;
   if (!submenuActive)
     goAnimState(taskbarButtonBoxRow, "taskbar-button-row--normal");
 }
 
-function onClick()
+function onClickTb()
 {
   beginSubmenuOpen();
 }
@@ -132,14 +132,4 @@ function onFadeComplete()
    page.removeChild(overlay); 
    overlay = null;
  }
-}
-
-function goAnimState(element, stateId)
-{
-  if (element.animState)
-  {
-    element.classList.remove(element.animState);
-  }
-  element.animState = stateId;
-  element.classList.add(element.animState);
 }

@@ -23,16 +23,9 @@ Fucking let's make some cool shit whaddayasay
 <!-- BODY ----------------------------------------------------------->
 <body>
 	<clipPath id="clip-path">
-		<circle cx="40" cy="35" r="35" />		
+		<circle cx="40" cy="35" r="35"/>		
 	</clipPath>
 	<div id="page">
-
-		<div id = "folder-exe" class = "program-button">
-			<div class = "program-image">
-				<img src="imgs/folder-icon.svg" id="portfolio" draggable=false width=50px>
-			</div>
-			<p class="program-text">Portfolio</p>
-		</div>
 		<!---- Logo ---->
 		<div id="logo-container" class = "unselectable-text">
 			<img src="imgs/logo.svg" width=200px id="logo" draggable=false>
@@ -69,6 +62,64 @@ Fucking let's make some cool shit whaddayasay
 		
 		<!---- Taskbar ---->
 		<div id="taskbar" class="taskbar-slide-in">
+			<div id="taskbar-submenu" class="box taskbar-submenu--off">
+
+				<div class="submenu-slot-wrapper">
+					<div class="text-vert-center-parent">
+						<div class="submenu-slot unselectable-text">
+							Portfolio
+						</div>
+					</div>
+					<div class="submenu-slot-bottom-line"></div>
+				</div>
+
+				<div class="submenu-slot-wrapper">
+					<div class="text-vert-center-parent">
+						<div class="submenu-slot unselectable-text">
+							Documents
+						</div>
+					</div>
+					<div class="submenu-slot-bottom-line"></div>
+				</div>
+
+				<div class="submenu-slot-wrapper">
+					<div class="text-vert-center-parent">
+						<div class="submenu-slot unselectable-text">
+							Executables
+						</div>
+					</div>
+					<div class="submenu-slot-bottom-line"></div>
+				</div>
+
+				<div class="submenu-slot-wrapper">
+					<div class="text-vert-center-parent">
+						<div class="submenu-slot unselectable-text">
+							Terminal
+						</div>
+					</div>
+					<div class="submenu-slot-bottom-line"></div>
+				</div>
+
+				<div class="submenu-slot-wrapper">
+					<div class="text-vert-center-parent">
+						<div class="submenu-slot unselectable-text">
+							Email
+						</div>
+					</div>
+					<div class="submenu-slot-bottom-line"></div>
+				</div>
+
+				<div class="submenu-slot-wrapper">
+					<div class="text-vert-center-parent">
+						<div class="submenu-slot unselectable-text">
+							Trash
+						</div>
+					</div>
+					<div class="submenu-slot-bottom-line"></div>
+				</div>
+
+			</div>
+
 			<div id = "galuga-container">
 				<div id = "galuga-text" class = "unselectable-text">
 					Galuga OS  <font style = "font-size: 15px;">|</font><font>                      0.1</font>
@@ -129,62 +180,16 @@ Fucking let's make some cool shit whaddayasay
 			</div>
 		</div>
 
-		<div id="taskbar-submenu" class="box taskbar-submenu--off">
-
-			<div class="submenu-slot-wrapper">
-				<div class="text-vert-center-parent">
-					<div class="submenu-slot unselectable-text">
-						Portfolio
-					</div>
+		<div id = "folder-exe" class = "program-button">
+			<div class = "program-icon">
+				<div id = "program-icon-scaler">
+					<img src="imgs/folder-icon-white.svg" class="folder-fg folder-fg--normal" draggable=false>
+					<img src="imgs/folder-icon.svg" id="portfolio" draggable=false>
 				</div>
-				<div class="submenu-slot-bottom-line"></div>
-			</div>
 
-			<div class="submenu-slot-wrapper">
-				<div class="text-vert-center-parent">
-					<div class="submenu-slot unselectable-text">
-						Design Doc's
-					</div>
-				</div>
-				<div class="submenu-slot-bottom-line"></div>
+				<div class="debug-origin"></div>
 			</div>
-
-			<div class="submenu-slot-wrapper">
-				<div class="text-vert-center-parent">
-					<div class="submenu-slot unselectable-text">
-						Executables
-					</div>
-				</div>
-				<div class="submenu-slot-bottom-line"></div>
-			</div>
-
-			<div class="submenu-slot-wrapper">
-				<div class="text-vert-center-parent">
-					<div class="submenu-slot unselectable-text">
-						Terminal
-					</div>
-				</div>
-				<div class="submenu-slot-bottom-line"></div>
-			</div>
-
-			<div class="submenu-slot-wrapper">
-				<div class="text-vert-center-parent">
-					<div class="submenu-slot unselectable-text">
-						Trash
-					</div>
-				</div>
-				<div class="submenu-slot-bottom-line"></div>
-			</div>
-
-			<div class="submenu-slot-wrapper">
-				<div class="text-vert-center-parent">
-					<div class="submenu-slot unselectable-text">
-						Email
-					</div>
-				</div>
-				<div class="submenu-slot-bottom-line"></div>
-			</div>
-
+			<p class="program-text">Portfolio</p>
 		</div>
 	</div>
 </div>
@@ -279,8 +284,10 @@ Fucking let's make some cool shit whaddayasay
 
 </script>
 <!-- Scripts -->
+<script src="js/common-funcs.js"></script>
 <script src="js/drag-and-drop.js"></script>
 <script src="js/taskbar.js"></script>
+<script src="js/folder.js"></script>
 
 </body>
 </html>
