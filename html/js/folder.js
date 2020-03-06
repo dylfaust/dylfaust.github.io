@@ -63,7 +63,7 @@ function onClickProgram()
   setTimeout(function() {
     goAnimState(thisElement, "program-icon--active");
     goAnimState(thisElement.text, "program-text--active");
-     goAnimState(thisElement.fg, "folder-fg--active");
+    goAnimState(thisElement.fg, "folder-fg--active");
   });
  // window.alert("click");
 }
