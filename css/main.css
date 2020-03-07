@@ -902,3 +902,8 @@ path
 		transition-delay: 0.0s;
 		transition-timing-function: ease-in-out;
 	}
+
+	#program-icon-anim
+	{
+		background: blue;
+	}

@@ -9,7 +9,7 @@
   renderer: 'svg',
   loop: false,
   autoplay: false,
-  path: "anims/anim-2/folder-anim-2.json"
+  path: "https://assets4.lottiefiles.com/packages/lf20_2kq53c.json"
 };
 
 var animData;
