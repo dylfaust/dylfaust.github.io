@@ -1,8 +1,13 @@
 // -------------------------------------------
 // Setup
 // -------------------------------------------
+
+var test = true;
+
 var folder = document.getElementById('program-icon-proc-anim');
 var folderParent = document.getElementsByClassName("program-icon-spacer")[0];
+var folderContent = document.getElementById("portfolio-body");
+
 
 var startLeft = null;
 var startTop = null;
@@ -12,6 +17,7 @@ folder.topbarText = folder.getElementsByClassName("topbar-text")[0];
 folder.hoverAnim = document.getElementById("program-icon-svg-anim");
 goAnimState(folder.button,"fade--off");
 goAnimState(folder.topbarText,"fade--off");
+goAnimState(folderContent,"fade--off");
 
 
 var params = {
@@ -50,6 +56,9 @@ animData= bodymovin.loadAnimation(params);
 
 }
 
+if (test)
+  onClickProgram();
+
 // -------------------------------------------
 // Funcs
 // -------------------------------------------
@@ -77,16 +86,18 @@ function onMouseOutProgram()
 
 function onClickProgram()
 {
-  this.active = true;
-  let posX = this.parentButton.style.posX;
-  let posY = this.parentButton.style.posY;
-  goAnimState(this.hoverAnim, "program-icon--normal");
-  // goAnimState(this.parentButton, "origin-top-left");
-  // posX -= this.style.width/2.0;
-  // posY -= this.style.width/2.0;
-  this.parentButton.style.transformOrigin = "0 0"; 
+  let thisElement = this;
+  if (test)
+    thisElement = folder; 
 
-  var thisElement = this;
+  this.active = true;
+  let posX = thisElement.parentButton.style.posX;
+  let posY = thisElement.parentButton.style.posY;
+  goAnimState(thisElement.hoverAnim, "program-icon--normal");
+  // goAnimState(thisElement.parentButton, "origin-top-left");
+  // posX -= thisElement.style.width/2.0;
+  // posY -= thisElement.style.width/2.0;
+  thisElement.parentButton.style.transformOrigin = "0 0"; 
 
    // goAnimState(thisElement, "program-icon--active");
   // this.style.transformOrigin.posX = posX;
@@ -121,6 +132,7 @@ function folderAnimBigComplete()
   folder.button.addEventListener("mousedown", onMouseDownClose, false);
   folder.button.addEventListener("mouseup", onMouseUpClose, false);
   goAnimState(folder.topbarText,"fade--in");
+  goAnimState(folderContent,"fade--in");
 
   animData.removeEventListener('complete', folderAnimBigComplete);
 }
@@ -156,6 +168,7 @@ setTimeout(function()
     // goAnimState(thisElement.text, "program-text--normal");
     goAnimState(thisElement.button,"fade--off");
     goAnimState(thisElement.topbarText,"fade--off");
+      goAnimState(folderContent,"fade--off");
   });
 }
 

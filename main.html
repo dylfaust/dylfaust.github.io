@@ -131,7 +131,7 @@ Fucking let's make some cool shit whaddayasay
 			</div>
 
 			<!---- Button Bg ---->
-			<div id="taskbar-button-bg" class = "box taskbar-button-fill">
+			<div id="taskbar-button-bg" class = "box taskbar-button-fill taskbar-margins">
 				<div id="taskbar-button-bg-t"></div>	
 				<div id="taskbar-button-bg-l"></div>	
 				<div id="taskbar-button-bg-r"></div>	
@@ -145,8 +145,8 @@ Fucking let's make some cool shit whaddayasay
 			</div>
 
 			<!---- Button Fg ---->
-			<div id = "taskbar-button" class = "box taskbar-button-fill taskbar-button-fill--normal">
-				<div id = "taskbar-button-boxes-anim" class="taskbar-button-box-row taskbar-button-row--normal">
+			<div id = "taskbar-button" class = "box taskbar-button-fill taskbar-margins taskbar-button-fill--normal">
+				<div id="taskbar-button-boxes-anim" class="taskbar-button-box-row taskbar-button-row--normal">
 					<div class = "taskbar-button-box-wrapper">
 						<div id="taskbar-button-box-1" class="taskbar-button-box box-small"></div>
 					</div>
@@ -161,6 +161,17 @@ Fucking let's make some cool shit whaddayasay
 					</div>
 				</div>
 			</div>
+			
+			<div id = "social-media-buttons" class="social-media-button-row taskbar-margins">
+				<a href="http://www.linkedin.com/in/dylanfaust/" target="_blank" rel="noopener noreferrer">
+					<img class="social-media-button" type="image/svg+xml" src="imgs/linked-in-button.svg"></img>
+				</a>
+
+				<a href="https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA" target="_blank" rel="noopener noreferrer">
+					<img class="social-media-button" type="image/svg+xml" src="imgs/youtube-button.svg"></img>
+				</a>
+			</div>
+
 			<div id = "taskbar-bg" class = "box"></div>
 		</div>
 
@@ -185,12 +196,28 @@ Fucking let's make some cool shit whaddayasay
 			<div class = "program-icon-spacer">
 				<div id="program-icon-proc-anim" class="program-icon--normal">
 					<div id = "program-icon-svg-anim">
-						<div id="folder-draggable" class="draggable">
-							<div id="topbar-portfolio" class="topbar-text fade--off">
-								portfolio.exe
+						<div id="portfolio-window-contents">
+							<div id="folder-draggable" class="draggable">
+								<div id="topbar-portfolio" class="topbar-text window-margins fade--off">
+									portfolio.exe
+								</div>
+								<div class="window-button fade--off">
+									<img src="imgs/close-button.svg" width=20px  draggable=false>
+								</div>
 							</div>
-							<div class="window-button fade--off">
-								<img src="imgs/close-button.svg" width=20px  draggable=false>
+
+							<div id="portfolio-body">
+								<div id="portfolio-column-list" style="padding-top: 20px; padding-bottom: 0px;">
+									<div id = "test" class = "program-button-2">
+										<div class = "program-icon">
+											<img src="imgs/bin.svg" width=50px  draggable=false>
+										</div>
+										<p class="program-text-2">Portfolio</p>
+									</div>
+
+
+								</div>
+								<div id="portfolio-info-pane"></div>
 							</div>
 						</div>
 					</div>
