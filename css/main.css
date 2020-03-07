@@ -1,23 +1,3 @@
-#anim
-{
-	background-color: red;
-	/*width: 100px;*/
-	position: absolute;
-	left: 0px;
-	top: 0px;
-}
-
-#click-detect
-{
-	position: absolute;
-	left:25px;
-	top:20px;
-	/*background-color: blue;*/
-	width: 60px;
-	height: 45px;
-	/*text-align: center;*/
-}
-
 :root {
 	--main-color:#06c;
 }
@@ -56,11 +36,8 @@ body
 {
 	outline: none;
 }
-svg
-{
-	vector-effect:non-scaling-stroke;
-}
 
+/* For AE anim */
 path
 {
 	vector-effect:non-scaling-stroke;
@@ -728,67 +705,6 @@ path
 	animation-delay: 0s;
 }
 
-/*@keyframes logo-slide-keys 
-{
-  0%   
-  {
-  	opacity: 0%;
-  	margin-top: 300px;
-	animation-timing-function: ease-out;
-  }
-  70% 
-  {
-  	margin-top: -5px;
-  	animation-timing-function: ease-in-out;
-  }
-  95%
-  {
-  	opacity: 100%;
-  }
-   100% 
-  {
-  	opacity: 100%;
-  	margin-top: 0px;
-  	animation-timing-function: ease-out;
-  }
-}
-
-
-@keyframes window-fade-in-keys
-{
-  0%   
-  {
-  	opacity: 0%;
-  }
-  60%     
-  {
-  	opacity: 0%;
-  	transform: scale(0.8,0.8);
-  }
-  100% 
-  {
-  	opacity: 100%;
-  	transform: scale(1.0,1.0);
-  }
-}
-
-@keyframes taskbar-slide-keys
-{
-  0%   
-  {
-  	bottom: -50px;
-  }
-  60%  
-  {
-  	bottom: -50px;
-  }
-  100% 
-  {
-  	bottom: 0px;
-  }
-}
-*/
-
 /* The element to apply the animation to */
 
 .anim 
@@ -937,7 +853,7 @@ path
 	.program-text--hover
 	{
 		transition: 0.4s; /* programIconHoverDuration */
-		letter-spacing: 1px;
+		letter-spacing: .03em;
 		transition-timing-function: ease-out;
 	}
 
@@ -986,102 +902,3 @@ path
 		transition-delay: 0.0s;
 		transition-timing-function: ease-in-out;
 	}
-
-
-/*#taskbar-button:hover
-{
-	border-radius: 10px !important;
-	background-color: #898989;
-	letter-spacing: .95vw;
-	text-indent: calc(0.9 * .95 * 1vw);
-	transition: 0.5s;
-	}*/
-
-/*.buttonHover {
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-	border-radius: 50px !important;
-	}
-	/* The animation code */
-/*@keyframes example 
-{
-  0%   
-  {
-  	border-radius: 0px;
-  }
-  50%  
-  {
-  	border-radius: 5px;
-  }
-  100% 
-  {
-  	border-radius: 5px;
-  }
-}
-*/
-/* The element to apply the animation to */
-
-/*.anim 
-{
-	animation-name: example;
-	animation-timing-function: linear;
-	animation-duration: 0.3s;
-	animation-fill-mode: forwards;
-	animation-delay: 0s;
-}
-
-{
-  0%   
-  {
-  	background-color: red;
-  	width:	1000px;
-  }
-  50%  
-  {
-  	background-color: yellow;
-  	width:	50px;
-  }
-  100% 
-  {
-  	background-color: red;
-  	width:	50px;
-  }
-  }*/
-
-/*
-@keyframes page-shrink 
-{
-  0%   
-  {
-  	background-color:blue;
-  	width: 100%;
-  	height: 100%;
-  	left: 0;
-  	top: 0;
-  	border: 0px solid #000;
-  	position:fixed;
-  }
-  100% 
-  {
-  	background-color: purple;
-  	left: 30%;
-  	top: 30px;
-  	width: 40%;
-  	height: 40%;
-  	border: 1px solid #000;
-  	position:relative;
-  }
-}
-
-.page-shrink 
-{
-	animation-name: page-shrink;
-	animation-timing-function: ease-out;
-	animation-duration: 0.5s;
-	animation-fill-mode: forwards;
-	animation-delay: 0s;
-}
-*/

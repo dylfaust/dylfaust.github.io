@@ -5,7 +5,7 @@
   let taskbarButtons = document.getElementsByClassName("program-button");
 
   var params = {
-  container: document.getElementById('program-icon-scaler'),
+  container: document.getElementById('program-icon-anim'),
   renderer: 'svg',
   loop: false,
   autoplay: false,
@@ -22,11 +22,11 @@ for (let i = 0; i < taskbarButtons.length; i++)
 {
   let programButton = taskbarButtons[i];
 
-  // icon = programButton.getElementsByClassName("program-icon")[0];
+  programButton.icon = programButton.getElementsByClassName("program-icon")[0];
   programButton.text = programButton.getElementsByClassName("program-text")[0];
   // icon.fg = programButton.getElementsByClassName("folder-fg")[0];
 
-  goAnimState(programButton, "program-icon--normal");
+  goAnimState(programButton.icon, "program-icon--normal");
   goAnimState(programButton.text, "program-text--normal");
   
   programButton.addEventListener("mouseover", onMouseOverProgram, true);
@@ -44,7 +44,7 @@ function onMouseOverProgram()
   this.hovered = true;
   if (!this.active)
   {
-    goAnimState(this, "program-icon--hover");
+    goAnimState(this.icon, "program-icon--hover");
     goAnimState(this.text, "program-text--hover");
   }
 }
@@ -54,7 +54,7 @@ function onMouseOutProgram()
   this.hovered = false;
   if (!this.active)
   {
-    goAnimState(this, "program-icon--normal");
+    goAnimState(this.icon, "program-icon--normal");
     goAnimState(this.text, "program-text--normal");
     // goAnimState(this.fg, "folder-fg--normal");
   }
@@ -75,7 +75,7 @@ function onClickProgram()
   // this.style.transformOrigin.posY = posY;
   setTimeout(function() {
 animData.play();
-    goAnimState(thisElement, "program-icon--active");
+    goAnimState(thisElement.icon, "program-icon--active");
     goAnimState(thisElement.text, "program-text--active");
     // goAnimState(thisElement.fg, "folder-fg--active");
   });
