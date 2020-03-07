@@ -12,31 +12,10 @@
 	position: absolute;
 	left:25px;
 	top:20px;
-	background-color: blue;
+	/*background-color: blue;*/
 	width: 60px;
 	height: 45px;
 	/*text-align: center;*/
-}
-
-#folder-anim
-{
-	position: absolute;
-	/*background-color: #FFFFFFAA;*/
-	width: 500px;
-	/*height: 800px !important;*/
-	/*overflow: hidden;*/
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	/*transform: translateY(-50%);*/
-
-}
-
-#lottie-test
-{
-	background:green;
-	width: 200px;
 }
 
 :root {
@@ -76,6 +55,16 @@ body
 *:focus 
 {
 	outline: none;
+}
+svg
+{
+	vector-effect:non-scaling-stroke;
+}
+
+path
+{
+	vector-effect:non-scaling-stroke;
+	stroke-width: 1px !important;
 }
 
 ::selection 
@@ -401,7 +390,7 @@ body
 	background-image: radial-gradient(circle, rgba(242,226,145,1) 0%, rgba(242,217,118,1) 73%, rgba(242,199,68,1) 100%, rgba(242,199,68,1) 100%);
 	/*//transform: scale(.3);*/
 	/*text-align: center;*/
-	background-color: blue;
+	/*background-color: blue;*/
 }
 
 #gradient 

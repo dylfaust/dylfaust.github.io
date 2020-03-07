@@ -4,21 +4,34 @@
 {
   let taskbarButtons = document.getElementsByClassName("program-button");
 
+  var params = {
+  container: document.getElementById('program-icon-scaler'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: "https://assets5.lottiefiles.com/packages/lf20_gBxadp.json"
+};
+
+var animData;
+animData= bodymovin.loadAnimation(params);
+
+
 // window.alert("swag");
 
 for (let i = 0; i < taskbarButtons.length; i++)
 {
   let programButton = taskbarButtons[i];
 
-  icon = programButton.getElementsByClassName("program-icon")[0];
-  icon.text = programButton.getElementsByClassName("program-text")[0];
-  icon.fg = programButton.getElementsByClassName("folder-fg")[0];
+  // icon = programButton.getElementsByClassName("program-icon")[0];
+  programButton.text = programButton.getElementsByClassName("program-text")[0];
+  // icon.fg = programButton.getElementsByClassName("folder-fg")[0];
 
-  goAnimState(icon.fg, "folder-fg--normal");
+  goAnimState(programButton, "program-icon--normal");
+  goAnimState(programButton.text, "program-text--normal");
   
-  icon.addEventListener("mouseover", onMouseOverProgram, true);
-  icon.addEventListener("mouseout", onMouseOutProgram, true);
-  icon.addEventListener("click", onClickProgram, true);
+  programButton.addEventListener("mouseover", onMouseOverProgram, true);
+  programButton.addEventListener("mouseout", onMouseOutProgram, true);
+  programButton.addEventListener("click", onClickProgram, true);
 }
 }
 
@@ -43,7 +56,7 @@ function onMouseOutProgram()
   {
     goAnimState(this, "program-icon--normal");
     goAnimState(this.text, "program-text--normal");
-    goAnimState(this.fg, "folder-fg--normal");
+    // goAnimState(this.fg, "folder-fg--normal");
   }
 }
 
@@ -61,9 +74,10 @@ function onClickProgram()
   // this.style.transformOrigin.posX = posX;
   // this.style.transformOrigin.posY = posY;
   setTimeout(function() {
+animData.play();
     goAnimState(thisElement, "program-icon--active");
     goAnimState(thisElement.text, "program-text--active");
-    goAnimState(thisElement.fg, "folder-fg--active");
+    // goAnimState(thisElement.fg, "folder-fg--active");
   });
  // window.alert("click");
 }
