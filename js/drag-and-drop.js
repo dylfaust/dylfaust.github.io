@@ -21,6 +21,16 @@ function makeWindowDraggable(draggable, appendParent=null)
   if (draggable && draggable.style.zIndex > topmostZIndex)
     topmostZIndex = draggable.style.zIndex;
 
+  if (draggable.appendParent == document.body)
+  {
+    currWindow=draggable;
+    currWindow.shiftX=0;
+    currWindow.shiftY=0;
+    document.body.append(currWindow);
+    moveAt(draggable.getBoundingClientRect().left, draggable.getBoundingClientRect().top);
+    currWindow=null;
+  }
+
 }
 
 function disableWindowDraggable(draggable)
@@ -52,8 +62,8 @@ function mouseDown(event)
 
       var top =  child.getBoundingClientRect().top;
       var bottom =  child.getBoundingClientRect().bottom;
-           var left =  child.getBoundingClientRect().left;
-                var right =  child.getBoundingClientRect().right;
+      var left =  child.getBoundingClientRect().left;
+      var right =  child.getBoundingClientRect().right;
 
       var withinY = posY > top && posY < bottom;
       var withinX = posX > left && posX < right;
@@ -72,13 +82,13 @@ function mouseDown(event)
     currWindow.shiftX = event.clientX - currWindow.getBoundingClientRect().left + (isFolder ? 30.0 : 0.0); 
     currWindow.shiftY = event.clientY - currWindow.getBoundingClientRect().top + (isFolder ? 30.0 : 0.0);
 
-       var posX = event.clientX;
-      var posY = event.clientY;
+    var posX = event.clientX;
+    var posY = event.clientY;
 
-      var top =  child.getBoundingClientRect().top;
-      var bottom =  child.getBoundingClientRect().left;
+    var top =  child.getBoundingClientRect().top;
+    var bottom =  child.getBoundingClientRect().left;
 
-      console.log(posX + " | " + posY + "\n" + left + " | " + top + "\n" + event.pageX + " | " + event.pageY);
+    console.log(posX + " | " + posY + "\n" + left + " | " + top + "\n" + event.pageX + " | " + event.pageY);
 
     currWindow.style.position = 'absolute';
     currWindow.style.zIndex = topmostZIndex;

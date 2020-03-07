@@ -12,13 +12,14 @@ Fucking let's make some cool shit whaddayasay
 <head>
 	<!-- Styling -->
 	<link rel="stylesheet" href="libs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/css/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/anims.css">
 
 	<!-- Libs -->
 	<script src="libs/js/jquery-1.11.3.min.js"></script>
 	<script src="libs/js/bootstrap.min.js"></script>
-
+	<script src="libs/js/jquery-ui.min.js"></script>
 	<script src="libs/js/lottie.js"></script>
 
 </head>
@@ -165,7 +166,7 @@ Fucking let's make some cool shit whaddayasay
 
 
 		<!---- Window Notes ---->
-		<div id = "window-notes" class = "box window d-flex flex-column window-fade-in">
+		<div id = "window-notes" class = "box window d-flex flex-column window-fade-in ui-widget-content">
 			<div id = "window-draggable" class = "topbar box draggable">
 				<div id = "topbar-notes" class = "topbar-text window-margins">
 					dylanFaust.exe
@@ -173,7 +174,7 @@ Fucking let's make some cool shit whaddayasay
 
 			</div>
 
-			<div  id = "body-notes" class = "editable-text-container window-body window-margins flex-grow-1">
+			<div  id = "body-notes" class = "editable-text-container window-body window-margins">
 				<p class = "editable-text" contenteditable="true" spellcheck="false">
 					A <b>UI / UX Programmer</b> with a keen eye for polish.
 				</p>
@@ -211,6 +212,12 @@ Fucking let's make some cool shit whaddayasay
 
 
 <!-- CODE ----------------------------------------------------------->
+<script>
+	$( function() {
+		$( "#window-notes" ).resizable();
+	} );
+</script>
+
 <script type='text/javascript'>
 
 	var container;

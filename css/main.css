@@ -63,7 +63,7 @@ path
 	/* width */
 	::-webkit-scrollbar 
 	{
-		width: 5px;
+		width: 4px;
 		margin-bottom: 10px;
 		margin-right: 20px;
 		padding-right: 20px;
@@ -76,7 +76,7 @@ path
 	{
 		background: #f1f1f1; 
 		background-color: #FFFFFF00;
-		margin-bottom: 1px;
+		margin-bottom: 8px;
 	}
 
 	/* Handle */
@@ -94,6 +94,20 @@ path
 	}
 
 /* 
+
+/* --------------------------------------------------------------------------
+	Resize handle
+	-------------------------------------------------------------------------- */
+
+	.ui-resizable-handle
+	{
+		right: -5px !important;
+		bottom: -5px !important;
+		margin-right: 0px !important;
+		padding-right: 0px !important;
+	}
+
+/*
 ===============================================================================
 --							       CLASSES									 --
 =============================================================================== 
@@ -206,7 +220,8 @@ path
 
 	.topbar
 	{
-		height:12%;
+		max-height:12%;
+		height: 24px; /*topbar-height*/
 		background-color: grey;
 		margin: 0;
 		padding: 0;
@@ -523,9 +538,16 @@ path
 	{
 		width: 256px;
 		height: 156px;
-		max-height: 30%;
+		/*max-height: 30%;*/
+
+		min-height: 80px;
+		min-width: 130px;
+
 		background-color: white;
-		right: 50px;
+		/*margin-left:70%;*/
+		/*margin-right:10%;*/
+		right: 60px;
+
 		top: 100px;
 		background-color: #f9e1ff;
 	}
@@ -539,7 +561,7 @@ path
 
 	#body-notes
 	{
-	
+		height: calc(100% - 24px/*topbar-height*/);
 	}
 
 
