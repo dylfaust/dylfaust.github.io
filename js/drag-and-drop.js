@@ -6,30 +6,43 @@ for (let i = 0; i < draggables.length; i++)
 {
   makeWindowDraggable(draggables[i]);
 }
-// makeWindowDraggable("window-notes");
-// makeWindowDraggable("window-console");
-// makeWindowDraggable("window-wip");
 
-function makeWindowDraggable(draggable)
+function makeWindowDraggable(draggable, appendParent=null)
 {
-  // var draggable = document.getElementById(id);
-  draggable.addEventListener("mousedown", function(event){ mouseDown(event, draggable) });
-  draggable.addEventListener("mouseup", function(event){ mouseUp(event) });
+  draggable.classList.add("window");
+  draggable.addEventListener("mousedown", mouseDown,false);
+  draggable.addEventListener("mouseup", mouseUp, false);
+
+  if (appendParent == null)
+    appendParent=document.body;
+
+  draggable.appendParent = appendParent;
+
   if (draggable && draggable.style.zIndex > topmostZIndex)
     topmostZIndex = draggable.style.zIndex;
 
 }
 
-function mouseDown(event, window)
+function disableWindowDraggable(draggable)
+{
+  draggable.classList.remove("window");
+  draggable.removeEventListener("mousedown", mouseDown,false);
+  draggable.removeEventListener("mouseup", mouseUp, false);
+  if (draggable && draggable.style.zIndex > topmostZIndex)
+    topmostZIndex = draggable.style.zIndex;
+
+}
+
+function mouseDown(event)
 {
   var canDrag = false;
-  if (window.classList.contains("draggable"))
+  if (this.classList.contains("draggable"))
   {
     canDrag = true;
   }
   else
   {
-    var child = window.getElementsByClassName("draggable")[0];
+    var child = this.getElementsByClassName("draggable")[0];
     if (child)
     {
       canDrag = true;
@@ -39,32 +52,47 @@ function mouseDown(event, window)
 
       var top =  child.getBoundingClientRect().top;
       var bottom =  child.getBoundingClientRect().bottom;
+           var left =  child.getBoundingClientRect().left;
+                var right =  child.getBoundingClientRect().right;
 
       var withinY = posY > top && posY < bottom;
+      var withinX = posX > left && posX < right;
 
-      canDrag = withinY;
+      canDrag = withinY && withinX;
     }
   }
 
 
   if (canDrag)
   {
-    currWindow = window;
-    currWindow.shiftX = event.clientX - currWindow.getBoundingClientRect().left;
-    currWindow.shiftY = event.clientY - currWindow.getBoundingClientRect().top;
+    let isFolder = this.appendParent != document.body;
+
+    currWindow = this;
+    // I dont understand why, but i need to offset this by 30 :'(
+    currWindow.shiftX = event.clientX - currWindow.getBoundingClientRect().left + (isFolder ? 30.0 : 0.0); 
+    currWindow.shiftY = event.clientY - currWindow.getBoundingClientRect().top + (isFolder ? 30.0 : 0.0);
+
+       var posX = event.clientX;
+      var posY = event.clientY;
+
+      var top =  child.getBoundingClientRect().top;
+      var bottom =  child.getBoundingClientRect().left;
+
+      console.log(posX + " | " + posY + "\n" + left + " | " + top + "\n" + event.pageX + " | " + event.pageY);
+
     currWindow.style.position = 'absolute';
     currWindow.style.zIndex = topmostZIndex;
-    document.body.append(currWindow);
+    currWindow.appendParent.append(currWindow);
 
     moveAt(event.pageX, event.pageY);
     // move the draggable on mousemove
-    document.addEventListener('mousemove', onMouseMove, event);
+    document.addEventListener('mousemove', onMouseMove, true);
   }
 }
 
 function mouseUp(event)
 {
-  document.removeEventListener('mousemove', onMouseMove);
+  document.removeEventListener('mousemove', onMouseMove, true);
   currWindow = null;
 }
 
