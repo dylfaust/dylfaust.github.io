@@ -34,35 +34,6 @@ Fucking let's make some cool shit whaddayasay
 		<div id="logo-container" class = "unselectable-text">
 			<img src="imgs/logo.svg" width=200px id="logo" draggable=false>
 		</div>
-
-		<!---- Window Console ---->
-	<!-- 	<div id = "window-wip" class = "box window d-flex flex-column window-fade-in draggable">
-			<div id = "window-draggable" class = "topbar box draggable">
-				<div id = "topbar-wip" class = "topbar-text window-margins">
-					wip.exe
-				</div>
-
-			</div>
-
-			<div  id = "body-wip" class = "editable-text-container window-body window-margins unselectable-text flex-grow-1">
-				<p>This website is an active <b>work in progress</b>.</p>
-			</div>
-		</div> -->
-		<!---- Window Console ---->
-		<!-- <div id = "window-console" class = "box window d-flex flex-column window-fade-in">
-			<div id = "window-draggable" class = "topbar box draggable">
-				<div id = "topbar-console" class = "topbar-text window-margins">
-					shell.exe
-				</div>
-
-			</div>
-
-			<div  id = "body-console" class = "editable-text-container window-body window-margins flex-grow-1">
-				<p class = "editable-text" contenteditable="true" spellcheck="false">
-					>_
-				</p>
-			</div>
-		</div> -->
 		
 		<!---- Taskbar ---->
 		<div id="taskbar" class="taskbar-slide-in">
@@ -187,13 +158,13 @@ Fucking let's make some cool shit whaddayasay
 
 			<div  id = "body-notes" class = "editable-text-container window-body window-margins">
 				<p class = "editable-text" contenteditable="true" spellcheck="false">
-					A <b>UI / UX Programmer</b> with a keen eye for polish.
+					A <b>game designer</b> with a passion for programming and digital art.
 				</p>
 			</div>
 		</div>
 
 		<div id = "folder-exe" class = "program-button">
-			<div class = "program-icon-spacer">
+			<div id="portfolio-spacer" class = "program-icon-spacer">
 				<div id="program-icon-proc-anim" class="program-icon--normal">
 					<div id = "program-icon-svg-anim">
 						<div id="portfolio-window-contents">
@@ -206,17 +177,60 @@ Fucking let's make some cool shit whaddayasay
 								</div>
 							</div>
 
-							<div id="portfolio-body">
-								<div id="portfolio-column-list" style="padding-top: 20px; padding-bottom: 0px;">
-									<div id = "test" class = "program-button-2">
-										<div class = "program-icon">
-											<img src="imgs/bin.svg" width=50px  draggable=false>
+							<div id="portfolio-body" class="fade--off">
+								<div class="column-list-wrapper">
+									<div id="portfolio-column-list" class="column-list">
+
+										<!---- Portfolio List ---->
+
+										<!---- TLOU ---->
+										<div id="tlou" class = "column-list-item">
+											<div class = "column-list-icon-wrapper">
+												<img src="imgs/bin.svg" draggable=false>
+											</div>
+											<p class="column-list-item-text">The Last<br>of Us 2
+											</p>
 										</div>
-										<p class="program-text-2">Portfolio</p>
+										
+										<div class="column-list-spacer"></div>
+
+										<div id="ctrlshift" class = "column-list-item">
+											<div class = "column-list-icon-wrapper">
+												<img src="imgs/bin.svg" draggable=false>
+											</div>
+											<p class="column-list-item-text">CtrlShift</p>
+										</div>
+										
+										<div class="column-list-spacer"></div>
+
+										<div id="morp" class = "column-list-item">
+											<div class = "column-list-icon-wrapper">
+												<img src="imgs/bin.svg" draggable=false>
+											</div>
+											<p class="column-list-item-text">The Mice of Riddle Place</p>
+										</div>
+
+										<div class="column-list-spacer"></div>
+
+										<div id="solarscreen" class = "column-list-item">
+											<div class = "column-list-icon-wrapper">
+												<img src="imgs/bin.svg" draggable=false>
+											</div>
+											<p class="column-list-item-text">SolarScreen</p>
+										</div>
+
+										<div class="column-list-spacer"></div>
+
+										<div id="spellcasters" class = "column-list-item">
+											<div class = "column-list-icon-wrapper">
+												<img src="imgs/bin.svg" draggable=false>
+											</div>
+											<p class="column-list-item-text">Spellcasters</p>
+										</div>
+
 									</div>
-
-
 								</div>
+
 								<div id="portfolio-info-pane"></div>
 							</div>
 						</div>
@@ -227,7 +241,7 @@ Fucking let's make some cool shit whaddayasay
 
 				<!-- <div class="debug-origin"></div> -->
 			</div>
-			<p class="program-text">Portfolio</p>
+			<p id="portfolio-text" class="program-text">Portfolio</p>
 		</div>
 		
 		<div id="bin">
@@ -336,7 +350,7 @@ Fucking let's make some cool shit whaddayasay
 <script src="js/common-funcs.js"></script>
 <script src="js/drag-and-drop.js"></script>
 <script src="js/taskbar.js"></script>
-<script src="js/folder.js"></script>
+<script src="js/folder-button.js"></script>
 <script src="js/anim-test.js"></script>
 
 </body>
