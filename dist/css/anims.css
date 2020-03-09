@@ -1,0 +1,256 @@
+/* 
+===============================================================================
+--							      ANIMS										 --
+=============================================================================== 
+*/
+
+/* --------------------------------------------------------------------------
+	Generic
+	-------------------------------------------------------------------------- */
+	.fade--in
+	{
+		opacity: 100%;
+		transition: .3s;
+	}
+
+	.fade--off
+	{
+		opacity: 0%;
+		transition: .3s;
+	}
+
+	.logo-slide-anim 
+	{
+		animation-name: logo-slide-keys;
+		animation-timing-function: ease-out;
+		animation-duration: 0.8s;
+		animation-fill-mode: forwards;
+		animation-delay: 0s;
+	}
+
+	.window-fade-in 
+	{
+		animation-name: window-fade-in-keys;
+		animation-timing-function: ease-out;
+		animation-duration: 1.1s;
+		animation-fill-mode: forwards;
+		animation-delay: 0s;
+	}
+
+	.taskbar-slide-in
+	{
+		animation-name: taskbar-slide-keys;
+		animation-timing-function: ease-out;
+		animation-duration: 1.1s;
+		animation-fill-mode: forwards;
+		animation-delay: 0s;
+	}
+
+	/* The element to apply the animation to */
+
+	.anim 
+	{
+		animation-name: example;
+		animation-timing-function: linear;
+		animation-duration: 0.3s;
+		animation-fill-mode: forwards;
+		animation-delay: 0s;
+	}
+
+/* --------------------------------------------------------------------------
+	Taskbar Button
+	-------------------------------------------------------------------------- */
+
+	.taskbar-button-row--normal
+	{
+		width: 64px;
+		margin-left: calc((99px/2.0) - (64px/2.0));
+
+		transition: 0.15s;
+		transition-timing-function: ease-out;
+	}
+
+	.taskbar-button-row--hover
+	{
+		width: 90px;
+		margin-left: calc((99px/2.0) - (90px/2.0));	
+
+		transition: 0.4s;
+		transition-timing-function: cubic-bezier(.4,1.76,.3,.98);
+	}
+
+	.taskbar-button-row--active
+	{
+		width: 32px;
+		margin-left: calc((99px/2.0) - (32px/2.0));	
+
+		transition: 0.1s;
+		transition-timing-function: ease-in;
+	}
+
+	.taskbar-button-fill--normal
+	{
+		transform: scale(1.0, 1.0);
+		transition: 0.1s;
+		transition-timing-function: ease-in;
+		filter: brightness(100%);
+	}
+
+	.taskbar-button-fill--active
+	{
+		transform: scale(0.935, 0.8);
+		transition: 0.15s;
+		transition-timing-function: ease-in;
+		filter: brightness(60%);
+	}
+
+/* --------------------------------------------------------------------------
+	Taskbar Submenu
+	-------------------------------------------------------------------------- */
+
+	.taskbar-submenu--active
+	{
+		height: 480px !important;
+		visibility: visible;
+
+		transition: 0.3s;
+		transition-timing-function: ease-out;
+	}
+
+	.taskbar-submenu--off
+	{
+		height: 0px !important;
+		visibility: hidden;
+
+		transition: 0.2s;
+	}
+
+/* --------------------------------------------------------------------------
+	Overlay
+	-------------------------------------------------------------------------- */
+
+	.dark-overlay--active
+	{
+		opacity: 50% !important;
+
+		transition: 0.3s !important;
+		transition-timing-function: ease-out !important;
+	}
+
+	.dark-overlay--off
+	{
+		opacity: 0% !important;
+
+		transition: 0.3s !important;
+		transition-timing-function: ease-out !important;
+	}
+
+/* --------------------------------------------------------------------------
+	Program Button
+	-------------------------------------------------------------------------- */
+	.program-icon--hover
+	{
+		transform: scale(1.05, 1.05);
+		transition-timing-function: ease-out;
+		filter: brightness(90%);
+		transition: 0.4s; /* programIconHoverDuration */
+	}
+
+	.program-icon--normal
+	{
+		transform: scale(1.0, 1.0);
+		filter: brightness(100%);
+		transition: 0.4s;
+		width: 100%;
+		left: 0px;
+		top: 0px;
+	}
+
+	.program-icon--active
+	{
+		width: 600px;
+		left: 100px;
+		top: 30px;
+
+		transition: 0.22s;
+		transition-timing-function: ease-in-out;
+	}
+
+	.program-text--normal
+	{
+		transition: 0.4s;
+		letter-spacing: 0px;
+	}
+
+	.program-text--anchor-upper-left
+	{
+		transition: 0.1s; /* programIconHoverDuration */
+	}
+
+	.program-text--hover
+	{
+		transition: 0.4s; /* programIconHoverDuration */
+		letter-spacing: .03em;
+		transition-timing-function: ease-out;
+	}
+
+	.program-text--active
+	{
+		transition: 0.1s;
+		opacity: 0%;
+		transition-timing-function: ease-out;
+	}
+
+	.debug-origin
+	{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: orange;
+		opacity: 1%;
+		pointer-events: none;
+		transform-origin: inherit;
+		transform:scale(.1, .1);
+	}
+
+	.origin-top-left
+	{
+		transition: 0.1s;
+		transform-origin: top left;
+	}
+
+	.origin-center
+	{
+		transform-origin: center center;
+	}
+
+	.folder-fg--normal
+	{
+		opacity: 0%;
+	}
+
+	.folder-fg--active
+	{
+		opacity: 100%;
+		transition: 0.22s;
+		transition-delay: 0.0s;
+		transition-timing-function: ease-in-out;
+	}
+
+	#program-icon-anim
+	{
+		background: blue;
+	}
+
+	.social-media-button:hover
+	{
+		transform: scale(1.03, 1.03);
+		transition-timing-function: ease-out;
+		filter: brightness(90%);
+		transition: 0.2s; /* socialMediaHoverDuration */
+	}
+	.social-media-button
+	{
+		transition: 0.2s; /* socialMediaHoverDuration */
+	}

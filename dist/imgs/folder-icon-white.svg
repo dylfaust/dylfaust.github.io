@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.5 40.63">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d7fdff;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        vector-effect:non-scaling-stroke;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>folder-icon-white</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path id="fill" class="cls-1" d="M95.22,44.5H70.6A1.63,1.63,0,0,1,69,42.88V42.4a2.9,2.9,0,0,0-2.9-2.9H51.9A2.9,2.9,0,0,0,49,42.4V73.85a5.29,5.29,0,0,0,5.28,5.27H95.22a5.29,5.29,0,0,0,5.28-5.27V49.77a5.29,5.29,0,0,0-5.28-5.27" transform="translate(-48.5 -39)"/>
+    <path id="outline" class="cls-2" d="M95.22,44.5H70.6A1.63,1.63,0,0,1,69,42.88V42.4a2.9,2.9,0,0,0-2.9-2.9H51.9A2.9,2.9,0,0,0,49,42.4V73.85a5.29,5.29,0,0,0,5.28,5.27H95.22a5.29,5.29,0,0,0,5.28-5.27V49.77A5.29,5.29,0,0,0,95.22,44.5Z" transform="translate(-48.5 -39)"/>
+  </g>
+  <g id="Layer_1_copy" data-name="Layer 1 copy">
+    <path class="cls-3" d="M95.22,44.5H49V73.85a5.29,5.29,0,0,0,5.28,5.27H95.22a5.29,5.29,0,0,0,5.28-5.27V49.77A5.29,5.29,0,0,0,95.22,44.5Z" transform="translate(-48.5 -39)"/>
+  </g>
+</svg>
