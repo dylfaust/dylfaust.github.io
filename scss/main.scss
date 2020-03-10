@@ -1,0 +1,419 @@
+@import "./resets";
+@import "./variables";
+@import "./functions";
+
+// --------------------------------------
+//    Variables
+// --------------------------------------
+
+// Palette
+$primary-color: #f2f0d8;
+$secondary-color: #000000;
+$text-color: #000000;
+$hover-color: #00000059;
+$window-bg: #f6f4e4;
+
+// Spacing
+$margin-horiz: 38px;
+
+$subwindow-margin-horiz: 17px;
+$subwindow-margin-vert: 10px;
+
+// Presets
+$line: 1px;
+$button-large-height: 38px;
+$button-large-width: 194px;
+
+// Fonts
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 900
+);
+
+$default-font: "Open Sans", Open Sans, sans-serif;
+
+$font-sizes: (
+  "small": 20px,
+  "medium": 22px
+);
+
+// Media sizes
+$mobile: 800px;
+
+// --------------------------------------
+//    Mixins
+// --------------------------------------
+
+@mixin box-outline {
+  border-style: solid;
+  border-width: $line;
+  border-color: $secondary-color;
+}
+
+@mixin subwindow-margins {
+  margin-top: $subwindow-margin-vert;
+  margin-left: $subwindow-margin-horiz;
+  margin-right: $subwindow-margin-horiz;
+  margin-bottom: $subwindow-margin-vert;
+}
+
+@mixin button-hover() {
+  background-color: $hover-color !important;
+  transition: 0.2s;
+  transition-timing-function: ease-out;
+  border-radius: 7px;
+}
+
+@mixin button() {
+  @include box-outline;
+  display: table;
+  transition: 0.2s;
+  transition-timing-function: ease-out;
+  user-select: none;
+
+  &:hover {
+    @include button-hover();
+  }
+
+  &:active {
+    @include button-hover();
+    transform: scale(0.985, 0.985);
+    transition: 0.05s;
+  }
+}
+
+@mixin button-large() {
+  @include button;
+  width: $button-large-width;
+  height: $button-large-height;
+}
+
+// --------------------------------------
+//    Styles
+// --------------------------------------
+html {
+  font-family: $default-font;
+  overflow: hidden;
+}
+
+body {
+  background: $primary-color;
+  color: $text-color;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+p {
+  font-size: size(medium);
+}
+
+// --------------------------------------
+//    General
+// --------------------------------------
+
+.pos-tl {
+  top: 0;
+  left: 0;
+}
+
+.pos-tr {
+  top: 0;
+  right: 0;
+}
+
+.pos-bl {
+  bottom: 0;
+  left: 0;
+}
+
+.pos-br {
+  bottom: 0;
+  right: 0;
+}
+
+// --------------------------------------
+//    Taskbar
+// --------------------------------------
+
+$taskbar-height: 88px;
+#taskbar {
+  @include horiz-center(calc(100% - (#{$margin-horiz} * 2)));
+  position: fixed;
+  height: $taskbar-height;
+  bottom: 0;
+  border-top: solid $line $secondary-color;
+}
+
+// Main Button
+// -----------------------
+
+#taskbar-main-button-wrapper {
+  @include vert-center(36px);
+  position: absolute;
+  width: 36px;
+}
+
+#taskbar-main-button {
+  position: absolute;
+  @include vert-center(100%);
+  @include horiz-center(100%);
+  transition: 0.1s;
+  transition-timing-function: ease-out;
+
+  // Anims
+  $extended-width: 40px;
+  $collapse-width: 34px;
+  &:hover {
+    @include vert-center-important($extended-width);
+    @include horiz-center-important($extended-width);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+  }
+  &:active {
+    @include vert-center-important($collapse-width);
+    @include horiz-center-important($collapse-width);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+  }
+}
+
+.taskbar-button-box {
+  width: 15.2px;
+  height: 15.2px;
+  background: $secondary-color;
+  position: absolute;
+}
+
+// Nav Buttons
+// -----------------------
+
+$taskbar-nav-button-margin: 35px/2;
+$taskbar-nav-button-width: 194px;
+$taskbar-nav-button-count: 3;
+
+$taskbar-nav-button-container-width: getRowWidth(
+  $taskbar-nav-button-count,
+  $taskbar-nav-button-width,
+  $taskbar-nav-button-margin
+);
+
+#taskbar-nav-buttons-container {
+  position: absolute;
+  @include vert-center($button-large-height);
+  @include horiz-center($taskbar-nav-button-container-width);
+}
+
+.taskbar-nav-button {
+  @include button-large();
+  float: left;
+  margin-left: $taskbar-nav-button-margin;
+  margin-right: $taskbar-nav-button-margin;
+}
+
+.taskbar-button-text {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: size(small);
+}
+
+$social-media-button-margin: 17.5px/2;
+$social-media-button-width: 34px;
+$social-media-button-height: 34px;
+$social-media-button-count: 2;
+
+$social-media-button-container-width: getRowWidth(
+  $social-media-button-count,
+  $social-media-button-width,
+  $social-media-button-margin
+);
+
+// Social Media Buttons
+// -----------------------
+
+#social-buttons-container {
+  position: absolute;
+  @include vert-center($social-media-button-height);
+  width: $social-media-button-container-width;
+  right: calc(#{$social-media-button-margin} * -1);
+  // background: blue;
+}
+
+.social-media-button {
+  @include button();
+  width: $social-media-button-width;
+  float: left;
+  height: 100%;
+  margin-left: $social-media-button-margin;
+  margin-right: $social-media-button-margin;
+}
+
+.social-media-icon {
+  display: table-cell;
+  filter: brightness(0%);
+}
+
+// --------------------------------------
+//    Windows
+// --------------------------------------
+
+.window {
+  position: absolute;
+  @include box-outline();
+  background: $window-bg;
+}
+
+$topbar-height: 24px;
+.topbar {
+  background-color: $secondary-color;
+  height: $topbar-height; /*topbar-height*/
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%;
+  position: absolute;
+}
+
+.window-body {
+  @include subwindow-margins();
+  height: calc(100% - #{$topbar-height} - #{$subwindow-margin-vert});
+  // margin-bottom: 0px;
+  // bottom: 0;
+  top: $topbar-height;
+  position: relative;
+}
+
+// #about-me-window-body {
+//   margin-right: 10px;
+// }
+
+$window-button-spacing: 13px;
+
+$window-button-spacer-height: calc(#{$button-large-height} + (#{$window-button-spacing} * 2));
+.window-button-spacer {
+  height: $window-button-spacer-height;
+  // position: absolute;
+  position: relative;
+  // bottom: calc(#{$subwindow-margin-vert} * -1);
+  // background: blue;
+}
+
+.window-button {
+  @include button;
+  @include horiz-center(130px);
+  @include vert-center($button-large-height);
+  @include box-outline();
+  position: absolute;
+  display: table;
+}
+
+#about-me-text {
+  overflow: auto;
+  height: calc(100% - #{$window-button-spacer-height});
+}
+
+#email-text {
+  @include box-outline();
+  overflow: auto;
+  height: calc(100% - #{$window-button-spacer-height});
+}
+
+.editable-text {
+  height: 100%;
+  font-size: size(medium);
+}
+
+#email-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#window-about-me {
+  width: 288px;
+  height: 220px;
+  // min-height: 80px;
+  // min-width: 130px;
+
+  right: 60px;
+  top: 100px;
+}
+
+#window-email {
+  width: 288px;
+  height: 220px;
+  // min-height: 80px;
+  // min-width: 130px;
+
+  left: 60px;
+  top: 200px;
+}
+
+$reel-window-width: 534px;
+$reel-window-height: 300px + $topbar-height;
+#window-reel {
+  width: $reel-window-width;
+  height: $reel-window-height;
+  // min-height: 80px;
+  // min-width: 130px;
+
+  left: calc(50% - (#{$reel-window-width} / 2));
+  top: calc(50% - (#{$reel-window-height} / 2) - (#{$taskbar-height} / 2));
+}
+
+#reel-body {
+  background: $secondary-color;
+  margin-bottom: $subwindow-margin-vert;
+  margin-left: $subwindow-margin-vert;
+  margin-top: $subwindow-margin-vert;
+  margin-right: $subwindow-margin-vert;
+  height: calc(100% - #{$topbar-height} - #{$subwindow-margin-vert} * 2);
+}
+
+.close-button {
+  @include button;
+  border-color: $primary-color;
+  width: 16px;
+  @include vert-center(16px);
+  // @include vert-center(16px);
+  right: 9px;
+  position: absolute;
+}
+
+.close-button-icon {
+  display: table-cell;
+}
+
+// --------------------------------------
+//    Logo
+// --------------------------------------
+
+$logo-height: 46px;
+
+#logo-container {
+  position: absolute;
+  left: $margin-horiz;
+  top: 30px;
+  height: $logo-height;
+  user-select: none;
+}
+
+#logo-icon {
+  height: $logo-height;
+  display: inline-block;
+}
+
+#logo-text {
+  position: relative;
+  display: inline-block;
+  font-size: 23px;
+  font-weight: bold;
+  margin-left: calc(20px - .3em);
+  bottom: 13px;
+}

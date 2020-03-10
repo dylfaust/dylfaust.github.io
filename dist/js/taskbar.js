@@ -13,19 +13,19 @@ var submenuActive = false;
 // -------------------------------------------
 
   // Hover and click
-  taskbarButton.addEventListener("mouseover", onMouseOverTb, true);
-  taskbarButton.addEventListener("mouseout", onMouseOutTb, true);
-  taskbarButton.addEventListener("click", onClickTb, true);
+  // taskbarButton.addEventListener("mouseover", onMouseOverTb, true);
+  // taskbarButton.addEventListener("mouseout", onMouseOutTb, true);
+  // taskbarButton.addEventListener("click", onClickTb, true);
 
-  // Transitions
-  taskbarButtonBoxRow.addEventListener("transitionend", onTransitionEnd, event);
+  // // Transitions
+  // taskbarButtonBoxRow.addEventListener("transitionend", onTransitionEnd, event);
 
 // -------------------------------------------
 // Setup
 // -------------------------------------------
 
-goAnimState(taskbarButtonBoxRow, "taskbar-button-row--normal");
-goAnimState(submenu, "taskbar-submenu--off");
+// goAnimState(taskbarButtonBoxRow, "taskbar-button-row--normal");
+// goAnimState(submenu, "taskbar-submenu--off");
 
 // -------------------------------------------
 // States

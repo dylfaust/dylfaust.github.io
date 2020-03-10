@@ -1,5 +1,5 @@
 var currWindow;
-var topmostZIndex = -9999;
+var topmostZIndex = "-9999";
 
 var draggables = document.getElementsByClassName("window");
 for (let i = 0; i < draggables.length; i++)
@@ -52,7 +52,7 @@ function mouseDown(event)
   }
   else
   {
-    var child = this.getElementsByClassName("draggable")[0];
+    var child = this.getElementsByClassName("topbar")[0];
     if (child)
     {
       canDrag = true;
@@ -75,12 +75,9 @@ function mouseDown(event)
 
   if (canDrag)
   {
-    let isFolder = this.appendParent != document.body;
-
     currWindow = this;
-    // I dont understand why, but i need to offset this by 30 :'(
-    currWindow.shiftX = event.clientX - currWindow.getBoundingClientRect().left + (isFolder ? 30.0 : 0.0); 
-    currWindow.shiftY = event.clientY - currWindow.getBoundingClientRect().top + (isFolder ? 30.0 : 0.0);
+    currWindow.shiftX = event.clientX - currWindow.getBoundingClientRect().left + 0.0; 
+    currWindow.shiftY = event.clientY - currWindow.getBoundingClientRect().top + 0.0;
 
     var posX = event.clientX;
     var posY = event.clientY;
@@ -88,11 +85,12 @@ function mouseDown(event)
     var top =  child.getBoundingClientRect().top;
     var bottom =  child.getBoundingClientRect().left;
 
-    console.log(posX + " | " + posY + "\n" + left + " | " + top + "\n" + event.pageX + " | " + event.pageY);
-
     currWindow.style.position = 'absolute';
-    currWindow.style.zIndex = topmostZIndex;
-    currWindow.appendParent.append(currWindow);
+    var append = (currWindow.style.zIndex != topmostZIndex);
+
+    // currWindow.style.zIndex = topmostZIndex;
+    if (append)
+     document.body.append(currWindow);
 
     moveAt(event.pageX, event.pageY);
     // move the draggable on mousemove
@@ -119,4 +117,12 @@ function mouseUp(event)
   function onMouseMove(event) 
   {
     moveAt(event.pageX, event.pageY);
+    pauseEvent(event);
   }
+function pauseEvent(e){
+    if(e.stopPropagation) e.stopPropagation();
+    if(e.preventDefault) e.preventDefault();
+    e.cancelBubble=true;
+    e.returnValue=false;
+    return false;
+}

@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus 
+{
+	outline: none;
+}
+
+/* width */
+	::-webkit-scrollbar 
+	{
+		width: 4px;
+		margin-bottom: 10px;
+		margin-right: 20px;
+		padding-right: 20px;
+		right: 200px;
+		position: fixed;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track 
+	{
+		background: #f1f1f1; 
+		background-color: #FFFFFF00;
+		margin-bottom: 8px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb 
+	{
+		background: #888;
+		margin-left: 10px;
+		margin-right: -10px; 
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover 
+	{
+		background: #555; 
+	}

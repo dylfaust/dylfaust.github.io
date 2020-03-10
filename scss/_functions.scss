@@ -1,0 +1,46 @@
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@function size($size-name) {
+  @return map-get($font-sizes, $size-name);
+}
+
+@function getRowWidth($button-count, $button-width, $button-margin) {
+  @return calc((#{$button-width} * #{$button-count}) + (#{$button-margin} * (#{$button-count} * 2))
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin fillRemainingSpace($filled-space, $subwindow-margin-vert)
+{
+  height: calc(100% - #{$filled-space} - (#{$subwindow-margin-vert} * 2));
+}
+
+@mixin horiz-center($width) {
+  width: $width;
+  left: 50%;
+  margin-left: calc((#{$width} / 2) * -1);
+}
+
+@mixin vert-center($width) {
+  height: $width;
+  top: 50%;
+  margin-top: calc((#{$width} / 2) * -1);
+}
+
+@mixin vert-center-important($width) {
+  height: $width !important;
+  top: 50% !important;
+  margin-top: calc((#{$width} / 2) * -1) !important;
+}
+
+@mixin horiz-center-important($width) {
+  width: $width;
+  left: 50%;
+  margin-left: calc((#{$width} / 2) * -1) !important;
+}

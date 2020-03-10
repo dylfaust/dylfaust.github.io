@@ -1,1 +1,16 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs><style>.cls-1{fill:#069;}.cls-2{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.5px;}.cls-3{fill:#fff;}</style></defs><title>linked-in-button</title><rect class="cls-1" x="0.25" y="0.25" width="17.5" height="17.5"/><rect class="cls-2" x="0.25" y="0.25" width="17.5" height="17.5"/><path class="cls-3" d="M5.74,4.4A1.27,1.27,0,0,1,4.37,5.68a1.28,1.28,0,1,1,0-2.55A1.25,1.25,0,0,1,5.74,4.4M3.11,6.68H5.66v8.19H3.11Z"/><path class="cls-3" d="M7.18,9.29c0-1,0-1.87-.06-2.61H9.33l.11,1.14h.05A2.94,2.94,0,0,1,12,6.5C13.7,6.5,15,7.62,15,10v4.84H12.41V10.33c0-1.05-.37-1.77-1.29-1.77a1.4,1.4,0,0,0-1.31.95,2,2,0,0,0-.08.64v4.72H7.18Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;}
+</style>
+<title>linked-in-button</title>
+<g>
+	<polygon class="st0" points="11.3,25.6 25.4,17.5 11.3,9.4 	"/>
+	<g>
+		<rect x="0.5" y="0.5" class="st1" width="34" height="34"/>
+	</g>
+</g>
+</svg>
