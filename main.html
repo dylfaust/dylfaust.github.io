@@ -4,11 +4,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styling -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- <link rel="stylesheet" href="./css/anims.css"> -->
+
+  <!-- Libs -->
+  <script src="libs/js/jquery-1.11.3.min.js"></script>
+  <script src="libs/js/bootstrap.min.js"></script>
+  <script src="libs/js/jquery-ui.min.js"></script>
+  <script src="libs/js/lottie.js"></script>
+
   <title>dylanFaust.exe</title>
+
 </head>
-<h1>Hello world.</h1>
+
 <body>
-This website is <b>under construction.</b>
+  <!-- Logo -->
+  <div id="logo-container">
+    <img type="image/svg+xml" src="./imgs/logo.svg" id="logo-icon"></img>
+    <p id="logo-text">Dylan Faust</p>
+  </div>
+  <!-- Taskbar -->
+  <div id="taskbar">
+
+    <!-- Main button -->
+    <div id="taskbar-main-button-wrapper">
+      <div id="taskbar-main-button">
+        <div class="taskbar-button-box pos-tl"></div>
+        <div class="taskbar-button-box pos-tr"></div>
+        <div class="taskbar-button-box pos-bl"></div>
+        <div class="taskbar-button-box pos-br"></div>
+      </div>
+    </div>
+
+    <!-- Nav buttons -->
+    <div id="taskbar-nav-buttons-container">
+      <div class="taskbar-nav-button button">
+        <p class="taskbar-button-text">
+          About Me
+        </p>
+      </div>
+
+      <div class="taskbar-nav-button button">
+        <p class="taskbar-button-text">
+          Portfolio
+        </p>
+      </div>
+
+      <div class="taskbar-nav-button button">
+        <p class="taskbar-button-text">
+          Resume
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Social Media -->
+    <div id="social-buttons-container">
+      <a href="https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA" target="_blank" rel="noopener noreferrer"
+        class="social-media-button button">
+        <img type="image/svg+xml" src="./imgs/linked-in-button.svg" class="social-media-icon"></img>
+      </a>
+
+      <a href="http://www.linkedin.com/in/dylanfaust/" target="_blank" rel="noopener noreferrer"
+        class="social-media-button button">
+        <img type="image/svg+xml" src="./imgs/youtube-button.svg" class="social-media-icon"></img>
+      </a>
+    </div>
+  </div>
+
+  <!-- Windows -->
+  <div class="window ui-widget-content" id="window-about-me">
+    <div class="topbar">
+      <div class="close-button">
+        <img type="image/svg+xml" src="./imgs/close-button.svg" class="close-button-icon"></img>
+
+      </div>
+    </div>
+
+    <div class="window-body" id="about-me-window-body">
+      <div id="about-me-text">
+        <p class="editable-text" contenteditable="true" spellcheck="false">
+          <i>A </i><b>game designer</b><i> with a passion for programming and digital art.</i>
+        </p>
+      </div>
+      <div class="window-button-spacer">
+        <div class="window-button">
+          <p class="taskbar-button-text">
+            About Me
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="window ui-widget-content" id="window-email">
+    <div class="topbar">
+      <div class="close-button">
+        <img type="image/svg+xml" src="./imgs/close-button.svg" class="close-button-icon"></img>
+
+      </div>
+    </div>
+
+    <div class="window-body" id="about-me-window-body">
+      <div id="email-text">
+        <p class="editable-text email-text" contenteditable="true" spellcheck="false">
+
+        </p>
+      </div>
+      <div class="window-button-spacer">
+        <div class="window-button">
+          <p class="taskbar-button-text">
+            Drop A Line
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="window ui-widget-content" id="window-reel">
+    <div class="topbar">
+      <div class="close-button">
+        <img type="image/svg+xml" src="./imgs/close-button.svg" class="close-button-icon"></img>
+
+      </div>
+    </div>
+
+    <div class="window-body" id="reel-body">
+      <iframe width="100%" height="100%"
+        src="https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=true&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0"
+        frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+    </div>
+  </div>
 </body>
+
+<!-- Scripts -->
+<script>
+  $(function ()
+  {
+    $("#window-about-me").resizable();
+
+    // Dynamically load pages
+    $('#portfolio-info-pane').load("html/thelastofus2_small.html");
+  });
+</script>
+
+<script src="js/common-funcs.js"></script>
+<script src="js/drag-and-drop.js"></script>
+<script src="js/taskbar.js"></script>
+<script src="js/anim-test.js"></script>
 
 </html>
