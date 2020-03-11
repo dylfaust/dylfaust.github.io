@@ -24,7 +24,7 @@
 <body>
   <!-- Logo -->
   <div id="logo-container">
-    <img type="image/svg+xml" src="./imgs/logo.svg" id="logo-icon"></img>
+    <img type="image/svg+xml" src="./imgs/logo.svg" draggable=false id="logo-icon"></img>
     <p id="logo-text">Dylan Faust</p>
   </div>
   <!-- Taskbar -->
@@ -66,12 +66,12 @@
     <div id="social-buttons-container">
       <a href="https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA" target="_blank" rel="noopener noreferrer"
         class="social-media-button button">
-        <img type="image/svg+xml" src="./imgs/linked-in-button.svg" class="social-media-icon"></img>
+        <img type="image/svg+xml" src="./imgs/linked-in-button.svg" draggable=false class="social-media-icon"></img>
       </a>
 
       <a href="http://www.linkedin.com/in/dylanfaust/" target="_blank" rel="noopener noreferrer"
         class="social-media-button button">
-        <img type="image/svg+xml" src="./imgs/youtube-button.svg" class="social-media-icon"></img>
+        <img type="image/svg+xml" src="./imgs/youtube-button.svg" draggable=false class="social-media-icon"></img>
       </a>
     </div>
   </div>
@@ -80,7 +80,7 @@
   <div class="window" id="window-about-me">
     <div class="topbar">
       <div class="close-button">
-        <img type="image/svg+xml" src="./imgs/close-button.svg" class="close-button-icon"></img>
+        <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
 
       </div>
     </div>
@@ -103,9 +103,9 @@
   </div>
 
   <div class="window" id="window-email">
-    <div class="topbar">      
+    <div class="topbar">
       <div class="close-button">
-        <img type="image/svg+xml" src="./imgs/close-button.svg" class="close-button-icon"></img>
+        <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
       </div>
     </div>
 
@@ -124,22 +124,31 @@
     <div class="window-outline"></div>
   </div>
 
-  <div class="window" id="window-reel">
-    <div class="topbar">      
-      <div class="close-button">
-        <img type="image/svg+xml" src="./imgs/close-button.svg" class="close-button-icon"></img>
+  <div class="window-wrapper">
+    <div class="window" id="window-reel">
+      <div class="topbar">
+        <div class="close-button">
+          <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
 
+        </div>
       </div>
-    </div>
 
-    <div class="window-body" id="reel-body">
-      <iframe width="100%" height="100%"
-        src="https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=1&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0"
-        frameborder="0" allow="autoplay;" allowfullscreen style="pointer-events: none;"></iframe>
+      <div class="window-body" id="reel-body">
+        <iframe width="100%" height="100%"
+          src="https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=1&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0"
+          frameborder="0" allow="autoplay;" allowfullscreen style="pointer-events: none;"></iframe>
+      </div>
+      <div class="window-outline"></div>
     </div>
-    <div class="window-outline"></div>
   </div>
+  <svg id="overlay-clip-wrapper" width="0" height="0">
+    <clipPath id="overlay-clip" style="mask-composite:add;">
+      <rect width="400" height="100" x="0%" y="0%" />
+      <circle cx="504" cy="213" r="213" />
+    </clipPath>
+  </svg>
 </body>
+<img class="overlay" src="./imgs/paper-texture-large.png">
 
 <!-- Scripts -->
 
