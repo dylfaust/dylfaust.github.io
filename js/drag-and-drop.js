@@ -1,51 +1,60 @@
 var currWindow;
-var topmostZIndex = "-9999";
+var topmostZIndex = 9999;
 
 var draggables = document.getElementsByClassName("window");
 for (let i = 0; i < draggables.length; i++)
 {
-  makeWindowDraggable(draggables[i]);
+  makeWindowDraggable(draggables[i], i);
+  topmostZIndex = i;
 }
 
-function makeWindowDraggable(draggable, appendParent=null)
+function makeWindowDraggable(draggable, zIndex = 1)
 {
   draggable.classList.add("window");
-  draggable.addEventListener("mousedown", mouseDown,false);
+  draggable.addEventListener("mousedown", mouseDown, false);
   draggable.addEventListener("mouseup", mouseUp, false);
-
-  if (appendParent == null)
-    appendParent=document.body;
-
-  draggable.appendParent = appendParent;
-
-  if (draggable && draggable.style.zIndex > topmostZIndex)
-    topmostZIndex = draggable.style.zIndex;
-
-  if (draggable.appendParent == document.body)
-  {
-    currWindow=draggable;
-    currWindow.shiftX=0;
-    currWindow.shiftY=0;
-    document.body.append(currWindow);
-    moveAt(draggable.getBoundingClientRect().left, draggable.getBoundingClientRect().top);
-    currWindow=null;
-  }
-
+  draggable.zIndexInt = zIndex;
+  draggable.style.zIndex = draggable.zIndexInt;
 }
 
 function disableWindowDraggable(draggable)
 {
   draggable.classList.remove("window");
-  draggable.removeEventListener("mousedown", mouseDown,false);
+  draggable.removeEventListener("mousedown", mouseDown, false);
   draggable.removeEventListener("mouseup", mouseUp, false);
-  if (draggable && draggable.style.zIndex > topmostZIndex)
-    topmostZIndex = draggable.style.zIndex;
+  for (let i = 0; i < topmostZIndex + 1; i++)
+  {
+    if (draggables[i] == draggable)
+      draggables[i] = null;
+  }
+}
 
+function shiftWindowToFront(newTopDraggable)
+{
+  priorIndex = newTopDraggable.zIndexInt;
+  for (let j = 0; j < topmostZIndex + 1; j++)
+  {
+    let currDraggable = draggables[j];
+    if (currDraggable)
+    {
+      if (currDraggable == newTopDraggable)
+      {
+        currDraggable.zIndexInt = topmostZIndex;
+        currDraggable.style.zIndex = newTopDraggable.zIndexInt;
+      }
+      else if (currDraggable.zIndexInt > priorIndex)
+      {
+        currDraggable.zIndexInt -= 1;
+        currDraggable.style.zIndex = currDraggable.zIndexInt;
+      }
+    }
+  }
 }
 
 function mouseDown(event)
 {
   var canDrag = false;
+  shiftWindowToFront(this);
   if (this.classList.contains("draggable"))
   {
     canDrag = true;
@@ -60,10 +69,10 @@ function mouseDown(event)
       var posX = event.clientX;
       var posY = event.clientY;
 
-      var top =  child.getBoundingClientRect().top;
-      var bottom =  child.getBoundingClientRect().bottom;
-      var left =  child.getBoundingClientRect().left;
-      var right =  child.getBoundingClientRect().right;
+      var top = child.getBoundingClientRect().top;
+      var bottom = child.getBoundingClientRect().bottom;
+      var left = child.getBoundingClientRect().left;
+      var right = child.getBoundingClientRect().right;
 
       var withinY = posY > top && posY < bottom;
       var withinX = posX > left && posX < right;
@@ -76,21 +85,19 @@ function mouseDown(event)
   if (canDrag)
   {
     currWindow = this;
-    currWindow.shiftX = event.clientX - currWindow.getBoundingClientRect().left + 0.0; 
+    currWindow.shiftX = event.clientX - currWindow.getBoundingClientRect().left + 0.0;
     currWindow.shiftY = event.clientY - currWindow.getBoundingClientRect().top + 0.0;
 
     var posX = event.clientX;
     var posY = event.clientY;
 
-    var top =  child.getBoundingClientRect().top;
-    var bottom =  child.getBoundingClientRect().left;
+    var top = child.getBoundingClientRect().top;
+    var bottom = child.getBoundingClientRect().left;
 
     currWindow.style.position = 'absolute';
-    var append = (currWindow.style.zIndex != topmostZIndex);
 
-    // currWindow.style.zIndex = topmostZIndex;
-    if (append)
-     document.body.append(currWindow);
+    // if (append)
+    //  document.body.append(currWindow);
 
     moveAt(event.pageX, event.pageY);
     // move the draggable on mousemove
@@ -106,23 +113,24 @@ function mouseUp(event)
 
 
 
-  // moves the draggable at (pageX, pageY) coordinates
-  // taking initial shifts into account
-  function moveAt(pageX, pageY) 
-  {
-    currWindow.style.left = pageX - currWindow.shiftX + 'px';
-    currWindow.style.top = pageY - currWindow.shiftY + 'px';
-  }
+// moves the draggable at (pageX, pageY) coordinates
+// taking initial shifts into account
+function moveAt(pageX, pageY) 
+{
+  currWindow.style.left = pageX - currWindow.shiftX + 'px';
+  currWindow.style.top = pageY - currWindow.shiftY + 'px';
+}
 
-  function onMouseMove(event) 
-  {
-    moveAt(event.pageX, event.pageY);
-    pauseEvent(event);
-  }
-function pauseEvent(e){
-    if(e.stopPropagation) e.stopPropagation();
-    if(e.preventDefault) e.preventDefault();
-    e.cancelBubble=true;
-    e.returnValue=false;
-    return false;
+function onMouseMove(event) 
+{
+  moveAt(event.pageX, event.pageY);
+  pauseEvent(event);
+}
+function pauseEvent(e)
+{
+  if (e.stopPropagation) e.stopPropagation();
+  if (e.preventDefault) e.preventDefault();
+  e.cancelBubble = true;
+  e.returnValue = false;
+  return false;
 }

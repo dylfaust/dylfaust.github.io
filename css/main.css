@@ -169,6 +169,7 @@ p {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: #f6f4e4;
   width: 194px;
   height: 38px;
   float: left;
@@ -228,6 +229,7 @@ p {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: #f6f4e4;
   width: 34px;
   float: left;
   height: 100%;
@@ -269,6 +271,7 @@ p {
   border-width: 1px;
   border-color: #000000;
   background: #f6f4e4;
+  z-index: 1;
 }
 
 .topbar {
@@ -311,6 +314,7 @@ p {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: #f6f4e4;
   width: 130px;
   left: 50%;
   margin-left: calc((130px / 2) * -1);
@@ -414,7 +418,9 @@ p {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: #f6f4e4;
   border-color: #f2f0d8;
+  background-color: #00000000;
   width: 16px;
   height: 16px;
   top: 50%;
