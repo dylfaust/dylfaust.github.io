@@ -272,6 +272,33 @@ p {
   border-color: #000000;
   background: #f6f4e4;
   z-index: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.window-close {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%) !important;
+          clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%) !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.window-outline {
+  pointer-events: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+}
+
+.window-outline-close {
+  height: 0px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .topbar {

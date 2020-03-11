@@ -19,7 +19,7 @@ function makeWindowDraggable(draggable, zIndex = 1)
 
 function disableWindowDraggable(draggable)
 {
-  draggable.classList.remove("window");
+  // draggable.classList.remove("window");
   draggable.removeEventListener("mousedown", mouseDown, false);
   draggable.removeEventListener("mouseup", mouseUp, false);
   for (let i = 0; i < topmostZIndex + 1; i++)

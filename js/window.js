@@ -5,12 +5,21 @@ for (let i = 0; i < draggables.length; i++)
   closeButton.window = draggables[i];
 
   closeButton.addEventListener("click", closeClick, false);
+  closeButton.addEventListener("mousedown", closeMouseDown, false);
 }
 
 function closeClick()
 {
   let elem = this.window;
+  let outline = elem.getElementsByClassName("window-outline")[0];
 
   disableWindowDraggable(elem);
-  elem.parentNode.removeChild(elem);
+  // elem.parentNode.removeChild(elem);
+  elem.classList.add("window-close");
+  outline.classList.add("window-outline-close");
+}
+
+function closeMouseDown(event)
+{
+  event.stopPropagation();
 }
