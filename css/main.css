@@ -1,6 +1,4 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -38,13 +36,25 @@
   background: #555;
 }
 
+.ui-icon-gripsmall-diagonal-se {
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+  background-image: url("../imgs/resize-handle.svg") !important;
+  background-position: 0px 0px !important;
+  background-size: 100% 100% !important;
+  width: 11px !important;
+  height: 13px !important;
+  bottom: -1px !important;
+  right: -1px !important;
+}
+
 html {
   font-family: "Open Sans", Open Sans, sans-serif;
   overflow: hidden;
 }
 
 body {
-  background: #f2f0d8;
+  background-color: #f2f0d8 !important;
   color: #000000;
 }
 
@@ -59,6 +69,7 @@ body {
 
 p {
   font-size: 22px;
+  margin-bottom: 0 !important;
 }
 
 .pos-tl {
@@ -266,14 +277,16 @@ p {
 }
 
 .window {
-  position: absolute;
+  position: absolute !important;
   border-style: solid;
   border-width: 1px;
   border-color: #000000;
   background: #f6f4e4;
   z-index: 1;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+          clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+  min-height: 130px;
+  min-width: 130px;
 }
 
 .window-close {
@@ -405,7 +418,7 @@ p {
 #window-about-me {
   width: 288px;
   height: 220px;
-  right: 60px;
+  left: calc(100% - 288px - 60px);
   top: 100px;
 }
 
@@ -504,6 +517,6 @@ p {
   font-size: 23px;
   font-weight: bold;
   margin-left: calc(20px - .3em);
-  bottom: 13px;
+  top: 5px;
 }
 /*# sourceMappingURL=main.css.map */
