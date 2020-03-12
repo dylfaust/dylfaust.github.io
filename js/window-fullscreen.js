@@ -25,7 +25,7 @@ function toggleWindow(sourceHtml, curActivationButton)
 
     let curWindowJq = $(windows[activeWindowIndex]);
     let curWindowDom = curWindowJq[0];
-    $(curWindowDom.content).load(sourceHtml);
+    // $(curWindowDom.content).load(sourceHtml);
 
     curWindowDom.classList.toggle("large-window-active");
   }
