@@ -8,17 +8,25 @@ var overlay = null;
 
 var submenuActive = false;
 
+var navButtons = document.getElementsByClassName("taskbar-nav-button");
+
+for (let i = 0; i < navButtons.length; i++)
+{
+  let curButton = navButtons[i];
+  curButton.addEventListener("click", navButtonClick);
+}
+
 // -------------------------------------------
 // Listeners
 // -------------------------------------------
 
-  // Hover and click
-  // taskbarButton.addEventListener("mouseover", onMouseOverTb, true);
-  // taskbarButton.addEventListener("mouseout", onMouseOutTb, true);
-  // taskbarButton.addEventListener("click", onClickTb, true);
+// Hover and click
+// taskbarButton.addEventListener("mouseover", onMouseOverTb, true);
+// taskbarButton.addEventListener("mouseout", onMouseOutTb, true);
+// taskbarButton.addEventListener("click", onClickTb, true);
 
-  // // Transitions
-  // taskbarButtonBoxRow.addEventListener("transitionend", onTransitionEnd, event);
+// // Transitions
+// taskbarButtonBoxRow.addEventListener("transitionend", onTransitionEnd, event);
 
 // -------------------------------------------
 // Setup
@@ -26,6 +34,12 @@ var submenuActive = false;
 
 // goAnimState(taskbarButtonBoxRow, "taskbar-button-row--normal");
 // goAnimState(submenu, "taskbar-submenu--off");
+
+function navButtonClick()
+{
+  toggleWindow(this.getAttribute("data-active"), this);
+  // window.alert(this.getAttribute("data-active"));
+}
 
 // -------------------------------------------
 // States
@@ -37,7 +51,8 @@ function beginSubmenuOpen()
     submenuActive = true;
     goAnimState(taskbarButtonBoxRow, "taskbar-button-row--active");
     goAnimState(taskbarButton, "taskbar-button-fill--active");
-    setTimeout(function() {
+    setTimeout(function ()
+    {
       // window.alert("county");
       document.addEventListener("click", onClickOutside, true);
     });
@@ -52,17 +67,17 @@ function endSubmenuOpen()
   if (overlay == null)
     overlay = document.createElement("overlay");
   overlay.classList.add("dark-overlay");
-  setTimeout(function() { goAnimState(overlay, "dark-overlay--active") });
+  setTimeout(function () { goAnimState(overlay, "dark-overlay--active") });
   overlay.classList.add("unselectable-text");
 
   var page = document.getElementById("page");
   page.appendChild(overlay);
 
   var z = overlay.style.zIndex;
-  submenu.style.zIndex = z+1;
+  submenu.style.zIndex = z + 1;
 
   var taskbar = document.getElementById("taskbar");
-  taskbar.style.zIndex = z+1;
+  taskbar.style.zIndex = z + 1;
 }
 
 function onClickOutside(event)
@@ -88,10 +103,11 @@ function goSubmenuClosed()
   let targetButtonState = taskbarButton.hovered ? "taskbar-button-row--hover" : "taskbar-button-row--normal";
   goAnimState(taskbarButtonBoxRow, targetButtonState);
 
-  setTimeout(function() {
-      // window.alert("county");
-      taskbarButton.addEventListener("click", onClickTb, true);
-    });
+  setTimeout(function ()
+  {
+    // window.alert("county");
+    taskbarButton.addEventListener("click", onClickTb, true);
+  });
 }
 
 // -------------------------------------------
@@ -119,7 +135,7 @@ function onClickTb()
 function onTransitionEnd(event)
 {
   if (this.animState == "taskbar-button-row--active")
-  {  
+  {
     endSubmenuOpen();
   }
 }
@@ -128,8 +144,8 @@ function onFadeComplete()
 {
   if (!submenuActive && overlay)
   {
-   var page = document.getElementById("page");
-   page.removeChild(overlay); 
-   overlay = null;
- }
+    var page = document.getElementById("page");
+    page.removeChild(overlay);
+    overlay = null;
+  }
 }

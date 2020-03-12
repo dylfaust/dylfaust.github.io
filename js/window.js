@@ -1,8 +1,8 @@
-// var windows = document.getElementsByClassName("window");
-for (let i = 0; i < draggables.length; i++)
+var windows = document.getElementsByClassName("window");
+for (let i = 0; i < windows.length; i++)
 {
-  let closeButton = draggables[i].getElementsByClassName("close-button")[0];
-  closeButton.window = draggables[i];
+  let closeButton = windows[i].getElementsByClassName("close-button")[0];
+  closeButton.window = windows[i];
 
   closeButton.addEventListener("click", closeClick, false);
   closeButton.addEventListener("mousedown", closeMouseDown, false);

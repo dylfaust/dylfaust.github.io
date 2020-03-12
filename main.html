@@ -17,7 +17,7 @@
   <script src="libs/js/jquery-ui.min.js"></script>
   <script src="libs/js/lottie.js"></script>
 
-  <title>dylanFaust.exe</title>
+  <title>Dylan Faust</title>
 
 </head>
 
@@ -42,19 +42,19 @@
 
     <!-- Nav buttons -->
     <div id="taskbar-nav-buttons-container">
-      <div class="taskbar-nav-button button">
+      <div class="taskbar-nav-button button" id="1" data-active="./html/aboutme.html">
         <p class="taskbar-button-text">
           About Me
         </p>
       </div>
 
-      <div class="taskbar-nav-button button">
+      <div class="taskbar-nav-button button" id="2" data-active="./html/portfolio.html">
         <p class="taskbar-button-text">
           Portfolio
         </p>
       </div>
 
-      <div class="taskbar-nav-button button">
+      <div class="taskbar-nav-button button" id="3" data-active="./html/resume.html">
         <p class="taskbar-button-text">
           Resume
         </p>
@@ -88,7 +88,7 @@
     <div class="window-body" id="about-me-window-body">
       <div id="about-me-text">
         <p class="editable-text" contenteditable="true" spellcheck="false">
-          <i>A </i><b>game designer</b><i> with a passion for programming and digital art.</i>
+          <i>A <b>game developer</b> with a passion for <b>programming</b> and <b>UI/UX</b>.</i>
         </p>
       </div>
       <div class="window-button-spacer">
@@ -147,15 +147,39 @@
       <circle cx="504" cy="213" r="213" />
     </clipPath>
   </svg>
+
+  <!-- Fullscreen Window -->
 </body>
-<img class="overlay" src="./imgs/paper-texture-large.png">
+
+<div class="large-window-wrapper">
+  <div class="large-window" id="large-window-1">
+    <div class="topbar">
+      <div class="close-button">
+        <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
+
+      </div>
+    </div>
+    <div class="window-body"></div>
+  </div>
+  <div class="large-window" id="large-window-2">
+    <div class="topbar">
+      <div class="close-button">
+        <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
+
+      </div>
+    </div>
+    <div class="window-body"></div>
+  </div>
+</div>
+<!-- <img class="overlay" src="./imgs/paper-texture.png"> -->
 
 <!-- Scripts -->
 
+<script src="js/jquery-funcs.js"></script>
 <script src="js/common-funcs.js"></script>
 <script src="js/drag-and-drop.js"></script>
 <script src="js/window.js"></script>
-<script src="js/jquery-funcs.js"></script>
+<script src="js/window-fullscreen.js"></script>
 <script src="js/taskbar.js"></script>
 <script src="js/anim-test.js"></script>
 
