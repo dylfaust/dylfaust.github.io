@@ -10,7 +10,7 @@ for (let i = 0; i < windows.length; i++)
   curWindow.content = curWindow.getElementsByClassName("large-window-body")[0];
 }
 
-// toggleWindow("./html/portfolio.html", 0);
+toggleWindow("./html/resume.html", 0);
 
 function toggleWindow(sourceHtml, curActivationButton)
 {
@@ -42,7 +42,12 @@ function toggleWindow(sourceHtml, curActivationButton)
     largeWindowWrapper.style.pointerEvents = "auto";
 
     curHtml = sourceHtml;
-    $(curWindowDom.content).load(curHtml);
+    $(curWindowDom.content).load(curHtml, function ()
+    {
+      loadHandler();
+    });
+
+
   }
   else
   {
@@ -52,6 +57,16 @@ function toggleWindow(sourceHtml, curActivationButton)
     activeWindowIndex = -1;
     largeWindowWrapper.style.pointerEvents = "none";
   }
+}
+
+function loadHandler()
+{
+  // document.webViewerLoad();
+
+  //
+  // Asynchronous download PDF
+  //
+  
 }
 
 function windowAnimOnComplete()

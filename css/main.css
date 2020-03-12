@@ -734,4 +734,8 @@ hr {
 .portfolio-text-overlay-b {
   font-size: 22px;
 }
+
+#pdf-viewer {
+  margin: auto;
+}
 /*# sourceMappingURL=main.css.map */
