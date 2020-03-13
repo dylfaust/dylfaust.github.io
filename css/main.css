@@ -54,6 +54,46 @@
   right: -1px !important;
 }
 
+.button-large, .taskbar-nav-button {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  display: table;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #f6f4e4;
+  width: 194px;
+  height: 38px;
+}
+
+.button-large:hover, .taskbar-nav-button:hover {
+  background-color: #00000059 !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  border-radius: 7px;
+}
+
+.button-large:active, .taskbar-nav-button:active {
+  background-color: #00000059 !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  border-radius: 7px;
+  -webkit-transform: scale(0.985, 0.985);
+          transform: scale(0.985, 0.985);
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
+}
+
 html {
   font-family: "Open Sans", Open Sans, sans-serif !important;
   overflow: hidden;
@@ -80,18 +120,36 @@ h1 {
   font-weight: bold !important;
 }
 
+h2 {
+  font-size: 33px !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+}
+
 p {
+  font-size: 20px;
+}
+
+p .desktop-text {
   font-size: 22px;
   margin-bottom: 0 !important;
 }
 
 hr {
-  background-color: #000000;
-  width: 800px;
+  border-color: #00000080 !important;
   margin: auto;
   display: block;
-  margin-top: 10px !important;
+  -webkit-margin-before: 0px !important;
+          margin-block-start: 0px !important;
+  -webkit-margin-after: 0px !important;
+          margin-block-end: 0px !important;
+  -webkit-margin-start: 0px !important;
+          margin-inline-start: 0px !important;
+  -webkit-margin-end: 0px !important;
+          margin-inline-end: 0px !important;
+  margin-top: 15px !important;
   margin-bottom: 10px !important;
+  height: 1px !important;
 }
 
 .pos-tl {
@@ -121,6 +179,14 @@ hr {
 
 .page-content-spacer {
   height: 80px;
+}
+
+.test-blue {
+  background-color: blue !important;
+}
+
+.test-orange {
+  background-color: orange !important;
 }
 
 #taskbar {
@@ -199,46 +265,9 @@ hr {
 }
 
 .taskbar-nav-button {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #000000;
-  display: table;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-color: #f6f4e4;
-  width: 194px;
-  height: 38px;
   float: left;
   margin-left: 17.5px;
   margin-right: 17.5px;
-}
-
-.taskbar-nav-button:hover {
-  background-color: #00000059 !important;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-  border-radius: 7px;
-}
-
-.taskbar-nav-button:active {
-  background-color: #00000059 !important;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-  border-radius: 7px;
-  -webkit-transform: scale(0.985, 0.985);
-          transform: scale(0.985, 0.985);
-  -webkit-transition: 0.05s;
-  transition: 0.05s;
 }
 
 .taskbar-nav-button-active {
@@ -250,12 +279,20 @@ hr {
   background-color: #000000ff !important;
 }
 
-.taskbar-button-text {
+.taskbar-button-text, .taskbar-button-text-link {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
   font-size: 20px;
+}
+
+.taskbar-button-text:hover, .taskbar-button-text-link:hover {
+  text-decoration: none;
+}
+
+.taskbar-button-text-link {
+  color: #000000 !important;
 }
 
 #social-buttons-container {
@@ -580,6 +617,10 @@ hr {
 }
 
 .large-window-body {
+  margin-top: 10px;
+  margin-left: 17px;
+  margin-right: 17px;
+  margin-bottom: 10px;
   margin-top: 50px;
   padding-bottom: 80px;
   overflow: auto;
@@ -598,6 +639,11 @@ hr {
 
 #toolbarContainer {
   background-color: #000000;
+}
+
+#about-me-margins {
+  margin-right: 90px;
+  margin-left: 90px;
 }
 
 #logo-container {
@@ -762,5 +808,34 @@ hr {
 
 canvas {
   background-color: orange !important;
+}
+
+#about-me-image {
+  max-height: 300px !important;
+}
+
+.p1-gradient-bg,
+.primary-btn,
+.primary-btn2:hover,
+.default-header,
+.dropdown-menu,
+.banner-area,
+.myself-wrap .desc .talk-btn,
+.skillbar-bar,
+.single-feature:hover,
+.single-footer-widget .click-btn,
+.generic-banner {
+  background-image: -webkit-gradient(linear, left top, right top, from(#9cb5ff), to(#c8b5ff));
+  background-image: linear-gradient(90deg, #9cb5ff 0%, #c8b5ff 100%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (min-width: 1100px) {
+  .about-container {
+    max-width: 1000px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

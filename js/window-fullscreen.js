@@ -10,7 +10,7 @@ for (let i = 0; i < windows.length; i++)
   curWindow.content = curWindow.getElementsByClassName("large-window-body-wrapper")[0];
 }
 
-// toggleWindow("./html/resume.html", 0);
+// toggleWindow("./html/about.html", 0);
 
 function toggleWindow(sourceHtml, curActivationButton)
 {
