@@ -267,7 +267,7 @@
             lessInfoButton: document.getElementById("errorShowLess")
           },
           printContainer: document.getElementById("printContainer"),
-          openFileInputName: "fileInput",
+          // openFileInputName: "fileInput",
           debuggerScriptPath: "./debugger.js"
         };
       }
@@ -1762,7 +1762,7 @@
   
           eventBus._on("updatefindcontrolstate", webViewerUpdateFindControlState);
   
-          eventBus._on("fileinputchange", webViewerFileInputChange);
+          // eventBus._on("fileinputchange", webViewerFileInputChange);
         },
   
         bindWindowEvents()
@@ -1894,7 +1894,7 @@
   
           eventBus._off("updatefindcontrolstate", webViewerUpdateFindControlState);
   
-          eventBus._off("fileinputchange", webViewerFileInputChange);
+          // eventBus._off("fileinputchange", webViewerFileInputChange);
   
           _boundEvents.beforePrint = null;
           _boundEvents.afterPrint = null;
@@ -1994,36 +1994,36 @@
         const params = (0, _ui_utils.parseQueryString)(queryString);
         file = "file" in params ? params.file : _app_options.AppOptions.get("defaultUrl");
         validateFileURL(file);
-        const fileInput = document.createElement("input");
-        fileInput.id = appConfig.openFileInputName;
-        fileInput.className = "fileInput";
-        fileInput.setAttribute("type", "file");
-        fileInput.oncontextmenu = _ui_utils.noContextMenuHandler;
-        document.body.appendChild(fileInput);
+        // const fileInput = document.createElement("input");
+        // fileInput.id = appConfig.openFileInputName;
+        // fileInput.className = "fileInput";
+        // fileInput.setAttribute("type", "file");
+        // fileInput.oncontextmenu = _ui_utils.noContextMenuHandler;
+        // document.body.appendChild(fileInput);
   
-        if (!window.File || !window.FileReader || !window.FileList || !window.Blob)
-        {
-          appConfig.toolbar.openFile.setAttribute("hidden", "true");
-          appConfig.secondaryToolbar.openFileButton.setAttribute("hidden", "true");
-        } else
-        {
-          fileInput.value = null;
-        }
+        // if (!window.File || !window.FileReader || !window.FileList || !window.Blob)
+        // {
+        //   appConfig.toolbar.openFile.setAttribute("hidden", "true");
+        //   appConfig.secondaryToolbar.openFileButton.setAttribute("hidden", "true");
+        // } else
+        // {
+        //   fileInput.value = null;
+        // }
   
-        fileInput.addEventListener("change", function (evt)
-        {
-          const files = evt.target.files;
+        // fileInput.addEventListener("change", function (evt)
+        // {
+        //   const files = evt.target.files;
   
-          if (!files || files.length === 0)
-          {
-            return;
-          }
+        //   if (!files || files.length === 0)
+        //   {
+        //     return;
+        //   }
   
-          PDFViewerApplication.eventBus.dispatch("fileinputchange", {
-            source: this,
-            fileInput: evt.target
-          });
-        });
+        //   PDFViewerApplication.eventBus.dispatch("fileinputchange", {
+        //     source: this,
+        //     fileInput: evt.target
+        //   });
+        // });
         appConfig.mainContainer.addEventListener("dragover", function (evt)
         {
           evt.preventDefault();
@@ -2039,10 +2039,10 @@
             return;
           }
   
-          PDFViewerApplication.eventBus.dispatch("fileinputchange", {
-            source: this,
-            fileInput: evt.dataTransfer
-          });
+          // PDFViewerApplication.eventBus.dispatch("fileinputchange", {
+          //   source: this,
+          //   fileInput: evt.dataTransfer
+          // });
         });
   
         if (!PDFViewerApplication.supportsDocumentFonts)
@@ -2334,51 +2334,51 @@
         }
       }
   
-      let webViewerFileInputChange;
-      {
-        webViewerFileInputChange = function webViewerFileInputChange(evt)
-        {
-          if (PDFViewerApplication.pdfViewer && PDFViewerApplication.pdfViewer.isInPresentationMode)
-          {
-            return;
-          }
+      // let webViewerFileInputChange;
+      // {
+      //   webViewerFileInputChange = function webViewerFileInputChange(evt)
+      //   {
+      //     if (PDFViewerApplication.pdfViewer && PDFViewerApplication.pdfViewer.isInPresentationMode)
+      //     {
+      //       return;
+      //     }
   
-          const file = evt.fileInput.files[0];
+      //     const file = evt.fileInput.files[0];
   
-          if (URL.createObjectURL && !_app_options.AppOptions.get("disableCreateObjectURL"))
-          {
-            let url = URL.createObjectURL(file);
+      //     if (URL.createObjectURL && !_app_options.AppOptions.get("disableCreateObjectURL"))
+      //     {
+      //       let url = URL.createObjectURL(file);
   
-            if (file.name)
-            {
-              url = {
-                url,
-                originalUrl: file.name
-              };
-            }
+      //       if (file.name)
+      //       {
+      //         url = {
+      //           url,
+      //           originalUrl: file.name
+      //         };
+      //       }
   
-            PDFViewerApplication.open(url);
-          } else
-          {
-            PDFViewerApplication.setTitleUsingUrl(file.name);
-            const fileReader = new FileReader();
+      //       PDFViewerApplication.open(url);
+      //     } else
+      //     {
+      //       PDFViewerApplication.setTitleUsingUrl(file.name);
+      //       const fileReader = new FileReader();
   
-            fileReader.onload = function webViewerChangeFileReaderOnload(evt)
-            {
-              const buffer = evt.target.result;
-              PDFViewerApplication.open(new Uint8Array(buffer));
-            };
+      //       fileReader.onload = function webViewerChangeFileReaderOnload(evt)
+      //       {
+      //         const buffer = evt.target.result;
+      //         PDFViewerApplication.open(new Uint8Array(buffer));
+      //       };
   
-            fileReader.readAsArrayBuffer(file);
-          }
+      //       fileReader.readAsArrayBuffer(file);
+      //     }
   
-          const appConfig = PDFViewerApplication.appConfig;
-          appConfig.toolbar.viewBookmark.setAttribute("hidden", "true");
-          appConfig.secondaryToolbar.viewBookmarkButton.setAttribute("hidden", "true");
-          appConfig.toolbar.download.setAttribute("hidden", "true");
-          appConfig.secondaryToolbar.downloadButton.setAttribute("hidden", "true");
-        };
-      }
+      //     const appConfig = PDFViewerApplication.appConfig;
+      //     appConfig.toolbar.viewBookmark.setAttribute("hidden", "true");
+      //     appConfig.secondaryToolbar.viewBookmarkButton.setAttribute("hidden", "true");
+      //     appConfig.toolbar.download.setAttribute("hidden", "true");
+      //     appConfig.secondaryToolbar.downloadButton.setAttribute("hidden", "true");
+      //   };
+      // }
   
       function webViewerPresentationMode()
       {
