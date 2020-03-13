@@ -127,8 +127,9 @@ h2 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 0px;
+  line-height: 1.5em;
 }
 
 p .desktop-text {
@@ -753,8 +754,8 @@ hr {
 .image-clip-wrapper {
   width: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(0 6px, 101% 6px, 101% calc(100% - 6px), 0 calc(100% - 6px));
-          clip-path: polygon(0 6px, 101% 6px, 101% calc(100% - 6px), 0 calc(100% - 6px));
+  -webkit-clip-path: polygon(0 4px, 101% 4px, 101% calc(100% - 4px + 1px), 0 calc(100% - 4px + 1px));
+          clip-path: polygon(0 4px, 101% 4px, 101% calc(100% - 4px + 1px), 0 calc(100% - 4px + 1px));
   position: absolute;
   top: 0;
   left: 0;
@@ -769,18 +770,18 @@ hr {
 
 .portfolio-slot-icon {
   position: absolute;
-  width: calc(100% - (6px * 2));
-  left: 6px;
+  width: calc(100% - (4px * 2));
+  left: 4px;
 }
 
 .portfolio-overlay {
   background-color: #000000d9;
   color: #f2f0d8;
-  height: calc(100% - (6px * 2));
-  width: calc(100% - (6px * 2));
-  left: 6px;
+  height: calc(100% - (4px * 2));
+  width: calc(100% - (4px * 2));
+  left: 4px;
   position: absolute;
-  top: 6px;
+  top: 4px;
   opacity: 0%;
   font-size: 26px;
   text-align: center;
@@ -801,6 +802,10 @@ hr {
 
 .portfolio-text-overlay-b {
   font-size: 22px;
+}
+
+.portfolio-detail-image-wrapper {
+  margin-bottom: 20px;
 }
 
 #pdf-viewer {
