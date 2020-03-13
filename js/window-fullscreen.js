@@ -7,10 +7,10 @@ var curHtml = null;
 for (let i = 0; i < windows.length; i++)
 {
   let curWindow = $(windows[i])[0];
-  curWindow.content = curWindow.getElementsByClassName("large-window-body")[0];
+  curWindow.content = curWindow.getElementsByClassName("large-window-body-wrapper")[0];
 }
 
-toggleWindow("./html/resume.html", 0);
+// toggleWindow("./html/resume.html", 0);
 
 function toggleWindow(sourceHtml, curActivationButton)
 {
