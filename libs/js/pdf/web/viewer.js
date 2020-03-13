@@ -602,9 +602,9 @@
       });
       pdfLinkService.setHistory(this.pdfHistory);
   
-      if (!this.supportsIntegratedFind) {
-        this.findBar = new _pdf_find_bar.PDFFindBar(appConfig.findBar, eventBus, this.l10n);
-      }
+      // if (!this.supportsIntegratedFind) {
+      //   this.findBar = new _pdf_find_bar.PDFFindBar(appConfig.findBar, eventBus, this.l10n);
+      // }
   
       this.pdfDocumentProperties = new _pdf_document_properties.PDFDocumentProperties(appConfig.documentProperties, this.overlayManager, eventBus, this.l10n);
       this.pdfCursorTools = new _pdf_cursor_tools.PDFCursorTools({
@@ -808,9 +808,9 @@
         this.pdfHistory.reset();
       }
   
-      if (this.findBar) {
-        this.findBar.reset();
-      }
+      // if (this.findBar) {
+      //   this.findBar.reset();
+      // }
   
       this.toolbar.reset();
       this.secondaryToolbar.reset();
@@ -3482,7 +3482,7 @@
       kind: OptionKind.VIEWER + OptionKind.PREFERENCE
     },
     defaultUrl: {
-      value: './pdfs/resume/dylan-faust-resume.pdf',
+      value: './pdfs/resume/dylan-faust-resume-transparent.pdf',
       kind: OptionKind.VIEWER
     },
     defaultZoomValue: {
@@ -5204,7 +5204,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.PDFFindBar = void 0;
+  // exports.PDFFindBar = void 0;
   
   var _ui_utils = __webpack_require__(2);
   
@@ -5403,7 +5403,7 @@
   
   }
   
-  exports.PDFFindBar = PDFFindBar;
+  // exports.PDFFindBar = PDFFindBar;
   
   /***/ }),
   /* 15 */
@@ -8525,6 +8525,7 @@
   
       const renderContext = {
         canvasContext: ctx,
+        // background: 'rgba(242, 240, 216,0)',
         viewport: drawViewport
       };
       const renderTask = this.renderTask = pdfPage.render(renderContext);
@@ -10456,6 +10457,7 @@
       const transform = !outputScale.scaled ? null : [outputScale.sx, 0, 0, outputScale.sy, 0, 0];
       const renderContext = {
         canvasContext: ctx,
+        background: 'rgba(242, 240, 216,10)',
         transform,
         viewport: this.viewport,
         enableWebGL: this.enableWebGL,
@@ -12926,6 +12928,7 @@
     return pdfDocument.getPage(pageNumber).then(function (pdfPage) {
       const renderContext = {
         canvasContext: ctx,
+        background: 'rgba(242, 240, 216,10)',
         transform: [PRINT_UNITS, 0, 0, PRINT_UNITS, 0, 0],
         viewport: pdfPage.getViewport({
           scale: 1,

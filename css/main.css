@@ -738,4 +738,8 @@ hr {
 #pdf-viewer {
   margin: auto;
 }
+
+canvas {
+  background-color: orange !important;
+}
 /*# sourceMappingURL=main.css.map */
