@@ -634,6 +634,25 @@ hr {
   overflow: auto;
 }
 
+#large-window-details {
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.large-window-details-active {
+  opacity: 100% !important;
+  pointer-events: auto !important;
+}
+
 .resume-large-window-body {
   margin-top: 0px;
 }
@@ -738,6 +757,8 @@ hr {
   border-color: #000000;
   padding-top: 56.25%;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+          clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
 }
 
 .portfolio-slot-window-wide {
@@ -748,6 +769,48 @@ hr {
   .portfolio-slot-window-wide {
     padding-top: 56.25% !important;
   }
+}
+
+.portfolio-slot-window {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  opacity: 100%;
+}
+
+.portfolio-slot-window-active, .portfolio-slot-window:active {
+  -webkit-transform: scale(0.985, 0.985);
+          transform: scale(0.985, 0.985);
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.portfolio-slot-window-clear {
+  opacity: 0%;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transform: scale(0.98, 0.98);
+          transform: scale(0.98, 0.98);
+}
+
+.section-header {
+  opacity: 100%;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.a-0-trans {
+  opacity: 0% !important;
+}
+
+.slow-trans {
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .image-clip-wrapper {

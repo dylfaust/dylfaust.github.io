@@ -13,7 +13,9 @@ for (let i = 0; i < windows.length; i++)
 
   largeButtons[i].window = curWindowDom;
 
-  $(curWindowDom.content).load(curWindowDom.getAttribute("html-ref"));
+  let content = curWindowDom.content;
+  $(content).load(curWindowDom.getAttribute("html-ref"));
+  content.loadStarted = true;
 }
 
 // toggleWindow("./html/portfolio-detail.html", 0);
@@ -59,4 +61,9 @@ function windowAnimOnComplete()
 {
   // var contentDom = windows[activeWindowIndex].content;
   // $(contentDom).load(curHtml);
+}
+
+function loadComplete ()
+{
+  this.doneLoading = true;
 }
