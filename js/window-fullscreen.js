@@ -16,6 +16,7 @@ for (let i = 0; i < windows.length; i++)
   let content = curWindowDom.content;
   $(content).load(curWindowDom.getAttribute("html-ref"));
   content.loadStarted = true;
+
 }
 
 // toggleWindow("./html/portfolio-detail.html", 0);
@@ -44,6 +45,10 @@ function toggleWindow(sourceHtml, curActivationButton)
     // let curWindowJq = $(curWindowDom);
     curWindowDom.classList.toggle("large-window-active");
     curWindowDom.addEventListener("transitionend", windowAnimOnComplete);
+
+    // let content = curWindowDom.content;
+    // $(content).load(curWindowDom.getAttribute("html-ref"));
+    // content.loadStarted = true;
 
     largeWindowWrapper.style.pointerEvents = "auto";
 

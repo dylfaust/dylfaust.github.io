@@ -8,6 +8,13 @@ var buttons;
 var headers;
 var lastWindow;
 
+var fadeOutDelay = 200;
+var fadeOutInDelay = 200;
+
+var fadeInDelay = 200;
+
+
+
 console.assert(contentPanes.length == 2, "portfolio window doesn't have two children!");
 
 // Load html
@@ -72,10 +79,15 @@ function portfolioButtonClicked()
   {
     lastWindow.classList.add("a-0-trans");
     lastWindow.classList.add("slow-trans");
+  }
+    , fadeOutDelay);
+
+    setTimeout(function ()
+  {
     secondaryContent.classList.add('large-window-details-active');
     largeWindowWrapper.style.pointerEvents = "auto";
   }
-    , 200);
+    , fadeOutDelay + fadeOutInDelay);
   // secondaryContent.classList.add('large-window-details-active');
   //  secondaryContent.style.zIndex = '9999';
 }
@@ -119,5 +131,5 @@ function backButtonClicked()
 
     lastWindow = null;
   }
-    , 400);
+    , fadeInDelay);
 }
