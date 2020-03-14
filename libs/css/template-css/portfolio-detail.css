@@ -113,13 +113,13 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
 
-.site-section {
+/* .site-section {
   padding: 4.5em 0; }
   @media (min-width: 768px) {
     .site-section {
-      padding: 7em 0; } }
+      padding: 3em 0; } }
   .site-section.site-section-sm {
-    padding: 4em 0; }
+    padding: 4em 0; } */
 
 .site-section-heading {
   font-size: 30px;
@@ -787,25 +787,9 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.1);
   margin-bottom: -15em; }
 
-.jm-sticky-top {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 7em; }
 
 .person h3 {
   font-size: 1.2rem; }
-
-.blockquote {
-  margin-bottom: 30px; }
-  .blockquote p {
-    font-size: 1.15rem; }
-  .blockquote p:first-child {
-    border-left: 10px #eee solid;
-    margin-bottom: 20px; }
-  .blockquote p {
-    padding-left: 20px;
-    color: #000;
-    font-style: italic; }
 
 .form-subscribe .form-control {
   border-color: #333333 !important;
