@@ -1,13 +1,20 @@
 var windows = $(".large-window");
-var activeWindowIndex = -1;
 var largeWindowWrapper = document.getElementsByClassName("large-window-wrapper")[0];
+var largeButtons = document.getElementsByClassName("taskbar-nav-button");
 var activationButton = null;
 var curHtml = null;
 
+console.assert(windows.length == largeButtons.length);
+
 for (let i = 0; i < windows.length; i++)
 {
-  let curWindow = $(windows[i])[0];
-  curWindow.content = curWindow.getElementsByClassName("large-window-body-wrapper")[0];
+  // let curWindowObj =  $(windows[i]);
+  let curWindowDom = $(windows[i])[0];
+  curWindowDom.content = curWindowDom.getElementsByClassName("large-window-body-wrapper")[0];
+
+  largeButtons[i].window = curWindowDom;
+
+  $(curWindowDom.content).load(curWindowDom.getAttribute("data-active"));
 }
 
 // toggleWindow("./html/portfolio-detail.html", 0);
@@ -16,9 +23,10 @@ function toggleWindow(sourceHtml, curActivationButton)
 {
   if (curActivationButton != null && (activationButton == null || (curActivationButton.id != activationButton.id)))
   {
-    if (activeWindowIndex >= 0)
+    // If we have an active window
+    if (activationButton != null)
     {
-      let curWindowDom = windows[activeWindowIndex];
+      let curWindowDom = activationButton.window;
       curWindowDom.classList.toggle("large-window-active");
       activationButton.classList.toggle("taskbar-nav-button-active");
       curWindowDom.removeEventListener("transitionend", windowAnimOnComplete);
@@ -26,51 +34,47 @@ function toggleWindow(sourceHtml, curActivationButton)
 
     activationButton = curActivationButton;
 
+    // Button anim
     if (activationButton != 0) // debug
       activationButton.classList.toggle("taskbar-nav-button-active");
 
-    if (activeWindowIndex == 0)
-      activeWindowIndex = 1;
-    else
-      activeWindowIndex = 0;
 
-    let curWindowJq = $(windows[activeWindowIndex]);
-    let curWindowDom = curWindowJq[0];
+    let curWindowDom = activationButton.window;
+    // let curWindowJq = $(curWindowDom);
     curWindowDom.classList.toggle("large-window-active");
     curWindowDom.addEventListener("transitionend", windowAnimOnComplete);
 
     largeWindowWrapper.style.pointerEvents = "auto";
 
-    curHtml = sourceHtml;
-    $(curWindowDom.content).load(curHtml, function ()
-    {
-      loadHandler();
-    });
+    // curHtml = sourceHtml;
+    // $(curWindowDom.content).load(curHtml, function ()
+    // {
+    //   loadHandler();
+    // });
 
 
   }
   else
   {
-    $(windows[activeWindowIndex])[0].classList.toggle("large-window-active");
+    activationButton.window.classList.toggle("large-window-active");
     activationButton.classList.toggle("taskbar-nav-button-active");
     activationButton = null;
-    activeWindowIndex = -1;
     largeWindowWrapper.style.pointerEvents = "none";
   }
 }
 
-function loadHandler()
-{
-  // document.webViewerLoad();
+// function loadHandler()
+// {
+//   // document.webViewerLoad();
 
-  //
-  // Asynchronous download PDF
-  //
-  
-}
+//   //
+//   // Asynchronous download PDF
+//   //
+
+// }
 
 function windowAnimOnComplete()
 {
-  var contentDom = windows[activeWindowIndex].content;
+  // var contentDom = windows[activeWindowIndex].content;
   // $(contentDom).load(curHtml);
 }
