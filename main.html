@@ -54,13 +54,13 @@
         </p>
       </div>
 
-      <div class="taskbar-nav-button button" id="2" data-active="./html/portfolio.html">
+      <div class="taskbar-nav-button button" id="2" html-ref="./html/portfolio.html">
         <p class="taskbar-button-text">
           Portfolio
         </p>
       </div>
 
-      <div class="taskbar-nav-button button" id="3" data-active="./html/portfolio-detail.html">
+      <div class="taskbar-nav-button button" id="3" html-ref="./html/portfolio-detail.html">
         <p class="taskbar-button-text">
           Resume
         </p>
@@ -157,8 +157,9 @@
   <!-- Fullscreen Window -->
 </body>
 
+<!-- About Me -->
 <div class="large-window-wrapper">
-  <div class="large-window" id="large-window-1" data-active="./html/about.html">
+  <div class="large-window" id="large-window-1" html-ref="./html/about.html">
     <div class="topbar">
       <div class="close-button">
         <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
@@ -166,8 +167,21 @@
       </div>
     </div>
     <div class="large-window-body-wrapper"></div>
-  </div>
-  <div class="large-window" id="large-window-2" data-active="./html/portfolio.html">
+  </div>   <!-- End About Me -->
+
+  <!-- Portfolio -->
+  <div class="large-window" id="large-window-portfolio" html-ref="./html/portfolio.html" secondary-html-ref="./html/portfolio-detail.html">
+    <div class="topbar">
+      <div class="close-button">
+        <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
+      </div>
+    </div>
+    <div class="large-window-body-wrapper"></div>
+    <div class="large-window-body-wrapper"></div>
+  </div> <!-- End Portfolio -->
+
+  <!-- Resume -->
+  <div class="large-window" id="large-window-3" html-ref="./html/resume.html">
     <div class="topbar">
       <div class="close-button">
         <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
@@ -175,16 +189,7 @@
       </div>
     </div>
     <div class="large-window-body-wrapper"></div>
-  </div>
-  <div class="large-window" id="large-window-3" data-active="./html/resume.html">
-    <div class="topbar">
-      <div class="close-button">
-        <img type="image/svg+xml" src="./imgs/close-button.svg" draggable=false class="close-button-icon"></img>
-
-      </div>
-    </div>
-    <div class="large-window-body-wrapper"></div>
-  </div>
+  </div> <!-- End Resume -->
 </div>
 <!-- <img class="overlay" src="./imgs/paper-texture.png"> -->
 

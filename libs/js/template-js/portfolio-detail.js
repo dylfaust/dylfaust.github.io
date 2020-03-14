@@ -252,7 +252,7 @@ jQuery(document).ready(function($) {
 	// 	}
 				
 	// };
-	siteCountDown();
+	// siteCountDown();
 
 	var siteDatePicker = function() {
 

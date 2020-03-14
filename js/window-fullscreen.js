@@ -8,13 +8,12 @@ console.assert(windows.length == largeButtons.length);
 
 for (let i = 0; i < windows.length; i++)
 {
-  // let curWindowObj =  $(windows[i]);
   let curWindowDom = $(windows[i])[0];
   curWindowDom.content = curWindowDom.getElementsByClassName("large-window-body-wrapper")[0];
 
   largeButtons[i].window = curWindowDom;
 
-  $(curWindowDom.content).load(curWindowDom.getAttribute("data-active"));
+  $(curWindowDom.content).load(curWindowDom.getAttribute("html-ref"));
 }
 
 // toggleWindow("./html/portfolio-detail.html", 0);
