@@ -46,13 +46,6 @@ function toggleWindow(sourceHtml, curActivationButton)
 
     largeWindowWrapper.style.pointerEvents = "auto";
 
-    // curHtml = sourceHtml;
-    // $(curWindowDom.content).load(curHtml, function ()
-    // {
-    //   loadHandler();
-    // });
-
-
   }
   else
   {
@@ -62,16 +55,6 @@ function toggleWindow(sourceHtml, curActivationButton)
     largeWindowWrapper.style.pointerEvents = "none";
   }
 }
-
-// function loadHandler()
-// {
-//   // document.webViewerLoad();
-
-//   //
-//   // Asynchronous download PDF
-//   //
-
-// }
 
 function windowAnimOnComplete()
 {
