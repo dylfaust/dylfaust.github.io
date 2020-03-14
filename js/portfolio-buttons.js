@@ -1,28 +1,32 @@
-// console.log(this);
-// window.alert(this);
-
-var portfolioWindow = document.getElementById("large-window-portfolio");
-let contentPanes = portfolioWindow.getElementsByClassName("large-window-body-wrapper");
+// Init
+var portfolioWindow = document.getElementById('large-window-portfolio');
+let contentPanes = portfolioWindow.getElementsByClassName('large-window-body-wrapper');
 var primaryContent = contentPanes[0];
 var secondaryContent = contentPanes[1];
 
 console.assert(contentPanes.length == 2, "portfolio window doesn't have two children!");
 
-$(secondaryContent).load(portfolioWindow.getAttribute("secondary-html"));
+// Load html
+$(secondaryContent).load(portfolioWindow.getAttribute('secondary-html'));
 
-window.alert(portfolioWindow.getAttribute("secondary-html-ref"));
-// var largeButtons = this.getElementsByClassName("image-clip-wrapper");
-// var activationButton = null;
-// var curHtml = null;
+// Repeatedly check that content is done loading
+window.setInterval(function ()
+{
+  if (primaryContent.doneLoading == true)
+  {
+    clearInterval();
+    setupButtons();
+  }
+}, 5000);
 
-// console.assert(windows.length == largeButtons.length);
+function setupButtons()
+{
+    let buttons = primaryContent.getElementsByClassName('image-clip-wrapper');
 
-// for (let i = 0; i < windows.length; i++)
-// {
-//   let curWindowDom = $(windows[i])[0];
-//   curWindowDom.content = curWindowDom.getElementsByClassName("large-window-body-wrapper")[0];
-
-//   largeButtons[i].window = curWindowDom;
-
-//   $(curWindowDom.content).load(curWindowDom.getAttribute("data-active"));
-// }
+  for (let i = 0; i < buttons.length; i++)
+  {
+    let curButton = buttons[i];
+    curButton.addEventListener('click', portfolioButtonClicked);
+    curButton.addEventListener('mouseenter')
+  }
+}
