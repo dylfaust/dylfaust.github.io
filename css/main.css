@@ -816,8 +816,8 @@ hr {
 .image-clip-wrapper {
   width: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(0 4px, 101% 4px, 101% calc(100% - 4px + 1px), 0 calc(100% - 4px + 1px));
-          clip-path: polygon(0 4px, 101% 4px, 101% calc(100% - 4px + 1px), 0 calc(100% - 4px + 1px));
+  -webkit-clip-path: polygon(0 0px, 101% 0px, 101% calc(100% - 0px + 1px), 0 calc(100% - 0px + 1px));
+          clip-path: polygon(0 0px, 101% 0px, 101% calc(100% - 0px + 1px), 0 calc(100% - 0px + 1px));
   position: absolute;
   top: 0;
   left: 0;
@@ -832,18 +832,18 @@ hr {
 
 .portfolio-slot-icon {
   position: absolute;
-  width: calc(100% - (4px * 2));
-  left: 4px;
+  width: calc(100% - (0px * 2));
+  left: 0px;
 }
 
 .portfolio-overlay {
   background-color: #000000d9;
   color: #f2f0d8;
-  height: calc(100% - (4px * 2));
-  width: calc(100% - (4px * 2));
-  left: 4px;
+  height: calc(100% - (0px * 2));
+  width: calc(100% - (0px * 2));
+  left: 0px;
   position: absolute;
-  top: 4px;
+  top: 0px;
   opacity: 0%;
   font-size: 26px;
   text-align: center;
@@ -882,6 +882,12 @@ hr {
   position: sticky;
   margin-top: -7px;
   top: calc(4em + -7px);
+}
+
+@media (max-width: 992px) {
+  .jm-sticky-top {
+    position: relative;
+  }
 }
 
 .blockquote {
