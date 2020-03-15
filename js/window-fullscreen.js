@@ -19,7 +19,7 @@ for (let i = 0; i < windows.length; i++)
 
 }
 
-toggleWindow("./html/portfolio-detail.html", largeButtons[1]);
+// toggleWindow("./html/portfolio-detail.html", largeButtons[1]);
 
 function toggleWindow(sourceHtml, curActivationButton)
 {
