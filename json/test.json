@@ -1,0 +1,33 @@
+{
+  "title": "The Last of Us Part Deux",
+  "role": "im the fucking GUY",
+  "description": "Swag hard, swag daily",
+  "skills": [
+    {
+      "title": "Ima reck it",
+      "desc": "soj gooooo"
+    },
+    {
+      "title": "Lorum ",
+      "desc": "Ipsum"
+    },
+    {
+      "title": "After Effects",
+      "desc": "animated mockups"
+    }
+  ],
+  "quotes": [
+    {
+      "quote": "I can't believe it's not butter!",
+      "title": "Jeremy Pivens | Gametowsn",
+      "picture": "./imgs/dylan-faust-headshot.jpg"
+    }
+  ],
+  "pictures": [
+    "./imgs/screen-shots/t2/greg-miller.jpg",
+    "./imgs/dylan-faust-headshot.jpg",
+    "./imgs/dylan-faust-headshot.jpg",
+    "./imgs/dylan-faust-headshot.jpg",
+    "./imgs/dylan-faust-headshot.jpg"
+  ]
+}

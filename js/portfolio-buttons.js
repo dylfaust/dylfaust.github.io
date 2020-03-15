@@ -13,12 +13,12 @@ var fadeOutInDelay = 200;
 
 var fadeInDelay = 200;
 
-
-
 console.assert(contentPanes.length == 2, "portfolio window doesn't have two children!");
 
 // Load html
 $(secondaryContent).load(portfolioWindow.getAttribute('secondary-html-ref'));
+
+initPortfolioDetailVars(secondaryContent);
 
 secondaryContent.style.opacity = '0%';
 
@@ -54,6 +54,8 @@ function setupPortfolioButtons()
 
 function portfolioButtonClicked()
 {
+  populatePortfolioDetail(this.getAttribute("json-data"));
+  
   this.window.classList.remove("slow-trans");
   this.window.classList.add("portfolio-slot-window-active");
 
