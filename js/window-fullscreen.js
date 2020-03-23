@@ -14,7 +14,7 @@ for (let i = 0; i < windows.length; i++)
   largeButtons[i].window = curWindowDom;
 
   let content = curWindowDom.content;
-  $(content).load(curWindowDom.getAttribute("html-ref"));
+  // $(content).load(curWindowDom.getAttribute("html-ref"));
   content.loadStarted = true;
 
 }
