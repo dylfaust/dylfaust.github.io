@@ -23,8 +23,6 @@
   <script src='libs/js/jquery-ui.min.js'></script>
   <script src='libs/js/lottie.js'></script>
   <script src='libs/js/pdf/build/pdf.js'></script>
-  <script defer src="./libs/js/swup/swup.min.js"></script>
-  <script defer src="js/main.js"></script>
 
   <title>Dylan Faust</title>
 
@@ -35,100 +33,328 @@
     <img type='image/svg+xml' width = 100.0 src='./imgs/logo.svg' draggable=false ></img>
   </div> -->
 
-  <main id="swup" class="transition-fade">
-    <div class="background-gradient"></div>
-    <div id="stars-clip-container">
-      <div id="stars-anim">
-        <div class='stars-fg' id="stars-fg-tl"></div>
-        <div class='stars-fg' id="stars-fg-tr"></div>
-        <div class='stars-fg' id="stars-fg-bl"></div>
-        <div class='stars-fg' id="stars-fg-br"></div>
-      </div>
-      <img type='image/svg+xml' src='./imgs/stars-bg.svg' draggable=false id='stars-bg'></img>
-    </div>
-    
-    <!-- Windows -->
-    <div class='window' id='window-about-me'>
-      <div class='topbar'>
-        <div class='close-button'>
-          <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-          
+  <main id="swup">
+    <!-- <div class="transition-swipe"></div> -->
+    <!-- PAGE CONTENT -->
+    <div class="background-fill"></div>
+    <div class='large-window'>
+      <div class='large-window-body'>
+        <div class="section-header">
+          <h1>Shipped Projects</h1>
+          <hr class='menu-content col-lg-8 mx-auto'>
+        </div>
+        <div class='container window-large-container'>
+
+          <!-- Row 1 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window portfolio-slot-window-wide'>
+                <div class='image-clip-wrapper' json-data='./json/t2.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/t2/t2-2.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        The Last of Us Part II
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI Scripter
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+
+          <!-- Row 2 -->
+          <row class='row portfolio-row'>
+
+            <div class='col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/ctrlshift.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/ctrlshift/ctrlshift-banner.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        CtrlShift
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI / Gameplay Programmer
+                        <br>Systems Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/apogee.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/apogee/apogee-3.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Apogee
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+          <!-- Row 3 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/morp.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/morp/morp-13.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        The Mice of Riddle Place
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/solarscreen.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/solarscreen/ss-3.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        SolarScreen iOS
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI Designer / Programmer<br>
+                        Software Developer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+        </div>
+
+        <div class='page-content-spacer'></div>
+
+        <!-- PERSONAL -->
+        <!------------------------------------------------->
+
+        <div class="section-header">
+          <h1>Prototypes</h1>
+          <hr class='menu-content col-lg-8 mx-auto'>
+        </div>
+        <div class='container window-large-container'>
+
+          <!-- Row 1 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/spellcasters.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/spellcasters/spellcast-2.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Spellcasters VR
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI / Gameplay Programmer
+                        <br>Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/novalis.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/novalis/novalis-1.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Novalis
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer
+                        <br>Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </row>
+
+          <!-- Row 2 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/hive.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/hive/hive-1.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        HIVE
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI / Gameplay Programmer
+                        <br>Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/just-act-natural.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/just-act-natural/jan-5.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Just Act Natural
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI / Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+          <!-- Row 3 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/lockbox.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/interactive-room/ir-15.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        The Lockbox
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-md portfolio-slot'>
+              <div class='portfolio-slot-window' json-data='./json/pebble-lake.json'>
+                <div class='image-clip-wrapper'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/pebble-lake/pebble-lake.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Pebble Lake
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+          <!-- Row 4 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/morp.json' json-data='./json/bound.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/bound/bound-3.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Bound
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/ms-viz.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/ms-viz/msviz-1.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Ms. Viz
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI Designer / Programmer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
         </div>
       </div>
-      
-      <div class='window-body' id='about-me-window-body'>
-        <div id='about-me-text'>
-          <p class='editable-text' contenteditable='true' spellcheck='false'>
-            A <strong class="bright">game developer</strong> with a passion for <strong
-            class="bright">programming</strong> and <strong class="bright">UI/UX</strong>.
-          </p>
-        </div>
-        <div class='window-button-spacer'>
-          <div class='window-button'>
-            <p class='taskbar-button-text'>
-              About Me
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class='window-outline'></div>
-    </div>
-    
+    </div> <!-- END PAGE CONTENT -->
     <!-- Logo -->
     <div id='logo-container'>
       <img type='image/svg+xml' src='./imgs/logo.svg' draggable=false id='logo-icon'></img>
       <p id='logo-text'>Dylan Faust</p>
     </div>
-    
-    <div class='window' id='window-email'>
-      <div class='topbar'>
-        <div class='close-button'>
-          <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-        </div>
-      </div>
-      
-      <div class='window-body' id='about-me-window-body'>
-        <div id='email-text'>
-          <p class='editable-text email-text' contenteditable='true' spellcheck='false'> </p>
-        </div>
-        <div class='window-button-spacer'>
-          <div class='window-button'>
-            <p class='taskbar-button-text'>
-              Drop A Line
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class='window-outline'></div>
-    </div>
-    
-    <div class='window-wrapper'>
-      <div class='window' id='window-reel'>
-        <div class='topbar'>
-          <div class='close-button'>
-            <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-            
-          </div>
-        </div>
-        
-        <div class='window-body' id='reel-body'>
-          <iframe width='100%' height='100%'
-          src='https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=1&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0'
-          frameborder='0' allow='autoplay;' allowfullscreen style='pointer-events: none;'></iframe>
-        </div>
-        <div class='window-outline'></div>
-      </div>
-    </div>
-    <svg id='overlay-clip-wrapper' width='0' height='0'>
-      <clipPath id='overlay-clip' style='mask-composite:add;'>
-        <rect width='400' height='100' x='0%' y='0%' />
-        <circle cx='504' cy='213' r='213' />
-      </clipPath>
-    </svg>
-    
-    <div class="transition-overlay"></div>
-    <!-- Fullscreen Window -->
   </main>
+
+  <div id="wipe-overlay-clip-wrapper">
+    <div class="transition-wipe wipe-overlay"></div>
+  </div>
 
   <!-- Taskbar -->
   <div id='taskbar'>
@@ -145,19 +371,19 @@
 
     <!-- Nav buttons -->
     <div id='taskbar-nav-buttons-container'>
-      <div class='taskbar-nav-button button' id='1'>
+      <a class='taskbar-nav-button button' id="about-link">
         <p class='taskbar-button-text'>
           About Me
         </p>
-      </div>
+      </a>
 
-      <div class='taskbar-nav-button button' id='2' html-ref='./html/portfolio.html'>
+      <a class='taskbar-nav-button button' id="portfolio-link">
         <p class='taskbar-button-text'>
           Portfolio
         </p>
-      </div>
+      </a>
 
-      <a href="/resume.html" class='taskbar-nav-button button'>
+      <a class='taskbar-nav-button button' id="resume-link">
         <p class='taskbar-button-text'>
           Resume
         </p>
@@ -181,43 +407,6 @@
 
 </body>
 
-<!-- About Me -->
-<div class='large-window-wrapper'>
-  <div class='large-window' id='large-window-1' html-ref='./html/about.html'>
-    <div class='topbar'>
-      <div class='close-button'>
-        <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-
-      </div>
-    </div>
-    <div class='large-window-body-wrapper'></div>
-  </div> <!-- End About Me -->
-
-  <!-- Portfolio -->
-  <div class='large-window' id='large-window-portfolio' html-ref='./html/portfolio.html'
-    secondary-html-ref='./html/portfolio-detail.html'>
-    <div class='topbar'>
-      <div class='close-button'>
-        <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-      </div>
-    </div>
-    <div class='large-window-body-wrapper'></div>
-    <div class='large-window-body-wrapper' id=large-window-details></div>
-  </div> <!-- End Portfolio -->
-
-  <!-- Resume -->
-  <div class='large-window' id='large-window-3' html-ref='./html/resume.html'>
-    <div class='topbar'>
-      <div class='close-button'>
-        <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-
-      </div>
-    </div>
-    <div class='large-window-body-wrapper'></div>
-  </div> <!-- End Resume -->
-</div>
-<!-- <img class='overlay' src='./imgs/paper-texture.png'> -->
-
 <!-- Scripts -->
 
 <script src='js/jquery-funcs.js'></script>
@@ -228,7 +417,11 @@
 <script src='js/taskbar.js'></script>
 <script src='js/anim-test.js'></script>
 <script src='js/portfolio-detail.js'></script>
-<script src='js/portfolio-buttons.js'></script>
+
+<script defer src="./libs/js/swup/swup.js"></script>
+<script defer src="js/swup.js"></script>
+
+<script src='js/resume.js'></script>
 
 <!-- <script src='js/bounce-bg.js'></script> -->
 

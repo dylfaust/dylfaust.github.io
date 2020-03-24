@@ -1,312 +1,429 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+  <!-- Styling -->
+  <link rel='stylesheet' href='./libs/css/jquery-ui.min.css'>
+  <link rel='stylesheet' href='./libs/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='./libs/css/bootstrap-reboot.min.css'>
+  <link rel='stylesheet' href='./libs/css/bootstrap-grid.min.css'>
+  <link rel='stylesheet' href='./css/main.css'>
+  <link rel='stylesheet' href='./css/transitions.css'>
+
+  <!-- This snippet is used in production (included from viewer.html) -->
+  <link rel='resource' type='application/l10n' href='locale/locale.properties'>
+
+  <!-- Libs -->
+  <script src='libs/js/jquery-3.3.1.min.js'></script>
+  <script src='libs/js/bootstrap.min.js'></script>
+  <script src='libs/js/bootstrap.bundle.min.js'></script>
+  <script src='libs/js/jquery-ui.min.js'></script>
+  <script src='libs/js/lottie.js'></script>
+  <script src='libs/js/pdf/build/pdf.js'></script>
+
+  <title>Dylan Faust</title>
+
+</head>
+
 <body>
-  <div class='large-window-body'>
-    <!-- SHIPPED -->
-    <!------------------------------------------------->
+  <!-- <div id="bounce-bg">
+    <img type='image/svg+xml' width = 100.0 src='./imgs/logo.svg' draggable=false ></img>
+  </div> -->
 
-    <div class="section-header">
-      <h1>Shipped Projects</h1>
-      <hr class='menu-content col-lg-8 mx-auto'>
+  <main id="swup">
+    <!-- <div class="transition-swipe"></div> -->
+    <!-- PAGE CONTENT -->
+    <div class="background-fill"></div>
+    <div class='large-window'>
+      <div class='large-window-body'>
+        <div class="section-header">
+          <h1>Shipped Projects</h1>
+          <hr class='menu-content col-lg-8 mx-auto'>
+        </div>
+        <div class='container window-large-container'>
+
+          <!-- Row 1 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window portfolio-slot-window-wide'>
+                <div class='image-clip-wrapper' json-data='./json/t2.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/t2/t2-2.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        The Last of Us Part II
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI Scripter
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+
+          <!-- Row 2 -->
+          <row class='row portfolio-row'>
+
+            <div class='col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/ctrlshift.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/ctrlshift/ctrlshift-banner.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        CtrlShift
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI / Gameplay Programmer
+                        <br>Systems Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/apogee.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/apogee/apogee-3.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Apogee
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+          <!-- Row 3 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/morp.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/morp/morp-13.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        The Mice of Riddle Place
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/solarscreen.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/solarscreen/ss-3.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        SolarScreen iOS
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI Designer / Programmer<br>
+                        Software Developer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+        </div>
+
+        <div class='page-content-spacer'></div>
+
+        <!-- PERSONAL -->
+        <!------------------------------------------------->
+
+        <div class="section-header">
+          <h1>Prototypes</h1>
+          <hr class='menu-content col-lg-8 mx-auto'>
+        </div>
+        <div class='container window-large-container'>
+
+          <!-- Row 1 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/spellcasters.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/spellcasters/spellcast-2.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Spellcasters VR
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI / Gameplay Programmer
+                        <br>Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/novalis.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/novalis/novalis-1.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Novalis
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer
+                        <br>Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </row>
+
+          <!-- Row 2 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/hive.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/hive/hive-1.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        HIVE
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI / Gameplay Programmer
+                        <br>Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/just-act-natural.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/just-act-natural/jan-5.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Just Act Natural
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI / Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+          <!-- Row 3 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/lockbox.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/interactive-room/ir-15.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        The Lockbox
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-md portfolio-slot'>
+              <div class='portfolio-slot-window' json-data='./json/pebble-lake.json'>
+                <div class='image-clip-wrapper'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/pebble-lake/pebble-lake.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Pebble Lake
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+
+          <!-- Row 4 -->
+          <row class='row portfolio-row'>
+
+            <div class=' col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/morp.json' json-data='./json/bound.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/bound/bound-3.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Bound
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        Gameplay Programmer<br>
+                        Game Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class='col-md portfolio-slot'>
+              <div class='portfolio-slot-window'>
+                <div class='image-clip-wrapper' json-data='./json/ms-viz.json'>
+                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/ms-viz/msviz-1.png'></img>
+                  <div class='portfolio-overlay d-table '>
+                    <div class='portfolio-text-overlay d-table-cell-centered'>
+                      <div class='portfolio-text-overlay-h'>
+                        Ms. Viz
+                      </div>
+                      <div class='portfolio-text-overlay-b'>
+                        UI Designer / Programmer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </row>
+        </div>
+      </div>
+    </div> <!-- END PAGE CONTENT -->
+    <!-- Logo -->
+    <div id='logo-container'>
+      <img type='image/svg+xml' src='./imgs/logo.svg' draggable=false id='logo-icon'></img>
+      <p id='logo-text'>Dylan Faust</p>
     </div>
-    <div class='container window-large-container'>
+  </main>
 
-      <!-- Row 1 -->
-      <row class='row portfolio-row'>
+  <div id="wipe-overlay-clip-wrapper">
+    <div class="transition-wipe wipe-overlay"></div>
+  </div>
 
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window portfolio-slot-window-wide'>
-            <div class='image-clip-wrapper' json-data='./json/t2.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/t2/t2-2.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    The Last of Us Part II
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    UI Scripter
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Taskbar -->
+  <div id='taskbar'>
 
-      </row>
+    <!-- Main button -->
+    <div id='taskbar-main-button-wrapper'>
+      <div id='taskbar-main-button'>
+        <div class='taskbar-button-box pos-tl'></div>
+        <div class='taskbar-button-box pos-tr'></div>
+        <div class='taskbar-button-box pos-bl'></div>
+        <div class='taskbar-button-box pos-br'></div>
+      </div>
+    </div>
 
+    <!-- Nav buttons -->
+    <div id='taskbar-nav-buttons-container'>
+      <a href="/about.html" class='taskbar-nav-button button'>
+        <p class='taskbar-button-text'>
+          About Me
+        </p>
+      </a>
 
-      <!-- Row 2 -->
-      <row class='row portfolio-row'>
+      <a href="/portfolio.html" class='taskbar-nav-button button'>
+        <p class='taskbar-button-text'>
+          Portfolio
+        </p>
+      </a>
 
-        <div class='col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/ctrlshift.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/ctrlshift/ctrlshift-banner.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    CtrlShift
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    UI / Gameplay Programmer
-                    <br>Systems Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/apogee.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/apogee/apogee-3.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    Apogee
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    Gameplay Programmer<br>
-                    Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </row>
-
-      <!-- Row 3 -->
-      <row class='row portfolio-row'>
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/morp.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/morp/morp-13.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    The Mice of Riddle Place
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    Gameplay Programmer<br>
-                    Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/solarscreen.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/solarscreen/ss-3.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    SolarScreen iOS
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    UI Designer / Programmer<br>
-                    Software Developer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </row>
+      <a href="/resume.html" class='taskbar-nav-button button'>
+        <p class='taskbar-button-text'>
+          Resume
+        </p>
+      </a>
 
     </div>
 
-    <div class='page-content-spacer'></div>
+    <!-- Social Media -->
+    <div id='social-buttons-container'>
+      <a href='https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA' target='_blank' rel='noopener noreferrer'
+        class='social-media-button button'>
+        <img type='image/svg+xml' src='./imgs/linked-in-button.svg' draggable=false class='social-media-icon'></img>
+      </a>
 
-    <!-- PERSONAL -->
-    <!------------------------------------------------->
-
-    <div class="section-header">
-      <h1>Prototypes</h1>
-      <hr class='menu-content col-lg-8 mx-auto'>
-    </div>
-    <div class='container window-large-container'>
-
-      <!-- Row 1 -->
-      <row class='row portfolio-row'>
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/spellcasters.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/spellcasters/spellcast-2.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    Spellcasters VR
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    UI / Gameplay Programmer
-                    <br>Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/novalis.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/novalis/novalis-1.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    Novalis
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    Gameplay Programmer
-                    <br>Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </row>
-
-      <!-- Row 2 -->
-      <row class='row portfolio-row'>
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/hive.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/hive/hive-1.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    HIVE
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    UI / Gameplay Programmer
-                    <br>Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/just-act-natural.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/just-act-natural/jan-5.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    Just Act Natural
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    UI / Gameplay Programmer<br>
-                    Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </row>
-
-      <!-- Row 3 -->
-      <row class='row portfolio-row'>
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/lockbox.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/interactive-room/ir-15.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    The Lockbox
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    Gameplay Programmer<br>
-                    Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class='col-md portfolio-slot'>
-          <div class='portfolio-slot-window' json-data='./json/pebble-lake.json'>
-            <div class='image-clip-wrapper'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/pebble-lake/pebble-lake.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    Pebble Lake
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    Gameplay Programmer<br>
-                    Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </row>
-
-      <!-- Row 4 -->
-      <row class='row portfolio-row'>
-
-        <div class=' col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/morp.json' json-data='./json/bound.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/bound/bound-3.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    Bound
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    Gameplay Programmer<br>
-                    Game Designer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class='col-md portfolio-slot'>
-          <div class='portfolio-slot-window'>
-            <div class='image-clip-wrapper' json-data='./json/ms-viz.json'>
-              <img class='portfolio-slot-icon' src='./imgs/screen-shots/ms-viz/msviz-1.png'></img>
-              <div class='portfolio-overlay d-table '>
-                <div class='portfolio-text-overlay d-table-cell-centered'>
-                  <div class='portfolio-text-overlay-h'>
-                    Ms. Viz
-                  </div>
-                  <div class='portfolio-text-overlay-b'>
-                    UI Designer / Programmer
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </row>
-
+      <a href='http://www.linkedin.com/in/dylanfaust/' target='_blank' rel='noopener noreferrer'
+        class='social-media-button button'>
+        <img type='image/svg+xml' src='./imgs/youtube-button.svg' draggable=false class='social-media-icon'></img>
+      </a>
     </div>
   </div>
+
 </body>
+
+<!-- Scripts -->
+
+<script src='js/jquery-funcs.js'></script>
+<script src='js/common-funcs.js'></script>
+<script src='js/drag-and-drop.js'></script>
+<script src='js/window-fullscreen.js'></script>
+<script src='js/window.js'></script>
+<script src='js/taskbar.js'></script>
+<script src='js/anim-test.js'></script>
+<script src='js/portfolio-detail.js'></script>
+<script src='js/portfolio-buttons.js'></script>
+
+<script defer src="./libs/js/swup/swup.js"></script>
+<script defer src="js/swup.js"></script>
+
+<script src='js/portfolio.js'></script>
+
+<!-- <script src='js/bounce-bg.js'></script> -->
+
+</html>

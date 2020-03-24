@@ -5,12 +5,12 @@ for (let i = 0; i < windowsSmall.length; i++)
   setupCloseButton(window, closeClick);
 }
 
-let windowsLarge = document.getElementsByClassName("large-window");
-for (let i = 0; i < windowsLarge.length; i++)
-{
-  let windowLarge = windowsLarge[i];
-  setupCloseButton(windowLarge, closeLarge);
-}
+// let windowsLarge = document.getElementsByClassName("large-window");
+// for (let i = 0; i < windowsLarge.length; i++)
+// {
+//   let windowLarge = windowsLarge[i];
+//   setupCloseButton(windowLarge, closeLarge);
+// }
 
 function setupCloseButton(window, clickFunc)
 {

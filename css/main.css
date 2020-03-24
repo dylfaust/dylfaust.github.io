@@ -140,7 +140,7 @@ h5 {
 }
 
 p {
-  font-size: 17px;
+  font-size: 20px;
   margin-bottom: 0px;
   line-height: 1.5em;
 }
@@ -151,7 +151,8 @@ p .desktop-text {
 }
 
 hr {
-  border-color: #00000080 !important;
+  border-color: #f8f3ef !important;
+  opacity: 60%;
   margin: auto;
   display: block;
   -webkit-margin-before: 0px !important;
@@ -242,11 +243,20 @@ strong {
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .background-gradient {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#161626), to(#323140)) !important;
   background-image: linear-gradient(0deg, #161626 0%, #323140 100%) !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.background-fill {
+  background-color: #161626 !important;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -343,6 +353,7 @@ strong {
   height: 88px;
   bottom: 0;
   border-top: solid 1px white;
+  z-index: 11;
 }
 
 #taskbar-main-button-wrapper {
@@ -415,6 +426,7 @@ strong {
   float: left;
   margin-left: 17.5px;
   margin-right: 17.5px;
+  color: #f8f3ef;
 }
 
 .taskbar-nav-button-active {
@@ -424,6 +436,7 @@ strong {
 
 .taskbar-nav-button-active:hover {
   background-color: #000000ff !important;
+  color: #f8f3ef;
 }
 
 .taskbar-button-text, .taskbar-button-text-link {
@@ -737,32 +750,7 @@ strong {
   position: absolute;
   width: calc(100% + 2px);
   height: calc(100% - 88px + 1px);
-  top: calc(50%);
-  border-left: 1px;
-  border-left-color: white;
-  border-left-style: solid;
-  border-right: 1px;
-  border-right-color: white;
-  border-right-style: solid;
-  border-top: 1px;
-  border-top-color: white;
-  border-top-style: solid;
-  -webkit-transform: scale(0, 0);
-          transform: scale(0, 0);
-  background-color: #f8f3ef;
-  -webkit-transition-duration: 10;
-          transition-duration: 10;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-}
-
-.large-window-active {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-  left: calc(0% - 1px);
-  top: calc(0% - 1px) !important;
+  overflow: auto;
 }
 
 .large-window-wrapper {
@@ -1006,8 +994,10 @@ strong {
   opacity: 0%;
   font-size: 26px;
   text-align: center;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   vertical-align: middle !important;
@@ -1132,13 +1122,72 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
-.transition-swipe {
-  opacity: 0;
-  -webkit-transition: 500ms;
-  transition: 500ms;
+.wipe-overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #707dbd;
+  position: absolute;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  z-index: 10;
 }
 
-html.is-animating .transition-swipe {
-  opacity: 0;
+#wipe-overlay-clip-wrapper {
+  position: absolute;
+  top: 0;
+  height: calc(100% - 88px);
+  width: 100%;
+  pointer-events: none;
+}
+
+.transition-wipe {
+  -webkit-transition: -webkit-transform 0.2s, -webkit-transform-origin 0.0s;
+  transition: -webkit-transform 0.2s, -webkit-transform-origin 0.0s;
+  transition: transform 0.2s, transform-origin 0.0s;
+  transition: transform 0.2s, transform-origin 0.0s, -webkit-transform 0.2s, -webkit-transform-origin 0.0s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+html.is-leaving .transition-wipe {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom !important;
+          transform-origin: bottom !important;
+}
+
+html.is-animating .transition-wipe {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+@-webkit-keyframes wipe-vertical-on {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes wipe-vertical-on {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
 }
 /*# sourceMappingURL=main.css.map */

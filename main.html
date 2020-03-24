@@ -23,8 +23,6 @@
   <script src='libs/js/jquery-ui.min.js'></script>
   <script src='libs/js/lottie.js'></script>
   <script src='libs/js/pdf/build/pdf.js'></script>
-  <script defer src="./libs/js/swup/swup.min.js"></script>
-  <script defer src="js/main.js"></script>
 
   <title>Dylan Faust</title>
 
@@ -35,8 +33,12 @@
     <img type='image/svg+xml' width = 100.0 src='./imgs/logo.svg' draggable=false ></img>
   </div> -->
 
-  <main id="swup" class="transition-fade">
+  <main id="swup">
+    <!-- <div class="transition-swipe"></div> -->
+
+    <!-- PAGE CONTENT -->
     <div class="background-gradient"></div>
+
     <div id="stars-clip-container">
       <div id="stars-anim">
         <div class='stars-fg' id="stars-fg-tl"></div>
@@ -46,21 +48,20 @@
       </div>
       <img type='image/svg+xml' src='./imgs/stars-bg.svg' draggable=false id='stars-bg'></img>
     </div>
-    
-    <!-- Windows -->
+
     <div class='window' id='window-about-me'>
       <div class='topbar'>
         <div class='close-button'>
           <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-          
+
         </div>
       </div>
-      
+
       <div class='window-body' id='about-me-window-body'>
         <div id='about-me-text'>
           <p class='editable-text' contenteditable='true' spellcheck='false'>
             A <strong class="bright">game developer</strong> with a passion for <strong
-            class="bright">programming</strong> and <strong class="bright">UI/UX</strong>.
+              class="bright">programming</strong> and <strong class="bright">UI/UX</strong>.
           </p>
         </div>
         <div class='window-button-spacer'>
@@ -73,20 +74,14 @@
       </div>
       <div class='window-outline'></div>
     </div>
-    
-    <!-- Logo -->
-    <div id='logo-container'>
-      <img type='image/svg+xml' src='./imgs/logo.svg' draggable=false id='logo-icon'></img>
-      <p id='logo-text'>Dylan Faust</p>
-    </div>
-    
+
     <div class='window' id='window-email'>
       <div class='topbar'>
         <div class='close-button'>
           <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
         </div>
       </div>
-      
+
       <div class='window-body' id='about-me-window-body'>
         <div id='email-text'>
           <p class='editable-text email-text' contenteditable='true' spellcheck='false'> </p>
@@ -101,20 +96,20 @@
       </div>
       <div class='window-outline'></div>
     </div>
-    
+
     <div class='window-wrapper'>
       <div class='window' id='window-reel'>
         <div class='topbar'>
           <div class='close-button'>
             <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-            
+
           </div>
         </div>
-        
+
         <div class='window-body' id='reel-body'>
           <iframe width='100%' height='100%'
-          src='https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=1&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0'
-          frameborder='0' allow='autoplay;' allowfullscreen style='pointer-events: none;'></iframe>
+            src='https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=1&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0'
+            frameborder='0' allow='autoplay;' allowfullscreen style='pointer-events: none;'></iframe>
         </div>
         <div class='window-outline'></div>
       </div>
@@ -124,11 +119,18 @@
         <rect width='400' height='100' x='0%' y='0%' />
         <circle cx='504' cy='213' r='213' />
       </clipPath>
-    </svg>
-    
-    <div class="transition-swipe"></div>
-    <!-- Fullscreen Window -->
+    </svg> <!-- END PAGE CONTENT -->
+
+    <!-- Logo -->
+    <div id='logo-container'>
+      <img type='image/svg+xml' src='./imgs/logo.svg' draggable=false id='logo-icon'></img>
+      <p id='logo-text'>Dylan Faust</p>
+    </div>
   </main>
+
+  <div id="wipe-overlay-clip-wrapper">
+    <div class="transition-wipe wipe-overlay"></div>
+  </div>
 
   <!-- Taskbar -->
   <div id='taskbar'>
@@ -145,19 +147,19 @@
 
     <!-- Nav buttons -->
     <div id='taskbar-nav-buttons-container'>
-      <div class='taskbar-nav-button button' id='1'>
+      <a class='taskbar-nav-button button' id="about-link">
         <p class='taskbar-button-text'>
           About Me
         </p>
-      </div>
+      </a>
 
-      <div class='taskbar-nav-button button' id='2' html-ref='./html/portfolio.html'>
+      <a class='taskbar-nav-button button' id="portfolio-link">
         <p class='taskbar-button-text'>
           Portfolio
         </p>
-      </div>
+      </a>
 
-      <a href="/resume.html" class='taskbar-nav-button button'>
+      <a class='taskbar-nav-button button' id="resume-link">
         <p class='taskbar-button-text'>
           Resume
         </p>
@@ -181,43 +183,6 @@
 
 </body>
 
-<!-- About Me -->
-<div class='large-window-wrapper'>
-  <div class='large-window' id='large-window-1' html-ref='./html/about.html'>
-    <div class='topbar'>
-      <div class='close-button'>
-        <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-
-      </div>
-    </div>
-    <div class='large-window-body-wrapper'></div>
-  </div> <!-- End About Me -->
-
-  <!-- Portfolio -->
-  <div class='large-window' id='large-window-portfolio' html-ref='./html/portfolio.html'
-    secondary-html-ref='./html/portfolio-detail.html'>
-    <div class='topbar'>
-      <div class='close-button'>
-        <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-      </div>
-    </div>
-    <div class='large-window-body-wrapper'></div>
-    <div class='large-window-body-wrapper' id=large-window-details></div>
-  </div> <!-- End Portfolio -->
-
-  <!-- Resume -->
-  <div class='large-window' id='large-window-3' html-ref='./html/resume.html'>
-    <div class='topbar'>
-      <div class='close-button'>
-        <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-
-      </div>
-    </div>
-    <div class='large-window-body-wrapper'></div>
-  </div> <!-- End Resume -->
-</div>
-<!-- <img class='overlay' src='./imgs/paper-texture.png'> -->
-
 <!-- Scripts -->
 
 <script src='js/jquery-funcs.js'></script>
@@ -228,7 +193,11 @@
 <script src='js/taskbar.js'></script>
 <script src='js/anim-test.js'></script>
 <script src='js/portfolio-detail.js'></script>
-<script src='js/portfolio-buttons.js'></script>
+
+<script defer src="./libs/js/swup/swup.js"></script>
+<script defer src='js/swup.js'></script>
+
+<script src="js/main.js"></script>
 
 <!-- <script src='js/bounce-bg.js'></script> -->
 
