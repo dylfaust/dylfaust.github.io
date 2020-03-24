@@ -37,7 +37,7 @@ for (let i = 0; i < navButtons.length; i++)
 
 function navButtonClick()
 {
-  toggleWindow(this.getAttribute("data-active"), this);
+  // toggleWindow(this.getAttribute("data-active"), this);
   // window.alert(this.getAttribute("data-active"));
 }
 
