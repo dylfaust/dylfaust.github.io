@@ -1057,10 +1057,10 @@ html.window-active #logo-container {
   opacity: 0%;
   font-size: 26px;
   text-align: center;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   vertical-align: middle !important;
