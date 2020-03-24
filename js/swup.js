@@ -1,10 +1,10 @@
 const swup = new Swup();
 
-const aboutLinkAbout = document.getElementById("about-link");
-const resumeLinkAbout = document.getElementById("resume-link");
-const portfolioLinkAbout = document.getElementById("portfolio-link");
+const aboutLink = document.getElementById("about-link");
+const resumeLink = document.getElementById("resume-link");
+const portfolioLink = document.getElementById("portfolio-link");
 
-
+updateLinks();
 
 swup.on('animationOutDone', updateLinks);
 
@@ -31,21 +31,31 @@ function updateLinks()
   else
     pageState = page.INVALID;
 
-  if (aboutLinkAbout)
+  if (aboutLink)
   {
     let resetLink = pageState == page.ABOUT;
-    aboutLinkAbout.href = resetLink ? "/main.html" : "/about.html";
+    aboutLink.href = resetLink ? "/main.html" : "/about.html";
   }
 
-  if (resumeLinkAbout)
+  if (resumeLink)
   {
     let resetLink = pageState == page.RESUME;
-    resumeLinkAbout.href = resetLink ? "/main.html" : "/resume.html";
+    resumeLink.href = resetLink ? "/main.html" : "/resume.html";
   }
 
-  if (portfolioLinkAbout)
+  if (portfolioLink)
   {
     let resetLink = pageState == page.PORTFOLIO;
-    portfolioLinkAbout.href = resetLink ? "/main.html" : "/portfolio.html";
+    portfolioLink.href = resetLink ? "/main.html" : "/portfolio.html";
   }
+
+  if (pageState != page.INVALID && pageState != page.MAIN)
+  {
+    document.documentElement.classList.add('window-active');
+  }
+  else
+  {
+    document.documentElement.classList.remove('window-active');
+  }
+
 }

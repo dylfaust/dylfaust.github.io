@@ -74,7 +74,7 @@
 }
 
 .button-large:hover, .taskbar-nav-button:hover {
-  background-color: #00000059 !important;
+  background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -83,7 +83,7 @@
 }
 
 .button-large:active, .taskbar-nav-button:active {
-  background-color: #00000059 !important;
+  background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -116,9 +116,11 @@ body {
 }
 
 h1 {
-  text-align: center;
-  font-size: 30px !important;
+  text-align: left;
+  font-size: 60px !important;
   font-family: "made_medium", Made Medium, sans-serif;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
 }
 
 h2 {
@@ -140,7 +142,7 @@ h5 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 0px;
   line-height: 1.5em;
 }
@@ -171,6 +173,13 @@ hr {
 @font-face {
   font-family: "made_medium";
   src: url("../fonts/made_tommy/MADE TOMMY Medium_PERSONAL USE.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "made_regular";
+  src: url("../fonts/made_tommy/MADE TOMMY Regular_PERSONAL USE.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -262,6 +271,14 @@ strong {
   height: 100%;
 }
 
+.topbar-large {
+  background-color: #707dbd !important;
+  position: absolute;
+  width: calc(100% - 150px);
+  right: 0;
+  height: 26px;
+}
+
 #stars-bg {
   pointer-events: none;
   -webkit-user-select: none;
@@ -341,8 +358,8 @@ strong {
   width: 100%;
   height: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 88px), 0 calc(100% - 88px));
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 88px), 0 calc(100% - 88px));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
 }
 
 #taskbar {
@@ -350,9 +367,9 @@ strong {
   left: 50%;
   margin-left: calc((calc(100% - (38px * 2)) / 2) * -1);
   position: fixed;
-  height: 88px;
+  height: 113px;
   bottom: 0;
-  border-top: solid 1px white;
+  border-top: solid 1px rgba(255, 255, 255, 0.33);
   z-index: 11;
 }
 
@@ -417,34 +434,37 @@ strong {
   height: 38px;
   top: 50%;
   margin-top: calc((38px / 2) * -1);
-  width: calc((194px * 3) + (17.5px * (3 * 2)));
+  width: calc((120px * 3) + (17.5px * (3 * 2)));
   left: 50%;
-  margin-left: calc((calc((194px * 3) + (17.5px * (3 * 2))) / 2) * -1);
+  margin-left: calc((calc((120px * 3) + (17.5px * (3 * 2))) / 2) * -1);
 }
 
 .taskbar-nav-button {
+  border-color: #00000000 !important;
+  background-color: #00000000 !important;
   float: left;
   margin-left: 17.5px;
   margin-right: 17.5px;
   color: #f8f3ef;
+  width: 120px;
 }
 
 .taskbar-nav-button-active {
-  background-color: white !important;
   color: #f8f3ef !important;
 }
 
 .taskbar-nav-button-active:hover {
-  background-color: #000000ff !important;
   color: #f8f3ef;
+  background-color: #00000000 !important;
+  background: #00000000 !important;
 }
 
 .taskbar-button-text, .taskbar-button-text-link {
   display: table-cell;
-  text-align: center;
+  margin: auto;
   vertical-align: middle;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .taskbar-button-text:hover, .taskbar-button-text-link:hover {
@@ -453,6 +473,19 @@ strong {
 
 .taskbar-button-text-link {
   color: white !important;
+}
+
+.taskbar-button-image {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#portfolio-link {
+  margin-top: -7px;
 }
 
 #social-buttons-container {
@@ -489,7 +522,7 @@ strong {
 }
 
 .social-media-button:hover {
-  background-color: #00000059 !important;
+  background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -498,7 +531,7 @@ strong {
 }
 
 .social-media-button:active {
-  background-color: #00000059 !important;
+  background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -617,7 +650,7 @@ strong {
 }
 
 .window-button:hover {
-  background-color: #00000059 !important;
+  background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -626,7 +659,7 @@ strong {
 }
 
 .window-button:active {
-  background-color: #00000059 !important;
+  background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -681,7 +714,7 @@ strong {
   width: 534px;
   height: 327px;
   left: calc(50% - (534px / 2));
-  top: calc(50% - (327px / 2) - (88px / 2));
+  top: calc(50% - (327px / 2) - (113px / 2));
 }
 
 #reel-body {
@@ -721,7 +754,7 @@ strong {
 }
 
 .close-button:hover {
-  background-color: #00000059 !important;
+  background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -730,7 +763,7 @@ strong {
 }
 
 .close-button:active {
-  background-color: #00000059 !important;
+  background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -749,7 +782,7 @@ strong {
 .large-window {
   position: absolute;
   width: calc(100% + 2px);
-  height: calc(100% - 88px + 1px);
+  height: calc(100% - 113px + 1px);
   overflow: auto;
 }
 
@@ -761,16 +794,16 @@ strong {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 88px), 0 calc(100% - 88px));
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 88px), 0 calc(100% - 88px));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
 }
 
 .large-window-body {
-  margin-top: 10px;
-  margin-left: 17px;
-  margin-right: 17px;
-  margin-bottom: 10px;
-  margin-top: 50px;
+  margin-top: 79px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  margin-top: 79px;
   padding-bottom: 80px;
 }
 
@@ -814,7 +847,7 @@ strong {
 }
 
 #logo-container {
-  position: absolute;
+  position: fixed;
   left: 38px;
   top: 30px;
   height: 46px;
@@ -824,8 +857,13 @@ strong {
           user-select: none;
 }
 
+html.window-active #logo-container {
+  left: -44px;
+  top: -11px;
+}
+
 #logo-icon {
-  height: 46px;
+  width: 39px;
   display: inline-block;
 }
 
@@ -836,6 +874,8 @@ strong {
   font-weight: bold;
   margin-left: calc(20px - 0.3em);
   top: 7px;
+  font-family: "made_regular", Made Regular, Sans;
+  letter-spacing: 0.5px;
 }
 
 .overlay {
@@ -859,13 +899,25 @@ strong {
   width: 100%;
 }
 
+.portfolio-header-desc {
+  margin-right: 30px;
+}
+
+.portfolio-header {
+  margin-top: 50px;
+}
+
 .portfolio-slot {
-  margin-bottom: 0px !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-bottom: 0px !important;
 }
 
 @media (max-width: 576px) {
   .portfolio-slot {
-    margin-bottom: 24px !important;
+    padding-bottom: 26px !important;
   }
 }
 
@@ -881,44 +933,44 @@ strong {
     margin-right: 0px !important;
     margin-left: 0px !important;
     width: 100% !important;
-    max-width: 500px !important;
   }
 }
 
 .portfolio-row {
   width: 100% !important;
   margin-left: 0px !important;
-  margin-bottom: 24px;
+  padding-bottom: 26px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767.98px) {
   .portfolio-row {
-    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.portfolio-slot-right {
+  -webkit-transform: translate(0, 25%);
+          transform: translate(0, 25%);
+}
+
+@media (max-width: 767.98px) {
+  .portfolio-slot-right {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 
 .portfolio-slot-window {
-  width: 100%;
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
   padding-top: 56.25%;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-          clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-}
-
-.portfolio-slot-window-wide {
-  padding-top: 35% !important;
-}
-
-@media (max-width: 767.98px) {
-  .portfolio-slot-window-wide {
-    padding-top: 56.25% !important;
-  }
-}
-
-.portfolio-slot-window {
+  border-color: #f8f3ef !important;
+  -webkit-transform: translateX(1000);
+          transform: translateX(1000);
+  overflow: hidden;
+  border-radius: 10px;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   opacity: 100%;
@@ -963,8 +1015,7 @@ strong {
 .image-clip-wrapper {
   width: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(0 0px, 101% 0px, 101% calc(100% - 0px + 1px), 0 calc(100% - 0px + 1px));
-          clip-path: polygon(0 0px, 101% 0px, 101% calc(100% - 0px + 1px), 0 calc(100% - 0px + 1px));
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -979,8 +1030,8 @@ strong {
 
 .portfolio-slot-icon {
   position: absolute;
-  width: calc(100% - (0px * 2));
-  left: 0px;
+  height: 100%;
+  left: 0;
 }
 
 .portfolio-overlay {
@@ -1029,8 +1080,10 @@ strong {
 .jm-sticky-top {
   position: -webkit-sticky;
   position: sticky;
+  position: fixed;
+  right: 0;
   margin-top: -7px;
-  top: calc(4em + -7px);
+  top: 79px;
 }
 
 @media (max-width: 992px) {
@@ -1139,23 +1192,29 @@ html.is-animating .transition-fade {
 #wipe-overlay-clip-wrapper {
   position: absolute;
   top: 0;
-  height: calc(100% - 88px);
+  height: calc(100% - 113px);
   width: 100%;
   pointer-events: none;
 }
 
 .transition-wipe {
-  -webkit-transition: -webkit-transform 0.2s, -webkit-transform-origin 0.0s;
-  transition: -webkit-transform 0.2s, -webkit-transform-origin 0.0s;
-  transition: transform 0.2s, transform-origin 0.0s;
-  transition: transform 0.2s, transform-origin 0.0s, -webkit-transform 0.2s, -webkit-transform-origin 0.0s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  -webkit-transition: -webkit-transform 0.2s, -webkit-transform-origin 0s;
+  transition: -webkit-transform 0.2s, -webkit-transform-origin 0s;
+  transition: transform 0.2s, transform-origin 0s;
+  transition: transform 0.2s, transform-origin 0s, -webkit-transform 0.2s, -webkit-transform-origin 0s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
 }
 
 html.is-leaving .transition-wipe {
+  -webkit-transition: -webkit-transform 0.25s, -webkit-transform-origin 0s;
+  transition: -webkit-transform 0.25s, -webkit-transform-origin 0s;
+  transition: transform 0.25s, transform-origin 0s;
+  transition: transform 0.25s, transform-origin 0s, -webkit-transform 0.25s, -webkit-transform-origin 0s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   -webkit-transform-origin: bottom !important;
