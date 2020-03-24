@@ -20,16 +20,36 @@ function updateLinks()
   }
   let pageState;
 
-  if (lastLinkClicked == "/main.html")
-    pageState = page.MAIN;
-  else if (lastLinkClicked == "/about.html")
-    pageState = page.ABOUT;
-  else if (lastLinkClicked == "/portfolio.html")
-    pageState = page.PORTFOLIO;
-  else if (lastLinkClicked == "/resume.html")
-    pageState = page.RESUME;
+  // More expensive
+  if (lastLinkClicked == null)
+  {
+    let currUrl = window.location.href;
+    if (currUrl.indexOf("/main.html") != -1)
+      pageState = page.MAIN;
+    else if (currUrl.indexOf("/about.html") != -1)
+      pageState = page.ABOUT;
+    else if (currUrl.indexOf("/portfolio.html") != -1)
+      pageState = page.PORTFOLIO;
+    else if (currUrl.indexOf("/resume.html") != -1)
+      pageState = page.RESUME;
+    else
+      pageState = page.INVALID;
+  }
+
+  // Cheap
   else
-    pageState = page.INVALID;
+  {
+    if (lastLinkClicked == "/main.html")
+      pageState = page.MAIN;
+    else if (lastLinkClicked == "/about.html")
+      pageState = page.ABOUT;
+    else if (lastLinkClicked == "/portfolio.html")
+      pageState = page.PORTFOLIO;
+    else if (lastLinkClicked == "/resume.html")
+      pageState = page.RESUME;
+    else
+      pageState = page.INVALID;
+  }
 
   if (aboutLink)
   {

@@ -781,8 +781,9 @@ strong {
 
 .large-window {
   position: absolute;
+  top: 26px;
   width: calc(100% + 2px);
-  height: calc(100% - 113px + 1px);
+  height: calc(100% - 113px - 26px + 1px);
   overflow: auto;
 }
 
@@ -794,16 +795,14 @@ strong {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
 }
 
 .large-window-body {
-  margin-top: 79px;
+  margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 50px;
-  margin-top: 79px;
+  margin-top: 50px;
   padding-bottom: 80px;
 }
 
@@ -921,6 +920,18 @@ html.window-active #logo-container {
   }
 }
 
+.portfolio-slot-right {
+  -webkit-transform: translate(0, 25%);
+          transform: translate(0, 25%);
+}
+
+@media (max-width: 767.98px) {
+  .portfolio-slot-right {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
 .window-large-container {
   width: 100% !important;
   padding-left: 0px !important;
@@ -948,18 +959,6 @@ html.window-active #logo-container {
   }
 }
 
-.portfolio-slot-right {
-  -webkit-transform: translate(0, 25%);
-          transform: translate(0, 25%);
-}
-
-@media (max-width: 767.98px) {
-  .portfolio-slot-right {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
 .portfolio-slot-window {
   border-style: solid;
   border-width: 1px;
@@ -977,20 +976,33 @@ html.window-active #logo-container {
 }
 
 .portfolio-slot-window-active, .portfolio-slot-window:active {
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
   -webkit-transform: scale(0.985, 0.985);
           transform: scale(0.985, 0.985);
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
 }
 
 .portfolio-slot-window-clear {
   opacity: 0%;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+}
+
+.portfolio-slot-window:hover {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.28, 0.66, 0.32, 0.99), -webkit-box-shadow 0.5s;
+  transition: -webkit-transform 1s cubic-bezier(0.28, 0.66, 0.32, 0.99), -webkit-box-shadow 0.5s;
+  transition: transform 1s cubic-bezier(0.28, 0.66, 0.32, 0.99), box-shadow 0.5s;
+  transition: transform 1s cubic-bezier(0.28, 0.66, 0.32, 0.99), box-shadow 0.5s, -webkit-transform 1s cubic-bezier(0.28, 0.66, 0.32, 0.99), -webkit-box-shadow 0.5s;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
 
 .section-header {
@@ -1059,7 +1071,7 @@ html.window-active #logo-container {
 }
 
 .portfolio-text-overlay-h {
-  font-weight: bold;
+  font-family: "made_medium", Made Medium, sans-serif;
 }
 
 .portfolio-text-overlay-b {
@@ -1080,10 +1092,9 @@ html.window-active #logo-container {
 .jm-sticky-top {
   position: -webkit-sticky;
   position: sticky;
-  position: fixed;
   right: 0;
   margin-top: -7px;
-  top: 79px;
+  top: 50px;
 }
 
 @media (max-width: 992px) {
