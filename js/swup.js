@@ -4,23 +4,23 @@ const aboutLink = document.getElementById("about-link");
 const resumeLink = document.getElementById("resume-link");
 const portfolioLink = document.getElementById("portfolio-link");
 
+const page = {
+  DETAIL: 'detail',
+  MAIN: 'main',
+  ABOUT: 'about',
+  PORTFOLIO: 'portfolio',
+  RESUME: 'resume'
+}
+
 updateLinks();
 
 swup.on('animationOutDone', updateLinks);
 
-function updateLinks()
-{
-  // let pageData = lastLinkClicked;
-  const page = {
-    INVALID: 'invalid',
-    MAIN: 'main',
-    ABOUT: 'about',
-    PORTFOLIO: 'portfolio',
-    RESUME: 'resume'
-  }
-  let pageState;
+swup.on('contentReplaced', newPageLogic);
 
-  // More expensive
+function getPageState()
+{
+  let pageState;
   if (lastLinkClicked == null)
   {
     let currUrl = window.location.href;
@@ -33,7 +33,7 @@ function updateLinks()
     else if (currUrl.indexOf("/resume.html") != -1)
       pageState = page.RESUME;
     else
-      pageState = page.INVALID;
+      pageState = page.DETAIL;
   }
 
   // Cheap
@@ -48,8 +48,16 @@ function updateLinks()
     else if (lastLinkClicked == "/resume.html")
       pageState = page.RESUME;
     else
-      pageState = page.INVALID;
+      pageState = page.DETAIL;
   }
+  return pageState;
+}
+
+function updateLinks()
+{
+  // let pageData = lastLinkClicked;
+  
+  let pageState = getPageState();
 
   if (aboutLink)
   {
@@ -65,11 +73,11 @@ function updateLinks()
 
   if (portfolioLink)
   {
-    let resetLink = pageState == page.PORTFOLIO;
+    let resetLink = pageState == page.PORTFOLIO || pageState == page.DETAIL;
     portfolioLink.href = resetLink ? "/main.html" : "/portfolio.html";
   }
 
-  if (pageState != page.INVALID && pageState != page.MAIN)
+  if (pageState != page.MAIN)
   {
     document.documentElement.classList.add('window-active');
   }
@@ -78,4 +86,22 @@ function updateLinks()
     document.documentElement.classList.remove('window-active');
   }
 
+  if (lastLinkClicked == null && pageState == page.DETAIL)
+  {
+    initPortfolioDetailVars();
+  }
+}
+
+function newPageLogic()
+{
+  let pageState = getPageState();
+  
+  if (pageState == page.DETAIL)
+  {
+    initPortfolioDetailVars();
+  }
+  else if (pageState == page.PORTFOLIO)
+  {
+    scrollToContainer();
+  }
 }

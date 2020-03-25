@@ -217,12 +217,13 @@ hr {
 
 b {
   font-family: "plex_medium", Plex Medium, sans-serif;
+  font-weight: 500;
 }
 
 strong {
   font-family: "plex_medium", Plex Medium, sans-serif;
   font-weight: 500;
-  color: #707dbd;
+  color: #7785ce;
 }
 
 .bright {
@@ -911,6 +912,10 @@ html.window-active #logo-container {
   position: fixed;
 }
 
+#portfolio-body {
+  margin-top: -25px;
+}
+
 .grid-container {
   height: 100%;
   width: 100%;
@@ -1096,8 +1101,54 @@ html.window-active #logo-container {
   font-size: 22px;
 }
 
+.back-button {
+  vertical-align: middle;
+}
+
+.back-button-image {
+  background-image: url("../imgs/back.svg");
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 18px;
+}
+
+.port-det-title-style {
+  letter-spacing: 3px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  line-height: 60px;
+  font-size: 50px !important;
+}
+
+.port-det-role-style {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.port-det-desc {
+  font-size: 21px;
+  margin-bottom: 70px !important;
+}
+
+.blockquote img {
+  width: 40px;
+  border-radius: 50%;
+}
+
 .portfolio-detail-image-wrapper {
   margin-bottom: 30px;
+}
+
+.port-det-image {
+  overflow: hidden;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #161626;
+  border-color: #f8f3ef;
+  border-width: 1px;
 }
 
 .portfolio-detail-section {
@@ -1105,6 +1156,15 @@ html.window-active #logo-container {
   padding-bottom: 0px;
   margin-bottom: 0px;
   margin-top: 4em;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.portfolio-detail-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 110px;
+  margin-right: 110px;
 }
 
 .jm-sticky-top {
@@ -1136,8 +1196,6 @@ html.window-active #logo-container {
 
 .blockquote p {
   padding-left: 20px;
-  color: #000;
-  font-style: italic;
 }
 
 .portfolio-quote {
@@ -1360,6 +1418,10 @@ canvas {
           user-select: none;
 }
 
+.skill-row {
+  display: inline-block;
+}
+
 #skills {
   margin-top: -7px;
   display: inline-block;
@@ -1404,7 +1466,7 @@ html.is-animating .transition-fade {
 #wipe-overlay-clip-wrapper {
   position: absolute;
   top: 0;
-  height: calc(100% - 113px);
+  height: calc(100% - 113px + 1px);
   width: 100%;
   pointer-events: none;
 }

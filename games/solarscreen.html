@@ -42,12 +42,16 @@
     <div class="topbar-large"></div>
     <div class='large-window'>
       <div class='large-window-body portfolio-detail-section' id='portfolio-section'>
-        <div class='container'>
+        <div class='portfolio-detail-container'>
           <div class='row'>
 
-            <div class='col-lg-5 order-lg-2 h-100 jm-sticky-top ml-auto'>
-              <h2 id="port-det-title" class='mb-2 port-det-title'>The Last of Us Part II</h2>
-              <p class='mb-3'><strong class='text-black'>Role:</strong> <span class="port-det-role">UI Scripter</span>
+            <div class='col-lg-6 order-lg-1 h-100 jm-sticky-top'>
+              <h1 class='port-det-title-syle'><span class="port-det-title">Last of Us Part II</span> <a
+                  href="/portfolio.html" class="back-button">
+                  <img class="back-button-image" src='../imgs/back.svg' alt='Image'>
+                </a></h1>
+              <!-- <span class="back-button-image"><a href="/portfolio.html" class="back-button"></a></span> -->
+              <p class='mb-3'><b class='role-title'>Roles:</b> <span class="port-det-role">UI Scripter</span>
               </p>
               <p class='mb-4 port-det-desc'>
                 Worked on a UI team of two, composed of a UI artist and myself, to
@@ -58,32 +62,19 @@
                 workflow, and keyframe animating the majority of the UI.
               </p>
               <p class='mb-0'>
-                <b>Skills / Tools:</b>
-                <li class="port-det-skill"> <span class="skill-title">UI / Gameplay Programming</span> | <span
-                    class="skill-desc">C++, Scripting (racket/lisp based language)</span>
-                </li>
-                <li class="port-det-skill"> <span class="skill-title">UI / Gameplay Programming</span> | <span
-                    class="skill-desc">C++, Scripting (racket/lisp based language)</span>
-                </li>
-                <li class="port-det-skill"> <span class="skill-title">UI / Gameplay Programming</span> | <span
-                    class="skill-desc">C++, Scripting (racket/lisp based language)</span>
-                </li>
-                <li class="port-det-skill"> <span class="skill-title">UI / Gameplay Programming</span> | <span
-                    class="skill-desc">C++, Scripting (racket/lisp based language)</span>
-                </li>
-                <li class="port-det-skill"> <span class="skill-title">UI / Gameplay Programming</span> | <span
-                    class="skill-desc">C++, Scripting (racket/lisp based language)</span>
-                </li>
-                <li class="port-det-skill"> <span class="skill-title">UI / Gameplay Programming</span> | <span
-                    class="skill-desc">C++, Scripting (racket/lisp based language)</span>
-                </li>
+                <span class="skill">C++</span>
+                <span class="skill">PyQt</span>
+                <span class="skill">Illustrator Scripting</span>
+                <span class="skill">After Effects</span>
+                <span class="skill">UI / Gameplay Programming</span>
+                <span class="skill">Skill</span>
+                <span class="skill">Skill</span>
+                <span class="skill">Skill</span>
+                <span class="skill">Skill</span>
               </p>
-              <div class='mt-30 button-large d-table back-button'>
-                <p class=' taskbar-button-text-link'>Back</span></p>
-              </div>
             </div>
 
-            <div class='col-lg-6 order-lg-1 mb-4 mb-lg-0'>
+            <div class='col-lg-6 order-lg-2 '>
 
               <!-- Image 1 -->
               <div class='portfolio-detail-image-wrapper port-det-image'>
@@ -153,30 +144,17 @@
       <!-- JSON DATA -->
       <script type="application/json" id="json-data">
         {
-          "title": "The Last of Us Part II",
-            "role": "UI Scripter",
-            "description": "Worked on a UI team of two, composed of a UI artist and myself, to design, implement, and iterate on the UI, using both the in-house scripting language and C++. Trained a third team-member (UI scripter) towards the end of the project. Was also responsible for tool improvements, Photoshop / Illustrator scripting to improve the artist's workflow, and keyframe animating the majority of the UI.",
-            "skills": [
-              {
-                "title": "UI / Gameplay Programming",
-                "desc": "C++, Scripting (racket/lisp based language)"
-              },
-              {
-                "title": "PyQt Programming",
-                "desc": "UI Editor tool improvements"
-              },
-              {
-                "title": "After Effects",
-                "desc": "animated mockups"
-              },
-              {
-                "title": "Illustrator / Photoshop Scripting",
-                "desc": "Pipeline improvements for artist"
-              },
-              {
-                "title": "UI Editor",
-                "desc": "(in-house tool)"
-              }
+          "title": "CtrlShift",
+          "roleTitle": "Roles:",
+          "role": "UI / Gameplay Programmer, Designer",
+          "description": "Worked on a UI team of two, composed of a UI artist and myself, to design, implement, and iterate on the UI, using both the in-house scripting language and C++. Trained a third team-member (UI scripter) towards the end of the project. Was also responsible for tool improvements, Photoshop / Illustrator scripting to improve the artist's workflow, and keyframe animating the majority of the UI.",
+          "skills": 
+            [
+            "Unreal Engine 4",
+            "C++",
+            "Blueprints", 
+            "UI Design",
+            "UI / Gameplay Programming", "Illustrator", "Systems Design"
             ],
             "quotes": [
               {
@@ -253,7 +231,7 @@
         <img type='image/svg+xml' src='../imgs/youtube-button.svg' draggable=false class='social-media-icon'></img>
       </a>
     </div>
-  </div>  
+  </div>
 </body>
 
 <!-- Scripts -->
