@@ -93,8 +93,16 @@ function populatePortfolioDetail(jsonFile)
       let curImage = a_images[i];
       if (imagesJson.length > i)
       {
+        $(curImage).fancybox({
+          helpers: { 
+            overlay: {
+              locked: false
+              }
+          }
+        });
         curImage.style.display = "block";
         let curImageJson = imagesJson[i];
+        curImage.href = curImageJson;
         curImage.img.src = curImageJson;
       }
       else

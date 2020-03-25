@@ -18,7 +18,13 @@ updateLinks();
 
 swup.on('animationOutDone', updateLinks);
 
+swup.on('animationOutStart', disableClicks);
+
 swup.on('contentReplaced', newPageLogic);
+
+function disableClicks(){
+  // document.getElementById("taskbar-nav-buttons-container").style.pointerEvents = "none";
+}
 
 function getPageState()
 {
@@ -57,6 +63,7 @@ function getPageState()
 
 function updateLinks()
 {
+  // document.getElementById("taskbar-nav-buttons-container").style.pointerEvents = "auto";
   // let pageData = lastLinkClicked;
   
   let pageState = getPageState();
