@@ -2,7 +2,8 @@ var title;
 var role;
 var desc;
 var roleTitle;
-var a_skills;
+// var a_skills;
+var a_skillWrappers;
 var a_images;
 var a_quotes;
 var innerJson;
@@ -23,7 +24,12 @@ function initPortfolioDetailVars(myPortfolioDetail)
     quote.image = quote.getElementsByClassName("quote-image")[0];
     quote.name = quote.getElementsByClassName("quote-cit")[0];
   }
-  a_skills = document.getElementsByClassName("skill");
+
+  a_skillWrappers = document.getElementsByClassName("skills");
+  for (let i = 0; i < a_skillWrappers.length; i++)
+  {
+    a_skillWrappers[i].skills = a_skillWrappers[i].getElementsByClassName("skill");
+  }
 
   a_images = document.getElementsByClassName("port-det-image");
   for (let i = 0; i < a_images.length; i++)
@@ -72,19 +78,34 @@ function populatePortfolioDetail(jsonFile)
     }
 
     let skillsJson = json.skills;
-    for (let i = 0; i < a_skills.length; i++)
+    for (let i = 0; i < a_skillWrappers.length; i++)
     {
-      let curSkill = a_skills[i];
-      if (skillsJson.length > i)
+      let a_skills = a_skillWrappers[i].skills;
+      for (let i = 0; i < a_skills.length; i++)
       {
-        curSkill.style.display = "inline";
-        let curSkillJson = skillsJson[i];
-        curSkill.innerHTML = curSkillJson;
+        let curSkill = a_skills[i];
+        if (skillsJson.length > i)
+        {
+          curSkill.style.display = "inline";
+          let curSkillJson = skillsJson[i];
+          curSkill.innerHTML = curSkillJson;
+        }
+        else
+        {
+          curSkill.style.display = "none";
+        }
       }
-      else
-      {
-        curSkill.style.display = "none";
-      }
+    }
+
+    if (json.leftSkills == true)
+    {
+        a_skillWrappers[0].style.display = "inline";
+        a_skillWrappers[1].style.display = "none";
+    }
+    else
+    {
+      a_skillWrappers[0].style.display = "none";
+      a_skillWrappers[1].style.display = "inline";
     }
 
     let imagesJson = json.pictures;
@@ -93,16 +114,17 @@ function populatePortfolioDetail(jsonFile)
       let curImage = a_images[i];
       if (imagesJson.length > i)
       {
-        $(curImage).fancybox({
-          helpers: { 
-            overlay: {
-              locked: false
-              }
-          }
-        });
         curImage.style.display = "block";
         let curImageJson = imagesJson[i];
-        curImage.href = curImageJson;
+        if (i == 0)
+        {
+          curImage.href = json.video;
+        }
+        else
+        {
+          curImage.href = curImageJson;
+        }
+
         curImage.img.src = curImageJson;
       }
       else

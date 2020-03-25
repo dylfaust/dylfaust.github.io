@@ -10,10 +10,11 @@
   <link rel='stylesheet' href='../libs/css/bootstrap.min.css'>
   <link rel='stylesheet' href='../libs/css/bootstrap-reboot.min.css'>
   <link rel='stylesheet' href='../libs/css/bootstrap-grid.min.css'>
+  <link rel='stylesheet' href='../libs/css/jquery.fancybox.css'>
+  <link rel='stylesheet' href='../libs/css/font-awesome.min.css'>
   <link rel='stylesheet' href='../css/main.css'>
+  <link rel='stylesheet' href='../libs/css/template-css/about.css'>
   <link rel='stylesheet' href='../css/transitions.css'>
-
-  <!-- <link rel='stylesheet' href='../libs/css/template-css/portfolio-detail.css'> -->
 
   <!-- This snippet is used in production (included from viewer.html) -->
   <link rel='resource' type='application/l10n' href='locale/locale.properties'>
@@ -25,6 +26,8 @@
   <script src='../libs/js/jquery-ui.min.js'></script>
   <script src='../libs/js/lottie.js'></script>
   <script src='../libs/js/pdf/build/pdf.js'></script>
+  <script src='../libs/js/jquery.fancybox.js'></script>
+
 
   <title>Dylan Faust</title>
 
@@ -46,22 +49,24 @@
           <div class='row'>
 
             <div class='col-lg-6 order-lg-1 h-100 jm-sticky-top'>
-              <h1 class='port-det-title-syle'><span class="port-det-title">Last of Us Part II</span> <a
+              <h1 class='port-det-title-style'><span class="port-det-title">Last of Us Part II</span> <a
                   href="/portfolio.html" class="back-button">
                   <img class="back-button-image" src='../imgs/back.svg' alt='Image'>
                 </a></h1>
               <!-- <span class="back-button-image"><a href="/portfolio.html" class="back-button"></a></span> -->
-              <p class='mb-3'><b class='role-title'>Roles:</b> <span class="port-det-role">UI Scripter</span>
+              <p class='port-det-role-style'><b class='role-title'>Roles:</b> <span class="port-det-role">UI
+                  Scripter</span>
               </p>
               <p class='mb-4 port-det-desc'>
                 Worked on a UI team of two, composed of a UI artist and myself, to
-                design, implement, and iterate on the UI, using both the in-house scripting language and C++. Trained a
+                <strong>design</strong>, <strong>implement</strong>, and <strong>iterate</strong> on the UI, using both
+                the in-house scripting language and C++. Trained a
                 third team-member (UI scripter) towards the end of the project. Was also responsible for tool
                 improvements,
                 Photoshop / Illustrator scripting to improve the artist's
                 workflow, and keyframe animating the majority of the UI.
               </p>
-              <p class='mb-0'>
+              <div class='skills'>
                 <span class="skill">C++</span>
                 <span class="skill">PyQt</span>
                 <span class="skill">Illustrator Scripting</span>
@@ -71,15 +76,17 @@
                 <span class="skill">Skill</span>
                 <span class="skill">Skill</span>
                 <span class="skill">Skill</span>
-              </p>
+              </div>
             </div>
 
             <div class='col-lg-6 order-lg-2 '>
 
               <!-- Image 1 -->
-              <div class='portfolio-detail-image-wrapper port-det-image'>
-                <img src='../imgs/screen-shots/t2/t2-2.png' alt='Image' class='img-fluid' class='img-fluid'>
-              </div> <!-- End Image 1 -->
+              <a data-fancybox="gallery" href="../imgs/screen-shots/t2/t2-2.png"
+                class='portfolio-detail-image-wrapper port-det-image'>
+                <img class="play-btn" src="../imgs/play.svg">
+                <img src='../imgs/screen-shots/t2/t2-2.png' alt='Image' class='img-fluid'>
+              </a> <!-- End Image 1 -->
 
               <!-- Quote 1 -->
               <div class='portfolio-detail-image-wrapper portfolio-quote'>
@@ -93,15 +100,32 @@
                 </blockquote>
               </div> <!-- End Quote 1 -->
 
+              <!-- Skills -->
+              <div class='portfolio-detail-image-wrapper portfolio-skills-right'>
+                <div class='skills'>
+                  <span class="skill">C++</span>
+                  <span class="skill">PyQt</span>
+                  <span class="skill">Illustrator Scripting</span>
+                  <span class="skill">After Effects</span>
+                  <span class="skill">UI / Gameplay Programming</span>
+                  <span class="skill">Skill</span>
+                  <span class="skill">Skill</span>
+                  <span class="skill">Skill</span>
+                  <span class="skill">Skill</span>
+                </div>
+              </div> <!-- End Skills -->
+
               <!-- Image 2 -->
-              <div class='portfolio-detail-image-wrapper port-det-image'>
+              <a data-fancybox="gallery" href="../imgs/screen-shots/t2/t2-2.png"
+                class='portfolio-detail-image-wrapper port-det-image'>
                 <img alt='Image' class='img-fluid' class='img-fluid'>
-              </div> <!-- End Image 2 -->
+              </a> <!-- End Image 2 -->
 
               <!-- Image 3 -->
-              <div class='portfolio-detail-image-wrapper port-det-image'>
+              <a data-fancybox="gallery" href="../imgs/screen-shots/t2/t2-2.png"
+                class='portfolio-detail-image-wrapper port-det-image'>
                 <img alt='Image' class='img-fluid' class='img-fluid'>
-              </div> <!-- End Image 1 -->
+              </a> <!-- End Image 1 -->
 
               <!-- Quote 2 -->
               <div class='portfolio-detail-image-wrapper portfolio-quote'>
@@ -115,14 +139,16 @@
               </div> <!-- End Quote 2 -->
 
               <!-- Image 4 -->
-              <div class='portfolio-detail-image-wrapper port-det-image'>
+              <a data-fancybox="gallery" href="../imgs/screen-shots/t2/t2-2.png"
+                class='portfolio-detail-image-wrapper port-det-image'>
                 <img alt='Image' class='img-fluid' class='img-fluid'>
-              </div> <!-- End Image 4 -->
+              </a> <!-- End Image 4 -->
 
               <!-- Image 5 -->
-              <div class='portfolio-detail-image-wrapper port-det-image'>
+              <a data-fancybox="gallery" href="../imgs/screen-shots/t2/t2-2.png"
+                class='portfolio-detail-image-wrapper port-det-image'>
                 <img alt='Image' class='img-fluid' class='img-fluid'>
-              </div> <!-- End Image 5 -->
+              </a> <!-- End Image 5 -->
 
               <!-- start footer Area -->
               <footer class='footer-area section-gap'>
@@ -147,7 +173,7 @@
           "title": "CtrlShift",
           "roleTitle": "Roles:",
           "role": "UI / Gameplay Programmer, Designer",
-          "description": "Worked on a UI team of two, composed of a UI artist and myself, to design, implement, and iterate on the UI, using both the in-house scripting language and C++. Trained a third team-member (UI scripter) towards the end of the project. Was also responsible for tool improvements, Photoshop / Illustrator scripting to improve the artist's workflow, and keyframe animating the majority of the UI.",
+          "description": "<strong>Winner</strong> of the <strong>Technical Achievement Award</strong> and the <strong>Studio Prize</strong> at the Sammy Showcase 2017.<br><br>Based on a concept which <strong>I conceived and pitched</strong>, CtrlShift is a <strong>2 player coop VR</strong> game, which only requires one VR headset. One player wears the VR headset and plays the role of <strong>the Spy</strong>, <strong>physically sneaking</strong> through the environment, and trying to make it to the mainframe unseen. The other player utilizes the keyboard and computer monitor to the play the role of <strong>the Hacker</strong>, <strong>typing in code</strong> to a command line interface to <strong>hack the environment</strong> in their Spy's favor. Both players have incomplete views of the environment, so they have to <strong>communicate</strong> and <strong>trust</strong> one another in order to succeed.",
           "skills": 
             [
             "Unreal Engine 4",
@@ -157,24 +183,17 @@
             "UI / Gameplay Programming", "Illustrator", "Systems Design"
             ],
             "quotes": [
-              {
-                "quote": "It floored me on just about every level.<br>The most intense combat I've ever had in a videogame.",
-                "title": "Greg Miller | Gamespot",
-                "picture": "../imgs/screen-shots/t2/greg-miller.jpg"
-              },
-              {
-                "quote": "Beyond the hype and expectation placed around so much of The Last of Us Part II, there's a sturdy little video game, that's had some thoughtful tweaks.",
-                "title": "Zoe Delahunty-Light | Eurogamer",
-                "picture": "../imgs/screen-shots/t2/zoe-delahunty.jpg"
-              }
+              
             ],
             "pictures": [
-              "../imgs/screen-shots/t2/t2-2.png",
-              "../imgs/screen-shots/t2/t2-3.jpg",
-              "../imgs/screen-shots/t2/t2-8.png",
-              "../imgs/screen-shots/t2/t2-4.png",
-              "../imgs/screen-shots/t2/t2-6.png"
-            ]
+              "../imgs/screen-shots/ctrlshift/ctrlshift-banner.png",
+              "../imgs/screen-shots/ctrlshift/ctrlshift-4.jpeg",
+              "../imgs/screen-shots/ctrlshift/ctrlshift-2.png",
+              "../imgs/screen-shots/ctrlshift/ctrlshift-1.png",
+              "../imgs/screen-shots/ctrlshift/ctrlshift-3.png"
+            ],
+            "video": "https://youtu.be/UifD7NRDrqQ",
+            "leftSkills": false
         }
       </script>
       <!-- END JSON DATA -->

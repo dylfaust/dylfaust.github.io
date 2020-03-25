@@ -112,6 +112,34 @@ html {
   color: black;
 }
 
+.play-btn {
+  position: absolute;
+  width: 120px;
+  left: 50%;
+  margin-left: calc((120px / 2) * -1);
+  height: 120px;
+  top: 50%;
+  margin-top: calc((120px / 2) * -1);
+  display: inline-block;
+}
+
+.play-btn-wrapper {
+  width: 10px;
+  height: 10px;
+  background: red;
+  position: absolute;
+  top: 50%;
+}
+
+.port-box-container {
+  background: red;
+  position: relative;
+}
+
+.play-btn-wrapper:after {
+  height: 100%;
+}
+
 body {
   font-family: "plex_light", Plex Light, sans-serif !important;
   background-size: 100%;
@@ -1130,7 +1158,7 @@ html.window-active #logo-container {
 }
 
 .port-det-desc {
-  font-size: 21px;
+  font-size: 19px;
   margin-bottom: 70px !important;
 }
 
@@ -1141,6 +1169,7 @@ html.window-active #logo-container {
 
 .portfolio-detail-image-wrapper {
   margin-bottom: 30px;
+  position: relative;
 }
 
 .port-det-image {
@@ -1151,6 +1180,7 @@ html.window-active #logo-container {
   border-color: #161626;
   border-color: #f8f3ef;
   border-width: 1px;
+  background: black;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
 }
@@ -1218,12 +1248,13 @@ html.window-active #logo-container {
   margin-bottom: 50px;
 }
 
-#pdf-viewer {
-  margin: auto;
+.portfolio-skills-right {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-canvas {
-  background-color: orange !important;
+#pdf-viewer {
+  margin: auto;
 }
 
 .resume-button {
@@ -1437,7 +1468,7 @@ canvas {
   display: inline-block;
 }
 
-#skills {
+.skills {
   margin-top: -7px;
   display: inline-block;
 }
