@@ -100,6 +100,18 @@ html {
   overflow: hidden;
 }
 
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.996);
+  opacity: 100% !important;
+  color: black;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.996);
+  opacity: 100% !important;
+  color: black;
+}
+
 body {
   font-family: "plex_light", Plex Light, sans-serif !important;
   background-size: 100%;
@@ -117,7 +129,7 @@ body {
 
 h1 {
   text-align: left;
-  font-size: 60px !important;
+  font-size: 55px !important;
   font-family: "made_medium", Made Medium, sans-serif;
   letter-spacing: 5px;
   padding-bottom: 20px;
@@ -134,7 +146,12 @@ h3 {
 }
 
 h4 {
-  font-family: "made_medium", Made Medium, sans-serif;
+  font-family: "made_regular", Made Medium, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 0px;
+  letter-spacing: 1px;
 }
 
 h5 {
@@ -204,6 +221,7 @@ b {
 
 strong {
   font-family: "plex_medium", Plex Medium, sans-serif;
+  font-weight: 500;
   color: #707dbd;
 }
 
@@ -1135,25 +1153,184 @@ canvas {
   background-color: orange !important;
 }
 
-#about-me-image {
-  max-height: 300px !important;
+.resume-button {
+  margin-top: 50px;
 }
 
-.p1-gradient-bg,
-.primary-btn,
-.primary-btn2:hover,
-.default-header,
-.dropdown-menu,
-.banner-area,
-.myself-wrap .desc .talk-btn,
-.skillbar-bar,
-.single-feature:hover,
-.single-footer-widget .click-btn,
-.generic-banner {
-  background-image: -webkit-gradient(linear, left top, right top, from(#9cb5ff), to(#c8b5ff));
-  background-image: linear-gradient(90deg, #9cb5ff 0%, #c8b5ff 100%);
+.about-left {
+  padding-right: 40px;
+}
+
+#about-body {
+  padding-bottom: 0px !important;
+}
+
+.sub-section-divider {
+  height: 60px;
+}
+
+.section-divider {
+  height: 95px;
+}
+
+.skill-pillar-wrapper {
+  padding: 0px;
+}
+
+.skill-pillar {
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #59618b99;
+  border-radius: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.skill-pillar-icon {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80px;
+  height: 90px;
+}
+
+.skill-pillar-divider {
+  opacity: 100%;
+  width: 50px;
+  margin-top: 12px !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.skill-pillar-title {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "made_regular", Made Medium, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.skill-pillar-traits {
+  text-align: center;
+  font-size: 21px;
+  margin-top: 15px;
+  line-height: 30px;
+}
+
+.skills-row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.skill-bar-percent {
+  /* color: #777777; */
+  font-size: 19px;
+  margin-bottom: 10px;
+  font-family: "made_regular", Made Medium, sans-serif;
+  text-align: left;
+}
+
+.myself-wrap {
+  background-color: #59618b99;
+  border-radius: 7px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.myself-wrap .desc {
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.myself-wrap .desc p {
+  margin-bottom: 5px;
+}
+
+.myself-wrap .desc .lnr {
+  font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .myself-wrap {
+    margin-top: 30px;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+#about-me-image {
+  max-height: 250px !important;
+}
+
+#myself-name {
+  font-family: "made_regular", Made Regular, Sans;
+  letter-spacing: 1px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+#myself-divider {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+.myself-info {
+  font-size: 21px;
+}
+
+.myself-desc {
+  font-size: 21px;
+}
+
+.lnr {
+  font-size: 19px;
+}
+
+.headshot-wrapper {
+  width: calc(100% - (8px * 2));
+  border-radius: 7px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.skillbar-bar {
+  background-color: #707dbd;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.skillbar {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.skillbar .skillwrap {
+  background-color: rgba(255, 255, 255, 0.22);
+  /* border-radius: 10px; */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skillbar-bar {
+  /* border-radius: 10px; */
+  height: 8px;
+  width: 0px;
+  -webkit-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+#skillbars {
+  margin-bottom: -20px;
 }
 
 @media (min-width: 1100px) {
@@ -1162,6 +1339,30 @@ canvas {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.skill {
+  font-size: 19px;
+  background-color: #59618b99;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 5px;
+  margin-left: 5px;
+  white-space: nowrap;
+  border-radius: 7px;
+  line-height: 55px;
+  vertical-align: top;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#skills {
+  margin-top: -7px;
+  display: inline-block;
 }
 
 .footer-text {
