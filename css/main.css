@@ -1439,13 +1439,13 @@ canvas {
   padding-bottom: 10px !important;
 }
 
-.transition-fade {
+.swup-transition-fade {
   opacity: 1;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
 
-html.is-animating .transition-fade {
+html.is-animating .swup-transition-fade {
   opacity: 0;
 }
 
@@ -1471,7 +1471,7 @@ html.is-animating .transition-fade {
   pointer-events: none;
 }
 
-.transition-wipe {
+.swup-transition-wipe {
   -webkit-transition: -webkit-transform 0.2s, -webkit-transform-origin 0s;
   transition: -webkit-transform 0.2s, -webkit-transform-origin 0s;
   transition: transform 0.2s, transform-origin 0s;
@@ -1482,7 +1482,7 @@ html.is-animating .transition-fade {
           transform: scaleY(0);
 }
 
-html.is-leaving .transition-wipe {
+html.is-leaving .swup-transition-wipe {
   -webkit-transition: -webkit-transform 0.25s, -webkit-transform-origin 0s;
   transition: -webkit-transform 0.25s, -webkit-transform-origin 0s;
   transition: transform 0.25s, transform-origin 0s;
@@ -1495,7 +1495,7 @@ html.is-leaving .transition-wipe {
           transform-origin: bottom !important;
 }
 
-html.is-animating .transition-wipe {
+html.is-animating .swup-transition-wipe {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
   -webkit-transform-origin: top;

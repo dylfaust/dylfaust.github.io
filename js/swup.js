@@ -1,4 +1,6 @@
-const swup = new Swup();
+const swup = new Swup(
+  { animationSelector: '[class*="swup-transition-"]'}
+);
 
 const aboutLink = document.getElementById("about-link");
 const resumeLink = document.getElementById("resume-link");
