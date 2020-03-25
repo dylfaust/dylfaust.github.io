@@ -98,6 +98,17 @@
 html {
   font-family: "plex_light", Plex Light, sans-serif !important;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+html body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  cursor: url("../imgs/cursor.svg"), default;
 }
 
 ::-moz-selection {
@@ -333,6 +344,10 @@ strong {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  width: 1437px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .stars-fg {
@@ -751,6 +766,13 @@ strong {
   top: 100px;
 }
 
+@media (max-width: 800px) {
+  #window-about-me {
+    top: 120px;
+    left: calc(50% - (293px / 2.0));
+  }
+}
+
 #window-email {
   width: 288px;
   height: 220px;
@@ -758,11 +780,26 @@ strong {
   top: 200px;
 }
 
+@media (max-width: 800px) {
+  #window-email {
+    display: none;
+  }
+}
+
 #window-reel {
   width: 534px;
   height: 327px;
   left: calc(50% - (534px / 2));
   top: calc(50% - (327px / 2) - (113px / 2));
+}
+
+@media (max-width: 800px) {
+  #window-reel {
+    width: calc(100% - (10px * 2.0));
+    height: calc((100vw - (10px * 2.0)) * (9.0 / 16.0) +  27px);
+    left: 10px;
+    top: calc(220px + 120px + 30px);
+  }
 }
 
 #reel-body {
@@ -1286,7 +1323,7 @@ html.window-active #logo-container {
   margin-right: 10px;
   background: #59618b99;
   border-radius: 7px;
-  padding-top: 15px;
+  padding-top: 10px;
   padding-bottom: 15px;
 }
 
@@ -1320,7 +1357,7 @@ html.window-active #logo-container {
   text-align: center;
   font-size: 21px;
   margin-top: 15px;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 .skills-row {
