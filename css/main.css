@@ -535,9 +535,9 @@ strong {
   height: 38px;
   top: 50%;
   margin-top: -19px;
-  width: 360px;
+  width: 240px;
   left: 50%;
-  margin-left: -180px;
+  margin-left: -120px;
 }
 
 @media (max-width: 600px) {
@@ -568,7 +568,7 @@ strong {
 @media (max-width: 600px) {
   .taskbar-nav-button-wrapper {
     margin-left: 0px;
-    margin-right: calc((100% - 80px) / 3);
+    margin-right: calc((100% - 60px) / 2);
   }
 }
 
@@ -584,8 +584,18 @@ strong {
   }
 }
 
+#chat-link-wrapper {
+  display: none;
+}
+
 @media (max-width: 600px) {
   #chat-link-wrapper {
+    margin-right: 0px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #portfolio-link-wrapper {
     margin-right: 0px !important;
   }
 }
@@ -635,6 +645,13 @@ strong {
 }
 
 @media (max-width: 600px) {
+  #portfolio-link {
+    margin-right: 0px;
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
   #chat-link {
     margin-right: 0px;
     right: 0;
@@ -680,6 +697,25 @@ strong {
     margin-left: 0px !important;
     left: -15px !important;
   }
+}
+
+#portfolio-link .taskbar-button-image {
+  margin-top: -27px !important;
+}
+
+@media (max-width: 600px) {
+  #portfolio-link .taskbar-button-image {
+    margin-right: 0px !important;
+    left: auto !important;
+    right: -12px !important;
+    margin-left: 0px !important;
+  }
+}
+
+#about-link .taskbar-button-image {
+  height: 47px !important;
+  top: 50% !important;
+  margin-top: -23.5px !important;
 }
 
 @media (max-width: 600px) {
@@ -1577,7 +1613,7 @@ html.window-active #logo-container {
 
 @media (max-width: 991px) {
   .port-det-desc {
-    max-width: 600px;
+    max-width: 700px;
   }
 }
 
@@ -2134,6 +2170,10 @@ html.window-active #logo-container {
   /* padding-top: 20px; */
   text-align: center;
   font-size: 14px !important;
+}
+
+.footer-text a {
+  color: #b4b4b4;
 }
 
 .footer-area {
