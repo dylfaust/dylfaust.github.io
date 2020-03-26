@@ -54,7 +54,7 @@
   right: -1px !important;
 }
 
-.button-large, .taskbar-nav-button {
+.button-large {
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
@@ -73,7 +73,7 @@
   height: 38px;
 }
 
-.button-large:hover, .taskbar-nav-button:hover {
+.button-large:hover {
   background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -82,7 +82,7 @@
   border-radius: 7px;
 }
 
-.button-large:active, .taskbar-nav-button:active {
+.button-large:active {
   background-color: #00000059;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -137,13 +137,11 @@ html body {
 .play-btn-wrapper {
   width: 10px;
   height: 10px;
-  background: red;
   position: absolute;
   top: 50%;
 }
 
 .port-box-container {
-  background: red;
   position: relative;
 }
 
@@ -158,7 +156,7 @@ body {
   overflow-y: hidden;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -209,7 +207,7 @@ p .desktop-text {
   margin-bottom: 0 !important;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   p {
     font-size: 19px;
   }
@@ -431,6 +429,13 @@ strong {
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
 }
 
+@media (max-width: 600px) {
+  #stars-clip-container {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 90px), 0 calc(100% - 90px));
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 90px), 0 calc(100% - 90px));
+  }
+}
+
 #taskbar {
   width: calc(100% - (38px * 2));
   left: 50%;
@@ -442,6 +447,12 @@ strong {
   z-index: 11;
 }
 
+@media (max-width: 600px) {
+  #taskbar {
+    height: 90px;
+  }
+}
+
 #taskbar-main-button-wrapper {
   height: 38px;
   top: 50%;
@@ -450,7 +461,7 @@ strong {
   width: 38px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #taskbar-main-button-wrapper {
     display: none;
   }
@@ -509,19 +520,58 @@ strong {
   height: 38px;
   top: 50%;
   margin-top: -19px;
-  width: 255px;
+  width: 360px;
   left: 50%;
-  margin-left: -127.5px;
+  margin-left: -180px;
+}
+
+@media (max-width: 600px) {
+  #taskbar-nav-buttons-container {
+    width: 100%;
+    left: 50%;
+    margin-left: calc((100% / 2) * -1);
+  }
 }
 
 .taskbar-nav-button {
+  border-color: #f8f3ef;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 24px;
+  width: 20px;
+  height: 100%;
   border-color: #00000000 !important;
-  background-color: #00000000 !important;
   float: left;
-  margin-left: 17.5px;
-  margin-right: 17.5px;
+  margin-left: 50px;
+  margin-right: 50px;
   color: #f8f3ef;
-  width: 50px;
+  width: 20px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .taskbar-nav-button {
+    margin-left: 0px;
+    margin-right: calc((100% - 80px) / 3);
+  }
+}
+
+.taskbar-nav-button .taskbar-button-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .taskbar-nav-button .taskbar-button-image {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
 .taskbar-nav-button-active {
@@ -534,6 +584,23 @@ strong {
   background: #00000000 !important;
 }
 
+#home-link {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #home-link {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  #chat-link {
+    margin-right: 0px;
+    right: 0;
+  }
+}
+
 .taskbar-button-text, .taskbar-button-text-link {
   display: table-cell;
   margin: auto;
@@ -544,7 +611,7 @@ strong {
   font-family: "plex_light", Plex Light, sans-serif;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .taskbar-button-text, .taskbar-button-text-link {
     font-size: 19px;
   }
@@ -559,16 +626,34 @@ strong {
 }
 
 .taskbar-button-image {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  margin: auto;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  width: 70px;
+  left: 50%;
+  margin-left: -35px !important;
+  height: 50px !important;
+  top: 50% !important;
+  margin-top: -25px !important;
+  position: absolute;
 }
 
-#portfolio-link {
-  margin-top: -7px;
+#home-link .taskbar-button-image {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #home-link .taskbar-button-image {
+    display: table;
+    margin-left: 0px !important;
+    left: 0px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #chat-link .taskbar-button-image {
+    margin-right: 0px !important;
+    left: auto !important;
+    right: 0 !important;
+    margin-left: 0px !important;
+  }
 }
 
 #social-buttons-container {
@@ -580,7 +665,7 @@ strong {
   right: calc(8.75px * -1);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #social-buttons-container {
     display: none;
   }
@@ -710,7 +795,7 @@ strong {
   position: relative;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .window-button-spacer {
     display: none;
   }
@@ -766,7 +851,7 @@ strong {
   transition: 0.05s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .window-button {
     display: none;
   }
@@ -777,7 +862,7 @@ strong {
   height: calc(100% - calc(38px + (13px * 2)));
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #about-me-text {
     height: 100%;
     padding-bottom: 30px;
@@ -811,7 +896,7 @@ strong {
   top: 100px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #window-about-me {
     height: 150px;
     top: 15%;
@@ -826,7 +911,7 @@ strong {
   top: 200px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #window-email {
     display: none;
   }
@@ -839,7 +924,7 @@ strong {
   top: calc(50% - (327px / 2) - (113px / 2));
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #window-reel {
     height: calc((100vw - (10px * 2)) * (9 / 16) + 27px);
     width: calc(100vw - (10px * 2));
@@ -917,6 +1002,12 @@ strong {
   width: calc(100% + 2px);
   height: calc(100% - 113px - 26px + 1px);
   overflow: auto;
+}
+
+@media (max-width: 600px) {
+  .large-window {
+    height: calc(100% - 90px - 26px + 1px);
+  }
 }
 
 .large-window-wrapper {
@@ -1599,6 +1690,12 @@ html.is-animating .swup-transition-fade {
   height: calc(100% - 113px + 1px);
   width: 100%;
   pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  #wipe-overlay-clip-wrapper {
+    height: calc(100% - 90px + 1px);
+  }
 }
 
 .swup-transition-wipe {
