@@ -1,45 +1,36 @@
-"title": "The Last of Us Part II",
-            "role": "UI Scripter",
-            "description": "Worked on a UI team of two, composed of a UI artist and myself, to design, implement, and iterate on the UI, using both the in-house scripting language and C++. Trained a third team-member (UI scripter) towards the end of the project. Was also responsible for tool improvements, Photoshop / Illustrator scripting to improve the artist's workflow, and keyframe animating the majority of the UI.",
-            "skills": [
-              {
-                "title": "UI / Gameplay Programming",
-                "desc": "C++, Scripting (racket/lisp based language)"
-              },
-              {
-                "title": "PyQt Programming",
-                "desc": "UI Editor tool improvements"
-              },
-              {
-                "title": "After Effects",
-                "desc": "animated mockups"
-              },
-              {
-                "title": "Illustrator / Photoshop Scripting",
-                "desc": "Pipeline improvements for artist"
-              },
-              {
-                "title": "UI Editor",
-                "desc": "(in-house tool)"
-              }
-            ],
-            "quotes": [
-              {
-                "quote": "It floored me on just about every level.<br>The most intense combat I've ever had in a videogame.",
-                "title": "Greg Miller | Gamespot",
-                "picture": "../imgs/screen-shots/t2/greg-miller.jpg"
-              },
-              {
-                "quote": "Beyond the hype and expectation placed around so much of The Last of Us Part II, there's a sturdy little video game, that's had some thoughtful tweaks.",
-                "title": "Zoe Delahunty-Light | Eurogamer",
-                "picture": "../imgs/screen-shots/t2/zoe-delahunty.jpg"
-              }
-            ],
-            "pictures": [
-              "../imgs/screen-shots/t2/t2-2.png",
-              "../imgs/screen-shots/t2/t2-3.jpg",
-              "../imgs/screen-shots/t2/t2-8.png",
-              "../imgs/screen-shots/t2/t2-4.png",
-              "../imgs/screen-shots/t2/t2-6.png"
-            ]
-        }
+{
+  "title": "The Last of Us<span class='special-force-break'></span>Part&nbspII",
+  "roleTitle": "Role:",
+  "role": "UI Scripter",
+  "description": "Worked on a UI team of two, composed of a UI artist and myself, to <strong>design</strong>, <strong>implement</strong>, and <strong>iterate</strong> on the UI, using both the <strong>in-house scripting language</strong> and <strong>C++</strong>. <strong>Trained</strong> a third <strong>team-member</strong> (UI scripter) towards the end of the project. Was also responsible for <strong>tool improvements</strong>, <strong>Photoshop / Illustrator scripting</strong> to improve the artist's workflow, and <strong>keyframe animating</strong> the majority of the UI.",
+  "skills": [
+  "C++",
+    "PyQt",
+    "Racket/Lisp",
+    "UI / UX Design",
+    "After Effects",
+    "Adobe Scripting",
+    "UI / Gameplay Programming"
+  ],
+  "quotes": [
+    {
+      "quote": "It floored me on just about every level.<br>The most intense combat I've ever had in a videogame.",
+      "title": "Greg Miller | Gamespot",
+      "picture": "../imgs/screen-shots/t2/greg-miller.jpg"
+    },
+    {
+      "quote": "Beyond the hype and expectation placed around so much of The Last of Us Part II, there's a sturdy little video game, that's had some thoughtful tweaks.",
+      "title": "Zoe Delahunty-Light | Eurogamer",
+      "picture": "../imgs/screen-shots/t2/zoe-delahunty.jpg"
+    }
+  ],
+  "pictures": [
+    "../imgs/screen-shots/t2/t2-2.png",
+    "../imgs/screen-shots/t2/t2-3.jpg",
+    "../imgs/screen-shots/t2/t2-8.png",
+    "../imgs/screen-shots/t2/t2-4.png",
+    "../imgs/screen-shots/t2/t2-6.png"
+  ],
+  "video": "https://www.youtube.com/embed/7iXWmpEQq3Y?start=587",
+  "leftSkills": true
+}

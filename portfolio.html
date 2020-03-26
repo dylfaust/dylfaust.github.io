@@ -42,17 +42,31 @@
       <div class='large-window-body' id="portfolio-body">
 
         <div class='window-large-container'>
-
+          <div class="portfolio-header-small">
+            <h1 class="portfolio-header">Completed Projects</h1>
+            <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games,
+              each
+              project I’ve worked on has been a valuable step forward.</p>
+          </div>
           <!-- Row 1 -->
           <row class='row portfolio-row'>
-            <div class='col-md portfolio-slot'>
-              <h1 class="portfolio-header">Completed<br>Projects</h1>
-              <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games, each
-                project I’ve worked on has been a valuable step forward.</p>
+            <div class='col-md portfolio-slot hide-when-md-one-column'>
+              <div class='portfolio-slot-window-dummy'>
+                <div class='image-clip-wrapper'>
+                  <div width="1244">
+                    <div class='portfolio-header-wrapper' width="1244">
+                      <h1 class="portfolio-header">Completed<br>Projects</h1>
+                      <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games,
+                        each
+                        project I’ve worked on has been a valuable step forward.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class='col-md portfolio-slot portfolio-slot-right'>
               <div class='portfolio-slot-window'>
-                <a href="/games/t2.html"  class='image-clip-wrapper' json-dais-right ta='./json/t2.json'>
+                <a href="/games/t2.html" class='image-clip-wrapper' json-dais-right ta='./json/t2.json'>
                   <img class='portfolio-slot-icon' src='./imgs/screen-shots/t2/t2-2.png'></img>
                   <div class='portfolio-overlay d-table '>
                     <div class='portfolio-text-overlay d-table-cell-centered'>
@@ -74,7 +88,7 @@
           <!-- Row 2 -->
           <row class='row portfolio-row'>
 
-            <div class='col-md portfolio-slot'>
+            <div class='col-md portfolio-slot portfolio-slot-left'>
               <div class='portfolio-slot-window'>
                 <a href="/games/ctrlshift.html" class='image-clip-wrapper' json-data='./json/ctrlshift.json'>
                   <img class='portfolio-slot-icon' src='./imgs/screen-shots/ctrlshift/ctrlshift-banner.png'></img>
@@ -118,7 +132,7 @@
           <!-- Row 3 -->
           <row class='row portfolio-row'>
 
-            <div class=' col-md portfolio-slot'>
+            <div class=' col-md portfolio-slot portfolio-slot-left'>
               <div class='portfolio-slot-window'>
                 <a href="/games/morp.html" class='image-clip-wrapper' json-data='./json/morp.json'>
                   <img class='portfolio-slot-icon' src='./imgs/screen-shots/morp/morp-13.png'></img>
@@ -137,9 +151,10 @@
               </div>
             </div>
 
-            <div class=' col-md portfolio-slot portfolio-slot-right'>
+            <div class=' col-md portfolio-slot portfolio-slot-right portfolio-slot-last'>
               <div class='portfolio-slot-window'>
-                <a href="/games/solarscreen.html"  class='is-right image-clip-wrapper' json-data='./json/solarscreen.json'>
+                <a href="/games/solarscreen.html" class='is-right image-clip-wrapper'
+                  json-data='./json/solarscreen.json'>
                   <img class='portfolio-slot-icon' src='./imgs/screen-shots/solarscreen/ss-1.jpeg'></img>
                   <div class='portfolio-overlay d-table '>
                     <div class='portfolio-text-overlay d-table-cell-centered'>
@@ -187,17 +202,30 @@
 
     <!-- Nav buttons -->
     <div id='taskbar-nav-buttons-container'>
-      <a class='taskbar-nav-button' id="about-link">
-        <img src="./imgs/info-link.svg" class="taskbar-button-image">
-      </a>
+      <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
+        <a href="/main.html" class='taskbar-nav-button' id="home-link">
+          <img src="./imgs/home.svg" class="taskbar-button-image" height=50>
+        </a>
+      </div>
 
-      <a class='taskbar-nav-button button' id="portfolio-link">
-        <img src="./imgs/portfolio-link.svg" class="taskbar-button-image">
-      </a>
+      <div class="taskbar-nav-button-wrapper">
+        <a class='taskbar-nav-button' id="about-link">
+          <img src="./imgs/info-link.svg" class="taskbar-button-image">
+        </a>
+      </div>
 
-      <a class='taskbar-nav-button button' id="resume-link">
-        <img src="./imgs/chat-link.svg" class="taskbar-button-image">
-      </a>
+      <div class="taskbar-nav-button-wrapper">
+        <a class='taskbar-nav-button' id="portfolio-link">
+          <img src="./imgs/portfolio-link.svg" class="taskbar-button-image">
+        </a>
+      </div>
+
+      <div class="taskbar-nav-button-wrapper" id="chat-link-wrapper">
+        <a class='taskbar-nav-button' id="chat-link">
+          <img src="./imgs/chat-link.svg" class="taskbar-button-image">
+        </a>
+      </div>
+
 
     </div>
 

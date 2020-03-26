@@ -7,6 +7,8 @@ var a_skillWrappers;
 var a_images;
 var a_quotes;
 var innerJson;
+var leftSkills;
+var anyQuotes;
 
 // initPortfolioDetailVars();
 
@@ -39,6 +41,33 @@ function initPortfolioDetailVars(myPortfolioDetail)
   }
   innerJson = document.getElementById('json-data').innerHTML;
   populatePortfolioDetail(innerJson);
+
+  // Attaching the event listener function to window's resize event
+  window.addEventListener("resize", checkResize);
+  checkResize();
+}
+
+function checkResize()
+{
+  // Get width and height of the window excluding scrollbars
+  var w = document.documentElement.clientWidth;
+
+  if (leftSkills)
+  {
+      if (w < 1300)
+      {
+        a_skillWrappers[0].style.display="none";
+        a_skillWrappers[1].style.display="block";
+        if (anyQuotes)
+          a_quotes[0].style.display="none";
+      }
+      else{
+        a_skillWrappers[0].style.display="block";
+        a_skillWrappers[1].style.display="none";
+        if (anyQuotes)
+          a_quotes[0].style.display="block";
+      }
+  }
 }
 
 
@@ -63,6 +92,7 @@ function populatePortfolioDetail(jsonFile)
     for (let i = 0; i < a_quotes.length; i++)
     {
       let curQuote = a_quotes[i];
+      anyQuotes = quotesJson.length > i;
       if (quotesJson.length > i)
       {
         curQuote.style.display = "block";
@@ -97,10 +127,11 @@ function populatePortfolioDetail(jsonFile)
       }
     }
 
+    leftSkills = json.leftSkills == true;
     if (json.leftSkills == true)
     {
-        a_skillWrappers[0].style.display = "inline";
-        a_skillWrappers[1].style.display = "none";
+      a_skillWrappers[0].style.display = "inline";
+      a_skillWrappers[1].style.display = "none";
     }
     else
     {

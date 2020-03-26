@@ -2,7 +2,7 @@
   "title": "CtrlShift",
   "roleTitle": "Roles:",
   "role": "UI / Gameplay Programmer, Designer",
-  "description": "Worked on a UI team of two, composed of a UI artist and myself, to design, implement, and iterate on the UI, using both the in-house scripting language and C++. Trained a third team-member (UI scripter) towards the end of the project. Was also responsible for tool improvements, Photoshop / Illustrator scripting to improve the artist's workflow, and keyframe animating the majority of the UI.",
+  "description": "<strong>Winner</strong> of the <strong>Technical Achievement Award</strong> and the <strong>Studio Prize</strong> at the Sammy Showcase 2017.<br><br>Based on a concept which <strong>I conceived and pitched</strong>, CtrlShift is a <strong>2 player coop VR</strong> game, which only requires one VR headset. One player wears the VR headset and plays the role of <strong>the Spy</strong>, <strong>physically sneaking</strong> through the environment, and trying to make it to the mainframe unseen. The other player utilizes the keyboard and computer monitor to the play the role of <strong>the Hacker</strong>, <strong>typing in code</strong> to a command line interface to <strong>hack the environment</strong> in their Spy's favor. Both players have incomplete views of the environment, so they have to <strong>communicate</strong> and <strong>trust</strong> one another in order to succeed.",
   "skills": 
     [
     "Unreal Engine 4",
@@ -12,22 +12,15 @@
     "UI / Gameplay Programming", "Illustrator", "Systems Design"
     ],
     "quotes": [
-      {
-        "quote": "It floored me on just about every level.<br>The most intense combat I've ever had in a videogame.",
-        "title": "Greg Miller | Gamespot",
-        "picture": "../imgs/screen-shots/t2/greg-miller.jpg"
-      },
-      {
-        "quote": "Beyond the hype and expectation placed around so much of The Last of Us Part II, there's a sturdy little video game, that's had some thoughtful tweaks.",
-        "title": "Zoe Delahunty-Light | Eurogamer",
-        "picture": "../imgs/screen-shots/t2/zoe-delahunty.jpg"
-      }
+      
     ],
     "pictures": [
-      "../imgs/screen-shots/t2/t2-2.png",
-      "../imgs/screen-shots/t2/t2-3.jpg",
-      "../imgs/screen-shots/t2/t2-8.png",
-      "../imgs/screen-shots/t2/t2-4.png",
-      "../imgs/screen-shots/t2/t2-6.png"
-    ]
+      "../imgs/screen-shots/ctrlshift/ctrlshift-banner.png",
+      "../imgs/screen-shots/ctrlshift/ctrlshift-4.jpeg",
+      "../imgs/screen-shots/ctrlshift/ctrlshift-2.png",
+      "../imgs/screen-shots/ctrlshift/ctrlshift-1.png",
+      "../imgs/screen-shots/ctrlshift/ctrlshift-3.png"
+    ],
+    "video": "https://youtu.be/UifD7NRDrqQ",
+    "leftSkills": false
 }

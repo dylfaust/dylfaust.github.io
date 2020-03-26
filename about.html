@@ -46,29 +46,35 @@
 				<div class='container window-large-container'>
 					<div class='row'>
 
-						<div class='col-lg-8 about-left'>
-							<!-- OPENING PARAGRAPH -->
-							<h1>About Me</h1>
+						<!-- Myself Panel -->
 
-							<p>
-								I'm a <strong>game developer</strong> with a keen eye for polish. My goal is to leverage my
-								background in <strong>animation</strong>, <strong>graphic design</strong>, and
-								<strong>programming</strong>, to build beautiful and unique
-								games from the
-								ground up.
-							</p>
-							<br>
-							<p>
-								I recently had the opportunity to combine these disciplines, and
-								served as the <strong>UI Scripter</strong> on <strong>The Last of Us Part II</strong>.
-							</p>
+						<div class='col-lg-8 about-left order-lg-1'>
+							<div class='row'>
+								<div class="opening-paragraph">
+									<!-- OPENING PARAGRAPH -->
+									<h1>About Me</h1>
+
+									<p>
+										I'm a <strong>game developer</strong> with a keen eye for polish. My goal is to leverage my
+										background in <strong>animation</strong>, <strong>graphic design</strong>, and
+										<strong>programming</strong>, to build beautiful and unique
+										games from the
+										ground up.
+									</p>
+									<br>
+									<p>
+										I recently had the opportunity to combine these disciplines, and
+										served as the <strong>UI Scripter</strong> on <strong>The Last of Us Part II</strong>.
+									</p>
+								</div>
+							</div>
 							<!-- END OPENING PARAGRAPH -->
 
 							<div class="sub-section-divider"></div>
 
 							<!-- SKILL PILLARS -->
 							<div class='row skills-row'>
-								<div class='col-md-4 skill-pillar-wrapper'>
+								<div class='col-md-4 skill-pillar-wrapper skill-pillar-top-row'>
 									<div class="skill-pillar">
 										<img class="skill-pillar-icon" src="./imgs/ui-icon.svg" alt="">
 										<h5 class="skill-pillar-title">UI / UX</h5>
@@ -80,7 +86,7 @@
 										</p>
 									</div>
 								</div>
-								<div class='col-md-4 skill-pillar-wrapper'>
+								<div class='col-md-4 skill-pillar-wrapper skill-pillar-top-row'>
 									<div class="skill-pillar">
 										<img class="skill-pillar-icon" src="./imgs/programming-icon.svg" alt="">
 										<h5 class="skill-pillar-title">Programming</h5>
@@ -218,8 +224,7 @@
 						</div>
 						<!-- END LEFT PANEL -->
 
-						<!-- Myself Panel -->
-						<div class='col-lg-4 order-lg-2 jm-sticky-top h-100 ml-auto'>
+						<div class='col-lg-4 order-lg-2 jm-sticky-top h-100 ml-auto myself-sticky-top'>
 							<div class='myself-wrap'>
 								<div class='headshot-wrapper'>
 									<img class='img-fluid' id='about-me-image' src='./imgs/dylan-faust-headshot.jpg' alt=''>
@@ -238,7 +243,6 @@
 								</div>
 							</div>
 						</div> <!-- End Myself Panel -->
-
 					</div>
 				</div>
 			</section>
@@ -271,21 +275,34 @@
 			</div>
 		</div>
 
-		<!-- Nav buttons -->
-		<div id='taskbar-nav-buttons-container'>
-			<a class='taskbar-nav-button' id="about-link">
-				<img src="./imgs/info-link.svg" class="taskbar-button-image">
-			</a>
+		 <!-- Nav buttons -->
+		 <div id='taskbar-nav-buttons-container'>
+      <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
+        <a href="/main.html" class='taskbar-nav-button' id="home-link">
+          <img src="./imgs/home.svg" class="taskbar-button-image" height=50>
+        </a>
+      </div>
 
-			<a class='taskbar-nav-button button' id="portfolio-link">
-				<img src="./imgs/portfolio-link.svg" class="taskbar-button-image">
-			</a>
+      <div class="taskbar-nav-button-wrapper">
+        <a class='taskbar-nav-button' id="about-link">
+          <img src="./imgs/info-link.svg" class="taskbar-button-image">
+        </a>
+      </div>
 
-			<a class='taskbar-nav-button button' id="resume-link">
-				<img src="./imgs/chat-link.svg" class="taskbar-button-image">
-			</a>
+      <div class="taskbar-nav-button-wrapper">
+        <a class='taskbar-nav-button' id="portfolio-link">
+          <img src="./imgs/portfolio-link.svg" class="taskbar-button-image">
+        </a>
+      </div>
 
-		</div>
+      <div class="taskbar-nav-button-wrapper" id="chat-link-wrapper">
+        <a class='taskbar-nav-button' id="chat-link">
+          <img src="./imgs/chat-link.svg" class="taskbar-button-image">
+        </a>
+      </div>
+
+
+    </div>
 
 		<!-- Social Media -->
 		<div id='social-buttons-container'>

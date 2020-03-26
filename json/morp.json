@@ -1,0 +1,27 @@
+{
+  "title": "The Mice of Riddle Place",
+  "roleTitle": "Roles:",
+  "role": "Gameplay Programmer, Designer",
+  "description": "An <strong>educational game</strong> I developed with Meadowlark Science and Education, through the University of Montana Science Department. It took place in a world of anthropomorphic mice, where the player was tasked with <strong>solving the mystery</strong> of why Mrs. Wirth was getting sick, by using <strong>environmental observation</strong> and <strong>scientific deduction</strong>. The main gameplay was composed of <strong>first person exploration</strong> and <strong>puzzle solving</strong>, with the occasional <strong>mini-games</strong> to demonstrate various parts of the scientific process. I focused my time with Meadowlark on the game design of both the main game loop, and a few of the mini-games. I also helped implement the systems for various minigames, and graphic designed / animated 2d art.",
+  "skills": 
+    [
+    "Unity",
+    "C#",
+    "Gameplay Programming",
+    "Graphic Design", "Illustrator",
+    "Puzzle Design",
+    "Level Design"
+    ],
+    "quotes": [
+      
+    ],
+    "pictures": [
+      "../imgs/screen-shots/morp/morp-13.png",
+      "../imgs/screen-shots/morp/morp-19.png",
+      "../imgs/screen-shots/morp/morp-21.png",
+      "../imgs/screen-shots/morp/morp-2.png",
+      "../imgs/screen-shots/morp/morp-title.png"
+    ],
+    "video": "https://www.youtube.com/embed/Ak6ZPybd_Hs?start=4",
+    "leftSkills": false
+}
