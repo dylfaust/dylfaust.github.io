@@ -130,7 +130,7 @@ html body {
   margin-left: calc((120px / 2) * -1);
   height: 120px;
   top: 50%;
-  margin-top: calc((120px / 2) * -1);
+  margin-top: -60px;
   display: inline-block;
 }
 
@@ -207,6 +207,12 @@ p {
 p .desktop-text {
   font-size: 22px;
   margin-bottom: 0 !important;
+}
+
+@media (max-width: 800px) {
+  p {
+    font-size: 19px;
+  }
 }
 
 hr {
@@ -439,16 +445,22 @@ strong {
 #taskbar-main-button-wrapper {
   height: 38px;
   top: 50%;
-  margin-top: calc((38px / 2) * -1);
+  margin-top: -19px;
   position: absolute;
   width: 38px;
+}
+
+@media (max-width: 800px) {
+  #taskbar-main-button-wrapper {
+    display: none;
+  }
 }
 
 #taskbar-main-button {
   position: absolute;
   height: 100%;
   top: 50%;
-  margin-top: calc((100% / 2) * -1);
+  margin-top: -50%;
   width: 100%;
   left: 50%;
   margin-left: calc((100% / 2) * -1);
@@ -496,10 +508,10 @@ strong {
   position: absolute;
   height: 38px;
   top: 50%;
-  margin-top: calc((38px / 2) * -1);
-  width: calc((120px * 3) + (17.5px * (3 * 2)));
+  margin-top: -19px;
+  width: 255px;
   left: 50%;
-  margin-left: calc((calc((120px * 3) + (17.5px * (3 * 2))) / 2) * -1);
+  margin-left: calc((255px / 2) * -1);
 }
 
 .taskbar-nav-button {
@@ -509,7 +521,7 @@ strong {
   margin-left: 17.5px;
   margin-right: 17.5px;
   color: #f8f3ef;
-  width: 120px;
+  width: 50px;
 }
 
 .taskbar-nav-button-active {
@@ -526,8 +538,16 @@ strong {
   display: table-cell;
   margin: auto;
   vertical-align: middle;
+  text-align: center;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 21px;
+  font-family: "plex_light", Plex Light, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .taskbar-button-text, .taskbar-button-text-link {
+    font-size: 19px;
+  }
 }
 
 .taskbar-button-text:hover, .taskbar-button-text-link:hover {
@@ -555,9 +575,15 @@ strong {
   position: absolute;
   height: 34px;
   top: 50%;
-  margin-top: calc((34px / 2) * -1);
-  width: calc((34px * 2) + (8.75px * (2 * 2)));
+  margin-top: -17px;
+  width: 103px;
   right: calc(8.75px * -1);
+}
+
+@media (max-width: 800px) {
+  #social-buttons-container {
+    display: none;
+  }
 }
 
 .social-media-button {
@@ -684,6 +710,12 @@ strong {
   position: relative;
 }
 
+@media (max-width: 800px) {
+  .window-button-spacer {
+    display: none;
+  }
+}
+
 .window-button {
   border-style: solid;
   border-width: 1px;
@@ -707,7 +739,7 @@ strong {
   margin-left: calc((130px / 2) * -1);
   height: 38px;
   top: 50%;
-  margin-top: calc((38px / 2) * -1);
+  margin-top: -19px;
   position: absolute;
   display: table;
 }
@@ -734,9 +766,22 @@ strong {
   transition: 0.05s;
 }
 
+@media (max-width: 800px) {
+  .window-button {
+    display: none;
+  }
+}
+
 #about-me-text {
   overflow: auto;
   height: calc(100% - calc(38px + (13px * 2)));
+}
+
+@media (max-width: 800px) {
+  #about-me-text {
+    height: 100%;
+    padding-bottom: 30px;
+  }
 }
 
 #email-text {
@@ -768,8 +813,9 @@ strong {
 
 @media (max-width: 800px) {
   #window-about-me {
-    top: 120px;
-    left: calc(50% - (293px / 2.0));
+    height: 150px;
+    top: 15%;
+    left: calc(50% - (293px / 2));
   }
 }
 
@@ -795,10 +841,11 @@ strong {
 
 @media (max-width: 800px) {
   #window-reel {
-    width: calc(100% - (10px * 2.0));
-    height: calc((100vw - (10px * 2.0)) * (9.0 / 16.0) +  27px);
-    left: 10px;
-    top: calc(220px + 120px + 30px);
+    height: calc((100vw - (10px * 2)) * (9 / 16) + 27px);
+    width: calc(100vw - (10px * 2));
+    left: 50%;
+    margin-left: calc((calc(100vw - (10px * 2)) / 2) * -1);
+    top: calc(150px + 15% + 5px);
   }
 }
 
@@ -832,7 +879,7 @@ strong {
   width: 16px;
   height: 16px;
   top: 50%;
-  margin-top: calc((16px / 2) * -1);
+  margin-top: -8px;
   right: 9px;
   position: absolute;
   border-radius: 0px;
