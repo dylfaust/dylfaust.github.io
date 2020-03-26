@@ -1525,14 +1525,14 @@ html.window-active #logo-container {
   font-size: 50px !important;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
   .port-det-title-style {
     font-size: 40px !important;
     line-height: 50px;
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991px) {
   .port-det-title-style {
     font-size: 45px !important;
     line-height: 50px;
@@ -1549,6 +1549,13 @@ html.window-active #logo-container {
 .port-det-role-style {
   font-size: 24px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1100px) {
+  .port-det-role-style {
+    margin-top: -3px;
+    font-size: 21px;
+  }
 }
 
 .port-det-desc {
@@ -1568,7 +1575,7 @@ html.window-active #logo-container {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991px) {
   .port-det-desc {
     max-width: 600px;
   }
@@ -1581,13 +1588,13 @@ html.window-active #logo-container {
 }
 
 @media (max-width: 991px) {
-  .col-md-6 {
+  .col-lg-6 {
     margin-bottom: 80px !important;
   }
 }
 
 @media (max-width: 600px) {
-  .col-md-6 {
+  .col-lg-6 {
     margin-bottom: 40px !important;
   }
 }
@@ -1635,6 +1642,12 @@ html.window-active #logo-container {
   margin-right: 0px;
 }
 
+@media (max-width: 1100px) {
+  .portfolio-detail-section {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 600px) {
   .portfolio-detail-section {
     margin-top: 40px;
@@ -1648,7 +1661,7 @@ html.window-active #logo-container {
   margin-right: 110px;
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 1200px) {
   .portfolio-detail-container {
     margin-left: 60px;
     margin-right: 60px;
@@ -1708,11 +1721,18 @@ html.window-active #logo-container {
   top: 50px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 1100px) {
+  .jmed-sticky-top {
+    top: 50px;
+  }
+}
+
+@media (max-width: 991px) {
   .jmed-sticky-top {
     margin-top: 0px;
     position: relative;
     top: 0;
+    padding-top: 0px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px !important;
@@ -1910,7 +1930,7 @@ html.window-active #logo-container {
 }
 
 @media (max-width: 767.98px) {
-  .col-md-6 {
+  .col-lg-6 {
     margin-left: 0px;
     margin-right: 0px;
     padding-left: 0px;
