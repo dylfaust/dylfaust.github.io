@@ -127,7 +127,7 @@ html body {
   position: absolute;
   width: 120px;
   left: 50%;
-  margin-left: calc((120px / 2) * -1);
+  margin-left: -60px;
   height: 120px;
   top: 50%;
   margin-top: -60px;
@@ -460,7 +460,7 @@ strong {
   position: absolute;
   height: 100%;
   top: 50%;
-  margin-top: -50%;
+  margin-top: calc((100% / 2) * -1);
   width: 100%;
   left: 50%;
   margin-left: calc((100% / 2) * -1);
@@ -473,10 +473,10 @@ strong {
 #taskbar-main-button:hover {
   height: 42px !important;
   top: 50% !important;
-  margin-top: calc((42px / 2) * -1) !important;
+  margin-top: -21px !important;
   width: 42px;
   left: 50%;
-  margin-left: calc((42px / 2) * -1) !important;
+  margin-left: -21px !important;
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
   -webkit-transition-timing-function: ease-out;
@@ -486,10 +486,10 @@ strong {
 #taskbar-main-button:active {
   height: 34px !important;
   top: 50% !important;
-  margin-top: calc((34px / 2) * -1) !important;
+  margin-top: -17px !important;
   width: 34px;
   left: 50%;
-  margin-left: calc((34px / 2) * -1) !important;
+  margin-left: -17px !important;
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
   -webkit-transition-timing-function: ease-out;
@@ -511,7 +511,7 @@ strong {
   margin-top: -19px;
   width: 255px;
   left: 50%;
-  margin-left: calc((255px / 2) * -1);
+  margin-left: -127.5px;
 }
 
 .taskbar-nav-button {
@@ -736,7 +736,7 @@ strong {
   border-radius: 24px;
   width: 130px;
   left: 50%;
-  margin-left: calc((130px / 2) * -1);
+  margin-left: -65px;
   height: 38px;
   top: 50%;
   margin-top: -19px;
