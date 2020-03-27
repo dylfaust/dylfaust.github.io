@@ -626,6 +626,25 @@ strong {
   }
 }
 
+.taskbar-nav-button .lottie-button-wrapper {
+  position: absolute;
+}
+
+.taskbar-nav-button .lottie-anim {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.taskbar-nav-button #info-button-anim {
+  width: 60px;
+  height: 70px;
+  top: -10px;
+}
+
 .taskbar-nav-button-active {
   color: #f8f3ef !important;
 }
@@ -690,6 +709,10 @@ a.back-button {
 
 .taskbar-button-text-link {
   color: white !important;
+}
+
+#about-link-image {
+  display: none;
 }
 
 .taskbar-button-image {
@@ -2282,5 +2305,10 @@ html.is-animating .swup-transition-wipe {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }
+}
+
+path {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1px !important;
 }
 /*# sourceMappingURL=main.css.map */
