@@ -169,7 +169,7 @@ h1 {
   text-align: left;
   font-size: 55px !important;
   font-family: "made_medium", Made Medium, sans-serif;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
   padding-bottom: 20px;
 }
 
@@ -658,6 +658,14 @@ strong {
   }
 }
 
+a.window-button {
+  text-decoration: none !important;
+}
+
+a.back-button {
+  text-decoration: none !important;
+}
+
 .taskbar-button-text, .taskbar-button-text-link {
   display: table-cell;
   margin: auto;
@@ -666,6 +674,8 @@ strong {
   font-weight: bold;
   font-size: 21px;
   font-family: "plex_light", Plex Light, sans-serif;
+  color: #f8f3ef;
+  text-decoration: none !important;
 }
 
 @media (max-width: 600px) {
@@ -675,7 +685,7 @@ strong {
 }
 
 .taskbar-button-text:hover, .taskbar-button-text-link:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .taskbar-button-text-link {
@@ -713,9 +723,10 @@ strong {
 }
 
 #about-link .taskbar-button-image {
-  height: 47px !important;
+  height: 60px !important;
   top: 50% !important;
-  margin-top: -23.5px !important;
+  margin-top: -30px !important;
+  margin-top: -25px !important;
 }
 
 @media (max-width: 600px) {
@@ -1554,7 +1565,7 @@ html.window-active #logo-container {
 }
 
 .port-det-title-style {
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   margin-bottom: 0px;
   padding-bottom: 0px;
   line-height: 60px;
