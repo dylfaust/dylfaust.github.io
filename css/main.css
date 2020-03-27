@@ -535,9 +535,9 @@ strong {
   height: 38px;
   top: 50%;
   margin-top: -19px;
-  width: 240px;
+  width: 340px;
   left: 50%;
-  margin-left: -120px;
+  margin-left: -170px;
 }
 
 @media (max-width: 600px) {
@@ -558,8 +558,8 @@ strong {
   height: 100%;
   border-color: #00000000 !important;
   float: left;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 75px;
+  margin-right: 75px;
   color: #f8f3ef;
   width: 20px;
   position: relative;
