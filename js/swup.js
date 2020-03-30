@@ -2,9 +2,9 @@ const swup = new Swup(
   { animationSelector: '[class*="swup-transition-"]'}
 );
 
-const aboutLink = document.getElementById("about-link");
+const aboutLink = document.getElementById("about-a");
 const resumeLink = document.getElementById("resume-link");
-const portfolioLink = document.getElementById("portfolio-link");
+const portfolioLink = document.getElementById("portfolio-a");
 
 const page = {
   DETAIL: 'detail',
@@ -32,13 +32,13 @@ function getPageState()
   if (lastLinkClicked == null)
   {
     let currUrl = window.location.href;
-    if (currUrl.indexOf("/main.html") != -1)
+    if (currUrl.indexOf("/main") != -1)
       pageState = page.MAIN;
-    else if (currUrl.indexOf("/about.html") != -1)
+    else if (currUrl.indexOf("/about") != -1)
       pageState = page.ABOUT;
-    else if (currUrl.indexOf("/portfolio.html") != -1)
+    else if (currUrl.indexOf("/portfolio") != -1)
       pageState = page.PORTFOLIO;
-    else if (currUrl.indexOf("/resume.html") != -1)
+    else if (currUrl.indexOf("/resume") != -1)
       pageState = page.RESUME;
     else
       pageState = page.DETAIL;

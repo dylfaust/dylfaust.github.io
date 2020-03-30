@@ -469,6 +469,7 @@ strong {
 }
 
 #taskbar-main-button-wrapper {
+  display: none;
   height: 38px;
   top: 50%;
   margin-top: -19px;
@@ -572,16 +573,31 @@ strong {
   }
 }
 
-#home-link-wrapper {
+#home-link-wrapper-mobile {
   display: none;
+  background: red;
 }
 
 @media (max-width: 600px) {
-  #home-link-wrapper {
+  #home-link-wrapper-mobile {
     display: table;
     margin-left: 0px !important;
     left: 0px !important;
   }
+}
+
+#home-link-wrapper {
+  margin-left: 0px !important;
+  left: 0px !important;
+}
+
+#home-link-image {
+  left: 0 !important;
+  position: absolute !important;
+  margin-left: 0px !important;
+  height: 50px;
+  top: 50%;
+  margin-top: -25px;
 }
 
 #chat-link-wrapper {
@@ -617,6 +633,7 @@ strong {
 .taskbar-nav-button .taskbar-button-image {
   margin-left: auto;
   margin-right: auto;
+  opacity: 0%;
 }
 
 @media (max-width: 600px) {
@@ -645,6 +662,21 @@ strong {
   top: -10px;
 }
 
+.taskbar-nav-button #portfolio-button-anim {
+  width: 71px;
+  height: 70px;
+  top: 50%;
+  margin-top: -35px;
+}
+
+.taskbar-nav-button #home-button-anim {
+  width: 90px;
+  left: -10px;
+  height: 70px;
+  top: 50%;
+  margin-top: -35px;
+}
+
 .taskbar-nav-button-active {
   color: #f8f3ef !important;
 }
@@ -653,12 +685,12 @@ strong {
   color: #f8f3ef;
 }
 
-#home-link {
+#home-link-mobile {
   display: none;
 }
 
 @media (max-width: 600px) {
-  #home-link {
+  #home-link-mobile {
     display: block;
   }
 }
@@ -726,7 +758,7 @@ a.back-button {
 }
 
 @media (max-width: 600px) {
-  #home-link .taskbar-button-image {
+  #home-link-mobile .taskbar-button-image {
     margin-left: 0px !important;
     left: -15px !important;
   }
@@ -2309,6 +2341,20 @@ html.is-animating .swup-transition-wipe {
 
 path {
   vector-effect: non-scaling-stroke;
-  stroke-width: 2px !important;
+  stroke-width: 1.5px !important;
+}
+
+g {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1.5px !important;
+}
+
+svg {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1.5px !important;
+}
+
+#about-a {
+  pointer-events: none;
 }
 /*# sourceMappingURL=main.css.map */
