@@ -360,7 +360,8 @@ strong {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  width: 1437px;
+  min-width: 1437px;
+  max-width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -466,6 +467,15 @@ strong {
     left: 50%;
     margin-left: calc((calc(100% - (25px * 2)) / 2) * -1);
   }
+}
+
+#taskbar-contents {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0%;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #taskbar-main-button-wrapper {
@@ -643,6 +653,8 @@ strong {
 }
 
 .taskbar-nav-button .nav-text-wrapper {
+  -webkit-clip-path: polygon(-100px 0px, 0 -100px, calc(100% + 100px) -100px, calc(100% + 100px) 0px);
+          clip-path: polygon(-100px 0px, 0 -100px, calc(100% + 100px) -100px, calc(100% + 100px) 0px);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -654,25 +666,26 @@ strong {
   text-align: center;
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, -60.5px) !important;
-          transform: translate(-50%, -60.5px) !important;
-  -webkit-transition: 0.2s opacity;
-  transition: 0.2s opacity;
+  -webkit-transform: translate(-50%, -50.5px) !important;
+          transform: translate(-50%, -50.5px) !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   pointer-events: none;
   top: 0;
   opacity: 0%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#000000FF), to(#FFFFFF00)) !important;
-  background-image: linear-gradient(0deg, #000000FF 0%, #FFFFFF00 100%) !important;
-  padding-left: 10px;
-  padding-right: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#161626FF), color-stop(10%, #161626FF), to(#16162600)) !important;
+  background-image: linear-gradient(0deg, #161626FF 0%, #161626FF 10%, #16162600 100%) !important;
+  padding-left: 15px;
+  padding-right: 15px;
   height: 60px !important;
   display: table;
 }
 
 .taskbar-nav-button .nav-text#nav-text-home {
+  text-align: left;
   left: 0px !important;
-  -webkit-transform: translate(6px, -60.5px) !important;
-          transform: translate(6px, -60.5px) !important;
+  -webkit-transform: translate(-10.5px, -50.5px) !important;
+          transform: translate(-10.5px, -50.5px) !important;
 }
 
 .taskbar-nav-button .nav-text-content {
@@ -685,20 +698,17 @@ strong {
   -webkit-transform: translate(-50%, -60.5px) !important;
           transform: translate(-50%, -60.5px) !important;
   opacity: 100%;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .taskbar-nav-button .nav-text-active#nav-text-home {
-  -webkit-transform: translate(6px, -60.5px) !important;
-          transform: translate(6px, -60.5px) !important;
+  -webkit-transform: translate(-10.5px, -60.5px) !important;
+          transform: translate(-10.5px, -60.5px) !important;
 }
 
 .taskbar-nav-button .lottie-button-wrapper {
   position: absolute;
-  opacity: 0%;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
   text-align: center;
 }
 
@@ -756,7 +766,6 @@ strong {
 }
 
 .taskbar-nav-button-active:hover {
-  color: #f8f3ef;
   border-radius: 10px;
 }
 
@@ -1214,13 +1223,13 @@ a.back-button {
   position: absolute;
   top: 26px;
   width: calc(100% + 2px);
-  height: calc(100% - 113px - 26px + 1px);
+  height: calc(100% - 113px - 26px);
   overflow: auto;
 }
 
 @media (max-width: 600px) {
   .large-window {
-    height: calc(100% - 90px - 26px + 1px);
+    height: calc(100% - 90px - 26px);
   }
 }
 
@@ -2352,14 +2361,14 @@ html.is-animating .swup-transition-fade {
 #wipe-overlay-clip-wrapper {
   position: absolute;
   top: 0;
-  height: calc(100% - 113px + 1px);
+  height: calc(100% - 113px);
   width: 100%;
   pointer-events: none;
 }
 
 @media (max-width: 600px) {
   #wipe-overlay-clip-wrapper {
-    height: calc(100% - 90px + 1px);
+    height: calc(100% - 90px);
   }
 }
 

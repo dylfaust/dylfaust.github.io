@@ -102,7 +102,6 @@ function jumpToEndFrame(anim, active)
 {
   this.goAnimState(anim, active);
   this.goToAndStop(anim.duration, true);
-  this.domElement.style.opacity = "100%";
 }
 
 //------------------------------
@@ -219,6 +218,7 @@ function initButtonAnims(pageState)
 function animControllerLoaded(animController, button)
 {
   animController.loaded = true;
+  loadedAnimCount++;
   if (button.active)
   {
     animController.jumpToEndFrame(button.anims.normal, true);
@@ -226,6 +226,12 @@ function animControllerLoaded(animController, button)
   else
   {
     animController.domElement.style.opacity = "100%";
+  }
+
+  if (loadedAnimCount == 3)
+  {
+    var taskbarContent = document.getElementById("taskbar-contents");
+    taskbarContent.style.opacity = "100%";
   }
 }
 
