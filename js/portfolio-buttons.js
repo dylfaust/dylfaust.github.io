@@ -144,7 +144,7 @@ Element.prototype.documentOffsetTop = function ()
 
 function scrollToContainer() 
 {
-  if (lastLinkClicked)
+  if (lastDetailViewed)
   {
     var imageLinks = document.getElementsByClassName('image-clip-wrapper');
     for (let i = 0; i < imageLinks.length; i++)

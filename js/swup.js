@@ -82,6 +82,9 @@ function updateLinks(popState = false)
   //   portfolioLink.href = resetLink ? "/main.html" : "/portfolio.html";
   // }
 
+  if (pageState != page.PORTFOLIO && pageState != page.DETAIL)
+    lastDetailViewed = null;
+
   if (pageState != page.MAIN)
   {
     document.documentElement.classList.add('window-active');

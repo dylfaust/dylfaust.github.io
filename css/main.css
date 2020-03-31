@@ -1321,7 +1321,7 @@ a.back-button {
   #window-reel {
     height: 45vh;
     width: calc((45vh - 27px) * 1.77778) !important;
-    left: calc(50% - ((45vh - 27px) * 1.77778 / 2.0));
+    left: calc(50% - ((45vh - 27px) * 1.77778 / 2));
     top: calc(50% - (45vh / 2));
   }
 }
@@ -1797,6 +1797,40 @@ html.window-active #logo-container {
 
 @media (max-width: 600px) {
   .window-large-container {
+    margin-top: 50px;
+  }
+}
+
+#portfolio-large-container {
+  margin-top: 10px;
+}
+
+@media (max-width: 1500px) {
+  #portfolio-large-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1350px) {
+  #portfolio-large-container {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1250px) {
+  #portfolio-large-container {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  #portfolio-large-container {
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 600px) {
+  #portfolio-large-container {
     margin-top: 50px;
   }
 }
