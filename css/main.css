@@ -643,8 +643,56 @@ strong {
   }
 }
 
+.taskbar-nav-button .nav-text-wrapper {
+  -webkit-clip-path: polygon(-50px 0, 0 -50px, calc(100% + 50px) -50px, calc(100% + 50px) 0);
+          clip-path: polygon(-50px 0, 0 -50px, calc(100% + 50px) -50px, calc(100% + 50px) 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -36px;
+}
+
+.taskbar-nav-button .nav-text {
+  font-family: "made_regular", Made Medium, sans-serif;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20px) !important;
+          transform: translate(-50%, -20px) !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  pointer-events: none;
+  top: 0;
+  height: 100%;
+  opacity: 0%;
+  text-shadow: 0px 0px 3px black;
+}
+
+.taskbar-nav-button .nav-text#nav-text-home {
+  left: 0px !important;
+  -webkit-transform: translate(6px, -20px) !important;
+          transform: translate(6px, -20px) !important;
+}
+
+.taskbar-nav-button .nav-text-active {
+  -webkit-transform: translate(-50%, -35px) !important;
+          transform: translate(-50%, -35px) !important;
+  opacity: 100%;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.taskbar-nav-button .nav-text-active#nav-text-home {
+  -webkit-transform: translate(6px, -35px) !important;
+          transform: translate(6px, -35px) !important;
+}
+
 .taskbar-nav-button .lottie-button-wrapper {
   position: absolute;
+  opacity: 0%;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  text-align: center;
 }
 
 .taskbar-nav-button .lottie-anim {
@@ -656,21 +704,40 @@ strong {
   top: 0px;
 }
 
-.taskbar-nav-button #info-button-anim {
+.taskbar-nav-button .nav-anim-text-wrapper {
+  position: absolute;
+  height: 41px;
+  top: 50%;
+  margin-top: -20.5px;
+}
+
+.taskbar-nav-button .nav-anim-text-wrapper#about-anim-text-wrapper {
   width: 60px;
+}
+
+.taskbar-nav-button .nav-anim-text-wrapper#home-anim-text-wrapper {
+  width: 90px;
+}
+
+.taskbar-nav-button .nav-anim-text-wrapper#port-anim-text-wrapper {
+  width: 71px;
+}
+
+.taskbar-nav-button #info-button-anim {
+  width: 100%;
   height: 70px;
   top: -10px;
 }
 
 .taskbar-nav-button #portfolio-button-anim {
-  width: 71px;
+  width: 100%;
   height: 70px;
   top: 50%;
   margin-top: -35px;
 }
 
 .taskbar-nav-button #home-button-anim {
-  width: 90px;
+  width: 100%;
   left: -10px;
   height: 70px;
   top: 50%;

@@ -1,18 +1,10 @@
 const swup = new Swup(
-  { animationSelector: '[class*="swup-transition-"]'}
+  { animationSelector: '[class*="swup-transition-"]' }
 );
 
 const aboutLink = document.getElementById("about-a");
 const resumeLink = document.getElementById("resume-link");
 const portfolioLink = document.getElementById("portfolio-a");
-
-const page = {
-  DETAIL: 'detail',
-  MAIN: 'main',
-  ABOUT: 'about',
-  PORTFOLIO: 'portfolio',
-  RESUME: 'resume'
-}
 
 updateLinks();
 
@@ -22,7 +14,8 @@ swup.on('animationOutStart', disableClicks);
 
 swup.on('contentReplaced', newPageLogic);
 
-function disableClicks(){
+function disableClicks()
+{
   // document.getElementById("taskbar-nav-buttons-container").style.pointerEvents = "none";
 }
 
@@ -65,7 +58,7 @@ function updateLinks()
 {
   // document.getElementById("taskbar-nav-buttons-container").style.pointerEvents = "auto";
   // let pageData = lastLinkClicked;
-  
+
   let pageState = getPageState();
 
   if (aboutLink)
@@ -95,16 +88,21 @@ function updateLinks()
     document.documentElement.classList.remove('window-active');
   }
 
-  if (lastLinkClicked == null && pageState == page.DETAIL)
+  if (lastLinkClicked == null)
   {
-    initPortfolioDetailVars();
+    if (pageState == page.DETAIL)
+    {
+      initPortfolioDetailVars();
+    }
+
+    initButtonAnims(pageState);
   }
 }
 
 function newPageLogic()
 {
   let pageState = getPageState();
-  
+
   if (pageState == page.DETAIL)
   {
     initPortfolioDetailVars();
