@@ -445,7 +445,7 @@ strong {
       -ms-user-select: none;
           user-select: none;
   width: 1437px;
-  min-width: 100vw;
+  min-height: 100vh;
   position: absolute;
   top: 0vh;
   left: -0px;
@@ -1109,13 +1109,15 @@ a.back-button {
           clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
   min-height: 130px;
   min-width: 130px;
+  -webkit-transition: -webkit-clip-path 0.3s;
+  transition: -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s;
+  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
 }
 
 .window-close {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%) !important;
           clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%) !important;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .window-outline {

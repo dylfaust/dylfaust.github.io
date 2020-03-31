@@ -331,7 +331,18 @@ function infoButtonClick()
       let body = document.getElementsByClassName("large-window-body")[0];
       let button = this;
       if (this == buttons[0])
+      {
         body = document.getElementsByClassName("dud-wrapper")[0];
+        let windows = document.getElementsByClassName("window");
+        for (let i = 0; i < windows.length; i++)
+        {
+          let window = windows[i];
+          let outline = window.getElementsByClassName("window-outline")[0];
+         window.classList.remove("window-close");
+         outline.classList.remove("window-outline-close");
+         makeWindowDraggable(window, window.zIndexInt);
+        }
+      }
 
       body.classList.add("dud-anim");
 

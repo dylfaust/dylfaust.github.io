@@ -129,7 +129,14 @@ function moveAt(pageX, pageY)
 
 function onMouseMove(event) 
 {
-  moveAt(event.pageX, event.pageY);
+  if (event.pageX < 0 || event.pageX  > document.body.clientWidth || event.pageY < 0 || event.pageY > document.body.clientHeight)
+  {
+    mouseUp(null);
+  }
+  else
+  {
+    moveAt(event.pageX, event.pageY);
+  }
   pauseEvent(event);
 }
 function pauseEvent(e)
