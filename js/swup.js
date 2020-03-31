@@ -119,6 +119,14 @@ function newPageLogic()
   }
   else if (pageState == page.MAIN)
   {
+    let infoButton = document.getElementById('about-link');
+    let infoButtonContent = infoButton.getElementsByClassName("lottie-button-wrapper")[0];
+    let aboutButtonAlias = document.getElementsByClassName("about-button-alias")[0];
+    aboutButtonAlias.addEventListener("click", function ()
+    {
+      infoButtonClick(event, infoButtonContent);
+    });
+    
     initDraggables();
   }
 }

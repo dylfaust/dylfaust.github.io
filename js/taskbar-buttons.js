@@ -294,24 +294,30 @@ function infoButtonMouseOver()
 }
 
 //------------------------------
-function infoButtonClick()
+function infoButtonClick(event, buttonOverride = null)
 {
-  let animController = this.animController;
-  let anims = this.anims;
+  let clickedButton;
+  if (buttonOverride)
+    clickedButton = buttonOverride;
+  else
+  clickedButton = this;
+
+  let animController = clickedButton.animController;
+  let anims = clickedButton.anims;
   let desiredState = anims.click;
 
-  if (!this.active)
+  if (!clickedButton.active)
   {
-    animController.goAnimState(desiredState, this.active);
+    animController.goAnimState(desiredState, clickedButton.active);
 
-    this.active = !this.active;
+    clickedButton.active = !clickedButton.active;
 
-    this.awaitingLinkTransition = true;
+    clickedButton.awaitingLinkTransition = true;
 
     for (let i = 0; i < buttons.length; i++)
     {
       let button = buttons[i];
-      if (button != this)
+      if (button != clickedButton)
       {
         let wasActive = button.active;
         button.active = false;
@@ -327,10 +333,10 @@ function infoButtonClick()
   {
     if (animController.currState != anims.click)
     {
-      this.classList.add("button-dud-anim");
+      clickedButton.classList.add("button-dud-anim");
       let body = document.getElementsByClassName("large-window-body")[0];
-      let button = this;
-      if (this == buttons[0])
+      let button = clickedButton;
+      if (clickedButton == buttons[0])
       {
         body = document.getElementsByClassName("dud-wrapper")[0];
         let windows = document.getElementsByClassName("window");
@@ -338,9 +344,9 @@ function infoButtonClick()
         {
           let window = windows[i];
           let outline = window.getElementsByClassName("window-outline")[0];
-         window.classList.remove("window-close");
-         outline.classList.remove("window-outline-close");
-         makeWindowDraggable(window, window.zIndexInt);
+          window.classList.remove("window-close");
+          outline.classList.remove("window-outline-close");
+          makeWindowDraggable(window, window.zIndexInt);
         }
       }
 
