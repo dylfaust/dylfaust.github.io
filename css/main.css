@@ -107,6 +107,90 @@ html body {
   height: 100%;
 }
 
+.dud-anim {
+  -webkit-animation-name: dud-anim;
+          animation-name: dud-anim;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.dud-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@-webkit-keyframes dud-anim {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(0.995);
+            transform: scale(0.995);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes dud-anim {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(0.995);
+            transform: scale(0.995);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.button-dud-anim {
+  -webkit-animation-name: button-dud-anim;
+          animation-name: button-dud-anim;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes button-dud-anim {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes button-dud-anim {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 * {
   cursor: url("../imgs/cursor.svg"), default;
 }
@@ -708,8 +792,6 @@ strong {
 }
 
 .taskbar-nav-button .nav-text-wrapper {
-  -webkit-clip-path: polygon(-1200px 0px, -1200px -1200px, calc(100% + 1200px) -1200px, calc(100% + 1200px) 0px);
-          clip-path: polygon(-1200px 0px, -1200px -1200px, calc(100% + 1200px) -1200px, calc(100% + 1200px) 0px);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -728,7 +810,7 @@ strong {
   pointer-events: none;
   top: 0;
   opacity: 0%;
-  background: radial-gradient(ellipse at center, #161626 0%, rgba(22, 22, 38, 0.301) 40%, rgba(22, 22, 38, 0) 75%);
+  background: radial-gradient(ellipse at center, #161626 0%, rgba(22, 22, 38, 0.301) 40%, rgba(22, 22, 38, 0.101) 55%, rgba(255, 255, 255, 0) 75%);
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
@@ -1189,6 +1271,15 @@ a.back-button {
   top: 100px;
 }
 
+@media (min-width: 1500px) {
+  #window-about-me {
+    height: 30vh;
+    width: calc(30vh * 1.33182);
+    top: 15%;
+    left: calc(100% - 30vh * 1.33182 - 60px);
+  }
+}
+
 @media (max-width: 600px) {
   #window-about-me {
     height: 150px;
@@ -1204,6 +1295,13 @@ a.back-button {
   top: 200px;
 }
 
+@media (min-width: 1500px) {
+  #window-email {
+    height: 30vh;
+    width: calc((30vh * 1.30909)) !important;
+  }
+}
+
 @media (max-width: 600px) {
   #window-email {
     display: none;
@@ -1215,6 +1313,15 @@ a.back-button {
   height: 327px;
   left: calc(50% - (534px / 2));
   top: calc(50% - (327px / 2) - (113px / 2));
+}
+
+@media (min-width: 1500px) {
+  #window-reel {
+    height: 45vh;
+    width: calc((45vh - 27px) * 1.77778) !important;
+    left: calc(50% - ((45vh - 27px) * 1.77778 / 2.0));
+    top: calc(50% - (45vh / 2));
+  }
 }
 
 @media (max-width: 600px) {

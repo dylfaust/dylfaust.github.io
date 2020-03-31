@@ -41,67 +41,18 @@
 
     <!-- PAGE CONTENT -->
     <div class="background-gradient"></div>
-
-    <div id="stars-clip-container">
-      <div id="stars-anim">
-        <div class='stars-fg' id="stars-fg-tl"></div>
-        <div class='stars-fg' id="stars-fg-tr"></div>
-        <div class='stars-fg' id="stars-fg-bl"></div>
-        <div class='stars-fg' id="stars-fg-br"></div>
-      </div>
-      <img type='image/svg+xml' src='./imgs/stars-bg.svg' draggable=false id='stars-bg'></img>
-    </div>
-
-    <div class='window' id='window-about-me'>
-      <div class='topbar'>
-        <div class='close-button'>
-          <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-
+    <div class="dud-wrapper">
+      <div id="stars-clip-container">
+        <div id="stars-anim">
+          <div class='stars-fg' id="stars-fg-tl"></div>
+          <div class='stars-fg' id="stars-fg-tr"></div>
+          <div class='stars-fg' id="stars-fg-bl"></div>
+          <div class='stars-fg' id="stars-fg-br"></div>
         </div>
+        <img type='image/svg+xml' src='./imgs/stars-bg.svg' draggable=false id='stars-bg'></img>
       </div>
 
-      <div class='window-body' id='about-me-window-body'>
-        <div id='about-me-text'>
-          <p class='editable-text' contenteditable='true' spellcheck='false'>
-            A <strong class="bright">game developer</strong> with a passion for <strong
-              class="bright">programming</strong> and <strong class="bright">UI/UX</strong>.
-          </p>
-        </div>
-        <div class='window-button-spacer'>
-          <a href="/about.html" class='window-button'>
-            <p class='taskbar-button-text'>
-              About Me
-            </p>
-          </a>
-        </div>
-      </div>
-      <div class='window-outline'></div>
-    </div>
-
-    <div class='window' id='window-email'>
-      <div class='topbar'>
-        <div class='close-button'>
-          <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-        </div>
-      </div>
-
-      <div class='window-body' id='about-me-window-body'>
-        <div id='email-text'>
-          <p class='editable-text email-text' contenteditable='true' spellcheck='false'> </p>
-        </div>
-        <div class='window-button-spacer'>
-          <div class='window-button'>
-            <p class='taskbar-button-text'>
-              Drop A Line
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class='window-outline'></div>
-    </div>
-
-    <div class='window-wrapper'>
-      <div class='window' id='window-reel'>
+      <div class='window' id='window-about-me'>
         <div class='topbar'>
           <div class='close-button'>
             <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
@@ -109,12 +60,62 @@
           </div>
         </div>
 
-        <div class='window-body' id='reel-body'>
-          <iframe width='100%' height='100%'
-            src='https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=1&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0'
-            frameborder='0' allow='autoplay;' allowfullscreen style='pointer-events: none;'></iframe>
+        <div class='window-body' id='about-me-window-body'>
+          <div id='about-me-text'>
+            <p class='editable-text' contenteditable='true' spellcheck='false'>
+              A <strong class="bright">game developer</strong> with a passion for <strong
+                class="bright">programming</strong> and <strong class="bright">UI/UX</strong>.
+            </p>
+          </div>
+          <div class='window-button-spacer'>
+            <a href="/about.html" class='window-button'>
+              <p class='taskbar-button-text'>
+                About Me
+              </p>
+            </a>
+          </div>
         </div>
         <div class='window-outline'></div>
+      </div>
+
+      <div class='window' id='window-email'>
+        <div class='topbar'>
+          <div class='close-button'>
+            <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
+          </div>
+        </div>
+
+        <div class='window-body' id='about-me-window-body'>
+          <div id='email-text'>
+            <p class='editable-text email-text' contenteditable='true' spellcheck='false'> </p>
+          </div>
+          <div class='window-button-spacer'>
+            <div class='window-button'>
+              <p class='taskbar-button-text'>
+                Drop A Line
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class='window-outline'></div>
+      </div>
+
+      <div class='window-wrapper'>
+        <div class='window' id='window-reel'>
+          <div class='topbar'>
+            <div class='close-button'>
+              <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
+
+            </div>
+          </div>
+
+          <div class='window-body' id='reel-body'>
+            <iframe width='100%' height='100%'
+              src='https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=1&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0'
+              frameborder='0' allow='autoplay;' allowfullscreen style='pointer-events: none;'></iframe>
+          </div>
+          <div class='window-outline'></div>
+        </div>
       </div>
     </div>
     <svg id='overlay-clip-wrapper' width='0' height='0'>

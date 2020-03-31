@@ -35,11 +35,20 @@ const defaultNormalAnim = {
   earlyExitFrame: null
 };
 
+const defaultDudAnim = {
+  name: 'dud',
+  normalStart: 30 * 2,
+  activeStart: 30 * 15,
+  duration: 22,
+  earlyExitFrame: null
+};
+
 
 const defaultAnims =
 {
   normal: defaultNormalAnim,
   hover: defaultHoverAnim,
+  dud: defaultDudAnim,
   click: defaultClickAnim
 };
 
@@ -76,6 +85,7 @@ const portfolioAnims =
 {
   normal: portfolioNormalAnim,
   hover: portfolioHoverAnim,
+  dud: defaultDudAnim,
   click: portfolioClickAnim
 };
 
@@ -209,7 +219,8 @@ function initButtonAnims(pageState)
     activeButton.active = true;
     activeButton.animController.jumpToEndFrame(activeButton.anims.normal, true);
   }
-  else {
+  else
+  {
     activeButton.active = true;
   }
 }
@@ -287,24 +298,45 @@ function infoButtonClick()
   let anims = this.anims;
   let desiredState = anims.click;
 
-  animController.goAnimState(desiredState, this.active);
-
-  this.active = !this.active;
-
-  this.awaitingLinkTransition = true;
-
-  for (let i = 0; i < buttons.length; i++)
+  if (!this.active)
   {
-    let button = buttons[i];
-    if (button != this)
+    animController.goAnimState(desiredState, this.active);
+
+    this.active = !this.active;
+
+    this.awaitingLinkTransition = true;
+
+    for (let i = 0; i < buttons.length; i++)
     {
-      let wasActive = button.active;
-      button.active = false;
-      if (wasActive)
+      let button = buttons[i];
+      if (button != this)
       {
-        button.animController.goAnimState(button.anims.click, true);
-        button.animController.queueAnimState(button.anims.normal, true);
+        let wasActive = button.active;
+        button.active = false;
+        if (wasActive)
+        {
+          button.animController.goAnimState(button.anims.click, true);
+          button.animController.queueAnimState(button.anims.normal, true);
+        }
       }
+    }
+  }
+  else
+  {
+    if (animController.currState != anims.click)
+    {
+      this.classList.add("button-dud-anim");
+      let body = document.getElementsByClassName("large-window-body")[0];
+      let button = this;
+      if (this == buttons[0])
+        body = document.getElementsByClassName("dud-wrapper")[0];
+
+      body.classList.add("dud-anim");
+
+      body.addEventListener("animationend", function() {
+        body.classList.remove("dud-anim");
+        button.classList.remove("button-dud-anim");
+      });
     }
   }
 }
@@ -324,12 +356,12 @@ function setupButtonAnims(buttonWrapper, animPath, anims)
     path: animPath
   })
 
-  
+
   animController.goAnimState = goAnimState;
   animController.queueAnimState = queueAnimState;
   animController.reset = reset;
   animController.jumpToEndFrame = jumpToEndFrame;
-  
+
   button.anims = anims;
   button.animController = animController;
   button.text = buttonWrapper.getElementsByClassName("nav-text")[0];
@@ -338,7 +370,7 @@ function setupButtonAnims(buttonWrapper, animPath, anims)
   animController.addEventListener('DOMLoaded',
     function (e) { animControllerLoaded(animController, button); }
   );
-  
+
   animController.addEventListener("complete", function (event)
   {
     animComplete(animController);
