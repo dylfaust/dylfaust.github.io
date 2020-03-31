@@ -211,42 +211,52 @@
   <!-- Taskbar -->
   <div id='taskbar'>
 
-    <!-- Main button -->
-    <div id='taskbar-main-button-wrapper'>
-      <div id='taskbar-main-button'>
-        <div class='taskbar-button-box pos-tl'></div>
-        <div class='taskbar-button-box pos-tr'></div>
-        <div class='taskbar-button-box pos-bl'></div>
-        <div class='taskbar-button-box pos-br'></div>
+   <!-- Main button -->
+   <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
+    <div href="/main.html" class='taskbar-nav-button' id="home-link">
+      <img src="../imgs/home.svg" class="taskbar-button-image" id="home-link-image" height=50>
+      <div class="lottie-button-wrapper" class="nav-link" id="home-button-anim">
+        <div class="lottie-anim"></div>
+      </div>
+      <a href="/main.html" class="nav-link" id="main-a"></a>
+    </div>
+  </div>
+
+  <!-- Nav buttons -->
+  <div id='taskbar-nav-buttons-container'>
+    <div class="taskbar-nav-button-wrapper" id="home-link-wrapper-mobile">
+      <div href="/main.html" class='taskbar-nav-button' id="home-link-mobile">
+        <img src="../imgs/home.svg" class="taskbar-button-image" height=50>
+      </div>
+      <a href="/main.html" class="nav-link" id="main-a"></a>
+    </div>
+
+    <div class="taskbar-nav-button-wrapper">
+      <div class='taskbar-nav-button' id="about-link">
+        <img src="../imgs/info-link.svg" class="taskbar-button-image" id="about-link-image">
+        <div class="lottie-button-wrapper" id="info-button-anim">
+          <div class="lottie-anim"></div>
+        </div>
+        <a href="/about.html" class="nav-link" id="about-a"></a>
       </div>
     </div>
 
-     <!-- Nav buttons -->
-    <div id='taskbar-nav-buttons-container'>
-      <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
-        <a href="/main.html" class='taskbar-nav-button' id="home-link">
-          <img src="../imgs/home.svg" class="taskbar-button-image" height=50>
-        </a>
-      </div>
-
-      <div class="taskbar-nav-button-wrapper">
-        <a class='taskbar-nav-button' id="about-link">
-          <img src="../imgs/info-link.svg" class="taskbar-button-image">
-        </a>
-      </div>
-
-      <div class="taskbar-nav-button-wrapper" id="portfolio-link-wrapper">
-        <a class='taskbar-nav-button' id="portfolio-link">
-          <img src="../imgs/portfolio-link.svg" class="taskbar-button-image">
-        </a>
-      </div>
-
-      <div class="taskbar-nav-button-wrapper" id="chat-link-wrapper">
-        <a class='taskbar-nav-button' id="chat-link">
-          <img src="../imgs/chat-link.svg" class="taskbar-button-image" id="chat-link-image">
-        </a>
+    <div class="taskbar-nav-button-wrapper" id="portfolio-link-wrapper">
+      <div class='taskbar-nav-button' id="portfolio-link">
+        <img src="../imgs/portfolio-link.svg" class="taskbar-button-image">
+        <div class="lottie-button-wrapper" id="portfolio-button-anim">
+          <div class="lottie-anim"></div>
+        </div>
+        <a href="/portfolio.html" class="nav-link" id="portfolio-a"></a>
       </div>
     </div>
+
+    <div class="taskbar-nav-button-wrapper" id="chat-link-wrapper">
+      <a class='taskbar-nav-button' id="chat-link">
+        <img src="../imgs/chat-link.svg" class="taskbar-button-image" id="chat-link-image">
+      </a>
+    </div>
+  </div>
 
 
     <!-- Social Media -->
@@ -272,6 +282,7 @@
 <script src='../js/window-fullscreen.js'></script>
 <script src='../js/window.js'></script>
 <script src='../js/taskbar.js'></script>
+<script src='../js/taskbar-buttons.js'></script>
 <script src='../js/anim-test.js'></script>
 <script src='../js/portfolio-detail.js'></script>
 <script src='../js/portfolio-buttons.js'></script>

@@ -75,10 +75,11 @@ const portfolioAnims =
 let infoButton = document.getElementById('about-link');
 let portButton = document.getElementById('portfolio-link');
 let homeButton = document.getElementById('home-link');
+let buttons = [infoButton, portButton, homeButton];
 
-setupButtonAnims(infoButton, './anims/info-button-anims.json', defaultAnims);
-setupButtonAnims(portButton, './anims/portfolio-button-anims.json', portfolioAnims);
-setupButtonAnims(homeButton, './anims/home-button-anims.json', defaultAnims);
+setupButtonAnims(infoButton, '../anims/info-button-anims.json', defaultAnims);
+setupButtonAnims(portButton, '../anims/portfolio-button-anims.json', portfolioAnims);
+setupButtonAnims(homeButton, '../anims/home-button-anims.json', defaultAnims);
 
 //  Anim Funcs
 // ==============================================================================
