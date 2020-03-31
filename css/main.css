@@ -58,7 +58,7 @@
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
-  border-color: #f8f3ef;
+  border-color: white;
   display: table;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -226,7 +226,7 @@ p .desktop-text {
 }
 
 hr {
-  border-color: #f8f3ef !important;
+  border-color: white !important;
   opacity: 60%;
   margin: auto;
   display: block;
@@ -360,18 +360,25 @@ strong {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  min-width: 1437px;
-  max-width: 100%;
+  width: 1437px;
+  min-width: 100vw;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0vh;
+  left: -0px;
 }
 
 .stars-fg {
   width: 1437px;
-  height: 688px;
+  height: 654px;
   position: absolute;
   background-image: url("../imgs/stars-fg.svg");
+}
+
+@media (min-width: 1725.4px), (min-height: 785.8px) {
+  .stars-fg {
+    height: 90vh;
+    width: calc(90vh * 2.19725);
+  }
 }
 
 #stars-fg-tr {
@@ -384,14 +391,33 @@ strong {
   top: 0px;
 }
 
+@media (min-width: 1725.4px), (min-height: 785.8px) {
+  #stars-fg-tl {
+    left: calc(-90vh * 2.19725);
+  }
+}
+
 #stars-fg-bl {
   left: -1437px;
-  top: 688px;
+  top: 654px;
+}
+
+@media (min-width: 1725.4px), (min-height: 785.8px) {
+  #stars-fg-bl {
+    left: calc(-90vh * 2.19725);
+    top: 90vh;
+  }
 }
 
 #stars-fg-br {
   left: 0;
-  top: 688px;
+  top: 654px;
+}
+
+@media (min-width: 1725.4px), (min-height: 785.8px) {
+  #stars-fg-br {
+    top: 90vh;
+  }
 }
 
 #stars-anim {
@@ -411,14 +437,21 @@ strong {
   pointer-events: none;
 }
 
+@media (min-width: 1725.4px), (min-height: 785.8px) {
+  #stars-anim {
+    -webkit-animation-name: stars-pan-big;
+            animation-name: stars-pan-big;
+  }
+}
+
 @-webkit-keyframes stars-pan {
   from {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
   to {
-    -webkit-transform: translate(1437px, calc(688px * -1));
-            transform: translate(1437px, calc(688px * -1));
+    -webkit-transform: translate(1437px, calc(654px * -1));
+            transform: translate(1437px, calc(654px * -1));
   }
 }
 
@@ -428,8 +461,30 @@ strong {
             transform: translate(0, 0);
   }
   to {
-    -webkit-transform: translate(1437px, calc(688px * -1));
-            transform: translate(1437px, calc(688px * -1));
+    -webkit-transform: translate(1437px, calc(654px * -1));
+            transform: translate(1437px, calc(654px * -1));
+  }
+}
+
+@-webkit-keyframes stars-pan-big {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(calc(90vh * 2.19725), -90vh);
+            transform: translate(calc(90vh * 2.19725), -90vh);
+  }
+}
+
+@keyframes stars-pan-big {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(calc(90vh * 2.19725), -90vh);
+            transform: translate(calc(90vh * 2.19725), -90vh);
   }
 }
 
@@ -571,7 +626,7 @@ strong {
   float: left;
   margin-left: 75px;
   margin-right: 75px;
-  color: #f8f3ef;
+  color: white;
   width: 20px;
   position: relative;
 }
@@ -631,7 +686,7 @@ strong {
   position: absolute;
   top: 0;
   left: 0;
-  border-color: #f8f3ef;
+  border-color: white;
   display: table;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -653,8 +708,8 @@ strong {
 }
 
 .taskbar-nav-button .nav-text-wrapper {
-  -webkit-clip-path: polygon(-100px 0px, 0 -100px, calc(100% + 100px) -100px, calc(100% + 100px) 0px);
-          clip-path: polygon(-100px 0px, 0 -100px, calc(100% + 100px) -100px, calc(100% + 100px) 0px);
+  -webkit-clip-path: polygon(-1200px 0px, -1200px -1200px, calc(100% + 1200px) -1200px, calc(100% + 1200px) 0px);
+          clip-path: polygon(-1200px 0px, -1200px -1200px, calc(100% + 1200px) -1200px, calc(100% + 1200px) 0px);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -666,45 +721,53 @@ strong {
   text-align: center;
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, -50.5px) !important;
-          transform: translate(-50%, -50.5px) !important;
+  -webkit-transform: translate(-50%, -50px) !important;
+          transform: translate(-50%, -50px) !important;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   pointer-events: none;
   top: 0;
   opacity: 0%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#161626FF), color-stop(10%, #161626FF), to(#16162600)) !important;
-  background-image: linear-gradient(0deg, #161626FF 0%, #161626FF 10%, #16162600 100%) !important;
-  padding-left: 15px;
-  padding-right: 15px;
-  height: 60px !important;
+  background: radial-gradient(ellipse at center, #161626 0%, rgba(22, 22, 38, 0.301) 40%, rgba(22, 22, 38, 0) 75%);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: table;
 }
 
 .taskbar-nav-button .nav-text#nav-text-home {
   text-align: left;
   left: 0px !important;
-  -webkit-transform: translate(-10.5px, -50.5px) !important;
-          transform: translate(-10.5px, -50.5px) !important;
+  -webkit-transform: translate(-50px, -50px) !important;
+          transform: translate(-50px, -50px) !important;
+}
+
+@media (max-width: 600px) {
+  .taskbar-nav-button .nav-text {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 90px), 0 calc(100% - 90px));
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 90px), 0 calc(100% - 90px));
+  }
 }
 
 .taskbar-nav-button .nav-text-content {
   display: table-cell;
   vertical-align: bottom;
   padding-bottom: 10px;
+  text-shadow: -0px -0px 10px black;
 }
 
 .taskbar-nav-button .nav-text-active {
-  -webkit-transform: translate(-50%, -60.5px) !important;
-          transform: translate(-50%, -60.5px) !important;
+  -webkit-transform: translate(-50%, -60px) !important;
+          transform: translate(-50%, -60px) !important;
   opacity: 100%;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
 .taskbar-nav-button .nav-text-active#nav-text-home {
-  -webkit-transform: translate(-10.5px, -60.5px) !important;
-          transform: translate(-10.5px, -60.5px) !important;
+  -webkit-transform: translate(-50px, -60px) !important;
+          transform: translate(-50px, -60px) !important;
 }
 
 .taskbar-nav-button .lottie-button-wrapper {
@@ -762,10 +825,11 @@ strong {
 }
 
 .taskbar-nav-button-active {
-  color: #f8f3ef !important;
+  color: white !important;
 }
 
 .taskbar-nav-button-active:hover {
+  color: white;
   border-radius: 10px;
 }
 
@@ -809,7 +873,7 @@ a.back-button {
   font-weight: bold;
   font-size: 21px;
   font-family: "plex_light", Plex Light, sans-serif;
-  color: #f8f3ef;
+  color: white;
   text-decoration: none !important;
 }
 
@@ -897,7 +961,7 @@ a.back-button {
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
-  border-color: #f8f3ef;
+  border-color: white;
   display: table;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -909,7 +973,7 @@ a.back-button {
           user-select: none;
   border-radius: 24px;
   width: 34px;
-  background-color: #f8f3ef;
+  background-color: white;
   float: left;
   height: 100%;
   margin-left: 8.75px;
@@ -937,6 +1001,13 @@ a.back-button {
           transform: scale(0.985, 0.985);
   -webkit-transition: 0.05s;
   transition: 0.05s;
+}
+
+.social-media-button:hover {
+  background-color: #ffffffff !important;
+  border-radius: 2px !important;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .social-media-icon {
@@ -1030,7 +1101,7 @@ a.back-button {
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
-  border-color: #f8f3ef;
+  border-color: white;
   display: table;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -1169,7 +1240,7 @@ a.back-button {
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
-  border-color: #f8f3ef;
+  border-color: white;
   display: table;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -1471,7 +1542,7 @@ html.window-active #logo-container {
 .portfolio-slot-window-dummy {
   padding-top: 56.25%;
   position: relative;
-  border-color: #f8f3ef !important;
+  border-color: white !important;
   border-radius: 10px;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
@@ -1561,7 +1632,7 @@ html.window-active #logo-container {
   border-color: #161626;
   padding-top: 56.25%;
   position: relative;
-  border-color: #f8f3ef !important;
+  border-color: white !important;
   overflow: hidden;
   border-radius: 10px;
   -webkit-transition-duration: 0.4s;
@@ -1662,7 +1733,7 @@ html.window-active #logo-container {
 
 .portfolio-overlay {
   background-color: #000000d9;
-  color: #f8f3ef;
+  color: white;
   height: calc(100% - (0px * 2));
   width: calc(100% - (0px * 2));
   left: 0px;
@@ -1803,7 +1874,7 @@ html.window-active #logo-container {
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
-  border-color: #f8f3ef;
+  border-color: white;
   border-width: 1px;
   background: black;
   -webkit-transition-duration: 0.4s;

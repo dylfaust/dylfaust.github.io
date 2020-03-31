@@ -1,15 +1,21 @@
 var currWindow;
 var topmostZIndex = 9999;
+var draggables;
 
-var draggables = document.getElementsByClassName("window");
-for (let i = 0; i < draggables.length; i++)
+function initDraggables()
 {
-  makeWindowDraggable(draggables[i], i);
-  topmostZIndex = i;
+  draggables = document.getElementsByClassName("window");
+  for (let i = 0; i < draggables.length; i++)
+  {
+    makeWindowDraggable(draggables[i], i);
+    topmostZIndex = i;
+  }
 }
 
 function makeWindowDraggable(draggable, zIndex = 1)
 {
+  $(draggable).resizable();
+
   draggable.classList.add("window");
   draggable.addEventListener("mousedown", mouseDown, false);
   draggable.addEventListener("mouseup", mouseUp, false);

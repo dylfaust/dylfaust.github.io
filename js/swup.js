@@ -7,6 +7,7 @@ const resumeLink = document.getElementById("resume-link");
 const portfolioLink = document.getElementById("portfolio-a");
 
 updateLinks();
+newPageLogic();
 
 swup.on('animationOutDone', updateLinks);
 
@@ -110,5 +111,9 @@ function newPageLogic()
   else if (pageState == page.PORTFOLIO)
   {
     scrollToContainer();
+  }
+  else if (pageState == page.MAIN)
+  {
+    initDraggables();
   }
 }
