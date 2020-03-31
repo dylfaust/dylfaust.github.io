@@ -214,14 +214,16 @@ function initButtonAnims(pageState)
     activeButton = buttons[0];
   }
 
-  if (activeButton.animController && activeButton.animController.loaded)
+  for (let i = 0; i < buttons.length; i++)
   {
-    activeButton.active = true;
-    activeButton.animController.jumpToEndFrame(activeButton.anims.normal, true);
-  }
-  else
-  {
-    activeButton.active = true;
+    let button = buttons[i];
+
+    button.active = (button == activeButton);
+
+    if (button.animController && button.animController.loaded)
+    {
+      button.animController.jumpToEndFrame(button.anims.normal, button.active);
+    }
   }
 }
 
@@ -236,7 +238,7 @@ function animControllerLoaded(animController, button)
   }
   else
   {
-    animController.domElement.style.opacity = "100%";
+    animController.jumpToEndFrame(button.anims.normal, false);
   }
 
   if (loadedAnimCount == 3)
@@ -333,7 +335,8 @@ function infoButtonClick()
 
       body.classList.add("dud-anim");
 
-      body.addEventListener("animationend", function() {
+      body.addEventListener("animationend", function ()
+      {
         body.classList.remove("dud-anim");
         button.classList.remove("button-dud-anim");
       });

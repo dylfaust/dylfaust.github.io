@@ -15,6 +15,8 @@ swup.on('animationOutStart', disableClicks);
 
 swup.on('contentReplaced', newPageLogic);
 
+swup.on('popState', popState);
+
 function disableClicks()
 {
   // document.getElementById("taskbar-nav-buttons-container").style.pointerEvents = "none";
@@ -55,30 +57,30 @@ function getPageState()
   return pageState;
 }
 
-function updateLinks()
+function updateLinks(popState = false)
 {
   // document.getElementById("taskbar-nav-buttons-container").style.pointerEvents = "auto";
   // let pageData = lastLinkClicked;
 
   let pageState = getPageState();
 
-  if (aboutLink)
-  {
-    let resetLink = pageState == page.ABOUT;
-    aboutLink.href = resetLink ? "/main.html" : "/about.html";
-  }
+  // if (aboutLink)
+  // {
+  //   let resetLink = pageState == page.ABOUT;
+  //   aboutLink.href = resetLink ? "/main.html" : "/about.html";
+  // }
 
-  if (resumeLink)
-  {
-    let resetLink = pageState == page.RESUME;
-    resumeLink.href = resetLink ? "/main.html" : "/resume.html";
-  }
+  // if (resumeLink)
+  // {
+  //   let resetLink = pageState == page.RESUME;
+  //   resumeLink.href = resetLink ? "/main.html" : "/resume.html";
+  // }
 
-  if (portfolioLink)
-  {
-    let resetLink = pageState == page.PORTFOLIO || pageState == page.DETAIL;
-    portfolioLink.href = resetLink ? "/main.html" : "/portfolio.html";
-  }
+  // if (portfolioLink)
+  // {
+  //   let resetLink = pageState == page.PORTFOLIO || pageState == page.DETAIL;
+  //   portfolioLink.href = resetLink ? "/main.html" : "/portfolio.html";
+  // }
 
   if (pageState != page.MAIN)
   {
@@ -89,7 +91,7 @@ function updateLinks()
     document.documentElement.classList.remove('window-active');
   }
 
-  if (lastLinkClicked == null)
+  if (lastLinkClicked == null || popState)
   {
     if (pageState == page.DETAIL)
     {
@@ -116,4 +118,9 @@ function newPageLogic()
   {
     initDraggables();
   }
+}
+
+function popState()
+{
+  updateLinks(true);
 }
