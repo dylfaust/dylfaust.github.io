@@ -646,7 +646,7 @@ strong {
   width: 100%;
   height: 100%;
   position: absolute;
-  pointer-events: none;
+  top: -36px;
 }
 
 .taskbar-nav-button .nav-text {
@@ -654,8 +654,8 @@ strong {
   text-align: center;
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, -61px) !important;
-          transform: translate(-50%, -61px) !important;
+  -webkit-transform: translate(-50%, -60.5px) !important;
+          transform: translate(-50%, -60.5px) !important;
   -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
   pointer-events: none;
@@ -671,8 +671,8 @@ strong {
 
 .taskbar-nav-button .nav-text#nav-text-home {
   left: 0px !important;
-  -webkit-transform: translate(6px, -61px) !important;
-          transform: translate(6px, -61px) !important;
+  -webkit-transform: translate(6px, -60.5px) !important;
+          transform: translate(6px, -60.5px) !important;
 }
 
 .taskbar-nav-button .nav-text-content {
@@ -682,16 +682,16 @@ strong {
 }
 
 .taskbar-nav-button .nav-text-active {
-  -webkit-transform: translate(-50%, -61px) !important;
-          transform: translate(-50%, -61px) !important;
+  -webkit-transform: translate(-50%, -60.5px) !important;
+          transform: translate(-50%, -60.5px) !important;
   opacity: 100%;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
 
 .taskbar-nav-button .nav-text-active#nav-text-home {
-  -webkit-transform: translate(6px, -61px) !important;
-          transform: translate(6px, -61px) !important;
+  -webkit-transform: translate(6px, -60.5px) !important;
+          transform: translate(6px, -60.5px) !important;
 }
 
 .taskbar-nav-button .lottie-button-wrapper {
@@ -986,10 +986,10 @@ a.back-button {
   font-style: italic;
   margin: 0;
   margin-left: -1px;
-  margin-right: -2px;
+  margin-right: -1px;
   margin-top: -1px;
   display: table;
-  width: 100%;
+  width: calc(100% + 2px);
   position: absolute;
 }
 
@@ -1181,6 +1181,7 @@ a.back-button {
   right: 9px;
   position: absolute;
   border-radius: 0px;
+  line-height: 0px;
 }
 
 .close-button:hover {
@@ -2417,17 +2418,17 @@ html.is-animating .swup-transition-wipe {
 
 path {
   vector-effect: non-scaling-stroke;
-  stroke-width: 1.5px !important;
+  stroke-width: 2px !important;
 }
 
 g {
   vector-effect: non-scaling-stroke;
-  stroke-width: 1.5px !important;
+  stroke-width: 2px !important;
 }
 
 svg {
   vector-effect: non-scaling-stroke;
-  stroke-width: 1.5px !important;
+  stroke-width: 2px !important;
 }
 
 #about-a {
