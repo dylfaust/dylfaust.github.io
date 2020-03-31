@@ -122,5 +122,6 @@ function newPageLogic()
 
 function popState()
 {
+  lastLinkClicked = null;
   updateLinks(true);
 }
