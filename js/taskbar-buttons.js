@@ -1,8 +1,9 @@
 //  Data
 // ----------------------------------------------------
 
-const infoClickAnim = {
-  name: 'infoClicked',
+// ---------------------------
+const defaultClickAnim = {
+  name: 'clicked',
   normalStart: 30 * 4,
   activeStart: 30 * 30,
   duration: 16,
@@ -10,20 +11,62 @@ const infoClickAnim = {
   transitionLinkFrame: 11,
 };
 
-const infoHoverAnim = {
-  name: 'infoHover',
+const defaultHoverAnim = {
+  name: 'hover',
   normalStart: 0,
   activeStart: 30 * 8,
   duration: 38,
   earlyExitFrame: null
 };
 
-const infoNormalAnim = {
-  name: 'infoNormal',
+const defaultNormalAnim = {
+  name: 'normal',
   normalStart: 30 * 2,
   activeStart: 30 * 6,
   duration: 18,
   earlyExitFrame: null
+};
+
+
+const defaultAnims =
+{
+  normal: defaultNormalAnim,
+  hover: defaultHoverAnim,
+  click: defaultClickAnim
+};
+// ---------------------------
+
+const portfolioClickAnim = {
+  name: 'clicked',
+  normalStart: 30 * 4,
+  activeStart: 30 * 30,
+  duration: 16,
+  earlyExitFrame: 11,
+  transitionLinkFrame: 11,
+};
+
+const portfolioHoverAnim = {
+  name: 'hover',
+  normalStart: 0,
+  activeStart: 30 * 6,
+  duration: 38,
+  earlyExitFrame: null
+};
+
+const portfolioNormalAnim = {
+  name: 'normal',
+  normalStart: 30 * 2,
+  activeStart: 30 * 8,
+  duration: 18,
+  earlyExitFrame: null
+};
+
+
+const portfolioAnims =
+{
+  normal: portfolioNormalAnim,
+  hover: portfolioHoverAnim,
+  click: portfolioClickAnim
 };
 
 //  Setup
@@ -33,9 +76,9 @@ let infoButton = document.getElementById('about-link');
 let portButton = document.getElementById('portfolio-link');
 let homeButton = document.getElementById('home-link');
 
-setupButtonAnims(infoButton, './anims/info-button-anims.json');
-setupButtonAnims(portButton, './anims/portfolio-button-anims.json');
-setupButtonAnims(homeButton, './anims/home-button-anims.json');
+setupButtonAnims(infoButton, './anims/info-button-anims.json', defaultAnims);
+setupButtonAnims(portButton, './anims/portfolio-button-anims.json', portfolioAnims);
+setupButtonAnims(homeButton, './anims/home-button-anims.json', defaultAnims);
 
 //  Anim Funcs
 // ==============================================================================
@@ -124,15 +167,17 @@ function reset()
 //------------------------------
 function infoButtonMouseOut()
 {
+  let animController = this.animController;
   let anims = this.anims;
+  let desiredState = anims.normal;
 
-  if (anims.currState != infoClickAnim)
+  if (animController.currState != anims.click)
   {
-    anims.goAnimState(infoNormalAnim, this.active);
+    animController.goAnimState(desiredState, this.active);
   }
   else
   {
-    anims.queueAnimState(infoNormalAnim);
+    animController.queueAnimState(desiredState);
   }
 
   this.hovered = false;
@@ -141,17 +186,19 @@ function infoButtonMouseOut()
 //------------------------------
 function infoButtonMouseOver()
 {
+  let animController = this.animController;
   let anims = this.anims;
+  let desiredState = anims.hover;
 
   if (!this.hovered)
   {
-    if (anims.currState != infoClickAnim)
+    if (animController.currState != anims.click)
     {
-      anims.goAnimState(infoHoverAnim, this.active);
+      animController.goAnimState(desiredState, this.active);
     }
     else
     {
-      anims.queueAnimState(infoHoverAnim);
+      animController.queueAnimState(desiredState);
     }
   }
 
@@ -161,42 +208,45 @@ function infoButtonMouseOver()
 //------------------------------
 function infoButtonClick()
 {
+  let animController = this.animController;
   let anims = this.anims;
+  let desiredState = anims.click;
 
-  anims.goAnimState(infoClickAnim, this.active);
+  animController.goAnimState(desiredState, this.active);
 
   this.active = !this.active;
 }
 
 //------------------------------
-function setupButtonAnims(buttonWrapper, animPath)
+function setupButtonAnims(buttonWrapper, animPath, anims)
 {
   let button = buttonWrapper.getElementsByClassName("lottie-button-wrapper")[0];
 
   button.link = buttonWrapper.getElementsByClassName("nav-link")[0];
 
-  var buttonAnims = bodymovin.loadAnimation({
+  var animController = bodymovin.loadAnimation({
     container: button.getElementsByClassName("lottie-anim")[0],
     renderer: 'svg',
     loop: false,
     autoplay: false,
     path: animPath
   })
-  buttonAnims.goAnimState = goAnimState;
-  buttonAnims.queueAnimState = queueAnimState;
-  buttonAnims.reset = reset;
+  animController.goAnimState = goAnimState;
+  animController.queueAnimState = queueAnimState;
+  animController.reset = reset;
 
-  button.anims = buttonAnims;
-  buttonAnims.domElement = button;
+  button.anims = anims;
+  button.animController = animController;
+  animController.domElement = button;
 
-  buttonAnims.addEventListener("complete", function (event)
+  animController.addEventListener("complete", function (event)
   {
-    animComplete(buttonAnims);
+    animComplete(animController);
   });
 
-  buttonAnims.addEventListener("enterFrame", function (event)
+  animController.addEventListener("enterFrame", function (event)
   {
-    enterFrame(event.currentTime, buttonAnims);
+    enterFrame(event.currentTime, animController);
   });
 
   button.addEventListener("mouseover", infoButtonMouseOver, true);

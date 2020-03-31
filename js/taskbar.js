@@ -1,4 +1,4 @@
-var taskbarReady = false'
+var taskbarReady = false;
 
 // -------------------------------------------
 // Global Vars
