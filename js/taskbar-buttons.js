@@ -108,6 +108,8 @@ const homeAnims =
   click: defaultClickAnim
 };
 
+var allowAnims = true;//allowLottie();
+
 //  Setup
 // ----------------------------------------------------
 
@@ -125,6 +127,11 @@ setupButtonAnims(homeButton, '../anims/home-button-anims.json', homeAnims);
 
 //  Anim Funcs
 // ==============================================================================
+
+function allowLottie()
+{
+  return window.navigator.userAgent.toLowerCase().indexOf("edge") <= -1;
+}
 
 //------------------------------
 function jumpToEndFrame(anim, active)
@@ -404,7 +411,10 @@ function setupButtonAnims(buttonWrapper, animPath, anims)
   let button = buttonWrapper.getElementsByClassName("lottie-button-wrapper")[0];
 
   button.link = buttonWrapper.getElementsByClassName("nav-link")[0];
+  button.text = buttonWrapper.getElementsByClassName("nav-text")[0];
 
+  if (allowAnims)
+  {
   var animController = bodymovin.loadAnimation({
     container: button.getElementsByClassName("lottie-anim")[0],
     renderer: 'svg',
@@ -421,22 +431,22 @@ function setupButtonAnims(buttonWrapper, animPath, anims)
 
   button.anims = anims;
   button.animController = animController;
-  button.text = buttonWrapper.getElementsByClassName("nav-text")[0];
   animController.domElement = button;
-
   animController.addEventListener('DOMLoaded',
     function (e) { animControllerLoaded(animController, button); }
   );
-
   animController.addEventListener("complete", function (event)
   {
     animComplete(animController);
   });
-
+  
   animController.addEventListener("enterFrame", function (event)
   {
     enterFrame(event.currentTime, animController);
   });
+}
+
+
 
   button.addEventListener("mouseover", infoButtonMouseOver, true);
   button.addEventListener("mouseout", infoButtonMouseOut, true);
