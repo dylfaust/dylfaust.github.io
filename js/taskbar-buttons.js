@@ -108,7 +108,7 @@ const homeAnims =
   click: defaultClickAnim
 };
 
-var allowAnims = true;//allowLottie();
+var allowAnims = allowLottie();
 
 //  Setup
 // ----------------------------------------------------
@@ -415,36 +415,74 @@ function setupButtonAnims(buttonWrapper, animPath, anims)
 
   if (allowAnims)
   {
-  var animController = bodymovin.loadAnimation({
-    container: button.getElementsByClassName("lottie-anim")[0],
-    renderer: 'svg',
-    loop: false,
-    autoplay: false,
-    path: animPath
-  })
+    var animController = bodymovin.loadAnimation({
+      container: button.getElementsByClassName("lottie-anim")[0],
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: animPath
+    })
 
 
-  animController.goAnimState = goAnimState;
-  animController.queueAnimState = queueAnimState;
-  animController.reset = reset;
-  animController.jumpToEndFrame = jumpToEndFrame;
+    animController.goAnimState = goAnimState;
+    animController.queueAnimState = queueAnimState;
+    animController.reset = reset;
+    animController.jumpToEndFrame = jumpToEndFrame;
 
-  button.anims = anims;
-  button.animController = animController;
-  animController.domElement = button;
-  animController.addEventListener('DOMLoaded',
-    function (e) { animControllerLoaded(animController, button); }
-  );
-  animController.addEventListener("complete", function (event)
+    button.anims = anims;
+    button.animController = animController;
+    animController.domElement = button;
+    animController.addEventListener('DOMLoaded',
+      function (e) { animControllerLoaded(animController, button); }
+    );
+    animController.addEventListener("complete", function (event)
+    {
+      animComplete(animController);
+    });
+
+    animController.addEventListener("enterFrame", function (event)
+    {
+      enterFrame(event.currentTime, animController);
+    });
+  }
+  else
   {
-    animComplete(animController);
-  });
-  
-  animController.addEventListener("enterFrame", function (event)
-  {
-    enterFrame(event.currentTime, animController);
-  });
-}
+    // let image;
+    // let height;
+    // let width;
+    // if (button == buttons[0])
+    // {
+    //   image = "url(../imgs/home.svg)";
+    //   height= "50px";
+    // }
+    // else if (button == buttons[1])
+    // {
+    //   image = "url(../imgs/about-link.svg)";
+    //   height= "50px";
+    // }
+    // else if (button == buttons[2])
+    // {
+    //   image = "url(../imgs/portfolio-link.svg)";
+    //   height= "50px";
+    //   width="60px";
+    // }
+
+    let anim = button.getElementsByClassName("lottie-anim")[0];
+    anim.style.backgroundImage = "url(../imgs/missing-anim.svg)";
+    anim.style.backgroundRepeat = "no-repeat";
+    anim.style.backgroundPosition = "center";
+    anim.style.height = "50px";
+    anim.style.width = "100px";
+    anim.style.margin = "auto";
+
+    // if (width)
+    // {
+    //   anim.style.width = width;
+    // }
+    // anim.style.backgroundColor = "red";
+    var taskbarContent = document.getElementById("taskbar-contents");
+    taskbarContent.style.opacity = "1.0";
+  }
 
 
 
