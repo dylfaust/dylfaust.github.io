@@ -765,6 +765,14 @@ strong {
   }
 }
 
+#check-anim {
+  position: absolute !important;
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  left: -8px;
+  top: -8px;
+}
+
 .taskbar-nav-button {
   height: 100%;
   width: 100%;
@@ -1264,6 +1272,51 @@ a.back-button {
 @media (max-width: 600px) {
   .window-button {
     display: none;
+  }
+}
+
+.button-collapse {
+  width: 40px;
+  left: 50%;
+  margin-left: -20px !important;
+  border-radius: 100px !important;
+  border-color: #00000000;
+  -webkit-transition-duration: 5s;
+          transition-duration: 5s;
+}
+
+.button-text-collapse {
+  -webkit-animation-name: button-text-collapse-anim;
+          animation-name: button-text-collapse-anim;
+  -webkit-animation-duration: 0.05s;
+          animation-duration: 0.05s;
+  position: absolute;
+  opacity: 0%;
+}
+
+@-webkit-keyframes button-text-collapse-anim {
+  0% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+    position: absolute;
+  }
+}
+
+@keyframes button-text-collapse-anim {
+  0% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+    position: absolute;
   }
 }
 
@@ -2427,7 +2480,7 @@ html.window-active #logo-container {
 }
 
 #about-me-image {
-  max-height: 250px !important;
+  max-height: 250px;
 }
 
 @media (max-width: 991px) {
@@ -2469,7 +2522,6 @@ html.window-active #logo-container {
 }
 
 .headshot-wrapper {
-  width: calc(100% - (8px * 2));
   border-radius: 7px;
   overflow: hidden;
   margin: auto;

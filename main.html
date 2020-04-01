@@ -90,10 +90,13 @@
             <p class='editable-text email-text' contenteditable='true' spellcheck='false'> </p>
           </div>
           <div class='window-button-spacer'>
-            <div class='window-button'>
+            <div class='window-button email-button'>
               <p class='taskbar-button-text'>
                 Drop A Line
               </p>
+              <div class="lottie-anim-wrapper" id="check-anim">
+                <div class="lottie-anim"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -198,7 +201,7 @@
           <img type='image/svg+xml' src='./imgs/youtube-button.svg' draggable=false class='social-media-icon'></img>
         </a>
       </div>
-      
+
       <!-- Main button -->
       <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
         <div href="/main.html" class='taskbar-nav-button' id="home-link">
@@ -224,6 +227,7 @@
 <!-- Scripts -->
 
 <script src='js/jquery-funcs.js'></script>
+<script src='js/home.js'></script>
 <script src='js/common-funcs.js'></script>
 <script src='js/drag-and-drop.js'></script>
 <script src='js/window-fullscreen.js'></script>
