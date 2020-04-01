@@ -1294,33 +1294,9 @@ a.back-button {
   opacity: 0%;
 }
 
-@-webkit-keyframes button-text-collapse-anim {
-  0% {
-    opacity: 100%;
-  }
-  99% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 0%;
-    position: absolute;
-  }
-}
+@-webkit-keyframes button-text-collapse-anim {}
 
-@keyframes button-text-collapse-anim {
-  0% {
-    opacity: 100%;
-  }
-  99% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 0%;
-    position: absolute;
-  }
-}
-
-#about-me-text {
+@keyframes button-text-collapse-anim {}#about-me-text {
   overflow: auto;
   height: calc(100% - calc(38px + (13px * 2)));
 }

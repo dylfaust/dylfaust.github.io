@@ -1,20 +1,26 @@
-var emailButton = document.getElementsByClassName("email-button")[0];
-var emailText = document.getElementsByClassName("email-text")[0];
+var emailButton;
+var emailText;
+var checkAnimController;
 
-emailButton.addEventListener("click", emailButtonClick, true);
+function setupEmailButton()
+{
+  emailButton = document.getElementsByClassName("email-button")[0];
+emailText = document.getElementsByClassName("email-text")[0];
 
-let anim = document.getElementById("check-anim");
+  emailButton.addEventListener("click", emailButtonClick, true);
 
-// button.link = buttonWrapper.getElementsByClassName("nav-link")[0];
+  let anim = document.getElementById("check-anim");
 
-var checkAnimController = bodymovin.loadAnimation({
-  container: anim.getElementsByClassName("lottie-anim")[0],
-  renderer: 'svg',
-  loop: false,
-  autoplay: false,
-  path: "../anims/checkmark.json"
-});
+  // button.link = buttonWrapper.getElementsByClassName("nav-link")[0];
 
+  checkAnimController = bodymovin.loadAnimation({
+    container: anim.getElementsByClassName("lottie-anim")[0],
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: "../anims/checkmark.json"
+  });
+}
 
 function emailButtonClick()
 {
@@ -34,28 +40,32 @@ function emailButtonClick()
     // let newString = "";
     let substring = origText;
     let i = origText.length;
-    let interval = setInterval(function ()
+    if (i > 1)
     {
-      substring = substring.substring(1, substring.length);
-      let newString = new Array(origText.length - i + 2).join("-");
-      emailText.textContent = newString + substring;
-
-      i--;
-      if (i == -1)
+      let interval = setInterval(function ()
       {
-        clearInterval(interval);
+        substring = substring.substring(1, substring.length);
+        let newString = new Array(origText.length - i + 2).join("-");
+        emailText.textContent = newString + substring;
 
-        let delay = setTimeout(function ()
+        i--;
+        if (i == 0)
         {
-          emailText.textContent = "";
-          // clearInterval(delay);
-        }, 500);
+          clearInterval(interval);
+
+          let delay = setTimeout(function ()
+          {
+            emailText.textContent = "";
+            // clearInterval(delay);
+          }, 500);
+        }
       }
+        ,
+        15
+      );
     }
-      ,
-      15
-    );
     // emailText.style.opacity = "0%";
   });
+
   // checkAnimController.play();
 }

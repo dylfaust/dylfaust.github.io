@@ -126,8 +126,9 @@ function newPageLogic()
     {
       infoButtonClick(event, infoButtonContent);
     });
-    
+
     initDraggables();
+    setupEmailButton();
   }
 }
 
