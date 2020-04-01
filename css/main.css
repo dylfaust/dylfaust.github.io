@@ -95,6 +95,33 @@
   transition: 0.05s;
 }
 
+.back-button-image {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.back-button-image:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+.back-button-image:active {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
 html {
   font-family: "plex_light", Plex Light, sans-serif !important;
   overflow: hidden;
@@ -197,13 +224,13 @@ html body {
 
 ::-moz-selection {
   background: rgba(255, 255, 255, 0.996);
-  opacity: 1.0 !important;
+  opacity: 1 !important;
   color: black;
 }
 
 ::selection {
   background: rgba(255, 255, 255, 0.996);
-  opacity: 1.0 !important;
+  opacity: 1 !important;
   color: black;
 }
 
@@ -612,7 +639,7 @@ strong {
   width: 100%;
   height: 100%;
   position: relative;
-  opacity: 0.0;
+  opacity: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -790,7 +817,7 @@ strong {
 .taskbar-nav-button .taskbar-button-image {
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.0;
+  opacity: 0;
 }
 
 @media (max-width: 600px) {
@@ -818,7 +845,7 @@ strong {
   transition: 0.2s;
   pointer-events: none;
   top: 0;
-  opacity: 0.0;
+  opacity: 0;
   background: radial-gradient(ellipse at center, #161626 0%, rgba(22, 22, 38, 0.301) 40%, rgba(22, 22, 38, 0.101) 55%, rgba(22, 22, 38, 0) 75%);
   padding-left: 50px;
   padding-right: 50px;
@@ -851,7 +878,7 @@ strong {
 .taskbar-nav-button .nav-text-active {
   -webkit-transform: translate(-50%, -60px) !important;
           transform: translate(-50%, -60px) !important;
-  opacity: 1.0;
+  opacity: 1;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
@@ -1292,7 +1319,7 @@ a.back-button {
   -webkit-animation-duration: 0.05s;
           animation-duration: 0.05s;
   position: absolute;
-  opacity: 0.0;
+  opacity: 0;
 }
 
 @-webkit-keyframes button-text-collapse-anim {}
@@ -1523,7 +1550,7 @@ a.back-button {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.0;
+  opacity: 0;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
@@ -1531,7 +1558,7 @@ a.back-button {
 }
 
 .large-window-details-active {
-  opacity: 1.0 !important;
+  opacity: 1 !important;
   pointer-events: auto !important;
 }
 
@@ -1718,7 +1745,7 @@ html.window-active #logo-container {
   border-radius: 10px;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .portfolio-header-wrapper {
@@ -1809,7 +1836,7 @@ html.window-active #logo-container {
   border-radius: 10px;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
-  opacity: 1.0;
+  opacity: 1;
   transition-duration: 0.4s;
 }
 
@@ -1825,7 +1852,7 @@ html.window-active #logo-container {
 }
 
 .portfolio-slot-window-clear {
-  opacity: 0.0;
+  opacity: 0;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
   -webkit-transition-timing-function: ease-out;
@@ -1899,13 +1926,13 @@ html.window-active #logo-container {
 }
 
 .section-header {
-  opacity: 1.0;
+  opacity: 1;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
 }
 
 .a-0-trans {
-  opacity: 0.0 !important;
+  opacity: 0 !important;
   -webkit-transition-timing-function: ease-out !important;
           transition-timing-function: ease-out !important;
 }
@@ -1926,7 +1953,7 @@ html.window-active #logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  opacity: 1.0;
+  opacity: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1945,7 +1972,7 @@ html.window-active #logo-container {
   left: 0px;
   position: absolute;
   top: 0px;
-  opacity: 0.0;
+  opacity: 0;
   font-size: 26px;
   text-align: center;
   -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
@@ -1958,7 +1985,7 @@ html.window-active #logo-container {
 }
 
 .portfolio-overlay:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .portfolio-text-overlay-h {
@@ -2345,7 +2372,7 @@ html.window-active #logo-container {
 }
 
 .skill-pillar-divider {
-  opacity: 1.0;
+  opacity: 1;
   width: 50px;
   margin-top: 12px !important;
   text-align: center !important;
@@ -2614,13 +2641,13 @@ html.window-active #logo-container {
 }
 
 .swup-transition-fade {
-  opacity: 1.0;
+  opacity: 1;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
 
 html.is-animating .swup-transition-fade {
-  opacity: 0.0;
+  opacity: 0;
 }
 
 .wipe-overlay {
