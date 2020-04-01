@@ -15,6 +15,7 @@ const defaultClickAnim = {
   normalStart: 30 * 4,
   activeStart: 30 * 30,
   duration: 16,
+  inactiveDuration: 11,
   earlyExitFrame: 11,
   transitionLinkFrame: 11,
 };
@@ -58,9 +59,9 @@ var loadedAnimCount = 0;
 const portfolioClickAnim = {
   name: 'clicked',
   normalStart: 30 * 4,
-  activeStart: 30 * 30,
-  duration: 16,
-  earlyExitFrame: 11,
+  activeStart: 30 * 30 + 10,
+  duration: 20 + 10,
+  earlyExitFrame: 18,
   transitionLinkFrame: 11,
 };
 
@@ -111,7 +112,8 @@ setupButtonAnims(homeButton, '../anims/home-button-anims.json', defaultAnims);
 function jumpToEndFrame(anim, active)
 {
   this.goAnimState(anim, active);
-  this.goToAndStop(anim.duration, true);
+  let duration = active && anim.inactiveDuration ? anim.inactiveDuration : anim.duration;
+  this.goToAndStop(duration, true);
 }
 
 //------------------------------
@@ -139,7 +141,17 @@ function goAnimState(animData, active)
 
   wantsEarlyExit = animData.earlyExitFrame != null;
   startFrame = active ? animData.activeStart : animData.normalStart;
-  endFrame = startFrame + animData.duration;
+
+  if (active && animData.inactiveDuration)
+  {
+    let breakhere = true;
+    if (breakhere)
+      console.log("cool");
+  }
+
+  let duration = active && animData.inactiveDuration ? animData.inactiveDuration : animData.duration;
+
+  endFrame = startFrame + duration;
 
   let animId = animData.name;
 
@@ -300,7 +312,7 @@ function infoButtonClick(event, buttonOverride = null)
   if (buttonOverride)
     clickedButton = buttonOverride;
   else
-  clickedButton = this;
+    clickedButton = this;
 
   let animController = clickedButton.animController;
   let anims = clickedButton.anims;
@@ -324,7 +336,7 @@ function infoButtonClick(event, buttonOverride = null)
         if (wasActive)
         {
           button.animController.goAnimState(button.anims.click, true);
-          button.animController.queueAnimState(button.anims.normal, true);
+          // button.animController.queueAnimState(button.anims.normal, true);
         }
       }
     }
