@@ -2308,7 +2308,8 @@ html.window-active #logo-container {
 .skill-pillar {
   margin-left: 10px;
   margin-right: 10px;
-  background: #59618b99;
+  background: #474c6b;
+  background: rgba(89, 97, 139, 0.6);
   border-radius: 7px;
   padding-top: 10px;
   padding-bottom: 15px;
@@ -2404,7 +2405,8 @@ html.window-active #logo-container {
 }
 
 .myself-wrap {
-  background-color: #59618b99;
+  background: #474c6b;
+  background: rgba(89, 97, 139, 0.6);
   border-radius: 7px;
   overflow: hidden;
   text-align: center;
@@ -2556,7 +2558,8 @@ html.window-active #logo-container {
 
 .skill {
   font-size: 19px;
-  background-color: #59618b99;
+  background: #474c6b;
+  background: rgba(89, 97, 139, 0.6);
   padding-right: 15px;
   padding-left: 15px;
   padding-top: 8px;
