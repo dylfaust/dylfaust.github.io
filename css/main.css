@@ -74,7 +74,7 @@
 }
 
 .button-large:hover {
-  background-color: #00000059;
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -83,7 +83,7 @@
 }
 
 .button-large:active {
-  background-color: #00000059;
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -1105,7 +1105,7 @@ a.back-button {
 }
 
 .social-media-button:hover {
-  background-color: #00000059;
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -1114,7 +1114,7 @@ a.back-button {
 }
 
 .social-media-button:active {
-  background-color: #00000059;
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -1182,7 +1182,7 @@ a.back-button {
 }
 
 .topbar {
-  background-color: #ffffff59;
+  background-color: rgba(255, 255, 255, 0.349);
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
@@ -1249,7 +1249,7 @@ a.back-button {
 }
 
 .window-button:hover {
-  background-color: #00000059;
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -1258,7 +1258,7 @@ a.back-button {
 }
 
 .window-button:active {
-  background-color: #00000059;
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -1437,7 +1437,7 @@ a.back-button {
 }
 
 .close-button:hover {
-  background-color: #00000059;
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -1446,7 +1446,7 @@ a.back-button {
 }
 
 .close-button:active {
-  background-color: #00000059;
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -1938,7 +1938,7 @@ html.window-active #logo-container {
 }
 
 .portfolio-overlay {
-  background-color: #000000d9;
+  background-color: rgba(0, 0, 0, 0.851);
   color: white;
   height: calc(100% - (0px * 2));
   width: calc(100% - (0px * 2));
