@@ -5,7 +5,7 @@ var checkAnimController;
 function setupEmailButton()
 {
   emailButton = document.getElementsByClassName("email-button")[0];
-emailText = document.getElementsByClassName("email-text")[0];
+  emailText = document.getElementsByClassName("email-text")[0];
 
   emailButton.addEventListener("click", emailButtonClick, true);
 

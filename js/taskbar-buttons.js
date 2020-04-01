@@ -90,6 +90,24 @@ const portfolioAnims =
   click: portfolioClickAnim
 };
 
+// ---------------------------
+const homeHoverAnim = {
+  name: 'hover',
+  normalStart: 0,
+  activeStart: 30 * 8,
+  duration: 18,
+  earlyExitFrame: null
+};
+
+
+const homeAnims =
+{
+  normal: defaultNormalAnim,
+  hover: homeHoverAnim,
+  dud: defaultDudAnim,
+  click: defaultClickAnim
+};
+
 //  Setup
 // ----------------------------------------------------
 
@@ -103,7 +121,7 @@ let buttons = [
 
 setupButtonAnims(infoButton, '../anims/info-button-anims.json', defaultAnims);
 setupButtonAnims(portButton, '../anims/portfolio-button-anims.json', portfolioAnims);
-setupButtonAnims(homeButton, '../anims/home-button-anims.json', defaultAnims);
+setupButtonAnims(homeButton, '../anims/home-button-anims.json', homeAnims);
 
 //  Anim Funcs
 // ==============================================================================
@@ -306,7 +324,7 @@ function infoButtonMouseOver()
 }
 
 //------------------------------
-function infoButtonClick(event, buttonOverride = null)
+function infoButtonClick(event, buttonOverride = null, queueNormal = false)
 {
   let clickedButton;
   if (buttonOverride)
@@ -321,6 +339,13 @@ function infoButtonClick(event, buttonOverride = null)
   if (!clickedButton.active)
   {
     animController.goAnimState(desiredState, clickedButton.active);
+
+
+    if (queueNormal)
+    {
+      animController.queueAnimState(anims.normal, clickedButton.active);
+    }
+
 
     clickedButton.active = !clickedButton.active;
 

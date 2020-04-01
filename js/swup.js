@@ -126,7 +126,7 @@ function newPageLogic()
     let aboutButtonAlias = document.getElementsByClassName("about-button-alias")[0];
     aboutButtonAlias.addEventListener("click", function ()
     {
-      infoButtonClick(event, infoButtonContent);
+      infoButtonClick(event, infoButtonContent, true);
     });
 
     initDraggables();
