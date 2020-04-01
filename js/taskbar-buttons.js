@@ -274,7 +274,7 @@ function animControllerLoaded(animController, button)
   if (loadedAnimCount == 3)
   {
     var taskbarContent = document.getElementById("taskbar-contents");
-    taskbarContent.style.opacity = "100%";
+    taskbarContent.style.opacity = "1.0";
   }
 }
 
