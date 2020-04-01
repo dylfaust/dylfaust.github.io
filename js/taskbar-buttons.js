@@ -193,6 +193,12 @@ function queueAnimState(animData)
   this.queuedState = animData;
 }
 
+function takeLinkTransition(domElement)
+{
+  let link = domElement.link;
+  link.click();
+}
+
 //------------------------------
 function enterFrame(currFrame, animData)
 {
@@ -204,8 +210,7 @@ function enterFrame(currFrame, animData)
   {
     if (currFrame >= animData.currState.transitionLinkFrame)
     {
-      let link = animData.domElement.link;
-      link.click();
+      takeLinkTransition(animData.domElement);
       animData.linkFired = true;
       animData.domElement.awaitingLinkTransition = false;
     }
@@ -288,33 +293,12 @@ function animControllerLoaded(animController, button)
 //------------------------------
 function infoButtonMouseOut()
 {
-  let animController = this.animController;
-  let anims = this.anims;
-  let desiredState = anims.normal;
-
-  if (animController.currState != anims.click)
+  if (allowAnims)
   {
-    animController.goAnimState(desiredState, this.active);
-  }
-  else
-  {
-    animController.queueAnimState(desiredState);
-  }
+    let animController = this.animController;
+    let anims = this.anims;
+    let desiredState = anims.normal;
 
-  this.text.classList.remove("nav-text-active");
-
-  this.hovered = false;
-}
-
-//------------------------------
-function infoButtonMouseOver()
-{
-  let animController = this.animController;
-  let anims = this.anims;
-  let desiredState = anims.hover;
-
-  if (!this.hovered)
-  {
     if (animController.currState != anims.click)
     {
       animController.goAnimState(desiredState, this.active);
@@ -324,8 +308,34 @@ function infoButtonMouseOver()
       animController.queueAnimState(desiredState);
     }
   }
+  this.text.classList.remove("nav-text-active");
 
+  this.hovered = false;
+}
+
+//------------------------------
+function infoButtonMouseOver()
+{
   this.text.classList.add("nav-text-active");
+
+  if (allowAnims)
+  {
+    let animController = this.animController;
+    let anims = this.anims;
+    let desiredState = anims.hover;
+
+    if (!this.hovered)
+    {
+      if (animController.currState != anims.click)
+      {
+        animController.goAnimState(desiredState, this.active);
+      }
+      else
+      {
+        animController.queueAnimState(desiredState);
+      }
+    }
+  }
 
   this.hovered = true;
 }
@@ -339,20 +349,34 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
   else
     clickedButton = this;
 
-  let animController = clickedButton.animController;
-  let anims = clickedButton.anims;
-  let desiredState = anims.click;
+
+  let animController;
+  let anims;
+  let desiredState;
+
+  if (allowAnims)
+  {
+    let animController = clickedButton.animController;
+    let anims = clickedButton.anims;
+    let desiredState = anims.click;
+  }
 
   if (!clickedButton.active)
   {
-    animController.goAnimState(desiredState, clickedButton.active);
 
-
-    if (queueNormal)
+    if (allowAnims)
     {
-      animController.queueAnimState(anims.normal, clickedButton.active);
-    }
+      animController.goAnimState(desiredState, clickedButton.active);
 
+      if (queueNormal)
+      {
+        animController.queueAnimState(anims.normal, clickedButton.active);
+      }
+    }
+    else
+    {
+      takeLinkTransition(clickedButton);
+    }
 
     clickedButton.active = !clickedButton.active;
 
@@ -365,7 +389,7 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
       {
         let wasActive = button.active;
         button.active = false;
-        if (wasActive)
+        if (wasActive && allowAnims)
         {
           button.animController.goAnimState(button.anims.click, true);
           // button.animController.queueAnimState(button.anims.normal, true);
@@ -375,7 +399,7 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
   }
   else
   {
-    if (animController.currState != anims.click)
+    if (!allowAnims || animController.currState != anims.click)
     {
       clickedButton.classList.add("button-dud-anim");
       let body = document.getElementsByClassName("large-window-body")[0];
