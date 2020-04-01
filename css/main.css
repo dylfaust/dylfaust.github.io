@@ -729,6 +729,7 @@ strong {
 @media (max-width: 600px) {
   #home-link-wrapper-mobile {
     display: table;
+    pointer-events: none;
     margin-left: 0px !important;
     left: 0px !important;
   }
@@ -877,6 +878,14 @@ strong {
   width: 60px;
 }
 
+@media (max-width: 600px) {
+  .taskbar-nav-button .nav-anim-text-wrapper#about-anim-text-wrapper {
+    width: 60px;
+    left: 50%;
+    margin-left: -30px;
+  }
+}
+
 .taskbar-nav-button .nav-anim-text-wrapper#home-anim-text-wrapper {
   width: 90px;
 }
@@ -885,10 +894,24 @@ strong {
   width: 71px;
 }
 
+@media (max-width: 600px) {
+  .taskbar-nav-button .nav-anim-text-wrapper#port-anim-text-wrapper {
+    width: 60px;
+    right: 8px;
+  }
+}
+
 .taskbar-nav-button #info-button-anim {
   width: 100%;
   height: 70px;
   top: -10px;
+}
+
+@media (max-width: 600px) {
+  .taskbar-nav-button #info-button-anim {
+    top: -4px;
+    height: 64px;
+  }
 }
 
 .taskbar-nav-button #portfolio-button-anim {
@@ -904,6 +927,15 @@ strong {
   height: 70px;
   top: 50%;
   margin-top: -35px;
+}
+
+@media (max-width: 600px) {
+  .taskbar-nav-button #home-button-anim {
+    height: 60px;
+    top: 50%;
+    margin-top: -30px;
+    left: -20px;
+  }
 }
 
 .taskbar-nav-button-active {
@@ -922,6 +954,7 @@ strong {
 @media (max-width: 600px) {
   #home-link-mobile {
     display: block;
+    pointer-events: none;
   }
 }
 
@@ -1088,8 +1121,8 @@ a.back-button {
 .social-media-button:hover {
   background-color: #ffffffff !important;
   border-radius: 2px !important;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 .social-media-icon {
