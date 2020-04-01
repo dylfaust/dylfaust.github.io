@@ -1103,7 +1103,7 @@ a.back-button {
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
-  background: #59618b99;
+  background: rgba(82, 87, 124, 0.8);
   z-index: 1;
   -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
           clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
