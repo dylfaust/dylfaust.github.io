@@ -28,7 +28,7 @@ function getPageState()
   if (lastLinkClicked == null)
   {
     let currUrl = window.location.href;
-    if (currUrl.indexOf("/home") != -1)
+    if (currUrl.indexOf("/index") != -1)
       pageState = page.MAIN;
     else if (currUrl.indexOf("/about") != -1)
       pageState = page.ABOUT;
@@ -36,14 +36,16 @@ function getPageState()
       pageState = page.PORTFOLIO;
     else if (currUrl.indexOf("/resume") != -1)
       pageState = page.RESUME;
-    else
+    else if (currUrl.indexOf("/games") != -1)
       pageState = page.DETAIL;
+    else
+      pageState = page.MAIN;
   }
 
   // Cheap
   else
   {
-    if (lastLinkClicked == "/home.html")
+    if (lastLinkClicked == "/index.html")
       pageState = page.MAIN;
     else if (lastLinkClicked == "/about.html")
       pageState = page.ABOUT;
