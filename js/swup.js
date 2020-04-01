@@ -28,7 +28,7 @@ function getPageState()
   if (lastLinkClicked == null)
   {
     let currUrl = window.location.href;
-    if (currUrl.indexOf("/main") != -1)
+    if (currUrl.indexOf("/home") != -1)
       pageState = page.MAIN;
     else if (currUrl.indexOf("/about") != -1)
       pageState = page.ABOUT;
@@ -43,7 +43,7 @@ function getPageState()
   // Cheap
   else
   {
-    if (lastLinkClicked == "/main.html")
+    if (lastLinkClicked == "/home.html")
       pageState = page.MAIN;
     else if (lastLinkClicked == "/about.html")
       pageState = page.ABOUT;
