@@ -1134,7 +1134,7 @@ a.back-button {
 }
 
 .social-media-icon {
-  display: table-cell;
+  width: 100%;
   -webkit-filter: brightness(0%);
           filter: brightness(0%);
 }
