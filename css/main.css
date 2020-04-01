@@ -1458,7 +1458,8 @@ a.back-button {
 }
 
 .close-button-icon {
-  display: table-cell;
+  width: 16px;
+  height: 16px;
 }
 
 .large-window {
