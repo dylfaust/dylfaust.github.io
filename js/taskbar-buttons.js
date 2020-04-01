@@ -67,7 +67,7 @@ const portfolioClickAnim = {
 
 const portfolioHoverAnim = {
   name: 'hover',
-  normalStart: 0,
+  normalStart: 4,
   activeStart: 30 * 6,
   duration: 38,
   earlyExitFrame: null
