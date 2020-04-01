@@ -356,9 +356,9 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
 
   if (allowAnims)
   {
-    let animController = clickedButton.animController;
-    let anims = clickedButton.anims;
-    let desiredState = anims.click;
+     animController = clickedButton.animController;
+     anims = clickedButton.anims;
+     desiredState = anims.click;
   }
 
   if (!clickedButton.active)
