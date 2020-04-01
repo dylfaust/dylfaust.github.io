@@ -218,34 +218,27 @@
     <div class="swup-transition-wipe wipe-overlay"></div>
   </div>
 
-  <!-- Taskbar -->
-  <div id='taskbar'>
-
-    <!-- Main button -->
-    <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
-      <div href="/main.html" class='taskbar-nav-button' id="home-link">
-        <img src="../imgs/home.svg" class="taskbar-button-image" id="home-link-image" height=50>
-        <div class="lottie-button-wrapper" class="nav-link" id="home-button-anim">
-          <div class="lottie-anim"></div>
-        </div>
-        <a href="/main.html" class="nav-link" id="main-a"></a>
-      </div>
-    </div>
+<!-- Taskbar -->
+<div id='taskbar'>
+  <div id='taskbar-contents'>
 
     <!-- Nav buttons -->
     <div id='taskbar-nav-buttons-container'>
       <div class="taskbar-nav-button-wrapper" id="home-link-wrapper-mobile">
-        <div href="/main.html" class='taskbar-nav-button' id="home-link-mobile">
-          <img src="../imgs/home.svg" class="taskbar-button-image" height=50>
-        </div>
-        <a href="/main.html" class="nav-link" id="main-a"></a>
       </div>
 
       <div class="taskbar-nav-button-wrapper">
         <div class='taskbar-nav-button' id="about-link">
-          <img src="../imgs/info-link.svg" class="taskbar-button-image" id="about-link-image">
-          <div class="lottie-button-wrapper" id="info-button-anim">
-            <div class="lottie-anim"></div>
+          <div class='nav-anim-text-wrapper' id="about-anim-text-wrapper">
+            <img src="./imgs/info-link.svg" class="taskbar-button-image" id="about-link-image">
+            <div class="lottie-button-wrapper" id="info-button-anim">
+              <div class="lottie-anim"></div>
+            </div>
+            <div class="nav-text-wrapper">
+              <div class="nav-text">
+                <p class="nav-text-content">About</p>
+              </div>
+            </div>
           </div>
           <a href="/about.html" class="nav-link" id="about-a"></a>
         </div>
@@ -253,9 +246,16 @@
 
       <div class="taskbar-nav-button-wrapper" id="portfolio-link-wrapper">
         <div class='taskbar-nav-button' id="portfolio-link">
-          <img src="../imgs/portfolio-link.svg" class="taskbar-button-image">
-          <div class="lottie-button-wrapper" id="portfolio-button-anim">
-            <div class="lottie-anim"></div>
+          <div class='nav-anim-text-wrapper' id="port-anim-text-wrapper">
+            <img src="./imgs/portfolio-link.svg" class="taskbar-button-image">
+            <div class="lottie-button-wrapper" id="portfolio-button-anim">
+              <div class="lottie-anim"></div>
+            </div>
+            <div class="nav-text-wrapper">
+              <div class="nav-text">
+                <p class="nav-text-content">Portfolio</p>
+              </div>
+            </div>
           </div>
           <a href="/portfolio.html" class="nav-link" id="portfolio-a"></a>
         </div>
@@ -263,25 +263,43 @@
 
       <div class="taskbar-nav-button-wrapper" id="chat-link-wrapper">
         <a class='taskbar-nav-button' id="chat-link">
-          <img src="../imgs/chat-link.svg" class="taskbar-button-image" id="chat-link-image">
+          <img src="./imgs/chat-link.svg" class="taskbar-button-image" id="chat-link-image">
         </a>
       </div>
     </div>
 
-
     <!-- Social Media -->
     <div id='social-buttons-container'>
       <a href='https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA' target='_blank' rel='noopener noreferrer'
-        class='social-media-button button'>
-        <img type='image/svg+xml' src='../imgs/linked-in-button.svg' draggable=false class='social-media-icon'></img>
+        class='social-media-button'>
+        <img type='image/svg+xml' src='./imgs/linked-in-button.svg' draggable=false class='social-media-icon'></img>
       </a>
 
       <a href='http://www.linkedin.com/in/dylanfaust/' target='_blank' rel='noopener noreferrer'
-        class='social-media-button button'>
-        <img type='image/svg+xml' src='../imgs/youtube-button.svg' draggable=false class='social-media-icon'></img>
+        class='social-media-button'>
+        <img type='image/svg+xml' src='./imgs/youtube-button.svg' draggable=false class='social-media-icon'></img>
       </a>
     </div>
+
+    <!-- Main button -->
+    <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
+      <div href="/main.html" class='taskbar-nav-button' id="home-link">
+        <div class='nav-anim-text-wrapper' id="home-anim-text-wrapper">
+          <img src="./imgs/home.svg" class="taskbar-button-image" id="home-link-image" height=50>
+          <div class="lottie-button-wrapper" class="nav-link" id="home-button-anim">
+            <div class="lottie-anim"></div>
+          </div>
+          <div class="nav-text-wrapper">
+            <div class="nav-text" id="nav-text-home">
+              <p class="nav-text-content">Home</p>
+            </div>
+          </div>
+        </div>
+        <a href="/main.html" class="nav-link" id="main-a"></a>
+      </div>
+    </div>
   </div>
+</div>
 </body>
 
 <!-- Scripts -->
