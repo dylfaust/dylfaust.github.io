@@ -1,3 +1,5 @@
+var useEdgeAnim = allowLottie();
+
 let windowsSmall = document.getElementsByClassName("window");
 for (let i = 0; i < windowsSmall.length; i++)
 {
@@ -40,4 +42,9 @@ function closeLarge()
 function closeMouseDown(event)
 {
   event.stopPropagation();
+}
+
+function allowLottie()
+{
+  return window.navigator.userAgent.toLowerCase().indexOf("edge") <= -1;
 }

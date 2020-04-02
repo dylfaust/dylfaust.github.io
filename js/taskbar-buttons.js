@@ -128,11 +128,6 @@ setupButtonAnims(homeButton, '../anims/home-button-anims.json', homeAnims);
 //  Anim Funcs
 // ==============================================================================
 
-function allowLottie()
-{
-  return window.navigator.userAgent.toLowerCase().indexOf("edge") <= -1;
-}
-
 //------------------------------
 function jumpToEndFrame(anim, active)
 {

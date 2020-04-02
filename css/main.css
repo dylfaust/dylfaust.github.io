@@ -956,9 +956,9 @@ strong {
 .taskbar-nav-button #home-button-anim {
   width: 100%;
   left: -10px;
-  height: 70px;
+  height: 72px;
   top: 50%;
-  margin-top: -35px;
+  margin-top: -36px;
 }
 
 @media (max-width: 600px) {
@@ -1174,7 +1174,7 @@ a.back-button {
   -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
           clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
   min-height: 130px;
-  min-width: 130px;
+  min-width: 132px;
   -webkit-transition: -webkit-clip-path 0.3s;
   transition: -webkit-clip-path 0.3s;
   transition: clip-path 0.3s;
@@ -1184,6 +1184,10 @@ a.back-button {
 .window-close {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%) !important;
           clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%) !important;
+}
+
+.window-close-msedge {
+  opacity: 0%;
 }
 
 .window-outline {
