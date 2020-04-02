@@ -401,11 +401,9 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
         else
           resetWindows = document.getElementsByClassName("window-close-msedge");
 
-        for (let i = 0; i < resetWindows.length; i++)
+        for (let x = 0; x < resetWindows.length; x++)
         {
-          let window = resetWindows[i];
-          console.log(resetWindows.length);
-          console.log(window);
+          let window = resetWindows[x];
           if (window)
           {
             let outline = window.getElementsByClassName("window-outline")[0];
@@ -418,6 +416,8 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
             {
               window.classList.remove("window-close-msedge");
             }
+
+            x--;
             makeWindowDraggable(window, window.zIndexInt);
           }
         }
