@@ -1093,15 +1093,26 @@ a.back-button {
 
 #back-anim {
   position: absolute;
-  left: 16px;
-  width: 50px;
-  height: 50px;
-  bottom: 18px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
   pointer-events: none;
 }
 
 .lottie-link {
   position: absolute;
+}
+
+.lottie-anim {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 0px !important;
 }
 
 #social-buttons-container {
@@ -2019,14 +2030,24 @@ html.window-active #logo-container {
   vertical-align: middle;
 }
 
-.back-button-image {
+.back-image-wrapper {
+  pointer-events: none;
   background-image: url("../imgs/back.svg");
   width: 50px;
   height: 50px;
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 14px;
-  margin-left: 2px;
+  margin-left: 0px;
+  position: relative;
+}
+
+.back-button-image {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
 }
 
 .port-det-title-style {
