@@ -220,7 +220,9 @@ html body {
 }
 
 * {
-  cursor: url("../imgs/cursor.svg"), default;
+  cursor: url("../imgs/cursor-01.png") 0 0, default;
+  cursor: -webkit-image-set(url("../imgs/cursor.svg") 1x, url("../imgs/cursor-2x.svg") 2x) 0 0, default;
+  cursor: image-set(url("../imgs/cursor.svg") 1x, url("../imgs/cursor-2x.svg") 2x) 0 0, default;
 }
 
 ::-moz-selection {
