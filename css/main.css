@@ -903,6 +903,8 @@ strong {
 
 .taskbar-nav-button .nav-anim-text-wrapper#about-anim-text-wrapper {
   width: 60px;
+  left: 50%;
+  margin-left: -30px;
 }
 
 @media (max-width: 600px) {
@@ -918,7 +920,9 @@ strong {
 }
 
 .taskbar-nav-button .nav-anim-text-wrapper#port-anim-text-wrapper {
-  width: 71px;
+  width: 74px;
+  left: 50%;
+  margin-left: -37px;
 }
 
 @media (max-width: 600px) {
