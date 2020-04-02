@@ -37,7 +37,6 @@ function closeClick()
   }
   else
   {
-    console.log("b");
     elem.classList.add("window-close-msedge")
   }
 }

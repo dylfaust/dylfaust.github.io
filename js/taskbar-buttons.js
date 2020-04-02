@@ -162,13 +162,6 @@ function goAnimState(animData, active)
   wantsEarlyExit = animData.earlyExitFrame != null;
   startFrame = active ? animData.activeStart : animData.normalStart;
 
-  if (active && animData.inactiveDuration)
-  {
-    let breakhere = true;
-    if (breakhere)
-      console.log("cool");
-  }
-
   let duration = active && animData.inactiveDuration ? animData.inactiveDuration : animData.duration;
 
   endFrame = startFrame + duration;
