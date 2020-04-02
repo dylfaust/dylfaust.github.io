@@ -100,7 +100,7 @@ function updateLinks(popState = false)
   {
     if (pageState == page.DETAIL)
     {
-      initPortfolioDetailVars();
+      // initPortfolioDetailVars();
     }
 
     initButtonAnims(pageState);

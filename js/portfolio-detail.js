@@ -10,6 +10,8 @@ var innerJson;
 var leftSkills;
 var anyQuotes;
 
+var allowLottie = allowLottie();
+
 // initPortfolioDetailVars();
 
 function initPortfolioDetailVars(myPortfolioDetail)
@@ -54,25 +56,61 @@ function checkResize()
 
   if (leftSkills)
   {
-      if (w < 1300)
-      {
-        a_skillWrappers[0].style.display="none";
-        a_skillWrappers[1].style.display="block";
-        if (anyQuotes)
-          a_quotes[0].style.display="none";
-      }
-      else{
-        a_skillWrappers[0].style.display="block";
-        a_skillWrappers[1].style.display="none";
-        if (anyQuotes)
-          a_quotes[0].style.display="block";
-      }
+    if (w < 1300)
+    {
+      a_skillWrappers[0].style.display = "none";
+      a_skillWrappers[1].style.display = "block";
+      if (anyQuotes)
+        a_quotes[0].style.display = "none";
+    }
+    else
+    {
+      a_skillWrappers[0].style.display = "block";
+      a_skillWrappers[1].style.display = "none";
+      if (anyQuotes)
+        a_quotes[0].style.display = "block";
+    }
   }
 }
 
 
 function populatePortfolioDetail(jsonFile)
 {
+  if (allowLottie)
+  {
+    var button = document.getElementsByClassName("back-button")[0];
+    let backAnimController = bodymovin.loadAnimation({
+      container: button.getElementsByClassName("lottie-anim")[0],
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: "../anims/back-button.json"
+    });
+
+    button.animController = backAnimController;
+    button.addEventListener("mouseover", backHover, true);
+    button.addEventListener("mouseout", backEndHover, true);
+    button.addEventListener("click", backClick, true);
+
+    backAnimController.addEventListener('DOMLoaded',
+      function (e)
+      {
+
+        let normIcon = button.getElementsByClassName("back-button-image")[0];
+        let lottieLink = button.getElementsByClassName("lottie-link")[0];
+        button.link = lottieLink;
+        if (normIcon)
+        {
+          normIcon.style.pointerEvents = "none";
+          lottieLink.style.pointerEvents = "none";
+          normIcon.style.opacity = "0.0";
+        }
+
+      }
+    );
+  }
+
+
   var path = window.location.pathname;
   var page = path.split("/").pop();
   lastDetailViewed = "/games/" + page;
@@ -163,5 +201,41 @@ function populatePortfolioDetail(jsonFile)
         curImage.style.display = "none";
       }
     }
+  }
+}
+
+function backHover()
+{
+  if (!this.active)
+  {
+    if (!this.hovered)
+      this.animController.playSegments([0, 13], true);
+
+    this.hovered = true;
+  }
+}
+
+function backEndHover()
+{
+  if (!this.active)
+  {
+    this.hovered = false;
+    this.animController.playSegments([60, 66], true);
+  }
+}
+
+function backClick()
+{
+  let start = (30 * 3) + 27;
+  duration = 24;
+  if (!this.active)
+  {
+    this.active = true;
+    this.animController.playSegments([start, start + duration]);
+    var button = this;
+    setTimeout(function()
+    {
+      button.link.click();
+    }, 450);
   }
 }
