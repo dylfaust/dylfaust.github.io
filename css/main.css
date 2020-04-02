@@ -1152,7 +1152,7 @@ a.back-button {
 }
 
 .social-media-button:hover {
-  background-color: #ffffffff !important;
+  background-color: white !important;
   border-radius: 2px !important;
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
