@@ -2037,9 +2037,8 @@ html.window-active #logo-container {
   width: 50px;
   height: 50px;
   display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 14px;
-  margin-left: 0px;
+  vertical-align: baseline;
+  margin-bottom: -3px;
   position: relative;
 }
 
