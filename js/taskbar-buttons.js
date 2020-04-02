@@ -395,7 +395,12 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
       if (clickedButton == buttons[0])
       {
         body = document.getElementsByClassName("dud-wrapper")[0];
-        let resetWindows = document.getElementsByClassName("window");
+        let resetWindows;
+        if (useDefaultAnim)
+          resetWindows = document.getElementsByClassName("window-close");
+        else
+          resetWindows = document.getElementsByClassName("window-close-msedge");
+
         for (let i = 0; i < resetWindows.length; i++)
         {
           let window = resetWindows[i];
