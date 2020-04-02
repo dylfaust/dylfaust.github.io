@@ -29,7 +29,7 @@ function closeClick()
   let outline = elem.getElementsByClassName("window-outline")[0];
 
   disableWindowDraggable(elem);
-  // elem.parentNode.removeChild(elem);
+  
   if (useDefaultAnim)
   {
   elem.classList.add("window-close");
