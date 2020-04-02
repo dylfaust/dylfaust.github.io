@@ -1176,10 +1176,10 @@ a.back-button {
           clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
   min-height: 130px;
   min-width: 132px;
-  -webkit-transition: -webkit-clip-path 0.3s;
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
+  -webkit-transition: opacity 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
+  transition: opacity 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
+  transition: clip-path 0.3s, opacity 0.15s, transform 0.15s;
+  transition: clip-path 0.3s, opacity 0.15s, transform 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
 }
 
 .window-close {
@@ -1189,6 +1189,8 @@ a.back-button {
 
 .window-close-msedge {
   opacity: 0%;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .window-outline {

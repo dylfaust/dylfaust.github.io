@@ -1,4 +1,4 @@
-var useEdgeAnim = allowLottie();
+var useDefaultAnim = allowLottie();
 
 let windowsSmall = document.getElementsByClassName("window");
 for (let i = 0; i < windowsSmall.length; i++)
@@ -30,8 +30,15 @@ function closeClick()
 
   disableWindowDraggable(elem);
   // elem.parentNode.removeChild(elem);
+  if (useDefaultAnim)
+  {
   elem.classList.add("window-close");
   outline.classList.add("window-outline-close");
+  }
+  else
+  {
+    elem.classList.add("window-close-msedge")
+  }
 }
 
 function closeLarge()

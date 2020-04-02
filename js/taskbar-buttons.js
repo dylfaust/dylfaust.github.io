@@ -407,8 +407,15 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
         {
           let window = windows[i];
           let outline = window.getElementsByClassName("window-outline")[0];
+          if (useDefaultAnim)
+          {
           window.classList.remove("window-close");
           outline.classList.remove("window-outline-close");
+          }
+          else
+          {
+            window.classList.remove("window-close-msedge");
+          }
           makeWindowDraggable(window, window.zIndexInt);
         }
       }
