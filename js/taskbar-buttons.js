@@ -344,9 +344,9 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
 
   if (allowAnims)
   {
-     animController = clickedButton.animController;
-     anims = clickedButton.anims;
-     desiredState = anims.click;
+    animController = clickedButton.animController;
+    anims = clickedButton.anims;
+    desiredState = anims.click;
   }
 
   if (!clickedButton.active)
@@ -399,15 +399,18 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
         for (let i = 0; i < resetWindows.length; i++)
         {
           let window = resetWindows[i];
-          let outline = window.getElementsByClassName("window-outline")[0];
-          if (useDefaultAnim)
+          if (window)
           {
-          window.classList.remove("window-close");
-          outline.classList.remove("window-outline-close");
-          }
-          else
-          {
-            window.classList.remove("window-close-msedge");
+            let outline = window.getElementsByClassName("window-outline")[0];
+            if (useDefaultAnim)
+            {
+              window.classList.remove("window-close");
+              outline.classList.remove("window-outline-close");
+            }
+            else
+            {
+              window.classList.remove("window-close-msedge");
+            }
           }
           makeWindowDraggable(window, window.zIndexInt);
         }
