@@ -855,10 +855,7 @@ strong {
 }
 
 .taskbar-nav-button .nav-text#nav-text-home {
-  text-align: left;
-  left: 0px !important;
-  -webkit-transform: translate(-50px, -50px) !important;
-          transform: translate(-50px, -50px) !important;
+  margin-left: -10px;
 }
 
 @media (max-width: 600px) {
@@ -881,11 +878,6 @@ strong {
   opacity: 1;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-}
-
-.taskbar-nav-button .nav-text-active#nav-text-home {
-  -webkit-transform: translate(-50px, -60px) !important;
-          transform: translate(-50px, -60px) !important;
 }
 
 .taskbar-nav-button .lottie-button-wrapper {
