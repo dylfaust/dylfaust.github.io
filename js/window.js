@@ -32,7 +32,6 @@ function closeClick()
   // elem.parentNode.removeChild(elem);
   if (useDefaultAnim)
   {
-    console.log("a");
   elem.classList.add("window-close");
   outline.classList.add("window-outline-close");
   }

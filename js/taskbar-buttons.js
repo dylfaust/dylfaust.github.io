@@ -402,10 +402,10 @@ function infoButtonClick(event, buttonOverride = null, queueNormal = false)
       if (clickedButton == buttons[0])
       {
         body = document.getElementsByClassName("dud-wrapper")[0];
-        let windows = document.getElementsByClassName("window");
-        for (let i = 0; i < windows.length; i++)
+        let resetWindows = document.getElementsByClassName("window");
+        for (let i = 0; i < resetWindows.length; i++)
         {
-          let window = windows[i];
+          let window = resetWindows[i];
           let outline = window.getElementsByClassName("window-outline")[0];
           if (useDefaultAnim)
           {
