@@ -1102,6 +1102,8 @@ a.back-button {
 
 .lottie-link {
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .lottie-anim {
