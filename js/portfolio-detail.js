@@ -98,9 +98,12 @@ function populatePortfolioDetail(jsonFile)
 
         let normIcon = button.getElementsByClassName("back-button-image")[0];
         let lottieLink = button.getElementsByClassName("lottie-link")[0];
+        let backImageWrapper = button.getElementsByClassName("back-image-wrapper")[0];
+        // pointer-events: none;
         button.link = lottieLink;
         if (normIcon)
         {
+          backImageWrapper.style.pointerEvents="none";
           normIcon.style.pointerEvents = "none";
           lottieLink.style.pointerEvents = "none";
           normIcon.style.opacity = "0.0";
