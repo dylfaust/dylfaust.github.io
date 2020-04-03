@@ -474,8 +474,10 @@ strong {
       -ms-user-select: none;
           user-select: none;
   width: 1437px;
+  min-width: 100vw;
   min-height: 100vh;
   position: absolute;
+  opacity: 0.8;
   top: 0vh;
   left: -0px;
 }
