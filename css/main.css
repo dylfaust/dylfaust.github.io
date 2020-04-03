@@ -1671,6 +1671,20 @@ html.window-active #logo-container {
   margin-top: -25px;
 }
 
+@media (min-width: 1500px) {
+  #portfolio-body {
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+}
+
+@media (min-width: 1750px) {
+  #portfolio-body {
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+}
+
 @media (max-width: 1160px) {
   #portfolio-body {
     margin-left: 60px;
@@ -1824,6 +1838,18 @@ html.window-active #logo-container {
 
 .portfolio-header-desc {
   margin-right: 30px;
+}
+
+@media (min-width: 1500px) {
+  .portfolio-header-desc {
+    margin-right: 5vw;
+  }
+}
+
+@media (min-width: 1750px) {
+  .portfolio-header-desc {
+    margin-right: 3vw;
+  }
 }
 
 @media (max-width: 1160px) {
@@ -2105,6 +2131,7 @@ html.window-active #logo-container {
 }
 
 .port-det-desc {
+  text-align: justify;
   font-size: 19px;
   margin-bottom: 70px !important;
 }
