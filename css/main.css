@@ -2109,6 +2109,12 @@ html.window-active #logo-container {
   margin-bottom: 70px !important;
 }
 
+@media (min-width: 1500px) {
+  .port-det-desc {
+    margin-right: 40px;
+  }
+}
+
 @media (max-width: 1500px) {
   .port-det-desc {
     margin-bottom: 40px !important;
