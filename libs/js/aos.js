@@ -1,5 +1,5 @@
 var largeWindow = document.getElementsByClassName("large-window")[0];
-var padding = 10;
+var padding = 0;
 
 ! function(e, t) { "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.AOS = t() : e.AOS = t() }(this, function() {
     return function(e) {
@@ -283,8 +283,6 @@ var padding = 10;
         var n = function(e, t, n) {
                 var o = e.node.getAttribute("data-aos-once");
                 var offset = e.node.offset ? e.node.offset : 0;
-                if (t > (e.position + padding - offset))
-                    console.log(t + " | " + e.position);
                 t > (e.position + padding - offset) ? e.node.classList.add("aos-animate") : "undefined" != typeof o && ("false" === o || !n && "true" !== o) && e.node.classList.remove("aos-animate")
             },
             o = function(e, t) {

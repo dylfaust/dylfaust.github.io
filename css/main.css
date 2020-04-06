@@ -1285,7 +1285,7 @@ a.back-button {
 }
 
 .window-button-spacer {
-  height: calc(38px+(13px * 2));
+  height: 64px;
   position: relative;
 }
 
@@ -1374,7 +1374,7 @@ a.back-button {
 
 @keyframes button-text-collapse-anim {}#about-me-text {
   overflow: auto;
-  height: calc(100% - calc(38px+(13px * 2)));
+  height: calc(100% - 64px);
 }
 
 @media (max-width: 600px) {
@@ -1389,7 +1389,7 @@ a.back-button {
   border-width: 1px;
   border-color: #161626;
   overflow: auto;
-  height: calc(100% - calc(38px+(13px * 2)));
+  height: calc(100% - 64px);
 }
 
 .editable-text {
