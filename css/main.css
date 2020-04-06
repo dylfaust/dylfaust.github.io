@@ -222,6 +222,8 @@ html body {
 * {
   cursor: -webkit-image-set(url("../imgs/cursor.svg") 1x, url("../imgs/cursor-2x.svg") 2x) 0 0, default;
   cursor: image-set(url("../imgs/cursor.svg") 1x, url("../imgs/cursor-2x.svg") 2x) 0 0, default;
+  cursor: -webkit-image-set(url("../imgs/cursor.svg") 1x, url("../imgs/cursor-2x.svg") 2x) 0 0, pointer;
+  cursor: image-set(url("../imgs/cursor.svg") 1x, url("../imgs/cursor-2x.svg") 2x) 0 0, pointer;
 }
 
 ::-moz-selection {
@@ -1283,7 +1285,7 @@ a.back-button {
 }
 
 .window-button-spacer {
-  height: calc(38px + (13px * 2));
+  height: 64px;
   position: relative;
 }
 
@@ -1372,7 +1374,7 @@ a.back-button {
 
 @keyframes button-text-collapse-anim {}#about-me-text {
   overflow: auto;
-  height: calc(100% - calc(38px + (13px * 2)));
+  height: calc(100% - 64px);
 }
 
 @media (max-width: 600px) {
@@ -1387,7 +1389,7 @@ a.back-button {
   border-width: 1px;
   border-color: #161626;
   overflow: auto;
-  height: calc(100% - calc(38px + (13px * 2)));
+  height: calc(100% - 64px);
 }
 
 .editable-text {
@@ -1464,11 +1466,11 @@ a.back-button {
 
 @media (max-width: 600px) {
   #window-reel {
-    height: calc((100vw - (30px * 2)) * (9 / 16) + 27px);
+    height: calc((100vw - (30px * 2)) * (9 / 16)+27px);
     width: calc(100vw - (10px * 2));
     left: 50%;
     margin-left: calc((calc(100vw - (10px * 2)) / 2) * -1);
-    top: calc(150px + 15% + 5px);
+    top: calc(150px+15%+5px);
   }
 }
 
@@ -2068,6 +2070,10 @@ html.window-active #logo-container {
   font-size: 22px;
 }
 
+.t2-loop {
+  background-color: black;
+}
+
 .back-button {
   position: relative;
   vertical-align: middle;
@@ -2146,7 +2152,14 @@ html.window-active #logo-container {
 
 @media (max-width: 1500px) {
   .port-det-desc {
+    margin-right: 20px;
     margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 1213px) {
+  .port-det-desc {
+    margin-right: 5px;
   }
 }
 
@@ -2190,6 +2203,10 @@ html.window-active #logo-container {
   position: relative;
 }
 
+.game-screen {
+  height: 1000px;
+}
+
 .port-det-image {
   overflow: hidden;
   border-radius: 10px;
@@ -2223,9 +2240,15 @@ html.window-active #logo-container {
   margin-right: 0px;
 }
 
+@media (max-width: 1300px) {
+  .portfolio-detail-section {
+    margin-top: 2.5em;
+  }
+}
+
 @media (max-width: 1100px) {
   .portfolio-detail-section {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 
@@ -2242,10 +2265,17 @@ html.window-active #logo-container {
   margin-right: 110px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .portfolio-detail-container {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media (max-width: 1213px) {
+  .portfolio-detail-container {
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
@@ -2302,9 +2332,15 @@ html.window-active #logo-container {
   top: 56px;
 }
 
+@media (max-width: 1300px) {
+  .jmed-sticky-top {
+    top: 2.5em;
+  }
+}
+
 @media (max-width: 1100px) {
   .jmed-sticky-top {
-    top: 50px;
+    top: 40px;
   }
 }
 
@@ -2693,7 +2729,7 @@ html.window-active #logo-container {
           user-select: none;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
   .skill {
     font-size: 15px !important;
   }
@@ -2838,5 +2874,9 @@ svg {
 
 #about-a {
   pointer-events: none;
+}
+
+.aos-slot-window {
+  pointer-events: auto !important;
 }
 /*# sourceMappingURL=main.css.map */

@@ -2,279 +2,291 @@
 <html lang='en'>
 
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-  <!-- Styling -->
-  <link rel='stylesheet' href='./libs/css/jquery-ui.min.css'>
-  <link rel='stylesheet' href='./libs/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='./libs/css/bootstrap-reboot.min.css'>
-  <link rel='stylesheet' href='./libs/css/bootstrap-grid.min.css'>
-  <link rel='stylesheet' href='./css/main.css'>
-  <link rel='stylesheet' href='./css/transitions.css'>
-  <link rel='stylesheet' href='./libs/css/jquery.fancybox.min.css'>
+    <!-- Styling -->
+    <link rel='stylesheet' href='./libs/css/jquery-ui.min.css'>
+    <link rel='stylesheet' href='./libs/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='./libs/css/bootstrap-reboot.min.css'>
+    <link rel='stylesheet' href='./libs/css/bootstrap-grid.min.css'>
+    <link rel='stylesheet' href='./css/main.css'>
+    <link rel='stylesheet' href='./css/transitions.css'>
+    <link rel='stylesheet' href='./libs/css/jquery.fancybox.min.css'>
+    <link rel='stylesheet' href='./libs/css/aos.css'>
 
-  <!-- This snippet is used in production (included from viewer.html) -->
-  <link rel='resource' type='application/l10n' href='locale/locale.properties'>
+    <!-- This snippet is used in production (included from viewer.html) -->
+    <link rel='resource' type='application/l10n' href='locale/locale.properties'>
 
-  <!-- Libs -->
-  <script src='libs/js/jquery-3.3.1.min.js'></script>
-  <script src='libs/js/bootstrap.min.js'></script>
-  <script src='libs/js/bootstrap.bundle.min.js'></script>
-  <script src='libs/js/jquery-ui.min.js'></script>
-  <script src='libs/js/lottie.js'></script>
-  <script src='libs/js/pdf/build/pdf.js'></script>
-  <script src='./libs/js/jquery.fancybox.js'></script>
+    <!-- Libs -->
+    <script src='libs/js/jquery-3.3.1.min.js'></script>
+    <script src='libs/js/bootstrap.min.js'></script>
+    <script src='libs/js/bootstrap.bundle.min.js'></script>
+    <script src='libs/js/jquery-ui.min.js'></script>
+    <script src='libs/js/lottie.js'></script>
+    <script src='libs/js/pdf/build/pdf.js'></script>
+    <script src='./libs/js/jquery.fancybox.js'></script>
 
-  <title>Dylan Faust</title>
+    <title>Dylan Faust</title>
 
 </head>
 
 <body>
-  <!-- <div id="bounce-bg">
+    <!-- <div id="bounce-bg">
     <img type='image/svg+xml' width = 100.0 src='./imgs/logo.svg' draggable=false ></img>
   </div> -->
 
-  <main id="swup">
-    <!-- <div class="swup-transition-swipe"></div> -->
-    <!-- PAGE CONTENT -->
-    <div class="background-fill"></div>
-    <div class="topbar-large"></div>
-    <div class='large-window'>
-      <div class='large-window-body' id="portfolio-body">
+    <main id="swup">
+        <!-- <div class="swup-transition-swipe"></div> -->
+        <!-- PAGE CONTENT -->
+        <div class="background-fill"></div>
+        <div class="topbar-large"></div>
+        <div class='large-window'>
+            <div class='large-window-body' id="portfolio-body">
 
-        <div class='window-large-container' id="portfolio-large-container">
-          <div class="portfolio-header-small">
-            <h1 class="portfolio-header">Completed Projects</h1>
-            <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games,
-              each
-              project I’ve worked on has been a valuable step forward.</p>
-          </div>
-          <!-- Row 1 -->
-          <row class='row portfolio-row'>
-            <div class='col-md portfolio-slot hide-when-md-one-column'>
-              <div class='portfolio-slot-window-dummy'>
-                <div class='image-clip-wrapper'>
-                  <div width="1244">
-                    <div class='portfolio-header-wrapper' width="1244">
-                      <h1 class="portfolio-header">Completed<br>Projects</h1>
-                      <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games,
-                        each
-                        project I’ve worked on has been a valuable step forward.</p>
+                <div class='window-large-container' id="portfolio-large-container">
+                    <div class="aos-item aos-slot-window" data-aos-once="true" data-aos="fade-up">
+                        <div class="portfolio-header-small">
+                            <h1 class="portfolio-header">Completed Projects</h1>
+                            <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games, each project I’ve worked on has been a valuable step forward.</p>
+                        </div>
                     </div>
-                  </div>
+                    <!-- Row 1 -->
+                    <row class='row portfolio-row'>
+                        <div class='col-md portfolio-slot hide-when-md-one-column'>
+                            <div class="aos-item aos-slot-window" data-aos-once="true" data-aos="fade-up">
+                                <div class='portfolio-slot-window-dummy'>
+                                    <div class='image-clip-wrapper'>
+                                        <div width="1244">
+                                            <div class='portfolio-header-wrapper' width="1244">
+                                                <h1 class="portfolio-header">Completed<br>Projects</h1>
+                                                <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games, each project I’ve worked on has been a valuable step forward.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md portfolio-slot portfolio-slot-right'>
+                            <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true" data-aos="fade-up">
+                                <div class='portfolio-slot-window'>
+                                    <a href="/games/t2.html" class='image-clip-wrapper' json-dais-right ta='./json/t2.json'>
+                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/t2/t2-2.png'></img>
+                                        <div class='portfolio-overlay d-table '>
+                                            <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                <div class='portfolio-text-overlay-h'>
+                                                    The Last of Us Part II
+                                                </div>
+                                                <div class='portfolio-text-overlay-b'>
+                                                    UI Scripter
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </row>
+
+
+                    <!-- Row 2 -->
+                    <row class='row portfolio-row'>
+
+                        <div class='col-md portfolio-slot portfolio-slot-left'>
+                            <div class="aos-item aos-slot-window aos-slot-offset-left" data-aos-once="true" data-aos="fade-up">
+                                <div class='portfolio-slot-window'>
+                                    <a href="/games/ctrlshift.html" class='image-clip-wrapper' json-data='./json/ctrlshift.json'>
+                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/ctrlshift/ctrlshift-banner.png'></img>
+                                        <div class='portfolio-overlay d-table '>
+                                            <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                <div class='portfolio-text-overlay-h'>
+                                                    CtrlShift
+                                                </div>
+                                                <div class='portfolio-text-overlay-b'>
+                                                    UI / Gameplay Programmer
+                                                    <br>Systems Designer
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class=' col-md portfolio-slot portfolio-slot-right'>
+                            <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true" data-aos="fade-up">
+                                <div class='portfolio-slot-window'>
+                                    <a href="/games/apogee.html" class='is-right image-clip-wrapper' json-data='./json/apogee.json'>
+                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/apogee/apogee-1.png'></img>
+                                        <div class='portfolio-overlay d-table '>
+                                            <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                <div class='portfolio-text-overlay-h'>
+                                                    Apogee
+                                                </div>
+                                                <div class='portfolio-text-overlay-b'>
+                                                    Gameplay Programmer<br> Game Designer
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </row>
+
+                    <!-- Row 3 -->
+                    <row class='row portfolio-row'>
+
+                        <div class='col-md portfolio-slot portfolio-slot-left'>
+                            <div class="aos-item aos-slot-window aos-slot-offset-left" data-aos-once="true" data-aos="fade-up">
+                                <div class='portfolio-slot-window'>
+                                    <a href="/games/morp.html" class='image-clip-wrapper' json-data='./json/morp.json'>
+                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/morp/morp-13.png'></img>
+                                        <div class='portfolio-overlay d-table'>
+                                            <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                <div class='portfolio-text-overlay-h'>
+                                                    The Mice of Riddle Place
+                                                </div>
+                                                <div class='portfolio-text-overlay-b'>
+                                                    Gameplay Programmer<br> Game Designer
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=' col-md portfolio-slot portfolio-slot-right portfolio-slot-last'>
+                            <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true" data-aos="fade-up">
+                                <div class='portfolio-slot-window'>
+                                    <a href="/games/solarscreen.html" class='is-right image-clip-wrapper' json-data='./json/solarscreen.json'>
+                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/solarscreen/ss-1.jpeg'></img>
+                                        <div class='portfolio-overlay d-table '>
+                                            <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                <div class='portfolio-text-overlay-h'>
+                                                    SolarScreen iOS / Apple Watch
+                                                </div>
+                                                <div class='portfolio-text-overlay-b'>
+                                                    UI Designer / Programmer<br> Software Developer
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </row>
+
                 </div>
-              </div>
+
             </div>
-            <div class='col-md portfolio-slot portfolio-slot-right'>
-              <div class='portfolio-slot-window'>
-                <a href="/games/t2.html" class='image-clip-wrapper' json-dais-right ta='./json/t2.json'>
-                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/t2/t2-2.png'></img>
-                  <div class='portfolio-overlay d-table '>
-                    <div class='portfolio-text-overlay d-table-cell-centered'>
-                      <div class='portfolio-text-overlay-h'>
-                        The Last of Us Part II
-                      </div>
-                      <div class='portfolio-text-overlay-b'>
-                        UI Scripter
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
+            <!-- END PAGE CONTENT -->
+            <!-- Logo -->
+            <div id='logo-container'>
+                <img type='image/svg+xml' src='./imgs/logo.svg' draggable=false id='logo-icon'></img>
+                <p id='logo-text'>Dylan Faust</p>
             </div>
+    </main>
 
-          </row>
-
-
-          <!-- Row 2 -->
-          <row class='row portfolio-row'>
-
-            <div class='col-md portfolio-slot portfolio-slot-left'>
-              <div class='portfolio-slot-window'>
-                <a href="/games/ctrlshift.html" class='image-clip-wrapper' json-data='./json/ctrlshift.json'>
-                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/ctrlshift/ctrlshift-banner.png'></img>
-                  <div class='portfolio-overlay d-table '>
-                    <div class='portfolio-text-overlay d-table-cell-centered'>
-                      <div class='portfolio-text-overlay-h'>
-                        CtrlShift
-                      </div>
-                      <div class='portfolio-text-overlay-b'>
-                        UI / Gameplay Programmer
-                        <br>Systems Designer
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-
-            <div class=' col-md portfolio-slot portfolio-slot-right'>
-              <div class='portfolio-slot-window'>
-                <a href="/games/apogee.html" class='is-right image-clip-wrapper' json-data='./json/apogee.json'>
-                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/apogee/apogee-1.png'></img>
-                  <div class='portfolio-overlay d-table '>
-                    <div class='portfolio-text-overlay d-table-cell-centered'>
-                      <div class='portfolio-text-overlay-h'>
-                        Apogee
-                      </div>
-                      <div class='portfolio-text-overlay-b'>
-                        Gameplay Programmer<br>
-                        Game Designer
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-          </row>
-
-          <!-- Row 3 -->
-          <row class='row portfolio-row'>
-
-            <div class=' col-md portfolio-slot portfolio-slot-left'>
-              <div class='portfolio-slot-window'>
-                <a href="/games/morp.html" class='image-clip-wrapper' json-data='./json/morp.json'>
-                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/morp/morp-13.png'></img>
-                  <div class='portfolio-overlay d-table '>
-                    <div class='portfolio-text-overlay d-table-cell-centered'>
-                      <div class='portfolio-text-overlay-h'>
-                        The Mice of Riddle Place
-                      </div>
-                      <div class='portfolio-text-overlay-b'>
-                        Gameplay Programmer<br>
-                        Game Designer
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class=' col-md portfolio-slot portfolio-slot-right portfolio-slot-last'>
-              <div class='portfolio-slot-window'>
-                <a href="/games/solarscreen.html" class='is-right image-clip-wrapper'
-                  json-data='./json/solarscreen.json'>
-                  <img class='portfolio-slot-icon' src='./imgs/screen-shots/solarscreen/ss-1.jpeg'></img>
-                  <div class='portfolio-overlay d-table '>
-                    <div class='portfolio-text-overlay d-table-cell-centered'>
-                      <div class='portfolio-text-overlay-h'>
-                        SolarScreen iOS / Apple Watch
-                      </div>
-                      <div class='portfolio-text-overlay-b'>
-                        UI Designer / Programmer<br>
-                        Software Developer
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-          </row>
-
-        </div>
-
-      </div> <!-- END PAGE CONTENT -->
-      <!-- Logo -->
-      <div id='logo-container'>
-        <img type='image/svg+xml' src='./imgs/logo.svg' draggable=false id='logo-icon'></img>
-        <p id='logo-text'>Dylan Faust</p>
-      </div>
-  </main>
-
-  <div id="wipe-overlay-clip-wrapper">
-    <div class="swup-transition-wipe wipe-overlay"></div>
-  </div>
-
-<!-- Taskbar -->
-<div id='taskbar'>
-  <div id='taskbar-contents'>
-
-    <!-- Nav buttons -->
-    <div id='taskbar-nav-buttons-container'>
-      <div class="taskbar-nav-button-wrapper" id="home-link-wrapper-mobile">
-      </div>
-
-      <div class="taskbar-nav-button-wrapper">
-        <div class='taskbar-nav-button' id="about-link">
-          <div class='nav-anim-text-wrapper' id="about-anim-text-wrapper">
-            <img src="./imgs/info-link.svg" class="taskbar-button-image" id="about-link-image">
-            <div class="lottie-button-wrapper" id="info-button-anim">
-              <div class="lottie-anim"></div>
-            </div>
-            <div class="nav-text-wrapper">
-              <div class="nav-text">
-                <p class="nav-text-content">About</p>
-              </div>
-            </div>
-          </div>
-          <a href="/about.html" class="nav-link" id="about-a"></a>
-        </div>
-      </div>
-
-      <div class="taskbar-nav-button-wrapper" id="portfolio-link-wrapper">
-        <div class='taskbar-nav-button' id="portfolio-link">
-          <div class='nav-anim-text-wrapper' id="port-anim-text-wrapper">
-            <img src="./imgs/portfolio-link.svg" class="taskbar-button-image">
-            <div class="lottie-button-wrapper" id="portfolio-button-anim">
-              <div class="lottie-anim"></div>
-            </div>
-            <div class="nav-text-wrapper">
-              <div class="nav-text">
-                <p class="nav-text-content">Portfolio</p>
-              </div>
-            </div>
-          </div>
-          <a href="/portfolio.html" class="nav-link" id="portfolio-a"></a>
-        </div>
-      </div>
-
-      <div class="taskbar-nav-button-wrapper" id="chat-link-wrapper">
-        <a class='taskbar-nav-button' id="chat-link">
-          <img src="./imgs/chat-link.svg" class="taskbar-button-image" id="chat-link-image">
-        </a>
-      </div>
+    <div id="wipe-overlay-clip-wrapper">
+        <div class="swup-transition-wipe wipe-overlay"></div>
     </div>
 
-    <!-- Social Media -->
-    <div id='social-buttons-container'>
-      <a href='https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA' target='_blank' rel='noopener noreferrer'
-        class='social-media-button'>
-        <img type='image/svg+xml' src='./imgs/linked-in-button.svg' draggable=false class='social-media-icon'></img>
-      </a>
+    <!-- Taskbar -->
+    <div id='taskbar'>
+        <div id='taskbar-contents'>
 
-      <a href='http://www.linkedin.com/in/dylanfaust/' target='_blank' rel='noopener noreferrer'
-        class='social-media-button'>
-        <img type='image/svg+xml' src='./imgs/youtube-button.svg' draggable=false class='social-media-icon'></img>
-      </a>
-    </div>
+            <!-- Nav buttons -->
+            <div id='taskbar-nav-buttons-container'>
+                <div class="taskbar-nav-button-wrapper" id="home-link-wrapper-mobile">
+                </div>
 
-    <!-- Main button -->
-    <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
-      <div href="/index.html" class='taskbar-nav-button' id="home-link">
-        <div class='nav-anim-text-wrapper' id="home-anim-text-wrapper">
-          <img src="./imgs/home.svg" class="taskbar-button-image" id="home-link-image" height=50>
-          <div class="lottie-button-wrapper" class="nav-link" id="home-button-anim">
-            <div class="lottie-anim"></div>
-          </div>
-          <div class="nav-text-wrapper">
-            <div class="nav-text" id="nav-text-home">
-              <p class="nav-text-content">Home</p>
+                <div class="taskbar-nav-button-wrapper">
+                    <div class='taskbar-nav-button' id="about-link">
+                        <div class='nav-anim-text-wrapper' id="about-anim-text-wrapper">
+                            <img src="./imgs/info-link.svg" class="taskbar-button-image" id="about-link-image">
+                            <div class="lottie-button-wrapper" id="info-button-anim">
+                                <div class="lottie-anim"></div>
+                            </div>
+                            <div class="nav-text-wrapper">
+                                <div class="nav-text">
+                                    <p class="nav-text-content">About</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/about.html" class="nav-link" id="about-a"></a>
+                    </div>
+                </div>
+
+                <div class="taskbar-nav-button-wrapper" id="portfolio-link-wrapper">
+                    <div class='taskbar-nav-button' id="portfolio-link">
+                        <div class='nav-anim-text-wrapper' id="port-anim-text-wrapper">
+                            <img src="./imgs/portfolio-link.svg" class="taskbar-button-image">
+                            <div class="lottie-button-wrapper" id="portfolio-button-anim">
+                                <div class="lottie-anim"></div>
+                            </div>
+                            <div class="nav-text-wrapper">
+                                <div class="nav-text">
+                                    <p class="nav-text-content">Portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/portfolio.html" class="nav-link" id="portfolio-a"></a>
+                    </div>
+                </div>
+
+                <div class="taskbar-nav-button-wrapper" id="chat-link-wrapper">
+                    <a class='taskbar-nav-button' id="chat-link">
+                        <img src="./imgs/chat-link.svg" class="taskbar-button-image" id="chat-link-image">
+                    </a>
+                </div>
             </div>
-          </div>
+
+            <!-- Social Media -->
+            <div id='social-buttons-container'>
+                <a href='https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA' target='_blank' rel='noopener noreferrer' class='social-media-button'>
+                    <img type='image/svg+xml' src='./imgs/linked-in-button.svg' draggable=false class='social-media-icon'></img>
+                </a>
+
+                <a href='http://www.linkedin.com/in/dylanfaust/' target='_blank' rel='noopener noreferrer' class='social-media-button'>
+                    <img type='image/svg+xml' src='./imgs/youtube-button.svg' draggable=false class='social-media-icon'></img>
+                </a>
+            </div>
+
+            <!-- Main button -->
+            <div class="taskbar-nav-button-wrapper" id="home-link-wrapper">
+                <div href="/index.html" class='taskbar-nav-button' id="home-link">
+                    <div class='nav-anim-text-wrapper' id="home-anim-text-wrapper">
+                        <img src="./imgs/home.svg" class="taskbar-button-image" id="home-link-image" height=50>
+                        <div class="lottie-button-wrapper" class="nav-link" id="home-button-anim">
+                            <div class="lottie-anim"></div>
+                        </div>
+                        <div class="nav-text-wrapper">
+                            <div class="nav-text" id="nav-text-home">
+                                <p class="nav-text-content">Home</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/index.html" class="nav-link" id="main-a"></a>
+                </div>
+            </div>
         </div>
-        <a href="/index.html" class="nav-link" id="main-a"></a>
-      </div>
     </div>
-  </div>
-</div>
 
 </body>
 
 <!-- Scripts -->
+<!-- Scripts -->
+<script src='../libs/js/aos.js'></script>
+<script>
+    // let windowLarge = document.getElementsByClassName("large-window")[0];
+    // windowLarge.addEventListener("scroll", (0, u.default));
+</script>
 
 <script src='../js/jquery-funcs.js'></script>
 <script src='../js/home.js'></script>
@@ -285,6 +297,7 @@
 <script src='../js/taskbar.js'></script>
 <script src='../js/taskbar-buttons.js'></script>
 <script src='../js/anim-test.js'></script>
+<script src='../js/portfolio.js'></script>
 <script src='../js/portfolio-detail.js'></script>
 <script src='../js/portfolio-buttons.js'></script>
 

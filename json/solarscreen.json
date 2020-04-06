@@ -1,21 +1,20 @@
 {
-  "title": "SolarScreen iOS / Apple Watch",
-  "roleTitle": "Roles:",
-  "role": "UI Programmer / Designer, App Developer",
-  "description": "SolarScreen is an app that gives you <strong>real time updates</strong> on the intensity of <strong>UV rays</strong> harmful to skin in <strong>your region</strong>, as well as sending you <strong>reminders</strong> to reapply your <strong>sunscreen</strong>. I <strong>built</strong> the <strong>iOS</strong> and <strong>Apple Watch</strong> versions of SolarScreen from the ground up, for Montana Root Applications Inc, and <strong>supported it after release</strong> with bug fixes and new features. <br><br>One of my favorite parts of this job was <strong>designing</strong> and <strong>implementing</strong> the <strong>UI / UX</strong> for SolarScreen. I worked closely with our CEO Ryan Duarte, and would design / iterate on mockups with his feedback. I also <strong>graphic designed</strong> some <strong>marketing materials</strong>, and internal pamphlets for the company.",
-  "skills": 
-    [
-    "Swift 2",
-    "Xcode",
-    "UI / UX Design",
-    "iOS", "App Development"
+    "title": "SolarScreen iOS / Apple Watch",
+    "roleTitle": "Roles:",
+    "role": "UI Programmer / Designer, App Developer",
+    "description": "SolarScreen is an app that gives you <strong>real time updates</strong> on the intensity of <strong>UV rays</strong> harmful to skin in <strong>your region</strong>. I <strong>built</strong> the <strong>iOS</strong> and <strong>Apple Watch</strong> versions of SolarScreen from the ground up, for Montana Root Applications Inc, and <strong>supported it after release</strong> with bug fixes and new features. <br><br>I <strong>designed</strong> and <strong>implemented</strong> the <strong>UI / UX</strong> for SolarScreen-- working closely with our CEO Ryan Duarte, to design / iterate on mockups with his feedback. I also <strong>graphic designed</strong> some <strong>marketing materials</strong>, and internal pamphlets for the company.",
+    "skills": [
+        "Swift 2",
+        "Xcode",
+        "UI / UX Design",
+        "iOS", "App Development"
     ],
     "quotes": [
-      
+
     ],
     "pictures": [
-      "../imgs/screen-shots/solarscreen/ss-1.jpeg",
-      "../imgs/screen-shots/solarscreen/ss-watch-2.png"
+        "../imgs/screen-shots/solarscreen/ss-1.jpeg",
+        "../imgs/screen-shots/solarscreen/ss-watch-2.png"
     ],
     "video": "https://www.youtube.com/watch?v=vyjqhUYDkrU&feature=emb_title",
     "leftSkills": false
