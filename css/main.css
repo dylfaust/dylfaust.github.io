@@ -2068,6 +2068,10 @@ html.window-active #logo-container {
   font-size: 22px;
 }
 
+.t2-loop {
+  background-color: black;
+}
+
 .back-button {
   position: relative;
   vertical-align: middle;
