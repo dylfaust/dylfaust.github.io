@@ -1,5 +1,5 @@
 var largeWindow = document.getElementsByClassName("large-window")[0];
-var padding = 0;
+var padding = 5;
 
 ! function(e, t) { "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.AOS = t() : e.AOS = t() }(this, function() {
     return function(e) {
