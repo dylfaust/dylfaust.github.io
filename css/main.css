@@ -2152,7 +2152,14 @@ html.window-active #logo-container {
 
 @media (max-width: 1500px) {
   .port-det-desc {
+    margin-right: 20px;
     margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 1213px) {
+  .port-det-desc {
+    margin-right: 5px;
   }
 }
 
@@ -2233,9 +2240,15 @@ html.window-active #logo-container {
   margin-right: 0px;
 }
 
+@media (max-width: 1300px) {
+  .portfolio-detail-section {
+    margin-top: 2.5em;
+  }
+}
+
 @media (max-width: 1100px) {
   .portfolio-detail-section {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 
@@ -2252,10 +2265,17 @@ html.window-active #logo-container {
   margin-right: 110px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .portfolio-detail-container {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media (max-width: 1213px) {
+  .portfolio-detail-container {
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
@@ -2312,9 +2332,15 @@ html.window-active #logo-container {
   top: 56px;
 }
 
+@media (max-width: 1300px) {
+  .jmed-sticky-top {
+    top: 2.5em;
+  }
+}
+
 @media (max-width: 1100px) {
   .jmed-sticky-top {
-    top: 50px;
+    top: 40px;
   }
 }
 
@@ -2703,7 +2729,7 @@ html.window-active #logo-container {
           user-select: none;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
   .skill {
     font-size: 15px !important;
   }
