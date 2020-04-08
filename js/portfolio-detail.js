@@ -10,6 +10,9 @@ var innerJson;
 var leftSkills;
 var anyQuotes;
 
+var totalImages;
+var curImagesLoaded;
+
 var allowLottie = allowLottie();
 
 // initPortfolioDetailVars();
@@ -156,6 +159,8 @@ function populatePortfolioDetail(jsonFile) {
         }
 
         let imagesJson = json.pictures;
+        totalImages = a_images.length;
+        imageCount = 0;
         for (let i = 0; i < a_images.length; i++) {
             let curImage = a_images[i];
             if (imagesJson.length > i) {
@@ -167,16 +172,19 @@ function populatePortfolioDetail(jsonFile) {
                     curImage.href = curImageJson;
                 }
 
-                if (i == a_images.length - 1) {
-                    let aosItems = document.getElementsByClassName("aos-item");
-                    curImage.img.onload = function() {
+                let aosItems = document.getElementsByClassName("aos-item");
+                curImage.img.onload = function() {
+                    imageCount++;
+                    if (imageCount = totalImages - 1) {
+
                         for (let i = 0; i < aosItems.length; i++) {
                             let aosItem = aosItems[i];
                             aosItem.classList.remove("aos-animate");
                         }
                         AOS.init();
-                    };
-                }
+                    }
+                };
+
                 curImage.img.src = curImageJson;
                 curImage.img.style.height = "auto";
             } else {

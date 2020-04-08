@@ -2203,6 +2203,10 @@ html.window-active #logo-container {
   position: relative;
 }
 
+span.line {
+  display: inline-block;
+}
+
 .game-screen {
   height: 1000px;
 }
