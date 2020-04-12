@@ -3,7 +3,7 @@ var loadingFrames = [24, 27, 32, 35, 40, 44, 47, 52, 55, 59];
 var outroAnim = [59, 30 * 5 + 6];
 var loadIndex = -1;
 var outroState = 0;
-var outroStateFrames = [3 * 30, 5 * 30, 6 * 30];
+var outroStateFrames = [3 * 30, 5 * 30, outroAnim[1] - 1];
 
 var lastTimeAnimated = -1;
 
@@ -90,8 +90,10 @@ function loadingAnim(timestamp)
 function playOutro()
 {
     loadAnimController.playSegments(outroAnim, true);
-    setTimeout(function(){
-    loadAnimController.addEventListener("enterFrame", logoOutroFrame);}, 500);
+    setTimeout(function ()
+    {
+        loadAnimController.addEventListener("enterFrame", logoOutroFrame);
+    }, 500);
 }
 
 function logoOutroFrame(event)
@@ -113,15 +115,59 @@ function logoOutroFrame(event)
             {
                 let taskbarLine = document.getElementById("taskbar-contents");
                 taskbarLine.classList.remove("taskbar-hidden");
-                let windowBg = document.getElementsByClassName("background-gradient")[0];
-                windowBg.classList.remove("background-hidden");
+                // let windowBg = document.getElementsByClassName("background-gradient")[0];
+                // windowBg.classList.remove("background-hidden");
 
             }
             if (outroState == 2)
             {
-                let taskbarLine = document.getElementById("taskbar-contents");
-                taskbarLine.classList.remove("taskbar-hidden");
+                let logo = document.getElementById("logo-container");
+                logo.classList.remove("logo-hidden");
+                logo.classList.add("logo-reveal");
+                setTimeout(function ()
+                {
 
+                    let windowBg = document.getElementsByClassName("background-gradient")[0];
+                    windowBg.classList.remove("background-hidden");
+
+                    let stars = document.getElementById("stars-reveal-container");
+                    stars.classList.remove("stars-hidden");
+
+                    let starsFgAnim = document.getElementById("stars-fg-wrapper");
+                    starsFgAnim.classList.add("stars-anim");
+
+                    attemptPlayVideo(true);
+                    setTimeout(function ()
+                    {
+                        let revealWindows = document.getElementsByClassName("window");
+                        let i = 0;
+
+                        let revealWindow = revealWindows[i];
+
+                        revealWindow.classList.remove("window-hidden");
+
+                        revealWindow.classList.add("window-reveal");
+                        i++;
+
+                        let windowRevealInterval = setInterval(function ()
+                        {
+                            revealWindow = revealWindows[i];
+
+                            revealWindow.classList.remove("window-hidden");
+
+                            revealWindow.classList.add("window-reveal");
+
+                            // revealWindow.style.animationDelay = 1*i + "s";
+
+                            i++;
+
+                            if (i == revealWindows)
+                            {
+                                clearInterval(windowRevealInterval);
+                            }
+                        }, 100);
+                    }, 200);
+                }, 200);
             }
 
             outroState += 1;

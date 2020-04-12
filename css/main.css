@@ -452,8 +452,8 @@ strong {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
 }
 
 .background-fill {
@@ -2922,17 +2922,99 @@ svg {
           transform: scaleX(0);
 }
 
+#stars-reveal-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: opacity 0.5s ease-out, -webkit-transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.5s ease-out;
+  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.5s ease-out, -webkit-transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
 .stars-hidden {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  opacity: 0.0;
 }
 
 .logo-hidden {
-  opacity: 0%;
+  opacity: 0.0;
+}
+
+.logo-reveal {
+  opacity: 1.0;
+  -webkit-animation-name: logo-reveal-anim;
+          animation-name: logo-reveal-anim;
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
+}
+
+@-webkit-keyframes logo-reveal-anim {
+  0% {
+    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  99% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes logo-reveal-anim {
+  0% {
+    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  99% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.ytp-show-cards-title {
+  opacity: 0.0 !important;
 }
 
 .window-hidden {
   opacity: 0%;
+}
+
+.window-reveal {
+  -webkit-animation-name: window-reveal;
+          animation-name: window-reveal;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+          animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@-webkit-keyframes window-reveal {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes window-reveal {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 .taskbar-hidden {
