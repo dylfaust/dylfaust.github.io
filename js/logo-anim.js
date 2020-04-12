@@ -7,6 +7,9 @@ var outroStateFrames = [3 * 30, 5 * 30, outroAnim[1] - 1];
 
 var lastTimeAnimated = -1;
 
+var logoLoaded = false;
+var timerEnded = false;
+
 // var button = document.getElementsByClassName("back-button")[0];
 let logoAnim = document.getElementById("logo-anim");
 let loadAnimController;
@@ -23,9 +26,25 @@ if (logoAnim)
         path: "../anims/logo-anim.json"
     });
 
+    loadAnimController.addEventListener('DOMLoaded', function()
+    {
+        logoLoaded = true;
+        attemptPlayLogo();
+    });
 
-    loadAnimController.playSegments([0, 22], false);
+    setTimeout(function(){
+        timerEnded = true;
+        attemptPlayLogo();
+    }, 500);
+}
+
+function attemptPlayLogo()
+{
+    if (logoLoaded && timerEnded)
+    {
+        loadAnimController.playSegments([0, 22], false);
     loadAnimController.addEventListener("complete", startLoading);
+    }
 }
 
 // MIT license
