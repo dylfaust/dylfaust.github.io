@@ -1,4 +1,4 @@
-var stallMainPage = true;
+var stallMainPage = false;
 var loadingFrames = [24, 27, 32, 35, 40, 44, 47, 52, 55, 59];
 var outroAnim = [59, 30 * 5 + 6];
 var loadIndex = -1;
@@ -8,17 +8,25 @@ var outroStateFrames = [3 * 30, 5 * 30, outroAnim[1] - 1];
 var lastTimeAnimated = -1;
 
 // var button = document.getElementsByClassName("back-button")[0];
-let loadAnimController = bodymovin.loadAnimation({
-    container: document.getElementById("logo-anim"),
-    renderer: 'svg',
-    loop: false,
-    autoplay: false,
-    path: "../anims/logo-anim.json"
-});
+let logoAnim = document.getElementById("logo-anim");
+let loadAnimController;
+
+if (logoAnim)
+{
+    stallMainPage = true;
+
+    loadAnimController = bodymovin.loadAnimation({
+        container: logoAnim,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: "../anims/logo-anim.json"
+    });
 
 
-loadAnimController.playSegments([0, 22], false);
-loadAnimController.addEventListener("complete", startLoading);
+    loadAnimController.playSegments([0, 22], false);
+    loadAnimController.addEventListener("complete", startLoading);
+}
 
 // MIT license
 
@@ -165,7 +173,7 @@ function logoOutroFrame(event)
 
                             i++;
 
-                            if (i == revealWindows)
+                            if (i == revealWindows.length)
                             {
                                 clearInterval(windowRevealInterval);
                             }
