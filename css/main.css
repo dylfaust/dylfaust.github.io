@@ -3027,37 +3027,47 @@ svg {
 }
 
 .window-reveal {
-  -webkit-animation-name: window-reveal;
-          animation-name: window-reveal;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
-  -webkit-animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
-          animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  -webkit-animation: window-reveal-translate 0.7s cubic-bezier(0.33, 1, 0.68, 1), window-reveal-opacity 0.5s ease-in-out;
+          animation: window-reveal-translate 0.7s cubic-bezier(0.33, 1, 0.68, 1), window-reveal-opacity 0.5s ease-in-out;
 }
 
-@-webkit-keyframes window-reveal {
+@-webkit-keyframes window-reveal-translate {
   0% {
-    opacity: 0%;
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
   }
   100% {
-    opacity: 100%;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
 }
 
-@keyframes window-reveal {
+@keyframes window-reveal-translate {
   0% {
-    opacity: 0%;
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
   }
   100% {
-    opacity: 100%;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes window-reveal-opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes window-reveal-opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 
