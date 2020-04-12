@@ -29,7 +29,6 @@
     <script src='./libs/js/pdf/build/pdf.js'></script>
     <script src='./libs/js/jquery.fancybox.js'></script>
     <script src='./libs/js/aos.js'></script>
-    <script src='./libs/js/pace.min.js'></script>
 
     <title>Dylan Faust</title>
 
@@ -39,14 +38,15 @@
     <!-- <div id="bounce-bg">
     <img type='image/svg+xml' width = 100.0 src='./imgs/logo.svg' draggable=false ></img>
   </div> -->
+
     <main id="swup">
         <!-- <div class="swup-transition-swipe"></div> -->
 
         <!-- PAGE CONTENT -->
-        <div class="background-hidden background-gradient"></div>
+        <div class="background-gradient"></div>
         <div class="dud-wrapper">
-            <div id="stars-clip-container" class="stars-hidden">
-                <div class="" id="stars-fg-wrapper">
+            <div id="stars-clip-container">
+                <div id="stars-anim">
                     <div class='stars-fg' id="stars-fg-tl"></div>
                     <div class='stars-fg' id="stars-fg-tr"></div>
                     <div class='stars-fg' id="stars-fg-bl"></div>
@@ -55,32 +55,7 @@
                 <img type='image/svg+xml' src='./imgs/stars-bg.svg' draggable=false id='stars-bg'></img>
             </div>
 
-            <div class='window window-hidden' id='window-email'>
-                <div class='topbar'>
-                    <div class='close-button'>
-                        <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
-                    </div>
-                </div>
-
-                <div class='window-body' id='about-me-window-body'>
-                    <div id='email-text'>
-                        <p class='editable-text email-text' contenteditable='true' spellcheck='false'> </p>
-                    </div>
-                    <div class='window-button-spacer'>
-                        <div class='window-button email-button'>
-                            <p class='taskbar-button-text'>
-                                Drop A Line
-                            </p>
-                            <div class="lottie-anim-wrapper" id="check-anim">
-                                <div class="lottie-anim"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class='window-outline'></div>
-            </div>
-
-            <div class='window window-hidden' id='window-about-me'>
+            <div class='window' id='window-about-me'>
                 <div class='topbar'>
                     <div class='close-button'>
                         <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
@@ -105,8 +80,33 @@
                 <div class='window-outline'></div>
             </div>
 
+            <div class='window' id='window-email'>
+                <div class='topbar'>
+                    <div class='close-button'>
+                        <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
+                    </div>
+                </div>
+
+                <div class='window-body' id='about-me-window-body'>
+                    <div id='email-text'>
+                        <p class='editable-text email-text' contenteditable='true' spellcheck='false'> </p>
+                    </div>
+                    <div class='window-button-spacer'>
+                        <div class='window-button email-button'>
+                            <p class='taskbar-button-text'>
+                                Drop A Line
+                            </p>
+                            <div class="lottie-anim-wrapper" id="check-anim">
+                                <div class="lottie-anim"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='window-outline'></div>
+            </div>
+
             <div class='window-wrapper'>
-                <div class='window window-hidden' id='window-reel'>
+                <div class='window' id='window-reel'>
                     <div class='topbar'>
                         <div class='close-button'>
                             <img type='image/svg+xml' src='./imgs/close-button.svg' draggable=false class='close-button-icon'></img>
@@ -115,7 +115,7 @@
                     </div>
 
                     <div class='window-body' id='reel-body'>
-                        <iframe class="t2-loop" width='100%' height='100%' src='https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=0&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0' frameborder='0' allow='autoplay;' allowfullscreen
+                        <iframe class="t2-loop" width='100%' height='100%' src='https://www.youtube.com/embed/btmN-bWwv0A?start=233&autoplay=1&loop=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&rel=0&amp;showinfo=0&controls=0' frameborder='0' allow='autoplay;' allowfullscreen
                             style='pointer-events: none;'></iframe>
                     </div>
                     <div class='window-outline'></div>
@@ -131,19 +131,21 @@
         <!-- END PAGE CONTENT -->
 
         <!-- Logo -->
-        <div id='logo-container' class="logo-hidden">
+        <div id='logo-container'>
             <img type='image/svg+xml' src='./imgs/logo.svg' draggable=false id='logo-icon'></img>
             <p id='logo-text'>Dylan Faust</p>
         </div>
     </main>
+
     <div id="wipe-overlay-clip-wrapper">
         <div class="swup-transition-wipe wipe-overlay"></div>
     </div>
+
     <!-- Taskbar -->
     <div id='taskbar'>
-        <div class='line-hidden' id='taskbar-line'></div>
-        <div id='taskbar-contents' class='taskbar-hidden'>
-            
+        <div class='' id='taskbar-line'></div>
+        <div id='taskbar-contents'>
+
             <!-- Nav buttons -->
             <div id='taskbar-nav-buttons-container'>
                 <div class="taskbar-nav-button-wrapper" id="home-link-wrapper-mobile">
@@ -224,7 +226,6 @@
 </body>
 
 <!-- Scripts -->
-
 <script src='../js/logo-anim.js'></script>
 <script src='../js/jquery-funcs.js'></script>
 <script src='../js/home.js'></script>
