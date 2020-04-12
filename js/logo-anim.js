@@ -149,6 +149,10 @@ function logoOutroFrame(event)
                         revealWindow.classList.add("window-reveal");
                         i++;
 
+                        let overlay = document.getElementById("youtube-overlay");
+
+                        overlay.classList.add("yt-overlay-hide");
+
                         let windowRevealInterval = setInterval(function ()
                         {
                             revealWindow = revealWindows[i];

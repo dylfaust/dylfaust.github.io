@@ -2934,6 +2934,50 @@ svg {
   transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.5s ease-out, -webkit-transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
+#youtube-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 9999;
+}
+
+.yt-overlay-hide {
+  -webkit-animation-name: yt-overlay-hide;
+          animation-name: yt-overlay-hide;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  opacity: 0%;
+}
+
+@-webkit-keyframes yt-overlay-hide {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+
+@keyframes yt-overlay-hide {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+
 .stars-hidden {
   -webkit-transform: translateY(30px);
           transform: translateY(30px);
