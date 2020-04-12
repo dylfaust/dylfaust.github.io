@@ -273,8 +273,11 @@ function animControllerLoaded(animController, button)
 
   if (loadedAnimCount == 3)
   {
-    var taskbarContent = document.getElementById("taskbar-contents");
-    taskbarContent.style.opacity = "1.0";
+    if (!stallMainPage)
+    {
+      var taskbarContent = document.getElementById("taskbar-contents");
+      taskbarContent.classList.remove("taskbar-hidden");
+    }
   }
 }
 
@@ -509,8 +512,11 @@ function setupButtonAnims(buttonWrapper, animPath, anims)
     //   anim.style.width = width;
     // }
     // anim.style.backgroundColor = "red";
-    var taskbarContent = document.getElementById("taskbar-contents");
-    taskbarContent.style.opacity = "1.0";
+    if (!stallMainPage)
+    {
+      var taskbarContent = document.getElementById("taskbar-contents");
+      taskbarContent.classList.remove("taskbar-hidden");
+    }
   }
 
 
