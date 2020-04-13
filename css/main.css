@@ -1458,9 +1458,9 @@ a.back-button {
 
 #window-reel {
   width: 534px;
-  height: 327px;
+  height: 337px;
   left: calc(50% - (534px / 2));
-  top: calc(50% - (327px / 2) - (113px / 2));
+  top: calc(50% - (337px / 2) - (113px / 2));
 }
 
 @media (min-width: 1500px) {
