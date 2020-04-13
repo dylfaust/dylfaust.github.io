@@ -810,7 +810,7 @@ strong {
   position: absolute !important;
   width: calc(100% + 14px);
   height: calc(100% + 14px);
-  left: -8px;
+  left: -7px;
   top: -8px;
 }
 

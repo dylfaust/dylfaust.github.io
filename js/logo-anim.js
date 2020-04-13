@@ -7,6 +7,10 @@ var outroStateFrames = [3 * 30, 5 * 30, outroAnim[1] - 1];
 
 var lastLinkClicked;
 
+var loadDone = false;
+var timerDone = false;
+var hasPlayed = false;
+
 var lastTimeAnimated = -1;
 
 const page = {
@@ -37,10 +41,21 @@ if (logoAnim)
             autoplay: false,
             path: "../anims/logo-anim.json"
         });
+        // loadAnimController.setSpeed(0.1);
+        loadAnimController.addEventListener("DOMLoaded",
+            function ()
+            {
+                loadDone = true;
+                attemptPlayLogo();
+            });
+
+        setTimeout(function()
+        {
+            timerDone = true;
+            attemptPlayVideo();
+        }, 500);
 
 
-        loadAnimController.playSegments([0, 22], false);
-        loadAnimController.addEventListener("complete", startLoading);
     }
     else
     {
@@ -48,9 +63,19 @@ if (logoAnim)
     }
 }
 
+function attemptPlayVideo()
+{
+    if (loadDone && timerDone && !hasPlayed)
+    {
+        hasPlayed = true;
+        loadAnimController.playSegments([0, 22], false);
+        loadAnimController.addEventListener("complete", startLoading);
+    }
+}
+
 function allowLottie()
 {
-  return window.navigator.userAgent.toLowerCase().indexOf("edge") <= -1;
+    return window.navigator.userAgent.toLowerCase().indexOf("edge") <= -1;
 }
 
 function getPageState()
