@@ -2903,11 +2903,10 @@ svg {
 }
 
 #logo-anim {
+  position: absolute !important;
   width: 100%;
   height: 50%;
-  margin-top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: calc(25% - 20px);
 }
 
 #logo-bg {
