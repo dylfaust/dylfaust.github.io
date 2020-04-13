@@ -106,7 +106,7 @@ function newPageLogic(event) {
         setupEmailButton();
         setupYtPlayer();
 
-        if (pageState == page.MAIN && transitioned)
+        if ((pageState == page.MAIN || pageState == page.MAINLOGO) && transitioned)
         {
             logoOutroFrame(null, true);
         }
