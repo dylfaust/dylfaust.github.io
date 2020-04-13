@@ -50,8 +50,3 @@ function closeMouseDown(event)
 {
   event.stopPropagation();
 }
-
-function allowLottie()
-{
-  return window.navigator.userAgent.toLowerCase().indexOf("edge") <= -1;
-}

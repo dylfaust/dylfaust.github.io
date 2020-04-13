@@ -21,13 +21,14 @@ const page = {
 // var button = document.getElementsByClassName("back-button")[0];
 let logoAnim = document.getElementById("logo-anim");
 let loadAnimController;
+let allowAnims = allowLottie();
 
 if (logoAnim)
 {
     stallMainPage = true;
 
     let state = getPageState();
-    if (state == page.MAINLOGO)
+    if (state == page.MAINLOGO && allowAnims)
     {
         loadAnimController = bodymovin.loadAnimation({
             container: logoAnim,
@@ -45,6 +46,11 @@ if (logoAnim)
     {
         logoOutroFrame(null, true);
     }
+}
+
+function allowLottie()
+{
+  return window.navigator.userAgent.toLowerCase().indexOf("edge") <= -1;
 }
 
 function getPageState()
