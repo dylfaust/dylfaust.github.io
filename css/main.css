@@ -2896,8 +2896,9 @@ svg {
   width: 50%;
   height: 100%;
   margin: auto auto;
-  position: relative;
-  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 25%;
 }
 
 #logo-anim {
