@@ -17,9 +17,6 @@
     <link rel='stylesheet' href='./css/transitions.css'>
     <link rel='stylesheet' href='./libs/css/aos.css'>
 
-    <!-- This snippet is used in production (included from viewer.html) -->
-    <link rel='resource' type='application/l10n' href='locale/locale.properties'>
-
     <!-- Libs -->
     <script src='./libs/js/jquery-3.3.1.min.js'></script>
     <script src='./libs/js/bootstrap.min.js'></script>
@@ -41,7 +38,6 @@
   </div> -->
     <main id="swup">
         <!-- <div class="swup-transition-swipe"></div> -->
-
         <!-- PAGE CONTENT -->
         <div class="background-hidden background-gradient"></div>
         <div class="dud-wrapper">
@@ -128,12 +124,11 @@
             </div>
 
         </div>
-        <svg id='overlay-clip-wrapper' width='0' height='0'>
-            <clipPath id='overlay-clip' style='mask-composite:add;'>
-                <rect width='400' height='100' x='0%' y='0%' />
-                <circle cx='504' cy='213' r='213' />
-            </clipPath>
-        </svg>
+
+        <div id="logo-bg"></div>
+        <div class="lottie-anim-wrapper" id="logo-anim-wrapper">
+            <div class="lottie-anim" id="logo-anim"></div>
+        </div>
         <!-- END PAGE CONTENT -->
 
         <!-- Logo -->
@@ -142,10 +137,6 @@
             <p id='logo-text'>Dylan Faust</p>
         </div>
     </main>
-    <div id="logo-bg"></div>
-    <div class="lottie-anim-wrapper" id="logo-anim-wrapper">
-        <div class="lottie-anim" id="logo-anim"></div>
-    </div>
     <div id="wipe-overlay-clip-wrapper">
         <div class="swup-transition-wipe wipe-overlay"></div>
     </div>

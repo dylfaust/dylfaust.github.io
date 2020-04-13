@@ -265,10 +265,14 @@ function animControllerLoaded(animController, button)
 
   if (loadedAnimCount == 3)
   {
+    var taskbarContent = document.getElementById("taskbar-contents");
     if (!stallMainPage)
     {
-      var taskbarContent = document.getElementById("taskbar-contents");
       taskbarContent.classList.remove("taskbar-hidden");
+    }
+    else
+    {
+      taskbarContent.loaded = true;
     }
   }
 }

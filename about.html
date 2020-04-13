@@ -16,9 +16,6 @@
     <link rel='stylesheet' href='./libs/css/jquery.fancybox.min.css'>
     <link rel='stylesheet' href='../libs/css/aos.css'>
 
-    <!-- This snippet is used in production (included from viewer.html) -->
-    <link rel='resource' type='application/l10n' href='locale/locale.properties'>
-
     <!-- Libs -->
     <script src='libs/js/jquery-3.3.1.min.js'></script>
     <script src='libs/js/bootstrap.min.js'></script>
@@ -269,7 +266,8 @@
 
     <!-- Taskbar -->
     <div id='taskbar'>
-        <div id='taskbar-contents'>
+        <div class='' id='taskbar-line'></div>
+        <div id='taskbar-contents' class='taskbar-hidden'>
 
             <!-- Nav buttons -->
             <div id='taskbar-nav-buttons-container'>
@@ -351,7 +349,8 @@
 </body>
 
 <!-- Scripts -->
-
+<script src='../js/yt-player.js'></script>
+<script src='../js/logo-anim.js'></script>
 <script src='../js/jquery-funcs.js'></script>
 <script src='../js/home.js'></script>
 <script src='../js/common-funcs.js'></script>

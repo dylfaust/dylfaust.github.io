@@ -180,14 +180,23 @@ function logoOutroFrame(event, forceStates = false)
             }
             if (outroState == 1 || forceStates)
             {
+                stallMainPage = false;
                 let taskbarLine = document.getElementById("taskbar-contents");
-                taskbarLine.classList.remove("taskbar-hidden");
+                if (taskbarLine.loaded)
+                {
+                    taskbarLine.classList.remove("taskbar-hidden");
+                }
                 // let windowBg = document.getElementsByClassName("background-gradient")[0];
                 // windowBg.classList.remove("background-hidden");
 
             }
             if (outroState == 2 || forceStates)
             {
+                if (loadAnimController)
+                {
+                    loadAnimController.removeEventListener("enterFrame", logoOutroFrame);
+                }
+
                 let logo = document.getElementById("logo-container");
                 logo.classList.remove("logo-hidden");
                 logo.classList.add("logo-reveal");
@@ -205,7 +214,7 @@ function logoOutroFrame(event, forceStates = false)
                     windowBg.classList.remove("background-hidden");
 
                     if (forceStates)
-                    windowBg.classList.add("reveal-instant");
+                        windowBg.classList.add("reveal-instant");
 
                     let stars = document.getElementById("stars-reveal-container");
                     stars.classList.remove("stars-hidden");

@@ -18,7 +18,7 @@
     <!-- This snippet is used in production (included from viewer.html) -->
     <link rel='resource' type='application/l10n' href='locale/locale.properties'>
 
-    <!-- Libs -->
+   <!-- Libs -->
     <script src='libs/js/jquery-3.3.1.min.js'></script>
     <script src='libs/js/bootstrap.min.js'></script>
     <script src='libs/js/bootstrap.bundle.min.js'></script>
@@ -26,6 +26,7 @@
     <script src='libs/js/lottie.js'></script>
     <script src='libs/js/pdf/build/pdf.js'></script>
     <script src='./libs/js/jquery.fancybox.js'></script>
+    <script src='../libs/js/aos.js'></script>
 
     <title>Dylan Faust</title>
 
@@ -199,7 +200,8 @@
 
     <!-- Taskbar -->
     <div id='taskbar'>
-        <div id='taskbar-contents'>
+        <div class='' id='taskbar-line'></div>
+        <div id='taskbar-contents' class='taskbar-hidden'>
 
             <!-- Nav buttons -->
             <div id='taskbar-nav-buttons-container'>
@@ -281,13 +283,8 @@
 </body>
 
 <!-- Scripts -->
-<!-- Scripts -->
-<script src='../libs/js/aos.js'></script>
-<script>
-    // let windowLarge = document.getElementsByClassName("large-window")[0];
-    // windowLarge.addEventListener("scroll", (0, u.default));
-</script>
-
+<script src='../js/yt-player.js'></script>
+<script src='../js/logo-anim.js'></script>
 <script src='../js/jquery-funcs.js'></script>
 <script src='../js/home.js'></script>
 <script src='../js/common-funcs.js'></script>
