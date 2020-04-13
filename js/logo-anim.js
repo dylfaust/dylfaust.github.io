@@ -21,14 +21,14 @@ const page = {
 // var button = document.getElementsByClassName("back-button")[0];
 let logoAnim = document.getElementById("logo-anim");
 let loadAnimController;
-let allowAnims = allowLottie();
+let allowLogoAnims = allowLottie();
 
 if (logoAnim)
 {
     stallMainPage = true;
 
     let state = getPageState();
-    if (state == page.MAINLOGO && allowAnims)
+    if (state == page.MAINLOGO && allowLogoAnims)
     {
         loadAnimController = bodymovin.loadAnimation({
             container: logoAnim,
