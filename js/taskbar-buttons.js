@@ -1,14 +1,6 @@
 //  Data
 // ----------------------------------------------------
 
-const page = {
-  DETAIL: 'detail',
-  MAIN: 'main',
-  ABOUT: 'about',
-  PORTFOLIO: 'portfolio',
-  RESUME: 'resume'
-}
-
 // ---------------------------
 const defaultClickAnim = {
   name: 'clicked',

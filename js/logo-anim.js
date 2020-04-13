@@ -5,7 +5,18 @@ var loadIndex = -1;
 var outroState = 0;
 var outroStateFrames = [3 * 30, 5 * 30, outroAnim[1] - 1];
 
+var lastLinkClicked;
+
 var lastTimeAnimated = -1;
+
+const page = {
+    DETAIL: 'detail',
+    MAIN: 'main',
+    MAINLOGO: 'main-logo',
+    ABOUT: 'about',
+    PORTFOLIO: 'portfolio',
+    RESUME: 'resume'
+}
 
 // var button = document.getElementsByClassName("back-button")[0];
 let logoAnim = document.getElementById("logo-anim");
@@ -15,17 +26,62 @@ if (logoAnim)
 {
     stallMainPage = true;
 
-    loadAnimController = bodymovin.loadAnimation({
-        container: logoAnim,
-        renderer: 'svg',
-        loop: false,
-        autoplay: false,
-        path: "../anims/logo-anim.json"
-    });
+    let state = getPageState();
+    if (state == page.MAINLOGO)
+    {
+        loadAnimController = bodymovin.loadAnimation({
+            container: logoAnim,
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: "../anims/logo-anim.json"
+        });
 
 
-    loadAnimController.playSegments([0, 22], false);
-    loadAnimController.addEventListener("complete", startLoading);
+        loadAnimController.playSegments([0, 22], false);
+        loadAnimController.addEventListener("complete", startLoading);
+    }
+    else
+    {
+        logoOutroFrame(null, true);
+    }
+}
+
+function getPageState()
+{
+    let pageState;
+    if (lastLinkClicked == null)
+    {
+        let currUrl = window.location.href;
+        if (currUrl.indexOf("/index") != -1)
+            pageState = page.MAIN;
+        else if (currUrl.indexOf("/about") != -1)
+            pageState = page.ABOUT;
+        else if (currUrl.indexOf("/portfolio") != -1)
+            pageState = page.PORTFOLIO;
+        else if (currUrl.indexOf("/resume") != -1)
+            pageState = page.RESUME;
+        else if (currUrl.indexOf("/games") != -1)
+            pageState = page.DETAIL;
+        else
+            pageState = page.MAINLOGO;
+    }
+
+    // Cheap
+    else
+    {
+        if (lastLinkClicked == "/index.html")
+            pageState = page.MAIN;
+        else if (lastLinkClicked == "/about.html")
+            pageState = page.ABOUT;
+        else if (lastLinkClicked == "/portfolio.html")
+            pageState = page.PORTFOLIO;
+        else if (lastLinkClicked == "/resume.html")
+            pageState = page.RESUME;
+        else
+            pageState = page.DETAIL;
+    }
+    return pageState;
 }
 
 // MIT license
@@ -104,22 +160,25 @@ function playOutro()
     }, 500);
 }
 
-function logoOutroFrame(event)
+function logoOutroFrame(event, forceStates = false)
 {
-    let curFrame = event.currentTime + outroAnim[0];
+    let curFrame = event != null ? event.currentTime + outroAnim[0] : 0;
 
-    if (outroState < outroStateFrames.length)
+    if (outroState < outroStateFrames.length || forceStates)
     {
         let frameToCheck = outroStateFrames[outroState];
-        if (curFrame >= frameToCheck)
+        if (curFrame >= frameToCheck || forceStates)
         {
-            if (outroState == 0)
+            if (outroState == 0 || forceStates)
             {
                 let taskbarLine = document.getElementById("taskbar-line");
                 taskbarLine.classList.remove("line-hidden");
 
+                if (forceStates)
+                    taskbarLine.classList.add("line-reveal-quick");
+
             }
-            if (outroState == 1)
+            if (outroState == 1 || forceStates)
             {
                 let taskbarLine = document.getElementById("taskbar-contents");
                 taskbarLine.classList.remove("taskbar-hidden");
@@ -127,19 +186,32 @@ function logoOutroFrame(event)
                 // windowBg.classList.remove("background-hidden");
 
             }
-            if (outroState == 2)
+            if (outroState == 2 || forceStates)
             {
                 let logo = document.getElementById("logo-container");
                 logo.classList.remove("logo-hidden");
                 logo.classList.add("logo-reveal");
+
+                if (forceStates)
+                    logo.classList.add("reveal-instant");
+
+                let revealBgDelay = forceStates ? 0 : 200;
+                let windowsDelay = forceStates ? 0 : 200;
+
                 setTimeout(function ()
                 {
 
                     let windowBg = document.getElementsByClassName("background-gradient")[0];
                     windowBg.classList.remove("background-hidden");
 
+                    if (forceStates)
+                    windowBg.classList.add("reveal-instant");
+
                     let stars = document.getElementById("stars-reveal-container");
                     stars.classList.remove("stars-hidden");
+
+                    if (forceStates)
+                        stars.classList.add('reveal-instant');
 
                     let starsFgAnim = document.getElementById("stars-fg-wrapper");
                     starsFgAnim.classList.add("stars-anim");
@@ -178,8 +250,8 @@ function logoOutroFrame(event)
                                 clearInterval(windowRevealInterval);
                             }
                         }, 100);
-                    }, 200);
-                }, 200);
+                    }, windowsDelay);
+                }, revealBgDelay);
             }
 
             outroState += 1;

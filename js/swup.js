@@ -25,40 +25,6 @@ function disableClicks() {
     // document.getElementById("taskbar-nav-buttons-container").style.pointerEvents = "none";
 }
 
-function getPageState() {
-    let pageState;
-    if (lastLinkClicked == null) {
-        let currUrl = window.location.href;
-        if (currUrl.indexOf("/index") != -1)
-            pageState = page.MAIN;
-        else if (currUrl.indexOf("/about") != -1)
-            pageState = page.ABOUT;
-        else if (currUrl.indexOf("/portfolio") != -1)
-            pageState = page.PORTFOLIO;
-        else if (currUrl.indexOf("/resume") != -1)
-            pageState = page.RESUME;
-        else if (currUrl.indexOf("/games") != -1)
-            pageState = page.DETAIL;
-        else
-            pageState = page.MAIN;
-    }
-
-    // Cheap
-    else {
-        if (lastLinkClicked == "/index.html")
-            pageState = page.MAIN;
-        else if (lastLinkClicked == "/about.html")
-            pageState = page.ABOUT;
-        else if (lastLinkClicked == "/portfolio.html")
-            pageState = page.PORTFOLIO;
-        else if (lastLinkClicked == "/resume.html")
-            pageState = page.RESUME;
-        else
-            pageState = page.DETAIL;
-    }
-    return pageState;
-}
-
 function updateLinks(popState = false) {
     // document.getElementById("taskbar-nav-buttons-container").style.pointerEvents = "auto";
     // let pageData = lastLinkClicked;
@@ -86,7 +52,7 @@ function updateLinks(popState = false) {
     if (pageState != page.PORTFOLIO && pageState != page.DETAIL)
         lastDetailViewed = null;
 
-    if (pageState != page.MAIN) {
+    if (pageState != page.MAIN && pageState != page.MAINLOGO) {
         document.documentElement.classList.add('window-active');
     } else {
         document.documentElement.classList.remove('window-active');
@@ -104,7 +70,7 @@ function updateLinks(popState = false) {
 function pageLoaded() {
     let pageState = getPageState();
 
-    if (pageState != page.MAIN) {
+    if (pageState != page.MAIN && pageState != page.MAINLOGO) {
 
         // largeWindow = document.getElementsByClassName("large-window")[0];
         // let aosItems = document.getElementsByClassName("aos-item");
@@ -117,7 +83,9 @@ function pageLoaded() {
     };
 }
 
-function newPageLogic() {
+function newPageLogic(event) {
+    let transitioned = event!= null;
+
     let pageState = getPageState();
 
     setPortfolioActive(pageState == page.PORTFOLIO);
@@ -126,7 +94,7 @@ function newPageLogic() {
         initPortfolioDetailVars();
     } else if (pageState == page.PORTFOLIO) {
         scrollToContainer();
-    } else if (pageState == page.MAIN) {
+    } else if (pageState == page.MAIN || pageState == page.MAINLOGO) {
         let infoButton = document.getElementById('about-link');
         let infoButtonContent = infoButton.getElementsByClassName("lottie-button-wrapper")[0];
         let aboutButtonAlias = document.getElementsByClassName("about-button-alias")[0];
@@ -136,6 +104,12 @@ function newPageLogic() {
 
         initDraggables();
         setupEmailButton();
+        setupYtPlayer();
+
+        if (pageState == page.MAIN && transitioned)
+        {
+            logoOutroFrame(null, true);
+        }
     }
 }
 
