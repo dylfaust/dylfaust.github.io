@@ -2899,6 +2899,7 @@ svg {
   position: absolute;
   top: 0;
   left: 25%;
+  pointer-events: none;
 }
 
 #logo-anim {

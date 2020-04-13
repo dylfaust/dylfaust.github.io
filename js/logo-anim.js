@@ -1,6 +1,6 @@
 var stallMainPage = false;
 var loadingFrames = [24, 27, 32, 35, 40, 44, 47, 52, 55, 59];
-var outroAnim = [59, 30 * 5 + 6];
+var outroAnim = [59, 30 * 5 + 7];
 var loadIndex = -1;
 var outroState = 0;
 var outroStateFrames = [3 * 30, 5 * 30, outroAnim[1] - 1];
@@ -52,7 +52,7 @@ if (logoAnim)
         setTimeout(function()
         {
             timerDone = true;
-            attemptPlayVideo();
+            attemptPlayLogo();
         }, 500);
 
 
@@ -63,7 +63,7 @@ if (logoAnim)
     }
 }
 
-function attemptPlayVideo()
+function attemptPlayLogo()
 {
     if (loadDone && timerDone && !hasPlayed)
     {
