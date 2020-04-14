@@ -1003,6 +1003,20 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     transition-property: opacity, transform;
 }
 
+[data-aos^="animate-bar"] {
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    transition-property: transform;
+}
+
+[data-aos="animate-bar-on"].aos-animate 
+{
+    transform: scaleX(1);
+    transition-duration: .8s !important;
+    transition-timing-function: ease-out;
+    /* transition-timing-function: ease-in-out-cubic !important; */
+}
+
 [data-aos^="fade"][data-aos^="fade"].aos-animate {
     opacity: 1;
     transform: translateZ(0);
