@@ -1232,6 +1232,13 @@ a.back-button {
           filter: brightness(0%);
 }
 
+.window-transition-timing {
+  -webkit-transition: opacity 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
+  transition: opacity 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
+  transition: clip-path 0.3s, opacity 0.15s, transform 0.15s;
+  transition: clip-path 0.3s, opacity 0.15s, transform 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
+}
+
 .window {
   position: absolute !important;
   border-style: solid;
@@ -1243,10 +1250,6 @@ a.back-button {
           clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
   min-height: 130px;
   min-width: 132px;
-  -webkit-transition: opacity 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
-  transition: opacity 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
-  transition: clip-path 0.3s, opacity 0.15s, transform 0.15s;
-  transition: clip-path 0.3s, opacity 0.15s, transform 0.15s, -webkit-clip-path 0.3s, -webkit-transform 0.15s;
 }
 
 .window-close {

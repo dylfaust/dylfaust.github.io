@@ -32,6 +32,7 @@ function closeClick()
   
   if (useDefaultAnim)
   {
+  elem.classList.add("window-transition-timing");
   elem.classList.add("window-close");
   outline.classList.add("window-outline-close");
   }
