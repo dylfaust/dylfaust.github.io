@@ -739,12 +739,15 @@ strong {
   }
 }
 
+.nav-link {
+  display: none;
+}
+
 .taskbar-nav-button-wrapper {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  border-radius: 24px;
   width: 20px;
   height: 100%;
   border-color: #00000000 !important;
@@ -942,7 +945,7 @@ strong {
 @media (max-width: 600px) {
   .taskbar-nav-button .nav-anim-text-wrapper#port-anim-text-wrapper {
     width: 60px;
-    right: 8px;
+    right: 0px;
   }
 }
 
@@ -1008,6 +1011,7 @@ strong {
   #portfolio-link {
     margin-right: 0px;
     right: 0;
+    left: auto;
   }
 }
 
