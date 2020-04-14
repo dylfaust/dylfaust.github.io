@@ -1474,11 +1474,11 @@ a.back-button {
 
 @media (max-width: 600px) {
   #window-reel {
-    height: calc((100vw - (30px * 2)) * (9 / 16)+27px);
+    height: calc((100vw * (9/16)) + 27px);
     width: calc(100vw - (10px * 2));
     left: 50%;
     margin-left: calc((calc(100vw - (10px * 2)) / 2) * -1);
-    top: calc(150px+15%+5px);
+    top: calc(150px + 15% + 20px);
   }
 }
 
@@ -2080,6 +2080,13 @@ html.window-active #logo-container {
 
 .t2-loop {
   background-color: black;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .t2-loop {
+    pointer-events: auto;
+  }
 }
 
 .back-button {
@@ -2949,6 +2956,7 @@ svg {
   left: 0;
   background: black;
   z-index: 9999;
+  pointer-events: none;
 }
 
 .yt-overlay-hide {
