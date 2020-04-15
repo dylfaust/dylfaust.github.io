@@ -1688,13 +1688,13 @@ html.window-active #logo-container {
 }
 
 #logo-text {
-  position: absolute;
+  position: relative;
   display: inline-block;
   width: 300px;
   font-size: 23px;
   font-weight: bold;
-  left: 56px;
-  top: 9px;
+  margin-left: calc(20px - 0.3em);
+  top: 7px;
   font-family: "made_regular", Made Regular, Sans;
   letter-spacing: 0.5px;
 }
