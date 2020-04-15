@@ -2149,11 +2149,11 @@ html.window-active #logo-container {
 
 .back-image-wrapper {
   background-image: url("../imgs/back.svg");
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   display: inline-block;
   vertical-align: baseline;
-  margin-bottom: -3px;
+  margin-bottom: -.3rem;
   position: relative;
 }
 
