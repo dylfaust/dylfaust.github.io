@@ -1271,7 +1271,7 @@ a.back-button {
   -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
           clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
   min-height: 130px;
-  min-width: 132px;
+  min-width: calc(13rem + 2px);
 }
 
 .window-close {
@@ -1361,9 +1361,9 @@ a.back-button {
       -ms-user-select: none;
           user-select: none;
   border-radius: 24px;
-  width: 130px;
+  width: 13rem;
   left: 50%;
-  margin-left: -65px;
+  margin-left: -6.5rem;
   height: 38px;
   top: 50%;
   margin-top: -19px;
