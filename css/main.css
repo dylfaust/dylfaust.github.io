@@ -149,7 +149,7 @@ html {
 
 @media (min-width: 1500px) {
   html {
-    font-size: calc( ( (100vw - 1500px) * .006 ) + 10px);
+    font-size: calc(((100vw - 1500px) * 0.006) + 10px);
   }
 }
 
@@ -316,7 +316,7 @@ h1 {
 
 @media (min-width: 1500px) {
   h1 {
-    padding-bottom: 2.0rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -346,7 +346,7 @@ h4 {
   font-family: "made_regular", Made Medium, sans-serif;
   font-size: 2.6rem;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
   margin-top: 0px;
   letter-spacing: 1px;
 }
@@ -1420,7 +1420,13 @@ a.back-button {
 
 @-webkit-keyframes button-text-collapse-anim {}
 
-@keyframes button-text-collapse-anim {}#about-me-text {
+@keyframes button-text-collapse-anim {}@media (min-width: 1500px) {
+  .opening-paragraph {
+    text-align: justify;
+  }
+}
+
+#about-me-text {
   overflow: auto;
   height: calc(100% - 64px);
 }
@@ -2014,6 +2020,12 @@ html.window-active #logo-container {
   }
 }
 
+@media (min-width: 1500px) {
+  #about-me-container {
+    max-width: 70vw !important;
+  }
+}
+
 #portfolio-large-container {
   margin-top: 10px;
 }
@@ -2400,7 +2412,7 @@ span.line {
 
 @media (min-width: 1750px) {
   .jmed-sticky-top {
-    padding-right: 3.0vw;
+    padding-right: 3vw;
   }
 }
 
@@ -2491,7 +2503,7 @@ span.line {
 }
 
 .about-left {
-  padding-right: 40px;
+  padding-right: 4.0rem;
 }
 
 @media (max-width: 991px) {
@@ -2506,16 +2518,16 @@ span.line {
 }
 
 .sub-section-divider {
-  height: 60px;
+  height: 6rem;
 }
 
 .section-divider {
-  height: 95px;
+  height: 9.5rem;
 }
 
 @media (max-width: 600px) {
   .section-divider {
-    height: 80px;
+    height: 8rem;
   }
 }
 
@@ -2571,7 +2583,7 @@ span.line {
 .skill-pillar-divider {
   opacity: 1;
   width: 50px;
-  margin-top: 12px !important;
+  margin-top: 1.2rem !important;
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -2595,8 +2607,8 @@ span.line {
 .skill-pillar-traits {
   text-align: center;
   font-size: 2.1rem;
-  margin-top: 15px;
-  line-height: 35px;
+  margin-top: 1.5rem;
+  line-height: 1.6;
 }
 
 .skills-row {
@@ -2640,13 +2652,13 @@ span.line {
 
 @media (max-width: 991px) {
   .myself-wrap {
-    margin-top: 95px;
+    margin-top: 9.5rem;
   }
 }
 
 @media (max-width: 991px) and (max-width: 600px) {
   .myself-wrap {
-    margin-top: 80px;
+    margin-top: 8rem;
   }
 }
 
@@ -2741,6 +2753,10 @@ span.line {
   }
 }
 
+.skillbar-col {
+  padding-right: 1.5rem;
+}
+
 .skillbar-bar {
   background-color: #707dbd;
   -webkit-transition: 1s;
@@ -2751,26 +2767,26 @@ span.line {
   position: relative;
   display: block;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .skillbar .skillwrap {
   background-color: rgba(255, 255, 255, 0.22);
   /* border-radius: 10px; */
-  border-radius: 5px;
+  border-radius: .5rem;
   overflow: hidden;
 }
 
 .skillbar-bar {
   /* border-radius: 10px; */
-  height: 8px;
+  height: .8rem;
   width: 0px;
   -webkit-transition-property: width, background-color;
   transition-property: width, background-color;
 }
 
 #skillbars {
-  margin-bottom: -20px;
+  margin-bottom: -2rem;
 }
 
 @media (min-width: 1100px) {
@@ -2782,7 +2798,7 @@ span.line {
 }
 
 .skill {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   background: #474c6b;
   background: rgba(89, 97, 139, 0.6);
   padding-right: 15px;
