@@ -63,6 +63,10 @@
   right: -1px !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.8rem;
+}
+
 .button-large {
   border-style: solid;
   border-width: 1px;
@@ -132,6 +136,7 @@
 }
 
 html {
+  font-size: 10px;
   font-family: "plex_light", Plex Light, sans-serif !important;
   overflow: hidden;
   width: 100%;
@@ -142,6 +147,8 @@ html body {
   width: 100%;
   height: 100%;
   font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .dud-anim {
@@ -291,7 +298,7 @@ body {
 
 h1 {
   text-align: left;
-  font-size: 55px !important;
+  font-size: 5.5rem !important;
   font-family: "made_medium", Made Medium, sans-serif;
   letter-spacing: 1px;
   padding-bottom: 20px;
@@ -310,7 +317,7 @@ h1 {
 }
 
 h2 {
-  font-size: 33px !important;
+  font-size: 3.3rem !important;
   font-family: "made_medium", Made Medium, sans-serif;
   margin-bottom: 20px !important;
 }
@@ -321,7 +328,7 @@ h3 {
 
 h4 {
   font-family: "made_regular", Made Medium, sans-serif;
-  font-size: 26px;
+  font-size: 2.6rem;
   font-weight: 600;
   margin-bottom: 25px;
   margin-top: 0px;
@@ -333,19 +340,18 @@ h5 {
 }
 
 p {
-  font-size: 22px;
+  font-size: 2.2rem;
   margin-bottom: 0px;
-  line-height: 1.5em;
 }
 
 p .desktop-text {
-  font-size: 22px;
+  font-size: 2.2rem;
   margin-bottom: 0 !important;
 }
 
 @media (max-width: 600px) {
   p {
-    font-size: 19px;
+    font-size: 1.9rem;
   }
 }
 
@@ -1047,7 +1053,7 @@ a.back-button {
   vertical-align: middle;
   text-align: center;
   font-weight: 900;
-  font-size: 21px;
+  font-size: 2.1rem;
   font-family: "plex_light", Plex Light, sans-serif;
   color: white;
   text-decoration: none !important;
@@ -1055,7 +1061,7 @@ a.back-button {
 
 @media (max-width: 600px) {
   .taskbar-button-text, .taskbar-button-text-link {
-    font-size: 19px;
+    font-size: 1.9rem;
   }
 }
 
@@ -1421,7 +1427,7 @@ a.back-button {
 
 .editable-text {
   height: 100%;
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 
 #email-text {
@@ -1672,12 +1678,13 @@ html.window-active #logo-container {
 }
 
 #logo-text {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  width: 300px;
   font-size: 23px;
   font-weight: bold;
-  margin-left: calc(20px - 0.3em);
-  top: 7px;
+  left: 56px;
+  top: 9px;
   font-family: "made_regular", Made Regular, Sans;
   letter-spacing: 0.5px;
 }
@@ -2074,7 +2081,7 @@ html.window-active #logo-container {
   position: absolute;
   top: 0px;
   opacity: 0;
-  font-size: 26px;
+  font-size: 2.6rem;
   text-align: center;
   -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
   transition: opacity 0.2s, -webkit-transform 0.2s;
@@ -2094,7 +2101,7 @@ html.window-active #logo-container {
 }
 
 .portfolio-text-overlay-b {
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 
 .t2-loop {
@@ -2136,7 +2143,7 @@ html.window-active #logo-container {
   margin-bottom: 0px;
   padding-bottom: 0px;
   line-height: 60px;
-  font-size: 50px !important;
+  font-size: 5rem !important;
 }
 
 @media (max-width: 1100px) {
@@ -2161,20 +2168,20 @@ html.window-active #logo-container {
 }
 
 .port-det-role-style {
-  font-size: 24px;
+  font-size: 2.4rem;
   margin-bottom: 30px;
 }
 
 @media (max-width: 1100px) {
   .port-det-role-style {
     margin-top: -3px;
-    font-size: 21px;
+    font-size: 2.1rem;
   }
 }
 
 .port-det-desc {
   text-align: justify;
-  font-size: 19px;
+  font-size: 1.9rem;
   margin-bottom: 70px !important;
 }
 
@@ -2199,7 +2206,7 @@ html.window-active #logo-container {
 
 @media (max-width: 850px) {
   .port-det-desc {
-    font-size: 19px;
+    font-size: 1.9rem;
   }
 }
 
@@ -2273,14 +2280,14 @@ span.line {
   overflow: none !important;
   padding-bottom: 0px;
   margin-bottom: 0px;
-  margin-top: 4em;
+  margin-top: 64px;
   margin-left: 0px;
   margin-right: 0px;
 }
 
 @media (max-width: 1300px) {
   .portfolio-detail-section {
-    margin-top: 2.5em;
+    margin-top: 40px;
   }
 }
 
@@ -2372,7 +2379,7 @@ span.line {
 
 @media (max-width: 1300px) {
   .jmed-sticky-top {
-    top: 2.5em;
+    top: 40px;
   }
 }
 
@@ -2404,7 +2411,7 @@ span.line {
 }
 
 .blockquote p {
-  font-size: 1.15rem;
+  font-size: 1.8rem;
 }
 
 .blockquote p:first-child {
@@ -2544,7 +2551,7 @@ span.line {
 }
 
 .skill-pillar-title {
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 600;
   font-family: "made_regular", Made Medium, sans-serif;
   text-align: center;
@@ -2554,13 +2561,13 @@ span.line {
 
 @media (max-width: 350px) {
   .skill-pillar-title {
-    font-size: 19px !important;
+    font-size: 1.9rem !important;
   }
 }
 
 .skill-pillar-traits {
   text-align: center;
-  font-size: 21px;
+  font-size: 2.1rem;
   margin-top: 15px;
   line-height: 35px;
 }
@@ -2572,7 +2579,7 @@ span.line {
 
 .skill-bar-percent {
   /* color: #777777; */
-  font-size: 19px;
+  font-size: 1.9rem;
   margin-bottom: 10px;
   font-family: "made_regular", Made Medium, sans-serif;
   text-align: left;
@@ -2622,6 +2629,7 @@ span.line {
   padding-top: 30px;
   padding-bottom: 35px;
   text-align: center;
+  background: green;
 }
 
 @media (max-width: 991px) {
@@ -2638,7 +2646,7 @@ span.line {
 }
 
 .myself-wrap .desc .lnr {
-  font-size: 20px;
+  font-size: 2.0rem;
 }
 
 @media (max-width: 991px) {
@@ -2661,7 +2669,7 @@ span.line {
 #myself-name {
   font-family: "made_regular", Made Regular, Sans;
   letter-spacing: 1px;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2px;
 }
@@ -2679,15 +2687,15 @@ span.line {
 }
 
 .myself-info {
-  font-size: 21px;
+  font-size: 2.1rem;
 }
 
 .myself-desc {
-  font-size: 21px;
+  font-size: 2.1rem;
 }
 
 .lnr {
-  font-size: 19px;
+  font-size: 1.9rem;
 }
 
 .headshot-wrapper {
@@ -2748,7 +2756,7 @@ span.line {
 }
 
 .skill {
-  font-size: 19px;
+  font-size: 1.9rem;
   background: #474c6b;
   background: rgba(89, 97, 139, 0.6);
   padding-right: 15px;
@@ -2769,13 +2777,13 @@ span.line {
 
 @media (max-width: 1450px) {
   .skill {
-    font-size: 16px !important;
+    font-size: 1.6rem !important;
   }
 }
 
 @media (max-width: 1450px) {
   .skills-inline .skill {
-    font-size: 15px !important;
+    font-size: 1.5rem !important;
   }
 }
 
