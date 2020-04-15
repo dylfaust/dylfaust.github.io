@@ -880,6 +880,7 @@ strong {
   height: 100%;
   position: absolute;
   top: -36px;
+  pointer-events: none;
 }
 
 .taskbar-nav-button .nav-text {
