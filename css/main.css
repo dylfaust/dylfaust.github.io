@@ -1167,6 +1167,7 @@ a.back-button {
 }
 
 #social-buttons-container {
+  line-height: 0px;
   position: absolute;
   height: 34px;
   top: 50%;
