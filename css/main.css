@@ -86,8 +86,8 @@ h1, h2, h3, h4, h5, h6 {
       -ms-user-select: none;
           user-select: none;
   border-radius: 24px;
-  width: 194px;
-  height: 38px;
+  width: 19.4rem;
+  height: 3.8rem;
 }
 
 .button-large:hover {
@@ -147,9 +147,27 @@ html {
   height: 100%;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   html {
-    font-size: calc(((100vw - 1500px) * 0.006) + 10px);
+    font-size: calc(((100vw - 1440px) * 0.007) + 10px);
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: calc(10px - ((1100px - 100vw) * 0.007));
+  }
+}
+
+@media (max-width: 950px) {
+  html {
+    font-size: 8.95px;
   }
 }
 
@@ -310,19 +328,13 @@ h1 {
   text-align: left;
   font-size: 5.5rem !important;
   font-family: "made_medium", Made Medium, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.2rem;
   padding-bottom: 20px;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   h1 {
     padding-bottom: 2rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  h1.portfolio-header {
-    text-align: center !important;
   }
 }
 
@@ -356,19 +368,13 @@ h5 {
 }
 
 p {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   margin-bottom: 0px;
 }
 
 p .desktop-text {
   font-size: 2.2rem;
   margin-bottom: 0 !important;
-}
-
-@media (max-width: 600px) {
-  p {
-    font-size: 1.9rem;
-  }
 }
 
 hr {
@@ -754,9 +760,9 @@ strong {
 
 #taskbar-nav-buttons-container {
   position: absolute;
-  height: 38px;
+  height: 3.8rem;
   top: 50%;
-  margin-top: -19px;
+  margin-top: -1.9rem;
   width: 340px;
   left: 50%;
   margin-left: -170px;
@@ -903,10 +909,10 @@ strong {
   display: table;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .taskbar-nav-button .nav-text {
-    -webkit-transform: translate(-50%, calc(1rem - 70px + 1rem - 1.0rem)) !important;
-            transform: translate(-50%, calc(1rem - 70px + 1rem - 1.0rem)) !important;
+    -webkit-transform: translate(-50%, calc(1rem - 70px + 1rem - 1rem)) !important;
+            transform: translate(-50%, calc(1rem - 70px + 1rem - 1rem)) !important;
   }
 }
 
@@ -936,10 +942,10 @@ strong {
   transition: 0.2s ease-in-out;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .taskbar-nav-button .nav-text-active {
-    -webkit-transform: translate(-50%, calc(1rem - 70px - 1.0rem)) !important;
-            transform: translate(-50%, calc(1rem - 70px - 1.0rem)) !important;
+    -webkit-transform: translate(-50%, calc(1rem - 70px - 1rem)) !important;
+            transform: translate(-50%, calc(1rem - 70px - 1rem)) !important;
   }
 }
 
@@ -1218,7 +1224,7 @@ a.back-button {
   height: 100%;
   margin-left: 8.75px;
   margin-right: 8.75px;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .social-media-button:hover {
@@ -1349,7 +1355,7 @@ a.back-button {
 }
 
 .window-button-spacer {
-  height: 64px;
+  height: calc(3.8rem + (13px * 2));
   position: relative;
 }
 
@@ -1380,9 +1386,9 @@ a.back-button {
   width: 13rem;
   left: 50%;
   margin-left: -6.5rem;
-  height: 38px;
+  height: 3.8rem;
   top: 50%;
-  margin-top: -19px;
+  margin-top: -1.9rem;
   position: absolute;
   display: table;
 }
@@ -1436,7 +1442,7 @@ a.back-button {
 
 @-webkit-keyframes button-text-collapse-anim {}
 
-@keyframes button-text-collapse-anim {}@media (min-width: 1500px) {
+@keyframes button-text-collapse-anim {}@media (min-width: 1440px) {
   .opening-paragraph {
     text-align: justify;
   }
@@ -1444,7 +1450,7 @@ a.back-button {
 
 #about-me-text {
   overflow: auto;
-  height: calc(100% - 64px);
+  height: calc(100% - calc(3.8rem + (13px * 2)));
 }
 
 @media (max-width: 600px) {
@@ -1460,7 +1466,7 @@ a.back-button {
   border-width: 1px;
   border-color: #161626;
   overflow: auto;
-  height: calc(100% - 64px);
+  height: calc(100% - calc(3.8rem + (13px * 2)));
 }
 
 .editable-text {
@@ -1482,7 +1488,7 @@ a.back-button {
   top: 100px;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   #window-about-me {
     height: 30vh;
     width: calc(30vh * 1.33182);
@@ -1506,7 +1512,7 @@ a.back-button {
   top: 200px;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   #window-email {
     height: 30vh;
     width: calc((30vh * 1.30909)) !important;
@@ -1526,7 +1532,7 @@ a.back-button {
   top: calc(50% - (337px / 2) - (113px / 2));
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   #window-reel {
     height: 45vh;
     width: calc((45vh - 27px) * 1.77778) !important;
@@ -1743,40 +1749,50 @@ html.window-active #logo-container {
 }
 
 #portfolio-body {
-  margin-top: -25px;
+  margin-top: -2.5rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
 }
 
-@media (min-width: 1500px) {
+@media (max-width: 1439px) {
   #portfolio-body {
-    margin-left: 7vw;
-    margin-right: 7vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1rem;
+    width: calc(1200px - 6rem);
   }
 }
 
-@media (min-width: 1750px) {
+@media (max-width: 1200px) {
   #portfolio-body {
-    margin-left: 12vw;
-    margin-right: 12vw;
-  }
-}
-
-@media (max-width: 1160px) {
-  #portfolio-body {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    width: calc(1100px - 6rem);
   }
 }
 
 @media (max-width: 1100px) {
   #portfolio-body {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 950px) {
+  #portfolio-body {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: auto;
   }
 }
 
 @media (max-width: 767.98px) {
   #portfolio-body {
     margin-top: 0px;
+    width: auto;
   }
 }
 
@@ -1786,6 +1802,8 @@ html.window-active #logo-container {
 }
 
 .portfolio-slot {
+  padding-left: 1.35rem;
+  padding-right: 1.35rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1795,7 +1813,7 @@ html.window-active #logo-container {
 
 @media (max-width: 576px) {
   .portfolio-slot {
-    padding-bottom: 26px !important;
+    padding-bottom: 2.6rem !important;
   }
 }
 
@@ -1804,7 +1822,7 @@ html.window-active #logo-container {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 26px;
+    margin-bottom: 2.6rem;
   }
 }
 
@@ -1827,8 +1845,8 @@ html.window-active #logo-container {
 
 @media (max-width: 950px) {
   .portfolio-slot-left {
-    -webkit-transform: translate(0, calc(-100% - 26px));
-            transform: translate(0, calc(-100% - 26px));
+    -webkit-transform: translate(0, calc(-100% - 2.6rem));
+            transform: translate(0, calc(-100% - 2.6rem));
   }
 }
 
@@ -1861,7 +1879,7 @@ html.window-active #logo-container {
 
 .portfolio-row {
   width: 100% !important;
-  padding-bottom: 26px;
+  padding-bottom: 2.6rem;
   margin: auto;
 }
 
@@ -1875,15 +1893,15 @@ html.window-active #logo-container {
   padding-top: 56.25%;
   position: relative;
   border-color: white !important;
-  border-radius: 10px;
+  border-radius: 1rem;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   opacity: 1;
 }
 
 .portfolio-header-wrapper {
-  overflow: overlay;
-  left: 0;
+  overflow: hidden;
+  margin-top: 2rem;
 }
 
 @media (max-width: 950px) {
@@ -1894,8 +1912,8 @@ html.window-active #logo-container {
 
 .portfolio-header-small {
   display: none;
-  margin-left: 15px;
-  margin-right: 15px;
+  padding-left: 1.35rem;
+  padding-right: 1.35rem;
   margin-bottom: 45px;
 }
 
@@ -1905,31 +1923,44 @@ html.window-active #logo-container {
   }
 }
 
+@media (max-width: 950px) {
+  .portfolio-header-small {
+    margin-bottom: 60px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .portfolio-header-small {
-    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
   }
 }
 
 .portfolio-header-desc {
-  margin-right: 30px;
+  letter-spacing: 0.12rem;
+  word-spacing: 0rem;
+  margin-right: 7rem;
+  margin-right: 0rem;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .portfolio-header-desc {
-    margin-right: 5vw;
+    margin-right: 4rem;
   }
 }
 
-@media (min-width: 1750px) {
+@media (max-width: 1200px) {
   .portfolio-header-desc {
-    margin-right: 3vw;
-  }
-}
-
-@media (max-width: 1160px) {
-  .portfolio-header-desc {
+    letter-spacing: 0.05rem;
     margin-right: 0px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .portfolio-header-desc {
+    letter-spacing: 0.05rem;
   }
 }
 
@@ -1942,24 +1973,12 @@ html.window-active #logo-container {
 @media (max-width: 767.98px) {
   .portfolio-header-desc {
     max-width: auto;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-.portfolio-header {
-  word-spacing: 1000px;
-}
-
-@media (max-width: 1160px) {
-  .portfolio-header {
-    padding-bottom: 10px;
   }
 }
 
 @media (max-width: 950px) {
   .portfolio-header {
-    padding-bottom: 0px;
+    padding-bottom: 10px;
   }
 }
 
@@ -1978,7 +1997,7 @@ html.window-active #logo-container {
   position: relative;
   border-color: white !important;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 1rem;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   opacity: 1;
@@ -2019,7 +2038,7 @@ html.window-active #logo-container {
   width: 100% !important;
   padding-left: 0px !important;
   padding-right: 0px !important;
-  margin-top: 55px;
+  margin-top: 5.5rem;
 }
 
 @media (max-width: 767.98px) {
@@ -2032,47 +2051,35 @@ html.window-active #logo-container {
 
 @media (max-width: 600px) {
   .window-large-container {
-    margin-top: 50px;
+    margin-top: 5rem;
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   #about-me-container {
     max-width: 70vw !important;
   }
 }
 
 #portfolio-large-container {
-  margin-top: 10px;
+  margin-top: 0.1rem;
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 1440px) {
   #portfolio-large-container {
-    margin-top: 20px;
+    margin-top: 0.1rem;
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 950px) {
   #portfolio-large-container {
-    margin-top: 50px;
-  }
-}
-
-@media (max-width: 1250px) {
-  #portfolio-large-container {
-    margin-top: 70px;
-  }
-}
-
-@media (max-width: 900px) {
-  #portfolio-large-container {
-    margin-top: 55px;
+    margin-top: 5.5rem;
   }
 }
 
 @media (max-width: 600px) {
   #portfolio-large-container {
-    margin-top: 50px;
+    margin-top: 5rem;
   }
 }
 
@@ -2169,7 +2176,7 @@ html.window-active #logo-container {
   height: 5rem;
   display: inline-block;
   vertical-align: baseline;
-  margin-bottom: -.3rem;
+  margin-bottom: -0.3rem;
   position: relative;
 }
 
@@ -2191,7 +2198,7 @@ html.window-active #logo-container {
 
 @media (max-width: 1100px) {
   .port-det-title-style {
-    font-size: 4.0rem !important;
+    font-size: 4rem !important;
     line-height: 1.2;
   }
 }
@@ -2229,7 +2236,7 @@ html.window-active #logo-container {
   margin-bottom: 70px !important;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .port-det-desc {
     margin-right: 40px;
   }
@@ -2298,7 +2305,7 @@ span.line {
 
 .port-det-image {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 1rem;
   border-style: solid;
   border-width: 1px;
   border-color: #161626;
@@ -2421,7 +2428,7 @@ span.line {
   top: 56px;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .jmed-sticky-top {
     padding-right: 2vw;
   }
@@ -2489,7 +2496,7 @@ span.line {
   margin-bottom: 50px;
 }
 
-@media (max-size: 950px) {
+@media (max-width: 950px) {
   .portfolio-skills-right {
     display: block;
   }
@@ -2499,7 +2506,7 @@ span.line {
   display: none;
 }
 
-@media (min-size: 950px) {
+@media (min-width: 950px) {
   .skills-inline {
     display: block;
   }
@@ -2510,17 +2517,17 @@ span.line {
 }
 
 .resume-button {
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 
 @media (max-width: 991px) {
   .resume-button {
-    margin-top: 40px;
+    margin-top: 4rem;
   }
 }
 
 .about-left {
-  padding-right: 4.0rem;
+  padding-right: 4rem;
 }
 
 @media (max-width: 991px) {
@@ -2559,11 +2566,11 @@ span.line {
 }
 
 .skill-pillar {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
   background: #474c6b;
   background: rgba(89, 97, 139, 0.6);
-  border-radius: 7px;
+  border-radius: 0.7rem;
   padding-top: 10px;
   padding-bottom: 15px;
 }
@@ -2575,9 +2582,9 @@ span.line {
     margin-bottom: 10px;
   }
   .skill-pillar-top-row .skill-pillar {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2593,8 +2600,8 @@ span.line {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 80px;
-  height: 90px;
+  width: 8rem;
+  height: 9rem;
 }
 
 .skill-pillar-divider {
@@ -2629,8 +2636,8 @@ span.line {
 }
 
 .skills-row {
-  margin-right: -10px;
-  margin-left: -10px;
+  margin-right: -1rem;
+  margin-left: -1rem;
 }
 
 .skill-bar-percent {
@@ -2660,11 +2667,12 @@ span.line {
 .myself-wrap {
   background: #474c6b;
   background: rgba(89, 97, 139, 0.6);
-  border-radius: 7px;
+  border-radius: 0.7rem;
   overflow: hidden;
   text-align: center;
   display: inline-block;
   text-align: center;
+  max-width: 26.4rem;
 }
 
 @media (max-width: 991px) {
@@ -2680,10 +2688,10 @@ span.line {
 }
 
 .myself-wrap .desc {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 30px;
-  padding-bottom: 35px;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
   text-align: center;
 }
 
@@ -2712,13 +2720,9 @@ span.line {
 }
 
 #about-me-image {
-  max-height: 250px;
-}
-
-@media (max-width: 991px) {
-  #about-me-image {
-    max-width: 200px;
-  }
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 #myself-name {
@@ -2754,20 +2758,13 @@ span.line {
 }
 
 .headshot-wrapper {
-  border-radius: 7px;
+  background: orange;
+  width: calc(100% - 0.8rem* 2);
+  border-radius: 0.7rem;
   overflow: hidden;
-  margin: auto;
-  margin-top: 8px;
-  display: inline-block;
-}
-
-@media (max-width: 991px) {
-  .headshot-wrapper {
-    display: inline-block;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  margin-top: 0.8rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
 }
 
 .skillbar-col {
@@ -2790,13 +2787,13 @@ span.line {
 .skillbar .skillwrap {
   background-color: rgba(255, 255, 255, 0.22);
   /* border-radius: 10px; */
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .skillbar-bar {
   /* border-radius: 10px; */
-  height: .8rem;
+  height: 0.8rem;
   width: 0px;
   -webkit-transition-property: width, background-color;
   transition-property: width, background-color;
@@ -2825,7 +2822,7 @@ span.line {
   margin-right: 5px;
   margin-left: 5px;
   white-space: nowrap;
-  border-radius: 7px;
+  border-radius: 0.7rem;
   line-height: 2.9;
   vertical-align: top;
   -webkit-user-select: none;
