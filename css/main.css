@@ -1821,15 +1821,25 @@ html.window-active #logo-container {
 
 @media (max-width: 991px) {
   #about-body {
-    margin-left: 10rem;
-    margin-right: 10rem;
+    width: 691px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 781px) {
+  #about-body {
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+    width: auto;
   }
 }
 
 @media (max-width: 600px) {
   #about-body {
-    margin-right: 3rem;
     margin-left: 3rem;
+    margin-right: 3rem;
+    width: auto;
   }
 }
 
@@ -2571,21 +2581,34 @@ span.line {
   max-width: none;
 }
 
+@media (max-width: 991px) {
+  .sticky-container {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .jm-sticky-top {
   position: -webkit-sticky;
   position: sticky;
-  background: orange;
   margin-right: -15px !important;
   top: 30px;
+  height: auto;
 }
 
 @media (max-width: 991px) {
   .jm-sticky-top {
     margin-top: 0px;
     position: relative;
+    display: inline-block;
     top: 0;
+    width: 205px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 550px !important;
   }
 }
 
@@ -2731,7 +2754,7 @@ span.line {
   }
 }
 
-@media (max-width: 991px) and (max-width: 600px) {
+@media (max-width: 600px) {
   .myself-wrap {
     margin-top: 8rem;
   }
@@ -2762,8 +2785,7 @@ span.line {
 
 @media (max-width: 991px) {
   .myself-wrap {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    display: inline;
   }
 }
 
