@@ -369,6 +369,8 @@ h5 {
 
 p {
   font-size: 2.1rem;
+  letter-spacing: .05rem;
+  word-spacing: .2rem;
   margin-bottom: 0px;
 }
 
@@ -1442,10 +1444,9 @@ a.back-button {
 
 @-webkit-keyframes button-text-collapse-anim {}
 
-@keyframes button-text-collapse-anim {}@media (min-width: 1440px) {
-  .opening-paragraph {
-    text-align: justify;
-  }
+@keyframes button-text-collapse-anim {}.opening-paragraph {
+  text-align: justify;
+  margin-right: 0px;
 }
 
 #about-me-text {
@@ -1639,19 +1640,19 @@ a.back-button {
 }
 
 .large-window-body {
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
   margin-bottom: 50px;
   padding-bottom: 80px;
 }
 
 @media (max-width: 600px) {
   .large-window-body {
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 50px;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-bottom: 50px;
   }
 }
 
@@ -2035,6 +2036,7 @@ html.window-active #logo-container {
 }
 
 .window-large-container {
+  max-width: none;
   width: 100% !important;
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -2055,10 +2057,10 @@ html.window-active #logo-container {
   }
 }
 
-@media (min-width: 1440px) {
-  #about-me-container {
-    max-width: 70vw !important;
-  }
+#about-me-container {
+  margin-right: 10rem !important;
+  margin-left: 10rem !important;
+  width: auto !important;
 }
 
 #portfolio-large-container {
@@ -2402,24 +2404,6 @@ span.line {
   }
 }
 
-.jm-sticky-top {
-  position: -webkit-sticky;
-  position: sticky;
-  right: 0;
-  margin-top: -7px;
-  top: 50px;
-}
-
-@media (max-width: 991px) {
-  .jm-sticky-top {
-    margin-top: 0px;
-    position: relative;
-    top: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .jmed-sticky-top {
   position: -webkit-sticky;
   position: sticky;
@@ -2518,6 +2502,8 @@ span.line {
 
 .resume-button {
   margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 991px) {
@@ -2527,7 +2513,7 @@ span.line {
 }
 
 .about-left {
-  padding-right: 4rem;
+  padding-right: 3rem;
 }
 
 @media (max-width: 991px) {
@@ -2537,8 +2523,36 @@ span.line {
   }
 }
 
+#about-row {
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  width: auto;
+  max-width: none;
+}
+
 #about-body {
   padding-bottom: 0px !important;
+  margin-left: 12rem;
+  margin-right: 12rem;
+}
+
+.jm-sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  background: orange;
+  margin-right: -15px !important;
+  top: 30px;
+}
+
+@media (max-width: 991px) {
+  .jm-sticky-top {
+    margin-top: 0px;
+    position: relative;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .sub-section-divider {
@@ -2606,7 +2620,7 @@ span.line {
 
 .skill-pillar-divider {
   opacity: 1;
-  width: 50px;
+  width: 5.0rem;
   margin-top: 1.2rem !important;
   text-align: center !important;
   margin-left: auto !important;
@@ -2636,8 +2650,8 @@ span.line {
 }
 
 .skills-row {
-  margin-right: -1rem;
-  margin-left: -1rem;
+  margin-right: calc((2rem * -.5 - 15px));
+  margin-left: calc((2rem * -.5 - 15px));
 }
 
 .skill-bar-percent {
@@ -2670,9 +2684,11 @@ span.line {
   border-radius: 0.7rem;
   overflow: hidden;
   text-align: center;
-  display: inline-block;
   text-align: center;
-  max-width: 26.4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 23rem;
 }
 
 @media (max-width: 991px) {
@@ -2688,8 +2704,6 @@ span.line {
 }
 
 .myself-wrap .desc {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
   padding-top: 3rem;
   padding-bottom: 3.5rem;
   text-align: center;
@@ -2734,6 +2748,9 @@ span.line {
 }
 
 #myself-divider {
+  margin-left: 3.5rem !important;
+  margin-right: 3.5rem !important;
+  width: auto;
   margin-top: 30px !important;
   margin-bottom: 30px !important;
 }
@@ -2747,6 +2764,13 @@ span.line {
 
 .myself-info {
   font-size: 2.1rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto !important;
+  display: inline-block;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 .myself-desc {
@@ -2758,13 +2782,17 @@ span.line {
 }
 
 .headshot-wrapper {
-  background: orange;
   width: calc(100% - 0.8rem* 2);
   border-radius: 0.7rem;
   overflow: hidden;
   margin-top: 0.8rem;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
+}
+
+.dud-row {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .skillbar-col {
@@ -2803,14 +2831,6 @@ span.line {
   margin-bottom: -2rem;
 }
 
-@media (min-width: 1100px) {
-  .about-container {
-    max-width: 1000px !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .skill {
   font-size: 1.8rem;
   background: #474c6b;
@@ -2847,6 +2867,7 @@ span.line {
 
 .skills {
   margin-top: -7px;
+  margin-left: -2px;
   display: inline-block;
 }
 

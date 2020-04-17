@@ -46,8 +46,8 @@
         <div class='large-window'>
             <section class='large-window-body' id="about-body">
                 <div class='container window-large-container' id='about-me-container'>
-                    <div class='row'>
-
+                    <div class='row' id='about-row'>
+                       
                         <!-- Myself Panel -->
 
                         <div class='col-lg-8 about-left order-lg-1'>
@@ -118,7 +118,7 @@
                             <div class="section-divider"></div>
 
                             <!-- SKILLBARS -->
-                            <div class='aos-item' data-aos-once="true" data-aos="fade-up">
+                            <div class='aos-item dud-row' data-aos-once="true" data-aos="fade-up">
                                 <h4>Programming Languages</h4>
 
                                 <div id="skillbars">
@@ -208,7 +208,7 @@
 
                             <!-- SKILLBARS -->
 
-                            <div class='aos-item' data-aos-once="true" data-aos="fade-up">
+                            <div class='aos-item dud-row' data-aos-once="true" data-aos="fade-up">
                                 <h4>Tools</h4>
                                 <div id="skill-wrapper">
                                     <div class="skills">
@@ -236,31 +236,37 @@
                         </div>
                         <!-- END LEFT PANEL -->
 
-                        <div class='col-lg-4 order-lg-2 jm-sticky-top h-100 ml-auto myself-sticky-top'>
-                            <div class='myself-wrap aos-item' data-aos-once="true" data-aos="fade-up">
-                                <div class='headshot-wrapper'>
-                                    <img class='' id='about-me-image' src='./imgs/dylan-faust-headshot.jpg'
-                                        alt=''>
-                                </div>
-                                <div class='desc'>
-                                    <h5 id="myself-name">Dylan Faust</h5>
-                                    <p class='pb-10 myself-desc'>Game Developer</p>
-                                    <hr id="myself-divider">
-
-                                    <p class="myself-info"><span class='lnr lnr-phone'></span> (907) 748 0500</p><p class="myself-info"><span class='lnr lnr-envelope'></span>dylfaust@gmail.com</p>
-                                    <div class='mt-30 button-large mx-auto d-table resume-button'>
-                                        <a class=' taskbar-button-text-link' href='./pdfs/resume/DylanFaust_Resume.pdf'
-                                            download>Download
-                                            CV</a>
+                        <div class='sticky-container col-lg-4 order-lg-2'>
+                            <div class='jm-sticky-top'>
+                                <div class='myself-wrap aos-item' data-aos-once="true" data-aos="fade-up">
+                                    <div class='headshot-wrapper'>
+                                        <img class='' id='about-me-image' src='./imgs/dylan-faust-headshot.jpg'
+                                            alt=''>
+                                    </div>
+                                    <div class='desc'>
+                                        <h5 id="myself-name">Dylan Faust</h5>
+                                        <p class='pb-10 myself-desc'>Game Developer</p>
+                
+                                        <hr id="myself-divider">
+                
+                                        <p class="myself-info">(907) 748 0500</p><p class="myself-info">dylfaust@gmail.com</p>
+                                        <div class='mt-30 button-large resume-button'>
+                                            <a class=' taskbar-button-text-link' href='./pdfs/resume/DylanFaust_Resume.pdf'
+                                                download>Download
+                                                CV</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                                <div class="sticky-sibling"></div>
+                                </div>
                         <!-- End Myself Panel -->
                     </div>
                 </div>
             </section>
         </div>
+
+        
         <!-- End about Area -->
 
         <!-- END PAGE CONTENT -->
