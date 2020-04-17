@@ -1093,6 +1093,7 @@ a.back-button {
   text-align: center;
   font-weight: 900;
   font-size: 2.1rem;
+  letter-spacing: 0;
   font-family: "plex_light", Plex Light, sans-serif;
   color: white;
   text-decoration: none !important;
@@ -2642,8 +2643,8 @@ span.line {
   background: #474c6b;
   background: rgba(89, 97, 139, 0.6);
   border-radius: 0.7rem;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding-top: 1.0rem;
+  padding-bottom: 1.5rem;
 }
 
 @media (max-width: 767.98px) {
