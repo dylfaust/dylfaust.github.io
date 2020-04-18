@@ -191,6 +191,31 @@ function playOutro()
     }, 500);
 }
 
+// Labeled hack as we really shouldn't need this dupe function
+function isMobileHACK()
+{
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // Windows Phone must come first because its UA also contains "Android"
+  if (/windows phone/i.test(userAgent))
+  {
+    return true;
+  }
+
+  if (/android/i.test(userAgent))
+  {
+    return true;
+  }
+
+  // iOS detection from: http://stackoverflow.com/a/9039885/177710
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
+  {
+    return true;
+  }
+
+  return false;
+}
+
 function logoOutroFrame(event, forceStates = false)
 {
     let curFrame = event != null ? event.currentTime + outroAnim[0] : 0;
@@ -228,9 +253,15 @@ function logoOutroFrame(event, forceStates = false)
                     loadAnimController.removeEventListener("enterFrame", logoOutroFrame);
                 }
 
+                let isMobile = isMobileHACK();
+
                 let logo = document.getElementById("logo-container");
+                let logoMobile =  document.getElementById("logo-mobile");
                 logo.classList.remove("logo-hidden");
-                logo.classList.add("logo-reveal");
+                logo.classList.remove("logo-mobile");
+
+                let animLogo = isMobile ?  logoMobile : logo;
+                animLogo.classList.add("logo-reveal");
 
                 if (forceStates)
                     logo.classList.add("reveal-instant");

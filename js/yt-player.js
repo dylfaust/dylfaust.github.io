@@ -1,13 +1,4 @@
 
-// 2. This code loads the IFrame Player API code asynchronously.
-var tag;
-var videoReady = false;
-var animReady = false;
-var startSeconds = 233;
-var endSeconds = 671;
-var videoId = 'btmN-bWwv0A';
-var player;
-
 function isMobile()
 {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -31,6 +22,16 @@ function isMobile()
 
   return false;
 }
+
+
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag;
+var videoReady = false;
+var animReady = false;
+var startSeconds = 233;
+var endSeconds = 671;
+var videoId = 'btmN-bWwv0A';
+var player;
 
 function setupYtPlayer()
 {
