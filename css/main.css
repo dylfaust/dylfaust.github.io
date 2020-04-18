@@ -505,9 +505,9 @@ strong {
 .topbar-large {
   background-color: #707dbd !important;
   position: absolute;
-  width: calc(100% - 150px);
+  width: calc(100% - 15.0rem);
   right: 0;
-  height: 26px;
+  height: 2.6rem;
 }
 
 #stars-bg {
@@ -651,8 +651,8 @@ strong {
   width: 100%;
   height: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 113px), 0 calc(100% - 113px));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 11.3rem), 0 calc(100% - 11.3rem));
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 11.3rem), 0 calc(100% - 11.3rem));
 }
 
 @media (max-width: 600px) {
@@ -663,11 +663,11 @@ strong {
 }
 
 #taskbar {
-  width: calc(100% - (38px * 2));
+  width: calc(100% - (3.8rem * 2));
   left: 50%;
-  margin-left: calc((calc(100% - (38px * 2)) / 2) * -1);
+  margin-left: calc((calc(100% - (3.8rem * 2)) / 2) * -1);
   position: fixed;
-  height: 113px;
+  height: 11.3rem;
   bottom: 0;
   z-index: 11;
 }
@@ -765,9 +765,9 @@ strong {
   height: 3.8rem;
   top: 50%;
   margin-top: -1.9rem;
-  width: 340px;
+  width: 34rem;
   left: 50%;
-  margin-left: -170px;
+  margin-left: -17rem;
 }
 
 @media (max-width: 600px) {
@@ -787,21 +787,21 @@ strong {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  width: 20px;
+  width: 2rem;
   height: 100%;
   border-color: #00000000 !important;
   float: left;
-  margin-left: 75px;
-  margin-right: 75px;
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
   color: white;
-  width: 20px;
+  width: 2rem;
   position: relative;
 }
 
 @media (max-width: 600px) {
   .taskbar-nav-button-wrapper {
     margin-left: 0px;
-    margin-right: calc((100% - 60px) / 2);
+    margin-right: calc((100% - 6rem) / 2);
   }
 }
 
@@ -887,7 +887,7 @@ strong {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -36px;
+  top: -3.6rem;
   pointer-events: none;
 }
 
@@ -896,25 +896,25 @@ strong {
   text-align: center;
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, calc(1rem - 70px + 1rem)) !important;
-          transform: translate(-50%, calc(1rem - 70px + 1rem)) !important;
+  -webkit-transform: translate(-50%, calc(1rem - 7rem + 1rem)) !important;
+          transform: translate(-50%, calc(1rem - 7rem + 1rem)) !important;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   pointer-events: none;
   top: 0;
   opacity: 0;
   background: radial-gradient(ellipse at center, #161626 0%, rgba(22, 22, 38, 0.301) 40%, rgba(22, 22, 38, 0.101) 55%, rgba(22, 22, 38, 0) 75%);
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: table;
 }
 
 @media (min-width: 1440px) {
   .taskbar-nav-button .nav-text {
-    -webkit-transform: translate(-50%, calc(1rem - 70px + 1rem - 1rem)) !important;
-            transform: translate(-50%, calc(1rem - 70px + 1rem - 1rem)) !important;
+    -webkit-transform: translate(-50%, calc(1rem - 7rem + 1rem - 1rem)) !important;
+            transform: translate(-50%, calc(1rem - 7rem + 1rem - 1rem)) !important;
   }
 }
 
@@ -937,8 +937,8 @@ strong {
 }
 
 .taskbar-nav-button .nav-text-active {
-  -webkit-transform: translate(-50%, calc(1rem - 70px)) !important;
-          transform: translate(-50%, calc(1rem - 70px)) !important;
+  -webkit-transform: translate(-50%, calc(1rem - 7rem)) !important;
+          transform: translate(-50%, calc(1rem - 7rem)) !important;
   opacity: 1;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -946,8 +946,8 @@ strong {
 
 @media (min-width: 1440px) {
   .taskbar-nav-button .nav-text-active {
-    -webkit-transform: translate(-50%, calc(1rem - 70px - 1rem)) !important;
-            transform: translate(-50%, calc(1rem - 70px - 1rem)) !important;
+    -webkit-transform: translate(-50%, calc(1rem - 7rem - 1rem)) !important;
+            transform: translate(-50%, calc(1rem - 7rem - 1rem)) !important;
   }
 }
 
@@ -967,15 +967,15 @@ strong {
 
 .taskbar-nav-button .nav-anim-text-wrapper {
   position: absolute;
-  height: 41px;
+  height: 4.1rem;
   top: 50%;
-  margin-top: -20.5px;
+  margin-top: -2.05rem;
 }
 
 .taskbar-nav-button .nav-anim-text-wrapper#about-anim-text-wrapper {
-  width: 60px;
+  width: 6rem;
   left: 50%;
-  margin-left: -30px;
+  margin-left: -3rem;
 }
 
 @media (max-width: 600px) {
@@ -987,13 +987,13 @@ strong {
 }
 
 .taskbar-nav-button .nav-anim-text-wrapper#home-anim-text-wrapper {
-  width: 90px;
+  width: 9.0rem;
 }
 
 .taskbar-nav-button .nav-anim-text-wrapper#port-anim-text-wrapper {
-  width: 75px;
+  width: 7.5rem;
   left: 50%;
-  margin-left: -37.5px;
+  margin-left: -3.75rem;
 }
 
 @media (max-width: 600px) {
@@ -1006,40 +1006,40 @@ strong {
 
 .taskbar-nav-button #info-button-anim {
   width: 100%;
-  height: 70px;
-  top: -9.5px;
+  height: 7.0rem;
+  top: -.95rem;
 }
 
 @media (max-width: 600px) {
   .taskbar-nav-button #info-button-anim {
-    top: -4px;
-    height: 60px;
-    top: -6px;
+    top: -.4rem;
+    height: 6.0rem;
+    top: -.6rem;
   }
 }
 
 .taskbar-nav-button #portfolio-button-anim {
   width: 100%;
-  height: 70px;
+  height: 7rem;
   top: 50%;
-  margin-top: -35px;
-  top: 18px;
+  margin-top: -3.5rem;
+  top: 1.8rem;
 }
 
 .taskbar-nav-button #home-button-anim {
   width: 100%;
-  left: -10px;
-  height: 72px;
+  left: -1.0rem;
+  height: 7.2rem;
   top: 50%;
-  margin-top: -36px;
+  margin-top: -3.6rem;
 }
 
 @media (max-width: 600px) {
   .taskbar-nav-button #home-button-anim {
-    height: 60px;
+    height: 6rem;
     top: 50%;
-    margin-top: -30px;
-    left: -20px;
+    margin-top: -3rem;
+    left: -2.0rem;
   }
 }
 
@@ -1193,11 +1193,11 @@ a.back-button {
 #social-buttons-container {
   line-height: 0px;
   position: absolute;
-  height: 34px;
+  height: 3.4rem;
   top: 50%;
-  margin-top: -17px;
-  width: 103px;
-  right: calc(8.75px * -1);
+  margin-top: -1.7rem;
+  width: 10.3rem;
+  right: calc(0.875rem * -1);
 }
 
 @media (max-width: 600px) {
@@ -1221,12 +1221,12 @@ a.back-button {
       -ms-user-select: none;
           user-select: none;
   border-radius: 24px;
-  width: 34px;
+  width: 3.4rem;
   background-color: white;
   float: left;
   height: 100%;
-  margin-left: 8.75px;
-  margin-right: 8.75px;
+  margin-left: 0.875rem;
+  margin-right: 0.875rem;
   border-radius: 0.5rem;
 }
 
@@ -1335,7 +1335,7 @@ a.back-button {
   border-width: 1px;
   border-color: #161626;
   border-width: 1px;
-  height: 27px;
+  height: 2.7rem;
   /*topbar-height*/
   font-style: italic;
   margin: 0;
@@ -1348,12 +1348,12 @@ a.back-button {
 }
 
 .window-body {
-  margin-top: 10px;
-  margin-left: 17px;
-  margin-right: 17px;
-  margin-bottom: 10px;
-  height: calc(100% - 27px - 10px);
-  top: 27px;
+  margin-top: 1rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  margin-bottom: 1rem;
+  height: calc(100% - 2.7rem - 1rem);
+  top: 2.7rem;
   position: relative;
 }
 
@@ -1458,7 +1458,7 @@ a.back-button {
 @media (max-width: 600px) {
   #about-me-text {
     height: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 3rem;
     overflow: hidden;
   }
 }
@@ -1528,24 +1528,22 @@ a.back-button {
 }
 
 #window-reel {
-  width: 534px;
-  height: 337px;
-  left: calc(50% - (534px / 2));
-  top: calc(50% - (337px / 2) - (113px / 2));
+  width: 53.4rem;
+  height: 33.7rem;
+  left: calc(50% - (53.4rem / 2));
+  top: calc(50% - (33.7rem / 2) - (11.3rem / 2));
 }
 
 @media (min-width: 1440px) {
   #window-reel {
-    height: 45vh;
-    width: calc((45vh - 27px) * 1.77778) !important;
-    left: calc(50% - ((45vh - 27px) * 1.77778 / 2));
+    left: calc(50% - ((45vh - 2.7rem) * 1.77778 / 2));
     top: calc(50% - (45vh / 2));
   }
 }
 
 @media (max-width: 600px) {
   #window-reel {
-    height: calc((100vw * (9 / 16)) + 27px);
+    height: calc((100vw * (9 / 16)) + 2.7rem);
     width: calc(100vw - (10px * 2));
     left: 50%;
     margin-left: calc((calc(100vw - (10px * 2)) / 2) * -1);
@@ -1555,11 +1553,11 @@ a.back-button {
 
 #reel-body {
   background: white;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-  height: calc(100% - 27px - 10px * 2);
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  height: calc(100% - 2.7rem - 1rem * 2);
 }
 
 .close-button {
@@ -1578,13 +1576,13 @@ a.back-button {
           user-select: none;
   border-radius: 24px;
   border-color: black;
-  border-width: 1px;
+  border-width: .1rem;
   background-color: #00000000;
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
   top: 50%;
-  margin-top: -8px;
-  right: 9px;
+  margin-top: -0.8rem;
+  right: .9rem;
   position: absolute;
   border-radius: 0px;
   line-height: 0px;
@@ -1613,20 +1611,20 @@ a.back-button {
 }
 
 .close-button-icon {
-  width: 14px;
+  width: 1.4rem;
 }
 
 .large-window {
   position: absolute;
-  top: 26px;
+  top: 2.6rem;
   width: calc(100% + 2px);
-  height: calc(100% - 113px - 26px);
+  height: calc(100% - 11.3rem - 2.6rem);
   overflow: auto;
 }
 
 @media (max-width: 600px) {
   .large-window {
-    height: calc(100% - 90px - 26px);
+    height: calc(100% - 90px - 2.6rem);
   }
 }
 
@@ -1664,8 +1662,8 @@ a.back-button {
 }
 
 .large-window-body-wrapper {
-  height: calc(100% - 27px);
-  top: 27px;
+  height: calc(100% - 2.7rem);
+  top: 2.7rem;
   position: relative;
   overflow: auto;
 }
@@ -1704,9 +1702,9 @@ a.back-button {
 
 #logo-container {
   position: fixed;
-  left: 38px;
-  top: 30px;
-  height: 46px;
+  left: 3.8rem;
+  top: 3.0rem;
+  height: 4.6rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1714,22 +1712,22 @@ a.back-button {
 }
 
 html.window-active #logo-container {
-  left: -44px;
-  top: -11px;
+  left: -4.4rem;
+  top: -1.1rem;
 }
 
 #logo-icon {
-  width: 39px;
+  width: 3.9rem;
   display: inline-block;
 }
 
 #logo-text {
   position: relative;
   display: inline-block;
-  font-size: 23px;
+  font-size: 2.3rem;
   font-weight: bold;
-  margin-left: 13.1px;
-  top: 7px;
+  margin-left: 1.31rem;
+  top: .7rem;
   font-family: "made_regular", Made Regular, Sans;
   letter-spacing: 0.5px;
 }
@@ -3015,7 +3013,7 @@ html.is-animating .swup-transition-fade {
 #wipe-overlay-clip-wrapper {
   position: absolute;
   top: 0;
-  height: calc(100% - 113px);
+  height: calc(100% - 11.3rem);
   width: 100%;
   pointer-events: none;
 }
@@ -3081,17 +3079,35 @@ html.is-animating .swup-transition-wipe {
 
 path {
   vector-effect: non-scaling-stroke;
-  stroke-width: 2px !important;
+  stroke-width: .2rem !important;
+}
+
+@media (max-width: 600px) {
+  path {
+    stroke-width: 2px;
+  }
 }
 
 g {
   vector-effect: non-scaling-stroke;
-  stroke-width: 2px !important;
+  stroke-width: .2rem !important;
+}
+
+@media (max-width: 600px) {
+  g {
+    stroke-width: 2px;
+  }
 }
 
 svg {
   vector-effect: non-scaling-stroke;
-  stroke-width: 2px !important;
+  stroke-width: .2rem !important;
+}
+
+@media (max-width: 600px) {
+  svg {
+    stroke-width: 2px;
+  }
 }
 
 #about-a {
