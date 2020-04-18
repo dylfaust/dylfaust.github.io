@@ -2952,6 +2952,13 @@ span.line {
   margin-right: -15px;
 }
 
+@media (max-width: 600px) {
+  .dud-row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
 .skillbar-col {
   padding-right: 1.5rem;
 }
