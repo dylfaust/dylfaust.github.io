@@ -7,9 +7,10 @@ function initDraggables()
   draggables = document.getElementsByClassName("window");
   for (let i = 0; i < draggables.length; i++)
   {
-    makeWindowDraggable(draggables[i], i);
-    setupCloseButton(draggables[i], closeClick);
-    topmostZIndex = i;
+    j = draggables.length - 1 - i;
+    makeWindowDraggable(draggables[j], i);
+    setupCloseButton(draggables[j], closeClick);
+    topmostZIndex = j;
   }
 }
 
