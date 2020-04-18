@@ -239,7 +239,7 @@ function logoOutroFrame(event, forceStates = false)
                 let logo = document.getElementById("logo-container");
                 let logoMobile =  document.getElementById("logo-mobile");
                 logo.classList.remove("logo-hidden");
-                logo.classList.remove("logo-mobile");
+                logoMobile.classList.remove("logo-hidden");
 
                 let animLogo = isMobile ?  logoMobile : logo;
                 animLogo.classList.add("logo-reveal");
