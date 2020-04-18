@@ -3000,7 +3000,7 @@ span.line {
   margin-left: 0.5rem;
   white-space: nowrap;
   border-radius: 0.7rem;
-  line-height: 2.9;
+  line-height: 3.4;
   vertical-align: top;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -3017,6 +3017,7 @@ span.line {
 
 .skills-inline .skill {
   font-size: 1.5rem !important;
+  line-height: 3.6;
 }
 
 @media (max-width: 1450px) {
