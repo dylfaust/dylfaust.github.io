@@ -314,8 +314,8 @@ html body {
   transition-property: transform, filter, -webkit-transform, -webkit-filter;
   -webkit-transition-duration: 0.3s, 0.3s;
           transition-duration: 0.3s, 0.3s;
-  -webkit-transition-timing-function: ease, ease;
-          transition-timing-function: ease, ease;
+  -webkit-transition-timing-function: ease-in-out, ease;
+          transition-timing-function: ease-in-out, ease;
 }
 
 .play-btn-hover {
@@ -1635,7 +1635,7 @@ a.back-button {
 }
 
 #reel-body {
-  background: white;
+  background-color: black;
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-top: 1rem;
