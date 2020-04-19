@@ -1487,16 +1487,16 @@ a.back-button {
 #window-about-me {
   width: 29.3rem;
   height: 22rem;
-  left: calc(100% - 29.3rem - 60px);
-  top: 100px;
+  left: calc(100% - 29.3rem - 6.0rem);
+  top: 10rem;
 }
 
 @media (min-width: 1440px) {
   #window-about-me {
     height: 30vh;
     width: calc(30vh * 1.33182);
-    top: 100px;
-    left: calc(100% - 30vh * 1.33182 - 60px);
+    top: 10rem;
+    left: calc(100% - 30vh * 1.33182 - 6.0rem);
   }
 }
 
@@ -1565,7 +1565,7 @@ a.back-button {
 
 @media (min-width: 1440px) {
   #window-reel {
-    left: calc(50% - ((45vh - 2.7rem) * 1.77778 / 2));
+    left: calc(50% - (53.4rem / 2));
     top: calc(50% - (45vh / 2));
   }
 }

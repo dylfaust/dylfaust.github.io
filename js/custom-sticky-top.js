@@ -2,18 +2,21 @@ let stickyItem;
 let myselfWrap;
 let largeWindowStickyRef;
 
-window.addEventListener("resize", adjustStickyTop);
-
-
-
 function resetForNewPage() {
+  window.addEventListener("resize", adjustStickyTop);
   stickyItem = document.getElementsByClassName("custom-sticky-top")[0];
   largeWindowStickyRef = document.getElementsByClassName("large-window")[0];
   myselfWrap = document.getElementsByClassName("myself-wrap")[0];
   adjustStickyTop();
 }
 
+function clearStickyTop()
+{
+  window.removeEventListener("resize", adjustStickyTop);
+}
+
 function adjustStickyTop() {
+  
   // Get width and height of the window excluding scrollbars
   // var w = document.documentElement.clientHeight;
 
