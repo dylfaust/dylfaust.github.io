@@ -154,6 +154,18 @@ html {
   }
 }
 
+@media (min-width: 1700px) {
+  html {
+    font-size: calc(((1700px - 1440px) * 0.007) + 10px);
+  }
+}
+
+@media (min-width: 1921px) {
+  html {
+    font-size: calc( ((100vw - 1921px) * 0.00615) + ((1700px - 1440px) * 0.007) +  10px);
+  }
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 10px;
@@ -361,7 +373,7 @@ h4 {
   font-weight: 600;
   margin-bottom: 2.5rem;
   margin-top: 0px;
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
 }
 
 h5 {
@@ -1713,6 +1725,18 @@ a.back-button {
   }
 }
 
+.stop-growing-clamp {
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1921px) {
+  .stop-growing-clamp {
+    max-width: 88.6vw;
+  }
+}
+
 .large-window-body-wrapper {
   height: calc(100% - 2.7rem);
   top: 2.7rem;
@@ -1802,7 +1826,7 @@ html.window-active #logo-container {
   margin-left: 1.31rem;
   top: .7rem;
   font-family: "made_regular", Made Regular, Sans;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
 }
 
 .overlay {
@@ -2384,7 +2408,7 @@ html.window-active #logo-container {
 }
 
 .port-det-title-style {
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
   margin-bottom: 0px;
   padding-bottom: 0px;
   line-height: 1.2;
@@ -2481,7 +2505,7 @@ html.window-active #logo-container {
 }
 
 .port-det-left {
-  margin-top: -17px;
+  margin-top: -1.7rem;
   padding-right: 4rem;
 }
 
@@ -2812,8 +2836,8 @@ span.line {
   font-weight: 600;
   font-family: "made_regular", Made Medium, sans-serif;
   text-align: center;
-  letter-spacing: 1px;
-  margin-top: 10px;
+  letter-spacing: .1rem;
+  margin-top: 1.0rem;
 }
 
 @media (max-width: 350px) {
@@ -2918,7 +2942,7 @@ span.line {
 
 #myself-name {
   font-family: "made_regular", Made Regular, Sans;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2px;
@@ -3063,7 +3087,7 @@ span.line {
 
 .skills {
   margin-top: -7px;
-  margin-left: -2px;
+  margin-left: -.6rem;
   display: inline-block;
 }
 

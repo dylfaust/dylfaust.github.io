@@ -65,7 +65,7 @@ function checkResize()
     var w = document.documentElement.clientWidth;
     var h = document.documentElement.clientHeight;
     let ratio = w / h;
-    let passesRatio = ratio <= checkRatio;
+    let passesRatio = true;//ratio <= checkRatio;
 
     if (a_skillWrappers)
     {

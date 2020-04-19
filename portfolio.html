@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-    <head profile="http://www.w3.org/2005/10/profile">
-        <link rel="icon" 
-              type="image/png" 
-              href="../imgs/favicon.png">
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png" href="../imgs/favicon.png">
     <meta charset='UTF-8'>
     <meta name='viewport' content="width=device-width, user-scalable=no">
 
@@ -21,7 +19,7 @@
     <!-- This snippet is used in production (included from viewer.html) -->
     <link rel='resource' type='application/l10n' href='locale/locale.properties'>
 
-   <!-- Libs -->
+    <!-- Libs -->
     <script src='libs/js/jquery-3.3.1.min.js'></script>
     <script src='libs/js/bootstrap.min.js'></script>
     <script src='libs/js/bootstrap.bundle.min.js'></script>
@@ -46,148 +44,168 @@
         <div class="background-fill"></div>
         <div class="topbar-large"></div>
         <div class='large-window'>
-            <div class='large-window-body' id="portfolio-body">
+            <div class='stop-growing-clamp'>
+                <div class='large-window-body' id="portfolio-body">
 
-                <div class='window-large-container' id="portfolio-large-container">
-                    <div class="aos-item aos-slot-window" data-aos-once="true" data-aos="fade-up">
-                        <div class="portfolio-header-small">
-                            <h1 class="portfolio-header">Professional Projects</h1>
-                            <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games, each project I’ve worked on has been a valuable step forward.</p>
+                    <div class='window-large-container' id="portfolio-large-container">
+                        <div class="aos-item aos-slot-window" data-aos-once="true" data-aos="fade-up">
+                            <div class="portfolio-header-small">
+                                <h1 class="portfolio-header">Professional Projects</h1>
+                                <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong>
+                                    games, each project I’ve worked on has been a valuable step forward.</p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Row 1 -->
-                    <row class='row portfolio-row'>
-                        <div class='col-md portfolio-slot hide-when-md-one-column'>
-                            <div class="aos-item aos-slot-window" data-aos-once="true" data-aos="fade-up">
-                                <div class='portfolio-slot-window-dummy'>
-                                    <div class='image-clip-wrapper'>
-                                        <div width="1244">
-                                            <div class='portfolio-header-wrapper' width="1244">
-                                                <h1 class="portfolio-header">Professional<br>Projects</h1>
-                                                <p class="portfolio-header-desc">From <strong>iOS apps</strong> to <strong>AAA</strong> games, each project I’ve worked on has been a valuable step forward.</p>
+                        <!-- Row 1 -->
+                        <row class='row portfolio-row'>
+                            <div class='col-md portfolio-slot hide-when-md-one-column'>
+                                <div class="aos-item aos-slot-window" data-aos-once="true" data-aos="fade-up">
+                                    <div class='portfolio-slot-window-dummy'>
+                                        <div class='image-clip-wrapper'>
+                                            <div width="1244">
+                                                <div class='portfolio-header-wrapper' width="1244">
+                                                    <h1 class="portfolio-header">Professional<br>Projects</h1>
+                                                    <p class="portfolio-header-desc">From <strong>iOS apps</strong> to
+                                                        <strong>AAA</strong> games, each project I’ve worked on has been
+                                                        a valuable step forward.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class='col-md portfolio-slot portfolio-slot-right'>
-                            <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true" data-aos="fade-up">
-                                <div class='portfolio-slot-window'>
-                                    <a href="/games/t2.html" class='image-clip-wrapper' json-dais-right ta='./json/t2.json'>
-                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/t2/t2-2.png'></img>
-                                        <div class='portfolio-overlay d-table '>
-                                            <div class='portfolio-text-overlay d-table-cell-centered'>
-                                                <div class='portfolio-text-overlay-h'>
-                                                    The Last of Us Part II
-                                                </div>
-                                                <div class='portfolio-text-overlay-b'>
-                                                    UI Scripter
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </row>
-
-
-                    <!-- Row 2 -->
-                    <row class='row portfolio-row'>
-
-                        <div class='col-md portfolio-slot portfolio-slot-left'>
-                            <div class="aos-item aos-slot-window aos-slot-offset-left" data-aos-once="true" data-aos="fade-up">
-                                <div class='portfolio-slot-window'>
-                                    <a href="/games/ctrlshift.html" class='image-clip-wrapper' json-data='./json/ctrlshift.json'>
-                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/ctrlshift/ctrlshift-banner.png'></img>
-                                        <div class='portfolio-overlay d-table '>
-                                            <div class='portfolio-text-overlay d-table-cell-centered'>
-                                                <div class='portfolio-text-overlay-h'>
-                                                    CtrlShift
-                                                </div>
-                                                <div class='portfolio-text-overlay-b'>
-                                                    UI / Gameplay Programmer
-                                                    <br>Systems Designer
+                            <div class='col-md portfolio-slot portfolio-slot-right'>
+                                <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true"
+                                    data-aos="fade-up">
+                                    <div class='portfolio-slot-window'>
+                                        <a href="/games/t2.html" class='image-clip-wrapper' json-dais-right
+                                            ta='./json/t2.json'>
+                                            <img class='portfolio-slot-icon'
+                                                src='./imgs/screen-shots/t2/t2-2.png'></img>
+                                            <div class='portfolio-overlay d-table '>
+                                                <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                    <div class='portfolio-text-overlay-h'>
+                                                        The Last of Us Part II
+                                                    </div>
+                                                    <div class='portfolio-text-overlay-b'>
+                                                        UI Scripter
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+                        </row>
 
 
-                        <div class=' col-md portfolio-slot portfolio-slot-right'>
-                            <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true" data-aos="fade-up">
-                                <div class='portfolio-slot-window'>
-                                    <a href="/games/apogee.html" class='is-right image-clip-wrapper' json-data='./json/apogee.json'>
-                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/apogee/apogee-1.png'></img>
-                                        <div class='portfolio-overlay d-table '>
-                                            <div class='portfolio-text-overlay d-table-cell-centered'>
-                                                <div class='portfolio-text-overlay-h'>
-                                                    Apogee
-                                                </div>
-                                                <div class='portfolio-text-overlay-b'>
-                                                    Gameplay Programmer<br> Game Designer
+                        <!-- Row 2 -->
+                        <row class='row portfolio-row'>
+
+                            <div class='col-md portfolio-slot portfolio-slot-left'>
+                                <div class="aos-item aos-slot-window aos-slot-offset-left" data-aos-once="true"
+                                    data-aos="fade-up">
+                                    <div class='portfolio-slot-window'>
+                                        <a href="/games/ctrlshift.html" class='image-clip-wrapper'
+                                            json-data='./json/ctrlshift.json'>
+                                            <img class='portfolio-slot-icon'
+                                                src='./imgs/screen-shots/ctrlshift/ctrlshift-banner.png'></img>
+                                            <div class='portfolio-overlay d-table '>
+                                                <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                    <div class='portfolio-text-overlay-h'>
+                                                        CtrlShift
+                                                    </div>
+                                                    <div class='portfolio-text-overlay-b'>
+                                                        UI / Gameplay Programmer
+                                                        <br>Systems Designer
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </row>
 
-                    <!-- Row 3 -->
-                    <row class='row portfolio-row'>
-
-                        <div class='col-md portfolio-slot portfolio-slot-left'>
-                            <div class="aos-item aos-slot-window aos-slot-offset-left" data-aos-once="true" data-aos="fade-up">
-                                <div class='portfolio-slot-window'>
-                                    <a href="/games/morp.html" class='image-clip-wrapper' json-data='./json/morp.json'>
-                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/morp/morp-13.png'></img>
-                                        <div class='portfolio-overlay d-table'>
-                                            <div class='portfolio-text-overlay d-table-cell-centered'>
-                                                <div class='portfolio-text-overlay-h'>
-                                                    The Mice of Riddle Place
-                                                </div>
-                                                <div class='portfolio-text-overlay-b'>
-                                                    Gameplay Programmer<br> Game Designer
+                            <div class=' col-md portfolio-slot portfolio-slot-right'>
+                                <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true"
+                                    data-aos="fade-up">
+                                    <div class='portfolio-slot-window'>
+                                        <a href="/games/apogee.html" class='is-right image-clip-wrapper'
+                                            json-data='./json/apogee.json'>
+                                            <img class='portfolio-slot-icon'
+                                                src='./imgs/screen-shots/apogee/apogee-1.png'></img>
+                                            <div class='portfolio-overlay d-table '>
+                                                <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                    <div class='portfolio-text-overlay-h'>
+                                                        Apogee
+                                                    </div>
+                                                    <div class='portfolio-text-overlay-b'>
+                                                        Gameplay Programmer<br> Game Designer
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class=' col-md portfolio-slot portfolio-slot-right portfolio-slot-last'>
-                            <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true" data-aos="fade-up">
-                                <div class='portfolio-slot-window'>
-                                    <a href="/games/solarscreen.html" class='is-right image-clip-wrapper' json-data='./json/solarscreen.json'>
-                                        <img class='portfolio-slot-icon' src='./imgs/screen-shots/solarscreen/ss-1.jpeg'></img>
-                                        <div class='portfolio-overlay d-table '>
-                                            <div class='portfolio-text-overlay d-table-cell-centered'>
-                                                <div class='portfolio-text-overlay-h'>
-                                                    SolarScreen iOS / Apple Watch
-                                                </div>
-                                                <div class='portfolio-text-overlay-b'>
-                                                    UI Designer / Programmer<br> Software Developer
+                        </row>
+
+                        <!-- Row 3 -->
+                        <row class='row portfolio-row'>
+
+                            <div class='col-md portfolio-slot portfolio-slot-left'>
+                                <div class="aos-item aos-slot-window aos-slot-offset-left" data-aos-once="true"
+                                    data-aos="fade-up">
+                                    <div class='portfolio-slot-window'>
+                                        <a href="/games/morp.html" class='image-clip-wrapper'
+                                            json-data='./json/morp.json'>
+                                            <img class='portfolio-slot-icon'
+                                                src='./imgs/screen-shots/morp/morp-13.png'></img>
+                                            <div class='portfolio-overlay d-table'>
+                                                <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                    <div class='portfolio-text-overlay-h'>
+                                                        The Mice of Riddle Place
+                                                    </div>
+                                                    <div class='portfolio-text-overlay-b'>
+                                                        Gameplay Programmer<br> Game Designer
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </row>
+                            <div class=' col-md portfolio-slot portfolio-slot-right portfolio-slot-last'>
+                                <div class="aos-item aos-slot-window aos-slot-offset-right" data-aos-once="true"
+                                    data-aos="fade-up">
+                                    <div class='portfolio-slot-window'>
+                                        <a href="/games/solarscreen.html" class='is-right image-clip-wrapper'
+                                            json-data='./json/solarscreen.json'>
+                                            <img class='portfolio-slot-icon'
+                                                src='./imgs/screen-shots/solarscreen/ss-1.jpeg'></img>
+                                            <div class='portfolio-overlay d-table '>
+                                                <div class='portfolio-text-overlay d-table-cell-centered'>
+                                                    <div class='portfolio-text-overlay-h'>
+                                                        SolarScreen iOS / Apple Watch
+                                                    </div>
+                                                    <div class='portfolio-text-overlay-b'>
+                                                        UI Designer / Programmer<br> Software Developer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </row>
+
+                    </div>
 
                 </div>
-
             </div>
             <!-- END PAGE CONTENT -->
             <!-- Logo -->
@@ -254,12 +272,16 @@
 
             <!-- Social Media -->
             <div id='social-buttons-container'>
-                <a href='https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA' target='_blank' rel='noopener noreferrer' class='social-media-button'>
-                    <img type='image/svg+xml' src='./imgs/linked-in-button.svg' draggable=false class='social-media-icon'></img>
+                <a href='https://www.youtube.com/channel/UCWGm5v6X7WUFB30tIe5SqtA' target='_blank'
+                    rel='noopener noreferrer' class='social-media-button'>
+                    <img type='image/svg+xml' src='./imgs/linked-in-button.svg' draggable=false
+                        class='social-media-icon'></img>
                 </a>
 
-                <a href='http://www.linkedin.com/in/dylanfaust/' target='_blank' rel='noopener noreferrer' class='social-media-button'>
-                    <img type='image/svg+xml' src='./imgs/youtube-button.svg' draggable=false class='social-media-icon'></img>
+                <a href='http://www.linkedin.com/in/dylanfaust/' target='_blank' rel='noopener noreferrer'
+                    class='social-media-button'>
+                    <img type='image/svg+xml' src='./imgs/youtube-button.svg' draggable=false
+                        class='social-media-icon'></img>
                 </a>
             </div>
 
