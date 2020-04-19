@@ -148,21 +148,21 @@ html {
   height: 100%;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   html {
-    font-size: calc(((100vw - 1440px) * 0.007) + 10px);
+    font-size: calc(((100vw - 1441px) * 0.007) + 10px);
   }
 }
 
 @media (min-width: 1700px) {
   html {
-    font-size: calc(((1700px - 1440px) * 0.007) + 10px);
+    font-size: calc(((1700px - 1441px) * 0.007) + 10px);
   }
 }
 
 @media (min-width: 1921px) {
   html {
-    font-size: calc( ((100vw - 1921px) * 0.00615) + ((1700px - 1440px) * 0.007) +  10px);
+    font-size: calc( ((100vw - 1921px) * 0.00615) + ((1700px - 1441px) * 0.007) +  10px);
   }
 }
 
@@ -364,7 +364,7 @@ h1 {
   padding-bottom: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   h1 {
     padding-bottom: 2rem;
   }
@@ -943,7 +943,7 @@ strong {
   display: table;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .taskbar-nav-button .nav-text {
     -webkit-transform: translate(-50%, calc(1rem - 7rem + 1rem - 1rem)) !important;
             transform: translate(-50%, calc(1rem - 7rem + 1rem - 1rem)) !important;
@@ -976,7 +976,7 @@ strong {
   transition: 0.2s ease-in-out;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .taskbar-nav-button .nav-text-active {
     -webkit-transform: translate(-50%, calc(1rem - 7rem - 1rem)) !important;
             transform: translate(-50%, calc(1rem - 7rem - 1rem)) !important;
@@ -1518,23 +1518,21 @@ a.back-button {
 #window-about-me {
   width: 29.3rem;
   height: 22rem;
-  left: calc(100% - 29.3rem - 6.0rem);
+  left: calc(100% - 29.3rem - 5.0rem);
   top: 10rem;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   #window-about-me {
-    height: 30vh;
-    width: calc(30vh * 1.33182);
     top: 10rem;
-    left: calc(100% - 30vh * 1.33182 - 6.0rem);
+    left: calc(83% - (29.3rem/2));
   }
 }
 
 @media (max-width: 1300px) {
   #window-about-me {
-    top: 15%;
-    left: calc(80% - (29.3rem / 2));
+    top: 10%;
+    left: calc(80% - (29.3rem/2));
   }
 }
 
@@ -1560,24 +1558,23 @@ a.back-button {
   top: 20.0rem;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   #window-email {
-    height: 30vh;
-    width: calc((30vh * 1.30909));
+    left: calc(16% - (29.3rem/2));
   }
 }
 
 @media (max-width: 1300px) {
   #window-email {
-    top: 50%;
-    left: calc(80% - (29.3rem / 2));
+    top: calc(100% - 11.3rem - 22.0rem - 10%);
+    left: calc(80% - (28.8rem / 2));
   }
 }
 
 @media (max-width: 820px) {
   #window-email {
     top: 55%;
-    left: calc(100% - 3.8rem - 29.3rem);
+    left: calc(100% - 3.8rem - 28.8rem);
   }
 }
 
@@ -1594,7 +1591,7 @@ a.back-button {
   top: calc(50% - (33.7rem / 2) - (11.3rem / 2));
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   #window-reel {
     left: calc(50% - (53.4rem / 2));
   }
@@ -1873,7 +1870,7 @@ html.window-active #logo-container {
   margin-right: 12rem;
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1440px) {
   #portfolio-body {
     margin-left: auto;
     margin-right: auto;
@@ -1921,7 +1918,7 @@ html.window-active #logo-container {
   margin-right: 22rem;
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1440px) {
   #about-body {
     margin-left: auto;
     margin-right: auto;
@@ -2186,7 +2183,7 @@ html.window-active #logo-container {
   margin-right: 0rem;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .portfolio-header-desc {
     margin-right: 4rem;
   }
@@ -2305,7 +2302,7 @@ html.window-active #logo-container {
   margin-top: 1rem;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   #portfolio-large-container {
     margin-top: 1rem;
   }
