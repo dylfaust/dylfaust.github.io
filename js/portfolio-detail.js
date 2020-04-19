@@ -13,6 +13,8 @@ var anyQuotes;
 var totalImages;
 var curImagesLoaded;
 
+var playBtn;
+
 var checkRatio = 64 / 31;
 
 var allowLottie = allowLottie();
@@ -49,14 +51,33 @@ function initPortfolioDetailVars(myPortfolioDetail)
     innerJson = document.getElementById('json-data').innerHTML;
     populatePortfolioDetail(innerJson);
 
+    let portVideo = document.getElementsByClassName("port-det-video")[0];
+    playBtn = portVideo.getElementsByClassName("play-btn")[0];
+
+    portVideo.addEventListener("mouseover", playButtonHover);
+    portVideo.addEventListener("mouseout", playButtonEndHover);
+
+
     // Attaching the event listener function to window's resize event
     window.addEventListener("resize", checkResize);
     // window.addEventListener("load", initAos);
     checkResize();
 }
 
-function disablePortfolioDetailVars() {
+function disablePortfolioDetailVars()
+{
     window.removeEventListener("resize", checkResize);
+}
+
+
+function playButtonHover()
+{
+    playBtn.classList.add("play-btn-hover");
+}
+
+function playButtonEndHover()
+{
+    playBtn.classList.remove("play-btn-hover");
 }
 
 function checkResize()
@@ -69,8 +90,8 @@ function checkResize()
 
     if (a_skillWrappers)
     {
-    if (leftSkills)
-    {
+        if (leftSkills)
+        {
             if (w < 1300 || !passesRatio)
             {
                 a_skillWrappers[0].style.display = "none";
