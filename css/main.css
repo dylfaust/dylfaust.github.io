@@ -306,6 +306,8 @@ html body {
   display: inline-block;
   -webkit-transform: scale(1);
           transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   -webkit-transition-property: -webkit-transform, -webkit-filter;
   transition-property: -webkit-transform, -webkit-filter;
   transition-property: transform, filter;
@@ -317,10 +319,10 @@ html body {
 }
 
 .play-btn-hover {
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
-  -webkit-transform: scale(0.95) translateX(-0.1rem);
-          transform: scale(0.95) translateX(-0.1rem);
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .play-btn-wrapper {
