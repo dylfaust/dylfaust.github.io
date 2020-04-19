@@ -90,9 +90,13 @@ function newPageLogic(event) {
 
     setPortfolioActive(pageState == page.PORTFOLIO);
 
-    if (pageState == page.DETAIL) {
+    if (pageState == page.DETAIL) 
         initPortfolioDetailVars();
-    } else if (pageState == page.PORTFOLIO) {
+    else
+        disablePortfolioDetailVars();
+    
+
+    if (pageState == page.PORTFOLIO) {
         scrollToContainer();
     } else if (pageState == page.MAIN || pageState == page.MAINLOGO) {
         let infoButton = document.getElementById('about-link');
@@ -110,6 +114,13 @@ function newPageLogic(event) {
         {
             logoOutroFrame(null, true);
         }
+    }
+
+    if (pageState == page.ABOUT || pageState == page.DETAIL)
+    {
+        // HACK to delay by a millisecond as the data i get here is wrong
+        setTimeout(function(){
+        resetForNewPage();}, 100);
     }
 }
 

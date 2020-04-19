@@ -13,17 +13,21 @@ var anyQuotes;
 var totalImages;
 var curImagesLoaded;
 
+var checkRatio = 64 / 31;
+
 var allowLottie = allowLottie();
 
 // initPortfolioDetailVars();
 
-function initPortfolioDetailVars(myPortfolioDetail) {
+function initPortfolioDetailVars(myPortfolioDetail)
+{
     title = document.getElementsByClassName("port-det-title")[0];
     role = document.getElementsByClassName("port-det-role")[0];
     roleTitle = document.getElementsByClassName("role-title")[0];
     desc = document.getElementsByClassName("port-det-desc")[0];
     a_quotes = document.getElementsByClassName("portfolio-quote");
-    for (let i = 0; i < a_quotes.length; i++) {
+    for (let i = 0; i < a_quotes.length; i++)
+    {
         let quote = a_quotes[i];
         quote.text = quote.getElementsByClassName("quote-text")[0];
         quote.image = quote.getElementsByClassName("quote-image")[0];
@@ -31,12 +35,14 @@ function initPortfolioDetailVars(myPortfolioDetail) {
     }
 
     a_skillWrappers = document.getElementsByClassName("skills");
-    for (let i = 0; i < a_skillWrappers.length; i++) {
+    for (let i = 0; i < a_skillWrappers.length; i++)
+    {
         a_skillWrappers[i].skills = a_skillWrappers[i].getElementsByClassName("skill");
     }
 
     a_images = document.getElementsByClassName("port-det-image");
-    for (let i = 0; i < a_images.length; i++) {
+    for (let i = 0; i < a_images.length; i++)
+    {
         let image = a_images[i];
         image.img = image.getElementsByClassName("img-fluid")[0];
     }
@@ -49,28 +55,44 @@ function initPortfolioDetailVars(myPortfolioDetail) {
     checkResize();
 }
 
-function checkResize() {
+function disablePortfolioDetailVars() {
+    window.removeEventListener("resize", checkResize);
+}
+
+function checkResize()
+{
     // Get width and height of the window excluding scrollbars
     var w = document.documentElement.clientWidth;
+    var h = document.documentElement.clientHeight;
+    let ratio = w / h;
+    let passesRatio = ratio <= checkRatio;
 
-    if (leftSkills) {
-        if (w < 1300) {
-            a_skillWrappers[0].style.display = "none";
-            a_skillWrappers[1].style.display = "block";
-            if (anyQuotes)
-                a_quotes[0].style.display = "none";
-        } else {
-            a_skillWrappers[0].style.display = "block";
-            a_skillWrappers[1].style.display = "none";
-            if (anyQuotes)
-                a_quotes[0].style.display = "block";
+    if (a_skillWrappers)
+    {
+    if (leftSkills)
+    {
+            if (w < 1300 || !passesRatio)
+            {
+                a_skillWrappers[0].style.display = "none";
+                a_skillWrappers[1].style.display = "block";
+                if (anyQuotes)
+                    a_quotes[0].style.display = "none";
+            } else
+            {
+                a_skillWrappers[0].style.display = "block";
+                a_skillWrappers[1].style.display = "none";
+                if (anyQuotes)
+                    a_quotes[0].style.display = "block";
+            }
         }
     }
 }
 
 
-function populatePortfolioDetail(jsonFile) {
-    if (allowLottie) {
+function populatePortfolioDetail(jsonFile)
+{
+    if (allowLottie)
+    {
         var button = document.getElementsByClassName("back-button")[0];
         let backAnimController = bodymovin.loadAnimation({
             container: button.getElementsByClassName("lottie-anim")[0],
@@ -86,14 +108,16 @@ function populatePortfolioDetail(jsonFile) {
         button.addEventListener("click", backClick, true);
 
         backAnimController.addEventListener('DOMLoaded',
-            function(e) {
+            function (e)
+            {
 
                 let normIcon = button.getElementsByClassName("back-button-image")[0];
                 let lottieLink = button.getElementsByClassName("lottie-link")[0];
                 let backImageWrapper = button.getElementsByClassName("back-image-wrapper")[0];
                 // pointer-events: none;
                 button.link = lottieLink;
-                if (normIcon) {
+                if (normIcon)
+                {
                     backImageWrapper.style.pointerEvents = "none";
                     normIcon.style.pointerEvents = "none";
                     lottieLink.style.pointerEvents = "none";
@@ -112,7 +136,8 @@ function populatePortfolioDetail(jsonFile) {
     // window.alert(jsonFile);
     // var obj = JSON.parse(jsonFile);
     var json = JSON.parse(jsonFile);
-    if (json) {
+    if (json)
+    {
         title.innerHTML = json.title;
         role.innerHTML = json.role;
         desc.innerHTML = json.description;
@@ -120,40 +145,49 @@ function populatePortfolioDetail(jsonFile) {
         roleTitle.innerHTML = json.roleTitle;
 
         let quotesJson = json.quotes;
-        for (let i = 0; i < a_quotes.length; i++) {
+        for (let i = 0; i < a_quotes.length; i++)
+        {
             let curQuote = a_quotes[i];
             anyQuotes = quotesJson.length > i;
-            if (quotesJson.length > i) {
+            if (quotesJson.length > i)
+            {
                 curQuote.style.display = "block";
                 let curQuoteJson = quotesJson[i];
                 curQuote.text.innerHTML = curQuoteJson.quote;
                 curQuote.image.src = curQuoteJson.picture;
                 curQuote.name.innerHTML = curQuoteJson.title;
-            } else {
+            } else
+            {
                 curQuote.style.display = "none";
             }
         }
 
         let skillsJson = json.skills;
-        for (let i = 0; i < a_skillWrappers.length; i++) {
+        for (let i = 0; i < a_skillWrappers.length; i++)
+        {
             let a_skills = a_skillWrappers[i].skills;
-            for (let i = 0; i < a_skills.length; i++) {
+            for (let i = 0; i < a_skills.length; i++)
+            {
                 let curSkill = a_skills[i];
-                if (skillsJson.length > i) {
+                if (skillsJson.length > i)
+                {
                     curSkill.style.display = "inline";
                     let curSkillJson = skillsJson[i];
                     curSkill.innerHTML = curSkillJson;
-                } else {
+                } else
+                {
                     curSkill.style.display = "none";
                 }
             }
         }
 
         leftSkills = json.leftSkills == true;
-        if (json.leftSkills == true) {
+        if (json.leftSkills == true)
+        {
             a_skillWrappers[0].style.display = "inline";
             a_skillWrappers[1].style.display = "none";
-        } else {
+        } else
+        {
             a_skillWrappers[0].style.display = "none";
             a_skillWrappers[1].style.display = "inline";
         }
@@ -161,23 +195,30 @@ function populatePortfolioDetail(jsonFile) {
         let imagesJson = json.pictures;
         totalImages = a_images.length;
         imageCount = 0;
-        for (let i = 0; i < a_images.length; i++) {
+        for (let i = 0; i < a_images.length; i++)
+        {
             let curImage = a_images[i];
-            if (imagesJson.length > i) {
+            if (imagesJson.length > i)
+            {
                 curImage.style.display = "block";
                 let curImageJson = imagesJson[i];
-                if (i == 0) {
+                if (i == 0)
+                {
                     curImage.href = json.video;
-                } else {
+                } else
+                {
                     curImage.href = curImageJson;
                 }
 
                 let aosItems = document.getElementsByClassName("aos-item");
-                curImage.img.onload = function() {
+                curImage.img.onload = function ()
+                {
                     imageCount++;
-                    if (imageCount = totalImages - 1) {
+                    if (imageCount = totalImages - 1)
+                    {
 
-                        for (let i = 0; i < aosItems.length; i++) {
+                        for (let i = 0; i < aosItems.length; i++)
+                        {
                             let aosItem = aosItems[i];
                             aosItem.classList.remove("aos-animate");
                         }
@@ -187,15 +228,18 @@ function populatePortfolioDetail(jsonFile) {
 
                 curImage.img.src = curImageJson;
                 curImage.img.style.height = "auto";
-            } else {
+            } else
+            {
                 curImage.style.display = "none";
             }
         }
     }
 }
 
-function backHover() {
-    if (!this.active) {
+function backHover()
+{
+    if (!this.active)
+    {
         if (!this.hovered)
             this.animController.playSegments([0, 13], true);
 
@@ -203,21 +247,26 @@ function backHover() {
     }
 }
 
-function backEndHover() {
-    if (!this.active) {
+function backEndHover()
+{
+    if (!this.active)
+    {
         this.hovered = false;
         this.animController.playSegments([60, 66], true);
     }
 }
 
-function backClick() {
+function backClick()
+{
     let start = (30 * 3) + 27;
     duration = 24;
-    if (!this.active) {
+    if (!this.active)
+    {
         this.active = true;
         this.animController.playSegments([start, start + duration]);
         var button = this;
-        setTimeout(function() {
+        setTimeout(function ()
+        {
             button.link.click();
         }, 450);
     }
