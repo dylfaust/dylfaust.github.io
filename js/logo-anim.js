@@ -169,7 +169,13 @@ function loadingAnim(timestamp)
         if (loadIndex == loadingFrames.length - 1)
         {
             cancelAnimationFrame(loadingAnim);
+
+            setTimeout(function()
+            {
             playOutro();
+            },
+            1
+            );
         }
         else
         {
