@@ -1563,7 +1563,7 @@ a.back-button {
 @media (min-width: 1440px) {
   #window-email {
     height: 30vh;
-    width: calc((30vh * 1.30909)) !important;
+    width: calc((30vh * 1.30909));
   }
 }
 
@@ -1597,7 +1597,6 @@ a.back-button {
 @media (min-width: 1440px) {
   #window-reel {
     left: calc(50% - (53.4rem / 2));
-    top: calc(50% - (45vh / 2));
   }
 }
 
