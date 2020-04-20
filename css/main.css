@@ -1640,12 +1640,12 @@ a.back-button {
   border-color: black;
   border-width: .1rem;
   background-color: #00000000;
+  position: absolute;
   width: 1.6rem;
   height: 1.6rem;
   top: 50%;
   margin-top: -0.8rem;
-  right: .9rem;
-  position: absolute;
+  right: .7rem;
   border-radius: 0px;
   line-height: 0px;
 }
@@ -2122,7 +2122,19 @@ html.window-active #logo-container {
 
 .portfolio-header-wrapper {
   overflow: hidden;
-  margin-top: 3.2rem;
+  margin-top: 1.85rem;
+}
+
+@media (min-width: 1441px) {
+  .portfolio-header-wrapper {
+    margin-top: 3.2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .portfolio-header-wrapper {
+    margin-top: 1.3rem;
+  }
 }
 
 @media (max-width: 950px) {
