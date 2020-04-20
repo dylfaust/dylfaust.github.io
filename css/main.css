@@ -2140,6 +2140,7 @@ html.window-active #logo-container {
 @media (max-width: 950px) {
   .portfolio-header-wrapper {
     display: none;
+    margin-top: 0rem;
   }
 }
 
