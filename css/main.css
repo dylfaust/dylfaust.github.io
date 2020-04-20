@@ -701,7 +701,7 @@ strong {
   position: fixed;
   height: 11.3rem;
   bottom: 0;
-  z-index: 11;
+  z-index: 9999;
 }
 
 @media (max-width: 600px) {
@@ -943,13 +943,6 @@ strong {
   display: table;
 }
 
-@media (min-width: 1441px) {
-  .taskbar-nav-button .nav-text {
-    -webkit-transform: translate(-50%, calc(1rem - 7rem + 1rem - 1rem)) !important;
-            transform: translate(-50%, calc(1rem - 7rem + 1rem - 1rem)) !important;
-  }
-}
-
 .taskbar-nav-button .nav-text#nav-text-home {
   margin-left: -10px;
 }
@@ -974,13 +967,6 @@ strong {
   opacity: 1;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-}
-
-@media (min-width: 1441px) {
-  .taskbar-nav-button .nav-text-active {
-    -webkit-transform: translate(-50%, calc(1rem - 7rem - 1rem)) !important;
-            transform: translate(-50%, calc(1rem - 7rem - 1rem)) !important;
-  }
 }
 
 .taskbar-nav-button .lottie-button-wrapper {
@@ -1829,6 +1815,7 @@ html.window-active #logo-container {
   top: .7rem;
   font-family: "made_regular", Made Regular, Sans;
   letter-spacing: 0.05rem;
+  /* -webkit-letter-spacing: 5rem; */
 }
 
 .overlay {
