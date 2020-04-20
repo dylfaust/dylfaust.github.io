@@ -8,9 +8,10 @@ function initDraggables()
   for (let i = 0; i < draggables.length; i++)
   {
     j = draggables.length - 1 - i;
-    makeWindowDraggable(draggables[j], i);
+    let zIndex = i + 12;
+    makeWindowDraggable(draggables[j], zIndex);
     setupCloseButton(draggables[j], closeClick);
-    topmostZIndex = j;
+    topmostZIndex = zIndex;
   }
 }
 
