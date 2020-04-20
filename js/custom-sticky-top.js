@@ -1,13 +1,44 @@
 let stickyItem;
 let myselfWrap;
 let largeWindowStickyRef;
+let headshotImage;
+let isAboutPage = false;
 
-function resetForNewPage() {
+function testImageSizeKnown(){
+  if(headshotImage.height && headshotImage.width)
+  {
+    adjustStickyTop();
+    return true;
+  }
+  else if (isAboutPage)
+  {
+    setTimeout(testImageSizeKnown, 100); // check every 100 ms
+    return false;
+  }
+}
+
+function exitAboutPage() {
+  clearTimeout(testImageSizeKnown, 100);
+  isAboutPage = false;
+}
+
+function resetForNewPage(isAbout = false) {
   window.addEventListener("resize", adjustStickyTop);
   stickyItem = document.getElementsByClassName("custom-sticky-top")[0];
   largeWindowStickyRef = document.getElementsByClassName("large-window")[0];
   myselfWrap = document.getElementsByClassName("myself-wrap")[0];
-  adjustStickyTop();
+  headshotImage = document.getElementById("about-me-image");
+
+  if (isAbout)
+  {
+    isAboutPage = true;
+    if (!testImageSizeKnown())
+      adjustStickyTop();
+  }
+  else 
+  {
+    adjustStickyTop();
+  }
 }
 
 function clearStickyTop()

@@ -1521,7 +1521,7 @@ a.back-button {
   width: 29.3rem;
   height: 22rem;
   left: calc(((50% - 26.7rem) / 2)  + 50% + 26.7rem  - 14.65rem);
-  top: calc((100% - 11.3rem) * .45 - 11rem + -10%);
+  top: calc((100% - 11.3rem) * .44 - 11rem + -7%);
 }
 
 @media (max-width: 1200px) {
@@ -1550,7 +1550,7 @@ a.back-button {
   width: 29.3rem;
   height: 22rem;
   left: calc(((50% - 26.7rem) / 2) - 14.65rem);
-  top: calc((100% - 11.3rem) * .45 - 11rem + 0px);
+  top: calc((100% - 11.3rem) * .44 - 11rem + 0px);
 }
 
 @media (max-width: 1200px) {

@@ -118,9 +118,15 @@ function newPageLogic(event) {
 
     if (pageState == page.ABOUT || pageState == page.DETAIL)
     {
+        let isAbout = pageState == page.ABOUT;
         // HACK to delay by a millisecond as the data i get here is wrong
         setTimeout(function(){
-        resetForNewPage();}, 100);
+        resetForNewPage(isAbout);}, 100);
+
+        if (!isAbout)
+        {
+            exitAboutPage();
+        }
     }
 }
 
