@@ -69,7 +69,7 @@ const portfolioNormalAnim = {
   name: 'normal',
   normalStart: 30 * 2 + 3,
   activeStart: 30 * 8,
-  duration: 30,
+  duration: 18,
   earlyExitFrame: null
 };
 
