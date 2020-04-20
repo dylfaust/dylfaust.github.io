@@ -2375,6 +2375,9 @@ html.window-active #logo-container {
 .t2-loop {
   background-color: black;
   pointer-events: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #161626;
 }
 
 @media (max-width: 600px) {
