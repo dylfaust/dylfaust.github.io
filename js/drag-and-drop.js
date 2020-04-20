@@ -2,8 +2,12 @@ var currWindow;
 var topmostZIndex = 9999;
 var draggables;
 
+var windowTiers = [1200, 820, 600];
+var currTier = 0;
+
 function initDraggables()
 {
+  window.addEventListener("resize", adjustWindowsForResize);
   draggables = document.getElementsByClassName("window");
   for (let i = 0; i < draggables.length; i++)
   {
@@ -13,6 +17,7 @@ function initDraggables()
     setupCloseButton(draggables[j], closeClick);
     topmostZIndex = zIndex;
   }
+  adjustWindowsForResize();
 }
 
 function makeWindowDraggable(draggable, zIndex = 1)
@@ -128,6 +133,33 @@ function moveAt(pageX, pageY)
 {
   currWindow.style.left = pageX - currWindow.shiftX + 'px';
   currWindow.style.top = pageY - currWindow.shiftY + 'px';
+}
+
+function adjustWindowsForResize() {
+  var w = document.documentElement.clientWidth;
+
+  let newTier;
+  for (let i = 0; i < windowTiers.length; i++)
+  {
+    let checkTier = windowTiers[i];
+    if (w < checkTier)
+    {
+      newTier = i;
+    }
+  }
+
+    if (newTier != currTier)
+    {
+      for (let i = 0; i < draggables.length; i++)
+      {
+        let draggable = draggables[i];
+        draggable.style.left ='';
+        draggable.style.top = '';
+      }
+      currTier = newTier;
+    }
+
+
 }
 
 function onMouseMove(event) 
