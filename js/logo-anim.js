@@ -49,7 +49,7 @@ if (logoAnim)
                 attemptPlayLogo();
             });
 
-        setTimeout(function()
+        setTimeout(function ()
         {
             timerDone = true;
             attemptPlayLogo();
@@ -157,25 +157,26 @@ function loadingAnim(timestamp)
     let timeSince = timestamp - lastTimeAnimated;
     if (timeSince > 50.0 || lastTimeAnimated == -1)
     {
-        lastTimeAnimated = timestamp;
-        loadAnimController.goToAndStop(loadingFrames[0], true);
+        if (lastTimeAnimated == -1)
+        {
+            loadAnimController.goToAndStop(loadingFrames[0], true);
+        }
+
         let desiredIndex = (Pace.bar.progress / 10) - 1;
+        lastTimeAnimated = timestamp;
+        
         if (desiredIndex > loadIndex)
         {
             loadIndex += 1;
             loadAnimController.goToAndStop(loadingFrames[loadIndex], true);
+            console.log(loadIndex);
         }
 
         if (loadIndex == loadingFrames.length - 1)
         {
             cancelAnimationFrame(loadingAnim);
 
-            setTimeout(function()
-            {
             playOutro();
-            },
-            1
-            );
         }
         else
         {
@@ -200,7 +201,7 @@ function playOutro()
 // Labeled hack as we really shouldn't need this dupe function
 function isMobileHACK()
 {
-   return $(window).width() <= 600;
+    return $(window).width() <= 600;
 }
 
 function logoOutroFrame(event, forceStates = false)
@@ -243,11 +244,11 @@ function logoOutroFrame(event, forceStates = false)
                 let isMobile = isMobileHACK();
 
                 let logo = document.getElementById("logo-container");
-                let logoMobile =  document.getElementById("logo-mobile");
+                let logoMobile = document.getElementById("logo-mobile");
                 logo.classList.remove("logo-hidden");
                 logoMobile.classList.remove("logo-hidden");
 
-                let animLogo = isMobile ?  logoMobile : logo;
+                let animLogo = isMobile ? logoMobile : logo;
                 animLogo.classList.add("logo-reveal");
 
                 if (forceStates)
