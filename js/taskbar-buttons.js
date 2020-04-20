@@ -85,7 +85,7 @@ const portfolioAnims =
 // ---------------------------
 const homeHoverAnim = {
   name: 'hover',
-  normalStart: 0,
+  normalStart: 1,
   activeStart: 30 * 8,
   duration: 18,
   earlyExitFrame: null
