@@ -155,6 +155,8 @@ function adjustWindowsForResize() {
         let draggable = draggables[i];
         draggable.style.left ='';
         draggable.style.top = '';
+        draggable.style.width = '';
+        draggable.style.height = '';
       }
       currTier = newTier;
     }
