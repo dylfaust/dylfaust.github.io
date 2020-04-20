@@ -2122,7 +2122,8 @@ html.window-active #logo-container {
 
 .portfolio-header-wrapper {
   overflow: hidden;
-  margin-top: 1.867rem;
+  margin-top: 1.88rem;
+  padding-left: .05rem;
 }
 
 @media (min-width: 1441px) {
