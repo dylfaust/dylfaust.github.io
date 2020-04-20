@@ -1857,7 +1857,7 @@ html.window-active #logo-container {
   #portfolio-body {
     margin-left: auto;
     margin-right: auto;
-    margin-top: -1rem;
+    margin-top: -1.2rem;
     width: calc(1200px - 6rem);
   }
 }
@@ -2127,13 +2127,13 @@ html.window-active #logo-container {
 
 @media (min-width: 1441px) {
   .portfolio-header-wrapper {
-    margin-top: 3.2rem;
+    margin-top: 3.65rem;
   }
 }
 
 @media (max-width: 1200px) {
   .portfolio-header-wrapper {
-    margin-top: 1.3rem;
+    margin-top: 1.33rem;
   }
 }
 
