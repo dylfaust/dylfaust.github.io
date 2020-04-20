@@ -53,7 +53,7 @@ const portfolioClickAnim = {
   normalStart: 30 * 4,
   activeStart: 30 * 30 + 10,
   duration: 20 + 10,
-  earlyExitFrame: 18,
+  earlyExitFrame: 16,
   transitionLinkFrame: 11,
 };
 
