@@ -67,9 +67,9 @@ const portfolioHoverAnim = {
 
 const portfolioNormalAnim = {
   name: 'normal',
-  normalStart: 30 * 2,
+  normalStart: 30 * 2 + 3,
   activeStart: 30 * 8,
-  duration: 18,
+  duration: 30,
   earlyExitFrame: null
 };
 
