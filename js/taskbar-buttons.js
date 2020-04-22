@@ -91,10 +91,18 @@ const homeHoverAnim = {
   earlyExitFrame: null
 };
 
+const homeNormalAnim = {
+  name: 'normal',
+  normalStart: 30 * 2,
+  activeStart: 30 * 6 + 1,
+  duration: 18,
+  earlyExitFrame: null
+};
+
 
 const homeAnims =
 {
-  normal: defaultNormalAnim,
+  normal: homeNormalAnim,
   hover: homeHoverAnim,
   dud: defaultDudAnim,
   click: defaultClickAnim
