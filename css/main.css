@@ -1445,13 +1445,20 @@ a.back-button {
 }
 
 .button-collapse {
-  width: 40px;
+  width: 3.8rem;
   left: 50%;
-  margin-left: -20px !important;
-  border-radius: 100px !important;
+  margin-left: -1.9rem !important;
+  border-radius: 100.0rem !important;
   border-color: #00000000;
-  -webkit-transition-duration: 5s;
-          transition-duration: 5s;
+  -webkit-transition: width, margin-left, left,  background-color !important;
+  transition: width, margin-left, left,  background-color !important;
+  -webkit-transition-duration: .2s, .2s, .2s, .5s !important;
+          transition-duration: .2s, .2s, .2s, .5s !important;
+  -webkit-transition-timing-function: ease-out, ease-out, ease-out, ease !important;
+          transition-timing-function: ease-out, ease-out, ease-out, ease !important;
+  -webkit-transition-delay: 0s, 0s, 0s, .2s !important;
+          transition-delay: 0s, 0s, 0s, .2s !important;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .button-text-collapse {
