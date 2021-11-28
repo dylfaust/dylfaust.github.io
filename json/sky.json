@@ -1,0 +1,32 @@
+{
+  "title": "Sky<span class='special-force-break'></span>Children of the Light",
+  "roleTitle": "Role:",
+  "role": "UI Lead",
+  "description": "Lead the <strong>design</strong> / <strong>implementation</strong> of the UI. Work in <strong>Illustrator</strong>, <strong>Figma</strong>, and <strong>After Effects</strong> to design wireframes, mockups, animations, and interactive prototypes. Iterate based on Creative Director / design team’s feedback, to ensure our game design goals are being met. Give feedback / do polish passes on UI elements prototyped by game designers, to ensure quality / consistency gamewide. Implement the final interfaces in-engine using C++",
+  "skills": [
+    "C++",
+    "UI / UX Design",
+    "Fimga",
+    "Illustrator",
+    "After Effects",
+    "Photoshop"
+  ],
+  "quotes": [
+    {
+      "quote": "It floored me on just about every level.<br>The most intense combat I've ever had in a videogame.",
+      "title": "Greg Miller | Gamespot",
+      "picture": "../imgs/screen-shots/t2/greg-miller.jpg"
+    },
+    {
+      "quote": "Beyond the hype and expectation placed around so much of The Last of Us Part II, there's a sturdy little video game, that's had some thoughtful tweaks.",
+      "title": "Zoe Delahunty-Light | Eurogamer",
+      "picture": "../imgs/screen-shots/t2/zoe-delahunty.jpg"
+    }
+  ],
+  "pictures": [
+    "../imgs/screen-shots/sky/sky2.jpeg",
+    "../imgs/screen-shots/t2/sky1.jpeg"
+  ],
+  "video": "https://www.youtube.com/embed/7iXWmpEQq3Y?start=587",
+  "leftSkills": true
+}
