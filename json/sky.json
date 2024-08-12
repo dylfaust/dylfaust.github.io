@@ -2,7 +2,7 @@
   "title": "Sky<span class='special-force-break'></span>Children of the Light",
   "roleTitle": "Role:",
   "role": "UI Lead",
-  "description": "Lead the <strong>design</strong> / <strong>implementation</strong> of the UI. Work in <strong>Illustrator</strong>, <strong>Figma</strong>, and <strong>After Effects</strong> to design wireframes, mockups, animations, and interactive prototypes. Iterate based on Creative Director / design team’s feedback, to ensure our game design goals are being met. Give feedback / do polish passes on UI elements prototyped by game designers, to ensure quality / consistency gamewide. Implement the final interfaces in-engine using C++",
+  "description": "Lead our team of <strong>Technical UI Designers</strong>, in designing and implementing all of the UI in the game. Work in <strong>Illustrator</strong>, <strong>Figma</strong>, and <strong>After Effects</strong> to design <strong>wireframes</strong>, <strong>mockups</strong>, <strong>animations</strong>, and interactive <strong>prototypes</strong>. Iterate based on Creative Director / design team’s feedback, to ensure our <strong>game design goals</strong> are being met. Give feedback / direction to the team, to ensure <strong>quality</strong> / <strong>consistency</strong> gamewide. Implement the final interfaces in-engine using <strong>C++</strong>.",
   "skills": [
     "C++",
     "UI / UX Design",
